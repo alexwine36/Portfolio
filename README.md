@@ -1,4 +1,6 @@
 
+[![Release Action](https://github.com/alexwine36/Portfolio/actions/workflows/release-action.yml/badge.svg)](https://github.com/alexwine36/Portfolio/actions/workflows/release-action.yml)
+
 
 # Portfolio
 
