@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import NxWelcome from './nx-welcome';
+import { Container } from '@mui/material';
+import HomePage from '../pages/home-page/home-page';
 
 const StyledApp = styled.div`
   // Your style here
@@ -7,9 +8,9 @@ const StyledApp = styled.div`
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="web" />
-    </StyledApp>
+    <Container>
+      <HomePage />
+    </Container>
   );
 }
 
