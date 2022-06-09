@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/alexwine36/Portfolio/compare/v1.0.0...v1.0.1) (2022-06-09)
+
+
+### Bug Fixes
+
+* **ci:** updated releaserc and action for running ([36fb6fd](https://github.com/alexwine36/Portfolio/commit/36fb6fd4c75505f1f7b8db61850bc807fe14a46e))
+
 # 1.0.0 (2022-06-09)
 
 
