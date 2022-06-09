@@ -12,8 +12,8 @@
       "@semantic-release/github",
       {
         "assets": [
-          { "path": "dist/apps/web", "label": "Web Build" },
-          { "path": "dist/libs/ui", "label": "UI Library" }
+          { "path": "dist/apps/web/**", "label": "Web Build" },
+          { "path": "dist/libs/ui/**", "label": "UI Library" }
         ]
       }
     ],
