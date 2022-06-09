@@ -8,15 +8,7 @@
         "npmPublish": false
       }
     ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": [
-          { "path": "dist/apps/web/**", "label": "Web Build" },
-          { "path": "dist/libs/ui/**", "label": "UI Library" }
-        ]
-      }
-    ],
+    ["@semantic-release/github", {}],
 
     [
       "@semantic-release/changelog",
