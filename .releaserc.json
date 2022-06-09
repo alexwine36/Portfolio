@@ -1,0 +1,43 @@
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          { "path": "dist/apps/web", "label": "Web Build" },
+          { "path": "dist/libs/ui", "label": "UI Library" }
+        ]
+      }
+    ],
+
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["package.json", "yarn.lock", "CHANGELOG.md", "README.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ],
+  "branches": [
+    "main",
+    "+([0-9])?(.{+([0-9]),x}).x",
+    {
+      "name": "alpha",
+      "prerelease": "alpha"
+    }
+  ]
+}
