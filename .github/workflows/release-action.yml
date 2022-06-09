@@ -1,4 +1,4 @@
-name: Releaser
+name: Release Action
 
 on:
   push:
