@@ -1,18 +1,17 @@
-name: Release Action
+name: 'Release'
 
 on:
   push:
-    branches: [$default-branch]
-  pull_request:
-    branches: [$default-branch]
+    branches:
+      - main
 
 jobs:
   release:
+    name: release
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
+      - uses: actions/checkout@v3
+      - uses: cycjimmy/semantic-release-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
