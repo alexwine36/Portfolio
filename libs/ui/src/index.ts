@@ -1,3 +1,4 @@
+export * from './components/text-header-display/text-header-display';
 export * from './components/section-display/section-display';
 export * from './assets/generate-galaxy-background/generate-galaxy-background';
 export * from './assets/polygon-background/polygon-background';

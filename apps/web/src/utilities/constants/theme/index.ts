@@ -18,6 +18,9 @@ export const theme = createTheme({
     h5: {
       fontWeight: 'bold',
     },
+    h6: {
+      fontWeight: 'bold',
+    },
   },
   palette: {
     mode: 'dark',

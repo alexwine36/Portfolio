@@ -3,7 +3,7 @@ import { analogue } from 'simpler-color';
 /* eslint-disable-next-line */
 export interface GradientTextProps {}
 
-const generateGradient = (theme: Theme, props: GradientProps) => {
+export const generateGradient = (theme: Theme, props: GradientProps) => {
   const { primary, secondary, color } = props;
   let end = theme.palette.primary.light;
   if (color) {

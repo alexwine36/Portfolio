@@ -19,7 +19,7 @@ export function HomePage(props: HomePageProps) {
           marginY: 5,
         }}
       >
-        <SectionDisplay />
+        <SectionDisplay title="Experience"></SectionDisplay>
       </Container>
 
       <Card>
