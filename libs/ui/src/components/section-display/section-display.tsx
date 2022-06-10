@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, styled, useTheme } from '@mui/material';
+import { Card, styled, useTheme } from '@mui/material';
 import TextHeaderDisplay from '../text-header-display/text-header-display';
 
 /* eslint-disable-next-line */
@@ -10,14 +10,14 @@ export interface SectionDisplayProps {
 const StyledSectionDisplay = styled(Card)(
   ({ theme }) => `
 // color: pink;
-background-image: linear-gradient(
-  to bottom right,
-  rgba(255, 255, 255, 0.2),
-  rgba(255, 255, 255, 0)
-);
-backdrop-filter: 'blur(10px)';
-box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
-border: 1px solid ${theme.palette.divider};
+// background-image: linear-gradient(
+//   to bottom right,
+//   rgba(255, 255, 255, 0.2),
+//   rgba(255, 255, 255, 0)
+// );
+// backdrop-filter: 'blur(10px)';
+// box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
+// border: 1px solid ${theme.palette.divider};
 `
 );
 
@@ -26,14 +26,18 @@ export function SectionDisplay(props: SectionDisplayProps) {
   const theme = useTheme();
   const gradientColor = theme.palette.error.main;
   return (
-    <StyledSectionDisplay>
-      {/* <h1>Welcome to SectionDisplay!</h1> */}
-      <CardHeader
-        title={<TextHeaderDisplay title={title} subtitle={'08/18-present'} />}
-      ></CardHeader>
+    <>
+      <TextHeaderDisplay hideDivider title={title}></TextHeaderDisplay>
+      <StyledSectionDisplay>
+        {/* <h1>Welcome to SectionDisplay!</h1> */}
+        {children}
+        {/* <CardHeader
+          title={
 
-      <CardContent>{children}</CardContent>
-    </StyledSectionDisplay>
+          }
+        ></CardHeader> */}
+      </StyledSectionDisplay>
+    </>
   );
 }
 

@@ -4,8 +4,18 @@ import GradientText, { generateGradient } from '../gradient-text/gradient-text';
 /* eslint-disable-next-line */
 export interface TextHeaderDisplayProps {
   title: string;
+  pretitle?: string;
   subtitle?: string;
   variant?: 'h5' | 'h6';
+  hideDivider?: boolean;
+  gradientColor?:
+    | 'primary'
+    | 'secondary'
+    | 'info'
+    | 'warning'
+    | 'error'
+    | 'success';
+  color?: string;
 }
 
 const StyledTextHeaderDisplay = styled('div')`
@@ -19,14 +29,38 @@ const TextBoxFormat = styled('div')`
 `;
 
 export function TextHeaderDisplay(props: TextHeaderDisplayProps) {
-  const { title, subtitle, variant = 'h5' } = props;
+  const {
+    title,
+    pretitle,
+    subtitle,
+    variant = 'h5',
+    hideDivider,
+    gradientColor: baseColor,
+    color,
+  } = props;
   const theme = useTheme();
-  const gradientColor = theme.palette.error.main;
+  let gradientColor = theme.palette.error.main;
+
+  if (baseColor) {
+    const palette = theme.palette;
+    if (baseColor in palette) {
+      gradientColor = palette[baseColor].main;
+    }
+  }
+  if (color) {
+    gradientColor = color;
+  }
+
   return (
     <StyledTextHeaderDisplay>
       <TextBoxFormat>
         <GradientText color={gradientColor} variant={variant}>
           {title}
+          {pretitle && (
+            <GradientText color="#fafafa" as="span">
+              {pretitle}
+            </GradientText>
+          )}
         </GradientText>
         <Typography
           sx={{
@@ -38,20 +72,21 @@ export function TextHeaderDisplay(props: TextHeaderDisplayProps) {
           {subtitle}
         </Typography>
       </TextBoxFormat>
-
-      <div
-        style={{
-          backgroundImage: generateGradient(theme, {
-            color: gradientColor,
-          }),
-          height: 1,
-          position: 'relative',
-          top: variant === 'h6' ? '-.5rem' : '-1.17rem',
-          // top: '-1.17rem';
-          zIndex: -1,
-          opacity: 0.7,
-        }}
-      ></div>
+      {!hideDivider && (
+        <div
+          style={{
+            backgroundImage: generateGradient(theme, {
+              color: gradientColor,
+            }),
+            height: 1,
+            position: 'relative',
+            top: variant === 'h5' ? '-.5rem' : '-1.17rem',
+            // top: '-1.17rem';
+            zIndex: -1,
+            opacity: 0.7,
+          }}
+        ></div>
+      )}
       {/* <h1>Welcome to TextHeaderDisplay!</h1> */}
     </StyledTextHeaderDisplay>
   );

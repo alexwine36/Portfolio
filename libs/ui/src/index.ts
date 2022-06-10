@@ -1,3 +1,5 @@
+export * from './components/detail-card-display/detail-card-display';
+export * from './components/detail-list-display/detail-list-display';
 export * from './components/text-header-display/text-header-display';
 export * from './components/section-display/section-display';
 export * from './assets/generate-galaxy-background/generate-galaxy-background';
