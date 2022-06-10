@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/alexwine36/Portfolio/compare/v1.0.1...v1.0.2) (2022-06-09)
+
+
+### Bug Fixes
+
+* **ci:** removed unnecessary assets ([e408dfe](https://github.com/alexwine36/Portfolio/commit/e408dfefe330d5a2c079398a23e057e611276c9d))
+
 ## [1.0.1](https://github.com/alexwine36/Portfolio/compare/v1.0.0...v1.0.1) (2022-06-09)
 
 
