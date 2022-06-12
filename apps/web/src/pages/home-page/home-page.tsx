@@ -35,19 +35,27 @@ export function HomePage(props: HomePageProps) {
           marginY: 5,
         }}
       >
-        <SectionDisplay title="Experience">
-          <Grid container>
-            <Grid item>
-              <DetailCardDisplay
-                pretitle=" | Abrazo Homes"
-                title="Business Intelligence Analyst"
-                subtitle="08/18 - Present"
-              >
-                <DetailListDisplay bullets={bullets} />
-              </DetailCardDisplay>
-            </Grid>
+        <SectionDisplay title="Experience"></SectionDisplay>
+        <Grid container spacing={3}>
+          <Grid item xs>
+            <DetailCardDisplay
+              pretitle=" | Abrazo Homes"
+              title="Business Intelligence Analyst"
+              subtitle="08/18 - Present"
+            >
+              <DetailListDisplay bullets={bullets} />
+            </DetailCardDisplay>
           </Grid>
-        </SectionDisplay>
+          <Grid item xs>
+            <DetailCardDisplay
+              pretitle=" | Abrazo Homes"
+              title="Business Intelligence Analyst"
+              subtitle="08/18 - Present"
+            >
+              <DetailListDisplay bullets={bullets} />
+            </DetailCardDisplay>
+          </Grid>
+        </Grid>
       </Container>
 
       <Card>

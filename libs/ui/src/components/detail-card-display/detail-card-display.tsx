@@ -10,16 +10,21 @@ export interface DetailCardDisplayProps {
   children: React.ReactNode;
 }
 
+const shadowColor = '255';
 const StyledDetailCardDisplay = styled(Card)(
   ({ theme }) => `
 // color: pink;
 background-image: linear-gradient(
   to bottom right,
-  rgba(255, 255, 255, 0.2),
+  rgba(255, 255, 255, 0.1),
   rgba(255, 255, 255, 0)
 );
-backdrop-filter: 'blur(10px)';
-box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
+backdrop-filter: blur(10px);
+
+box-shadow: ${theme.shadows[1].replace(
+    /rgba\(0,0,0/gm,
+    `rgba(${shadowColor},${shadowColor},${shadowColor}`
+  )};
 border: 1px solid ${theme.palette.divider};
 `
 );
