@@ -15,9 +15,9 @@ export interface PolygonBackgroundProps extends SVGProps<SVGSVGElement> {
 export function PolygonBackground(props: PolygonBackgroundProps) {
   const theme = useTheme();
   const {
-    mainColor = theme.palette.secondary.dark,
-    secondaryColor = theme.palette.secondary.dark,
-    accentColor = theme.palette.secondary.main,
+    mainColor = theme.palette.secondary.main,
+    secondaryColor = theme.palette.secondary.main,
+    accentColor = theme.palette.secondary.light,
     ...rest
   } = props;
 

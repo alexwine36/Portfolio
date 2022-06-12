@@ -14,9 +14,9 @@ const shadowColor = '255';
 const StyledDetailCardDisplay = styled(Card)(
   ({ theme }) => `
 // color: pink;
-background-image: linear-gradient(
-  to bottom right,
-  rgba(255, 255, 255, 0.1),
+background-image: radial-gradient(
+
+  rgba(255, 255, 255, 0.15),
   rgba(255, 255, 255, 0)
 );
 backdrop-filter: blur(10px);

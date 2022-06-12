@@ -8,3 +8,10 @@ export const generateBase64 = (element: React.ReactElement<any, any>) => {
 
   return `data:image/svg+xml;base64,${res}`;
 };
+
+export const generateBackgroundUri = (
+  element: React.ReactElement<any, any>
+) => {
+  const uri = generateBase64(element);
+  return `url(${uri})`;
+};

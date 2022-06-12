@@ -4,7 +4,10 @@ import { Container } from '@mui/system';
 import {
   DetailCardDisplay,
   DetailListDisplay,
+  generateBackgroundUri,
+  GeneratePlanetBackground,
   HeroDisplay,
+  PageBackground,
   SectionDisplay,
 } from '@portfolio/ui';
 
@@ -12,7 +15,7 @@ import {
 export interface HomePageProps {}
 
 const StyledHomePage = styled.div`
-  color: pink;
+  // color: pink;
 `;
 
 export function HomePage(props: HomePageProps) {
@@ -28,7 +31,7 @@ export function HomePage(props: HomePageProps) {
   ];
 
   return (
-    <StyledHomePage>
+    <PageBackground>
       <HeroDisplay />
       <Container
         sx={{
@@ -36,7 +39,18 @@ export function HomePage(props: HomePageProps) {
         }}
       >
         <SectionDisplay title="Experience"></SectionDisplay>
-        <Grid container spacing={3}>
+        {/* <GeneratePlanetBackground /> */}
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            backgroundImage: generateBackgroundUri(
+              <GeneratePlanetBackground />
+            ),
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+          }}
+        >
           <Grid item xs>
             <DetailCardDisplay
               pretitle=" | Abrazo Homes"
@@ -46,7 +60,7 @@ export function HomePage(props: HomePageProps) {
               <DetailListDisplay bullets={bullets} />
             </DetailCardDisplay>
           </Grid>
-          <Grid item xs>
+          {/* <Grid item xs>
             <DetailCardDisplay
               pretitle=" | Abrazo Homes"
               title="Business Intelligence Analyst"
@@ -54,7 +68,7 @@ export function HomePage(props: HomePageProps) {
             >
               <DetailListDisplay bullets={bullets} />
             </DetailCardDisplay>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
 
@@ -62,7 +76,7 @@ export function HomePage(props: HomePageProps) {
         <CardHeader title="Sample"></CardHeader>
         <CardContent>Sample stuff</CardContent>
       </Card>
-    </StyledHomePage>
+    </PageBackground>
   );
 }
 

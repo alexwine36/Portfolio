@@ -1,16 +1,16 @@
 // import styled from '@emotion/styled';
-import { Grid, Paper, styled, Typography } from '@mui/material';
+import { Grid, styled, Typography } from '@mui/material';
 import hexRgb from 'hex-rgb';
-import GenerateGalaxyBackground from '../../assets/generate-galaxy-background/generate-galaxy-background';
-import { generateBase64 } from '../../lib/utilities/functions/generateBase64';
+import PolygonBackground from '../../assets/polygon-background/polygon-background';
+import { generateBackgroundUri } from '../../lib/utilities/functions/generateBase64';
 import GradientText from '../gradient-text/gradient-text';
 
 /* eslint-disable-next-line */
 export interface HeroDisplayProps {}
 
-const StyledHeroDisplay = styled(Paper)(({ theme }) => {
+const StyledHeroDisplay = styled('div')(({ theme }) => {
   // const { dark, main } = theme.palette.secondary;
-  const galaxyRes = generateBase64(<GenerateGalaxyBackground />);
+  const polygonRes = generateBackgroundUri(<PolygonBackground />);
   // const polygonRes = generateBase64(
   //   <PolygonBackground
   //     mainColor={dark}
@@ -21,19 +21,11 @@ const StyledHeroDisplay = styled(Paper)(({ theme }) => {
   // console.log(polygonRes);
 
   return `
-// color: pink;
-// background-image: linear-gradient(
-//   rgba(255, 255, 255, 0),
-//   rgb(247, 250, 255, 0.2) 100%
-// );
+//   background-color: transparent;
+// background-image: ${polygonRes};
+// background-size: cover;
+// background-position: center;
 height: 90vh;
-background-color: transparent;
-// background-image: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-
-padding: ${theme.spacing(3)};
-background-image: url(${galaxyRes});
-background-size: cover;
-background-position: center;
 `;
 });
 
@@ -58,8 +50,10 @@ const makeBackground = (bgColor: string) => {
 };
 
 export function HeroDisplay(props: HeroDisplayProps) {
+  // const theme = useTheme();
   return (
     <StyledHeroDisplay>
+      {/* <StyledPolygonBackground accentColor={theme.palette.primary.main} /> */}
       {/* <StyledGenerateGalaxyBackground /> */}
       <Grid container>
         <Grid item xs={6}>
