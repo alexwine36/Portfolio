@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/alexwine36/Portfolio/compare/v1.2.0...v1.2.1) (2022-06-13)
+
+
+### Bug Fixes
+
+* **deps:** updated nx deps ([3b5dc0b](https://github.com/alexwine36/Portfolio/commit/3b5dc0b67a78397915b101cae14fec13897020d9))
+
 # [1.2.0](https://github.com/alexwine36/Portfolio/compare/v1.1.0...v1.2.0) (2022-06-13)
 
 
