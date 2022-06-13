@@ -1,14 +1,12 @@
 import styled from '@emotion/styled';
-import { Card, CardContent, CardHeader, Grid } from '@mui/material';
-import { Container } from '@mui/system';
+import { Card, CardContent, CardHeader, Container, Grid } from '@mui/material';
 import {
   DetailCardDisplay,
   DetailListDisplay,
-  generateBackgroundUri,
-  GeneratePlanetBackground,
   HeroDisplay,
   PageBackground,
   SectionDisplay,
+  StyledGeneratePlanetBackground,
 } from '@portfolio/ui';
 
 /* eslint-disable-next-line */
@@ -36,31 +34,52 @@ export function HomePage(props: HomePageProps) {
       <Container
         sx={{
           marginY: 5,
+
+          // backgroundImage: generateBackgroundUri(<GeneratePlanetBackground />),
+          // backgroundPosition: 'center',
+          // backgroundSize: 'cover',
+          // backgroundAttachment: 'fixed',
         }}
       >
         <SectionDisplay title="Experience"></SectionDisplay>
         {/* <GeneratePlanetBackground /> */}
-        <Grid
-          container
-          spacing={3}
+        <StyledGeneratePlanetBackground>
+          <Grid container spacing={3}>
+            {/* <Container
           sx={{
-            backgroundImage: generateBackgroundUri(
-              <GeneratePlanetBackground />
-            ),
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
+            marginY: 5,
           }}
-        >
-          <Grid item xs>
-            <DetailCardDisplay
-              pretitle=" | Abrazo Homes"
-              title="Business Intelligence Analyst"
-              subtitle="08/18 - Present"
-            >
-              <DetailListDisplay bullets={bullets} />
-            </DetailCardDisplay>
-          </Grid>
-          {/* <Grid item xs>
+        > */}
+            <Grid item>
+              <DetailCardDisplay
+                pretitle=" | Abrazo Homes"
+                title="Business Intelligence Analyst"
+                subtitle="08/18 - Present"
+              >
+                <DetailListDisplay bullets={bullets} />
+              </DetailCardDisplay>
+            </Grid>
+            <Grid item>
+              <DetailCardDisplay
+                pretitle=" | Abrazo Homes"
+                title="Business Intelligence Analyst"
+                subtitle="08/18 - Present"
+              >
+                <DetailListDisplay bullets={bullets} />
+              </DetailCardDisplay>
+            </Grid>
+            <Grid item>
+              <DetailCardDisplay
+                pretitle=" | Abrazo Homes"
+                title="Business Intelligence Analyst"
+                subtitle="08/18 - Present"
+              >
+                <DetailListDisplay bullets={bullets} />
+              </DetailCardDisplay>
+            </Grid>
+            {/* </Container> */}
+
+            {/* <Grid item xs>
             <DetailCardDisplay
               pretitle=" | Abrazo Homes"
               title="Business Intelligence Analyst"
@@ -69,7 +88,8 @@ export function HomePage(props: HomePageProps) {
               <DetailListDisplay bullets={bullets} />
             </DetailCardDisplay>
           </Grid> */}
-        </Grid>
+          </Grid>
+        </StyledGeneratePlanetBackground>
       </Container>
 
       <Card>

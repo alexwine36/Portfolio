@@ -1,13 +1,121 @@
-import styled from '@emotion/styled';
-
+// import styled from '@emotion/styled';
+import { styled, useTheme } from '@mui/material';
+import random from 'random';
+import { SVGProps } from 'react';
+import seedrandom from 'seedrandom';
+import { generateGradient } from '../../lib/utilities/functions/generate-gradient';
+import { generateBackgroundUri } from '../../lib/utilities/functions/generateBase64';
 /* eslint-disable-next-line */
-export interface GeneratePlanetBackgroundProps {}
+export interface GeneratePlanetBackgroundProps
+  extends SVGProps<SVGSVGElement> {}
 
-const StyledGeneratePlanetBackground = styled.div`
-  color: pink;
-`;
+export const StyledGeneratePlanetBackground = styled('div')(
+  ({ theme }) => `
+left: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
+max-width: 100vw;
+position: relative;
+right: 50%;
+width: 100vw;
+background-image: ${generateBackgroundUri(<GeneratePlanetBackground />)};
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+// position: absolute;
+z-index: 0;
+`
+);
+
+const randomize = (data: { min: number; max: number }, seed?: string) => {
+  if (seed) {
+    random.use((seedrandom as any)(seed));
+  }
+  const { min, max } = data;
+  return random.float(min, max);
+};
+const randomItem = <T,>(arr: T[], seed?: string) => {
+  if (seed) {
+    random.use((seedrandom as any)(seed));
+  }
+  const max = arr.length;
+  const index = random.int(0, max - 1);
+  return arr[index];
+};
 
 export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
+  const size = 560;
+  const count = random.int(4, 6);
+  const baseSeed = randomize({
+    min: 0,
+    max: size,
+  });
+
+  const theme = useTheme();
+  const circleArray = [...Array(count).keys()];
+
+  const gradientCount = 6;
+
+  const fillOptions: string[] = [
+    // 'SvgjsLinearGradient1037',
+    // 'SvgjsLinearGradient1038',
+    // 'SvgjsLinearGradient1039',
+    // 'SvgjsLinearGradient1040',
+    // 'SvgjsLinearGradient1041',
+    // 'SvgjsLinearGradient1042',
+  ];
+
+  const linearGradients = [...Array(gradientCount).keys()].map((key) => {
+    const randomLoc = (seed: string) =>
+      randomize({ min: 0, max: size }, `${baseSeed}-position-${key}-${seed}`);
+
+    const colorOptions = [
+      theme.palette.primary.main,
+      theme.palette.secondary.main,
+      theme.palette.error.main,
+      theme.palette.info.main,
+    ];
+
+    const { start, end } = generateGradient(
+      randomItem(colorOptions, `${baseSeed}-${key}`)
+    );
+
+    const id = `SvgjsLinearGradient10${key}`;
+    fillOptions.push(id);
+
+    return {
+      x1: randomLoc('x1'),
+      y1: randomLoc('y1'),
+      x2: randomLoc('x2'),
+      y2: randomLoc('y2'),
+      gradientUnits: 'userSpaceOnUse',
+      id: id,
+      color: {
+        start,
+        end,
+      },
+    };
+    // return (
+    //   <linearGradient
+    //     x1={randomLoc('x1')}
+    //     y1={randomLoc('y1')}
+    //     x2={randomLoc('x2')}
+    //     y2={randomLoc('y2')}
+    //     gradientUnits="userSpaceOnUse"
+    //     id={id}
+    //   >
+    //     <stop stopColor={start} offset="0.1"></stop>
+    //     <stop stopColor={end} offset="0.9"></stop>
+    //   </linearGradient>
+    // );
+  });
+
+  const randomPosition = (idx: string, radius: number) =>
+    randomize(
+      { min: 0 + radius, max: size - radius },
+      `${baseSeed}-position-${idx}`
+    );
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,118 +125,40 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
       // width="1440"
       // height="560"
       // preserveAspectRatio="none"
-      viewBox="0 0 1440 560"
+      viewBox={`0 0 ${size} ${size}`}
+      {...props}
     >
-      <g clip-path='url("#SvgjsClipPath1036")' fill="none">
-        <circle
-          r="24.36"
-          cx="990.87"
-          cy="34.13"
-          fill="url(#SvgjsLinearGradient1037)"
-        ></circle>
-        <circle r="54.345" cx="1298.09" cy="333.11" fill="#43468b"></circle>
-        <circle
-          r="35.545"
-          cx="289.05"
-          cy="287.22"
-          fill="url(#SvgjsLinearGradient1038)"
-        ></circle>
-        <circle
-          r="15.06"
-          cx="603.03"
-          cy="185.54"
-          fill="url(#SvgjsLinearGradient1039)"
-        ></circle>
-        <circle
-          r="45.04"
-          cx="756.65"
-          cy="225.67"
-          fill="url(#SvgjsLinearGradient1040)"
-        ></circle>
-        <circle r="24.335" cx="1070.08" cy="184.68" fill="#43468b"></circle>
-        <circle
-          r="46.855"
-          cx="1205.2"
-          cy="273.37"
-          fill="url(#SvgjsLinearGradient1041)"
-        ></circle>
-        <circle
-          r="15.025"
-          cx="822.1"
-          cy="215.97"
-          fill="url(#SvgjsLinearGradient1042)"
-        ></circle>
+      <g clipPath='url("#SvgjsClipPath1036")' fill="none">
+        {circleArray.map((idx) => {
+          const radius = randomize({
+            min: size / (count * 4),
+            max: size / (count * 2),
+          });
+          return (
+            <circle
+              key={idx}
+              r={radius}
+              cx={randomPosition(`${baseSeed}-${idx}-x`, radius)}
+              cy={randomPosition(`${baseSeed}-${idx}-y`, radius)}
+              fill={`url(#${randomItem(fillOptions)})`}
+            ></circle>
+          );
+        })}
       </g>
       <defs>
         <clipPath id="SvgjsClipPath1036">
-          <rect width="1440" height="560" x="0" y="0"></rect>
+          <rect width={size} height={size} x="0" y="0"></rect>
         </clipPath>
-        <linearGradient
-          x1="942.15"
-          y1="34.13"
-          x2="1039.59"
-          y2="34.13"
-          gradientUnits="userSpaceOnUse"
-          id="SvgjsLinearGradient1037"
-        >
-          <stop stop-color="#84b6e0" offset="0.1"></stop>
-          <stop stop-color="#464a8f" offset="0.9"></stop>
-        </linearGradient>
-        <linearGradient
-          x1="217.96"
-          y1="287.22"
-          x2="360.14"
-          y2="287.22"
-          gradientUnits="userSpaceOnUse"
-          id="SvgjsLinearGradient1038"
-        >
-          <stop stop-color="#32325d" offset="0.1"></stop>
-          <stop stop-color="#424488" offset="0.9"></stop>
-        </linearGradient>
-        <linearGradient
-          x1="572.91"
-          y1="185.54"
-          x2="633.15"
-          y2="185.54"
-          gradientUnits="userSpaceOnUse"
-          id="SvgjsLinearGradient1039"
-        >
-          <stop stop-color="#e298de" offset="0.1"></stop>
-          <stop stop-color="#484687" offset="0.9"></stop>
-        </linearGradient>
-        <linearGradient
-          x1="666.5699999999999"
-          y1="225.66999999999996"
-          x2="846.7299999999999"
-          y2="225.66999999999996"
-          gradientUnits="userSpaceOnUse"
-          id="SvgjsLinearGradient1040"
-        >
-          <stop stop-color="#f29b7c" offset="0.1"></stop>
-          <stop stop-color="#7e6286" offset="0.9"></stop>
-        </linearGradient>
-        <linearGradient
-          x1="1111.49"
-          y1="273.37"
-          x2="1298.91"
-          y2="273.37"
-          gradientUnits="userSpaceOnUse"
-          id="SvgjsLinearGradient1041"
-        >
-          <stop stop-color="#f29b7c" offset="0.1"></stop>
-          <stop stop-color="#7e6286" offset="0.9"></stop>
-        </linearGradient>
-        <linearGradient
-          x1="792.0500000000001"
-          y1="215.97"
-          x2="852.1500000000001"
-          y2="215.97"
-          gradientUnits="userSpaceOnUse"
-          id="SvgjsLinearGradient1042"
-        >
-          <stop stop-color="#84b6e0" offset="0.1"></stop>
-          <stop stop-color="#464a8f" offset="0.9"></stop>
-        </linearGradient>
+        {linearGradients.map((gradient, idx) => {
+          const { color, ...rest } = gradient;
+          const { start, end } = color;
+          return (
+            <linearGradient {...rest} key={idx}>
+              <stop stopColor={start} offset="0.1"></stop>
+              <stop stopColor={end} offset="0.9"></stop>
+            </linearGradient>
+          );
+        })}
       </defs>
     </svg>
     // <StyledGeneratePlanetBackground>

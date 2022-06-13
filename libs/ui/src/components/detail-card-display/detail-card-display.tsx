@@ -19,7 +19,7 @@ background-image: radial-gradient(
   rgba(255, 255, 255, 0.15),
   rgba(255, 255, 255, 0)
 );
-backdrop-filter: blur(10px);
+backdrop-filter: blur(25px);
 
 box-shadow: ${theme.shadows[1].replace(
     /rgba\(0,0,0/gm,
