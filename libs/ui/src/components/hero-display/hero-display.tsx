@@ -1,6 +1,6 @@
 // import styled from '@emotion/styled';
 import { Grid, styled, Typography } from '@mui/material';
-import hexRgb from 'hex-rgb';
+// import hexRgb from 'hex-rgb';
 import PolygonBackground from '../../assets/polygon-background/polygon-background';
 import { generateBackgroundUri } from '../../lib/utilities/functions/generateBase64';
 import GradientText from '../gradient-text/gradient-text';
@@ -33,21 +33,21 @@ const formatRgba = (values: (number | string)[]) => {
   return `rgba(${values.map((v) => `${v}`).join(', ')})`;
 };
 
-const makeBackground = (bgColor: string) => {
-  const res = `linear-gradient(to right, ${formatRgba(
-    hexRgb(bgColor, {
-      alpha: 0,
-      format: 'array',
-    })
-  )}, ${formatRgba(
-    hexRgb(bgColor, {
-      alpha: 1,
-      format: 'array',
-    })
-  )}), url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)`;
+// const makeBackground = (bgColor: string) => {
+//   const res = `linear-gradient(to right, ${formatRgba(
+//     hexRgb(bgColor, {
+//       alpha: 0,
+//       format: 'array',
+//     })
+//   )}, ${formatRgba(
+//     hexRgb(bgColor, {
+//       alpha: 1,
+//       format: 'array',
+//     })
+//   )}), url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)`;
 
-  return res;
-};
+//   return res;
+// };
 
 export function HeroDisplay(props: HeroDisplayProps) {
   // const theme = useTheme();
