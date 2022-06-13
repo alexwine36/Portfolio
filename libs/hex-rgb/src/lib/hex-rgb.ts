@@ -41,14 +41,6 @@ export type RgbaTuple = [
   alpha: number
 ];
 
-type FormatReturn<T extends Options['format']> = T extends 'array'
-  ? RgbaTuple
-  : T extends 'css'
-  ? string
-  : T extends 'object'
-  ? RgbaObject
-  : RgbaObject;
-
 /**
 Convert HEX color to RGBA.
 @param hex - The color in HEX format. Leading `#` is optional.
