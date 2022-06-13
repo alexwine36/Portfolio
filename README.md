@@ -2,6 +2,9 @@
 [![Release Action](https://github.com/alexwine36/Portfolio/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/alexwine36/Portfolio/actions/workflows/build-deploy.yml.yml)
 
 
+
+[Coverage](COVERAGE.md)
+
 # Portfolio
 
 This project was generated using [Nx](https://nx.dev).
