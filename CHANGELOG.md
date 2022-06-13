@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/alexwine36/Portfolio/compare/v1.0.2...v1.1.0) (2022-06-12)
+
+
+### Bug Fixes
+
+* **ui:** scaffolding display ([a440bb4](https://github.com/alexwine36/Portfolio/commit/a440bb42c7cad2f891e88d11dc9e4ff8793059c2))
+
+
+### Features
+
+* **ui:** added display text component ([862f30f](https://github.com/alexwine36/Portfolio/commit/862f30f3e5e8d10325ea23f8b3aef681a1738526))
+* **ui:** added section display ([faa5d84](https://github.com/alexwine36/Portfolio/commit/faa5d841276e5427e59f59c49e4d0d728143b249))
+* **ui:** updated detail card for displays ([d202059](https://github.com/alexwine36/Portfolio/commit/d202059f9297f4734b95a31709da77bac28e5adf))
+
 ## [1.0.2](https://github.com/alexwine36/Portfolio/compare/v1.0.1...v1.0.2) (2022-06-09)
 
 
