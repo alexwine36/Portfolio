@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/alexwine36/Portfolio/compare/v1.1.0...v1.2.0) (2022-06-13)
+
+
+### Features
+
+* **hex-rgb:** added custom library for hex-rgb ([7b5d2be](https://github.com/alexwine36/Portfolio/commit/7b5d2be314ddb2e73c0f6661809c9d77c2bd9ccd))
+* **ui:** added planet background ([38caf00](https://github.com/alexwine36/Portfolio/commit/38caf005ce7db332c394de515316a1dd88bb2fe1))
+* **ui:** added planet background and convenience methods ([5c9b39e](https://github.com/alexwine36/Portfolio/commit/5c9b39e25af71384c51f96414d2c4876a0fe9cb9))
+
 # [1.1.0](https://github.com/alexwine36/Portfolio/compare/v1.0.2...v1.1.0) (2022-06-12)
 
 
