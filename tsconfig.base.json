@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@portfolio/hex-rgb": ["libs/hex-rgb/src/index.ts"],
       "@portfolio/ui": ["libs/ui/src/index.ts"]
     }
   },

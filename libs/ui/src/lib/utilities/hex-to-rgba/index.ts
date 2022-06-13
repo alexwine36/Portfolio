@@ -1,5 +1,5 @@
 import { rgbToHex } from '@mui/material';
-import hexRgb from 'hex-rgb';
+import { hexRgb } from '@portfolio/hex-rgb';
 
 export const hexToRgba = (color: string, alpha: number) => {
   console.log(color);
