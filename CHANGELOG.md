@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/alexwine36/Portfolio/compare/v1.2.2...v1.2.3) (2022-06-13)
+
+
+### Bug Fixes
+
+* **versionrc:** removed versionrc file ([4b20d1a](https://github.com/alexwine36/Portfolio/commit/4b20d1ab60538acf8bb0c2794f8b8c6ead7834c7))
+
 ## [1.2.2](https://github.com/alexwine36/Portfolio/compare/v1.2.1...v1.2.2) (2022-06-13)
 
 
