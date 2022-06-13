@@ -42,6 +42,13 @@ jobs:
           # thresholds: '60 80'
       - name: Check output
         run: ls -aFG
+      - name: Copy Coverage Summary
+        run: cp code-coverage-results.md COVERAGE.md
+      - name: Upload coverage-summary files
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-summary
+          path: COVERAGE.md
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -78,3 +85,22 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+  release:
+    name: release
+    if: github.ref == 'refs/heads/main'
+    needs: [test, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: DerYeger/yarn-setup-action@master
+        with:
+          node-version: 16
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage-summary
+          # path: build
+      - run: ls -aFG
+      - uses: cycjimmy/semantic-release-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
