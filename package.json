@@ -8,7 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "test:ci": "nx affected --target=test --parallel=3 --ci --code-coverage",
+    "test:ci": "nx test --parallel=3 --ci --code-coverage --coverageReporters=cobertura --coverageReporters=html --coverageReporters=text",
     "lint": "nx affected --target=lint --parallel=3",
     "format:check": "nx format:check"
   },
@@ -89,4 +89,3 @@
     }
   }
 }
-

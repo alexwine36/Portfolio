@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+      - uses: nrwl/nx-set-shas@v2
       - name: Install Node.js
         uses: actions/setup-node@v3
         # with:
@@ -29,8 +29,22 @@ jobs:
         run: yarn build
 
       - name: Run tests
-        run: yarn test
+        run: yarn test:ci
 
+      - name: Copy Coverage
+        run: cp coverage/apps/web/cobertura-coverage.xml coverage.cobertura.xml
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.2.0
+        with:
+          filename: coverage.cobertura.xml
+          badge: true
+          # fail_below_min: true
+          format: markdown
+          # hide_branch_rate: false
+          # hide_complexity: true
+          # indicators: true
+          output: both
+          # thresholds: '60 80'
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
