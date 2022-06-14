@@ -26,4 +26,9 @@ describe('hexRgb', () => {
 
     expect(data).toBe('rgba(0,0,0,0.5)');
   });
+
+  test('should return alpha vals', () => {
+    const { alpha } = hexRgb('#000', { alpha: 0 });
+    expect(alpha).toBe(0);
+  });
 });
