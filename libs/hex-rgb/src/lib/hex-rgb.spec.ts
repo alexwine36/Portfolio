@@ -31,4 +31,10 @@ describe('hexRgb', () => {
     const { alpha } = hexRgb('#000', { alpha: 0 });
     expect(alpha).toBe(0);
   });
+  test('should should throw error', () => {
+    // expect(hexRgb('#33', { format: 'css' })).toThrow();
+    expect(() => {
+      hexRgb('#33', { format: 'css' });
+    }).toThrow('Expected a valid hex string');
+  });
 });
