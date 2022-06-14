@@ -1,4 +1,4 @@
-![Code Coverage](https://img.shields.io/badge/Code%20Coverage-86%25-success?style=flat)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-87%25-success?style=flat)
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
@@ -6,6 +6,10 @@ apps.web.src.app | 100% | 100% | 0 | ✔
 apps.web.src.pages.home-page | 100% | 100% | 0 | ✔
 libs.hex-rgb.src | 100% | 100% | 0 | ✔
 libs.hex-rgb.src.lib | 66% | 45% | 0 | ➖
+libs.resume-hooks.src | 100% | 100% | 0 | ✔
+libs.resume-hooks.src.lib | 50% | 100% | 0 | ➖
+libs.resume-hooks.src.lib.data | 100% | 100% | 0 | ✔
+libs.resume-hooks.src.lib.use-rhubarb-resume | 100% | 100% | 0 | ✔
 libs.ui.src | 100% | 100% | 0 | ✔
 libs.ui.src.assets.code-thinking | 25% | 0% | 0 | ❌
 libs.ui.src.assets.generate-galaxy-background | 100% | 100% | 0 | ✔
@@ -22,4 +26,4 @@ libs.ui.src.lib | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **86%** (133 / 155) | **64%** (34 / 53) | **0** | ✔
+**Summary** | **87%** (151 / 174) | **67%** (38 / 57) | **0** | ✔

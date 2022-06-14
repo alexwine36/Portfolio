@@ -1,3 +1,15 @@
+## [1.3.0](https://github.com/alexwine36/Portfolio/compare/v1.2.5...v1.3.0) (2022-06-14)
+
+
+### Features
+
+* **resume hooks:** scaffolded provider for resume data ([7f4ba09](https://github.com/alexwine36/Portfolio/commit/7f4ba09a50a04e76fc144980678c7769ce5ffa86))
+
+
+### Bug Fixes
+
+* **resume hooks:** updated resume provider ([4d841e7](https://github.com/alexwine36/Portfolio/commit/4d841e74ab8c73302b9370a66430efdefeec59bd))
+
 ## [1.2.5](https://github.com/alexwine36/Portfolio/compare/v1.2.4...v1.2.5) (2022-06-14)
 
 
