@@ -117,9 +117,10 @@ export function hexRgb<T extends Options, K extends T['format']>(
 
   if (format === 'css') {
     const alphaString =
-      alpha === 1 ? '' : ` / ${Number((alpha * 100).toFixed(2))}%`;
+      alpha === 1 ? '' : `${Number((alpha * 100).toFixed(2))}%`;
     // @ts-ignore
-    return `rgb(${red} ${green} ${blue}${alphaString})`;
+    // return `rgb(${red} ${green} ${blue}${alphaString})`;
+    return `rgba(${[red, green, blue, alpha].join(',')})`;
   }
   // @ts-ignore
   return { red, green, blue, alpha };
