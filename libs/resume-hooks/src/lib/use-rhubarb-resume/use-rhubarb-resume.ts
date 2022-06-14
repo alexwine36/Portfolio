@@ -1,5 +1,4 @@
 import dayjs from 'dayjs';
-import { useState } from 'react';
 import data from '../data/rhubarb';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 // export interface UseRhubarbResume {
@@ -30,8 +29,11 @@ const formatResume = () => {
   };
 };
 
+type ResumeKeys = keyof typeof data;
+
 export function useRhubarbResume() {
-  const [resume] = useState(formatResume());
+  // const [resume] = useState(formatResume());
+  const resume = formatResume();
 
   // const increment = useCallback(() => setCount((x) => x + 1), []);
   return { resume };

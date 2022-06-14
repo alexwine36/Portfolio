@@ -13,5 +13,5 @@ export const generateBackgroundUri = (
   element: React.ReactElement<any, any>
 ) => {
   const uri = generateBase64(element);
-  return `url(${uri})`;
+  return `url("${uri}")`;
 };
