@@ -1,3 +1,16 @@
+## [1.2.5](https://github.com/alexwine36/Portfolio/compare/v1.2.4...v1.2.5) (2022-06-14)
+
+
+### Bug Fixes
+
+* **hex-rgb:** testing ([c3202f4](https://github.com/alexwine36/Portfolio/commit/c3202f446845abfa44cdbf561762d4d0ddaab0fd))
+
+
+### Tests
+
+* **hex-rgb:** added alpha value for options ([5ce134c](https://github.com/alexwine36/Portfolio/commit/5ce134cec44883a16b408396daf26e5c606598fd))
+* **hex-rgb:** updated hex-rgb tests ([a3fc841](https://github.com/alexwine36/Portfolio/commit/a3fc84152482b9086391937729d8839be20f0421))
+
 ## [1.2.4](https://github.com/alexwine36/Portfolio/compare/v1.2.3...v1.2.4) (2022-06-14)
 
 
