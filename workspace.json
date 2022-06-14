@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "hex-rgb": "libs/hex-rgb",
+    "resume-hooks": "libs/resume-hooks",
     "ui": "libs/ui",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"

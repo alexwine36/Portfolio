@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Card, CardContent, CardHeader, Container, Grid } from '@mui/material';
+import { useRhubarbResume } from '@portfolio/resume-hooks';
 import {
   DetailCardDisplay,
   DetailListDisplay,
@@ -28,6 +29,9 @@ export function HomePage(props: HomePageProps) {
     'Managed department spending per annum through strategic procurement of equipment and services.',
   ];
 
+  const { resume } = useRhubarbResume();
+  console.log(resume);
+
   return (
     <PageBackground>
       <HeroDisplay />
@@ -44,42 +48,57 @@ export function HomePage(props: HomePageProps) {
         <SectionDisplay title="Experience"></SectionDisplay>
         {/* <GeneratePlanetBackground /> */}
         <StyledGeneratePlanetBackground>
-          <Grid container spacing={3}>
-            {/* <Container
+          <Container>
+            <Grid container spacing={3}>
+              {/* <Container
           sx={{
             marginY: 5,
           }}
         > */}
-            <Grid item>
-              <DetailCardDisplay
-                pretitle=" | Abrazo Homes"
-                title="Business Intelligence Analyst"
-                subtitle="08/18 - Present"
-              >
-                <DetailListDisplay bullets={bullets} />
-              </DetailCardDisplay>
-            </Grid>
-            <Grid item>
-              <DetailCardDisplay
-                pretitle=" | Abrazo Homes"
-                title="Business Intelligence Analyst"
-                subtitle="08/18 - Present"
-              >
-                <DetailListDisplay bullets={bullets} />
-              </DetailCardDisplay>
-            </Grid>
-            <Grid item>
-              <DetailCardDisplay
-                pretitle=" | Abrazo Homes"
-                title="Business Intelligence Analyst"
-                subtitle="08/18 - Present"
-              >
-                <DetailListDisplay bullets={bullets} />
-              </DetailCardDisplay>
-            </Grid>
-            {/* </Container> */}
 
-            {/* <Grid item xs>
+              {resume.workExperience.map((exp) => {
+                return (
+                  <Grid item xs={12}>
+                    <DetailCardDisplay
+                      pretitle={` | ${exp.role}`}
+                      title={exp.company.name}
+                      subtitle={exp.dateDisplay}
+                    >
+                      <DetailListDisplay bullets={exp.bullets} />
+                    </DetailCardDisplay>
+                  </Grid>
+                );
+              })}
+              {/* <Grid item>
+              <DetailCardDisplay
+                pretitle=" | Abrazo Homes"
+                title="Business Intelligence Analyst"
+                subtitle="08/18 - Present"
+              >
+                <DetailListDisplay bullets={bullets} />
+              </DetailCardDisplay>
+            </Grid>
+            <Grid item>
+              <DetailCardDisplay
+                pretitle=" | Abrazo Homes"
+                title="Business Intelligence Analyst"
+                subtitle="08/18 - Present"
+              >
+                <DetailListDisplay bullets={bullets} />
+              </DetailCardDisplay>
+            </Grid>
+            <Grid item>
+              <DetailCardDisplay
+                pretitle=" | Abrazo Homes"
+                title="Business Intelligence Analyst"
+                subtitle="08/18 - Present"
+              >
+                <DetailListDisplay bullets={bullets} />
+              </DetailCardDisplay>
+            </Grid> */}
+              {/* </Container> */}
+
+              {/* <Grid item xs>
             <DetailCardDisplay
               pretitle=" | Abrazo Homes"
               title="Business Intelligence Analyst"
@@ -88,7 +107,8 @@ export function HomePage(props: HomePageProps) {
               <DetailListDisplay bullets={bullets} />
             </DetailCardDisplay>
           </Grid> */}
-          </Grid>
+            </Grid>
+          </Container>
         </StyledGeneratePlanetBackground>
       </Container>
 

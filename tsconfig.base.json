@@ -14,8 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "paths": {
       "@portfolio/hex-rgb": ["libs/hex-rgb/src/index.ts"],
+      "@portfolio/resume-hooks": ["libs/resume-hooks/src/index.ts"],
       "@portfolio/ui": ["libs/ui/src/index.ts"]
     }
   },
