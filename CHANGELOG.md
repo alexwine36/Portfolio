@@ -1,3 +1,16 @@
+## [1.2.4](https://github.com/alexwine36/Portfolio/compare/v1.2.3...v1.2.4) (2022-06-14)
+
+
+### Bug Fixes
+
+* **prettier:** updated prettier config ([d0a5272](https://github.com/alexwine36/Portfolio/commit/d0a52724fca0b792f60984165089c86a011a6899))
+
+
+### Docs
+
+* **readme:** updated readme ([78eb947](https://github.com/alexwine36/Portfolio/commit/78eb9477d90ed07ba20a8da8612979e5aa67a582))
+* **release notes:** updated release notes config ([af8deaa](https://github.com/alexwine36/Portfolio/commit/af8deaa2d0d119487ca71a8285523b97a53786cd))
+
 ## [1.2.3](https://github.com/alexwine36/Portfolio/compare/v1.2.2...v1.2.3) (2022-06-13)
 
 
