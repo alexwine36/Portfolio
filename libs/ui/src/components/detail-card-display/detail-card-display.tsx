@@ -13,19 +13,7 @@ export interface DetailCardDisplayProps {
 const shadowColor = '255';
 const StyledDetailCardDisplay = styled(Card)(
   ({ theme }) => `
-// color: pink;
-background-image: radial-gradient(
 
-  rgba(255, 255, 255, 0.15),
-  rgba(255, 255, 255, 0)
-);
-backdrop-filter: blur(25px);
-
-box-shadow: ${theme.shadows[1].replace(
-    /rgba\(0,0,0/gm,
-    `rgba(${shadowColor},${shadowColor},${shadowColor}`
-  )};
-border: 1px solid ${theme.palette.divider};
 `
 );
 

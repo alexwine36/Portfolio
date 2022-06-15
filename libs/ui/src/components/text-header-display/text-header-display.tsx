@@ -57,7 +57,13 @@ export function TextHeaderDisplay(props: TextHeaderDisplayProps) {
         <GradientText color={gradientColor} variant={variant}>
           {title}
           {pretitle && (
-            <GradientText color="#fafafa" as="span">
+            <GradientText
+              sx={{
+                fontWeight: '400',
+              }}
+              color="#fafafa"
+              as="span"
+            >
               {pretitle}
             </GradientText>
           )}
