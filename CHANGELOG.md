@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/alexwine36/Portfolio/compare/v1.3.0...v1.3.1) (2022-06-15)
+
+
+### Bug Fixes
+
+* **ui:** galaxy updated with more colors ([1171eeb](https://github.com/alexwine36/Portfolio/commit/1171eeb916bc3284e8c26b19a24112977380ff0a))
+* **ui:** updated galaxy background source ([060b9f4](https://github.com/alexwine36/Portfolio/commit/060b9f46a024f02c26c5cbce534c7f2df54a72fa))
+* **web:** updated website title ([b2ceaac](https://github.com/alexwine36/Portfolio/commit/b2ceaac357195b1fdd481fa9429704dfdc677fec))
+
 ## [1.3.0](https://github.com/alexwine36/Portfolio/compare/v1.2.5...v1.3.0) (2022-06-14)
 
 
