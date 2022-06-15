@@ -1,9 +1,11 @@
 import { styled } from '@mui/material';
 import { Background, Parallax } from 'react-parallax';
 import { SizeMe } from 'react-sizeme';
+import GeneratePlanetBackground from '../../assets/generate-planet-background/generate-planet-background';
 /* eslint-disable-next-line */
 export interface ParallaxBackgroundProps {
-  image: React.ReactElement;
+  image?: React.ReactElement;
+  planet?: boolean;
   children: React.ReactElement;
 }
 
@@ -37,7 +39,7 @@ const StyledBackground = styled('div')<{ height?: number | null }>(
 );
 
 export function ParallaxBackground(props: ParallaxBackgroundProps) {
-  const { image, children } = props;
+  const { image, children, planet } = props;
 
   return (
     <StyledParallaxBackground>
@@ -58,7 +60,16 @@ export function ParallaxBackground(props: ParallaxBackgroundProps) {
                 // }}
               >
                 <StyledBackground height={size.height}>
-                  {image}
+                  {planet ? (
+                    <GeneratePlanetBackground
+                      dimensions={{
+                        width: size.width || 560,
+                        height: size.height || 560,
+                      }}
+                    />
+                  ) : (
+                    image
+                  )}
                 </StyledBackground>
               </Bg>
               {children}

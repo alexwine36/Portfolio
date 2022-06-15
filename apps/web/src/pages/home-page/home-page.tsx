@@ -8,7 +8,6 @@ import {
   PageBackground,
   ParallaxBackground,
   SectionDisplay,
-  StyledGeneratePlanetBackground,
 } from '@portfolio/ui';
 
 /* eslint-disable-next-line */
@@ -42,7 +41,7 @@ export function HomePage(props: HomePageProps) {
         </Container>
 
         {/* <GeneratePlanetBackground /> */}
-        <ParallaxBackground image={<StyledGeneratePlanetBackground />}>
+        <ParallaxBackground planet>
           <Container>
             <Grid container spacing={3}>
               {/* <Container

@@ -6,7 +6,7 @@ import seedrandom from 'seedrandom';
 import { generateGradient } from '../../lib/utilities/functions/generate-gradient';
 /* eslint-disable-next-line */
 export interface GeneratePlanetBackgroundProps extends SVGProps<SVGSVGElement> {
-  size?: {
+  dimensions?: {
     width: number;
     height: number;
   };
@@ -41,8 +41,17 @@ const randomItem = <T,>(arr: T[], seed?: string) => {
 };
 
 export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
-  const size = 560;
-  const count = random.int(4, 6);
+  let size = 560;
+  const { dimensions } = props;
+  // const {width = size, height = size} = dimensions;
+  const width = dimensions?.width || size;
+  const height = dimensions?.height || size;
+
+  if (dimensions) {
+    size = Math.min(width, height);
+  }
+
+  const count = random.int(4, Math.round(size / 100));
   const baseSeed = randomize({
     min: 0,
     max: size,
@@ -63,8 +72,10 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
   ];
 
   const linearGradients = [...Array(gradientCount).keys()].map((key) => {
-    const randomLoc = (seed: string) =>
-      randomize({ min: 0, max: size }, `${baseSeed}-position-${key}-${seed}`);
+    const randomLocX = (seed: string) =>
+      randomize({ min: 0, max: width }, `${baseSeed}-position-${key}-${seed}`);
+    const randomLocY = (seed: string) =>
+      randomize({ min: 0, max: width }, `${baseSeed}-position-${key}-${seed}`);
 
     const colorOptions = [
       theme.palette.primary.main,
@@ -81,10 +92,10 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
     fillOptions.push(id);
 
     return {
-      x1: randomLoc('x1'),
-      y1: randomLoc('y1'),
-      x2: randomLoc('x2'),
-      y2: randomLoc('y2'),
+      x1: randomLocX('x1'),
+      y1: randomLocY('y1'),
+      x2: randomLocX('x2'),
+      y2: randomLocY('y2'),
       gradientUnits: 'userSpaceOnUse',
       id: id,
       color: {
@@ -107,10 +118,10 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
     // );
   });
 
-  const randomPosition = (idx: string, radius: number) =>
+  const randomPosition = (idx: string, axis: 'x' | 'y', radius: number) =>
     randomize(
-      { min: 0 + radius, max: size - radius },
-      `${baseSeed}-position-${idx}`
+      { min: 0 + radius, max: axis === 'x' ? width : height - radius },
+      `${baseSeed}-position-${idx}-${axis}`
     );
 
   return (
@@ -122,21 +133,21 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
       // width="1440"
       // height="560"
       // preserveAspectRatio="none"
-      viewBox={`0 0 ${size} ${size}`}
+      viewBox={`0 0 ${width} ${height}`}
       {...props}
     >
       <g clipPath='url("#SvgjsClipPath1036")' fill="none">
         {circleArray.map((idx) => {
           const radius = randomize({
-            min: size / (count * 4),
-            max: size / (count * 2),
+            min: size / (count * 2),
+            max: size / (count * 1),
           });
           return (
             <circle
               key={idx}
               r={radius}
-              cx={randomPosition(`${baseSeed}-${idx}-x`, radius)}
-              cy={randomPosition(`${baseSeed}-${idx}-y`, radius)}
+              cx={randomPosition(`${baseSeed}-${idx}`, 'x', radius)}
+              cy={randomPosition(`${baseSeed}-${idx}`, 'y', radius)}
               fill={`url(#${randomItem(fillOptions)})`}
             ></circle>
           );
@@ -144,7 +155,7 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
       </g>
       <defs>
         <clipPath id="SvgjsClipPath1036">
-          <rect width={size} height={size} x="0" y="0"></rect>
+          <rect width={width} height={height} x="0" y="0"></rect>
         </clipPath>
         {linearGradients.map((gradient, idx) => {
           const { color, ...rest } = gradient;
