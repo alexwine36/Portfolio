@@ -1,3 +1,4 @@
+export * from './components/parallax-background/parallax-background';
 export * from './components/page-background/page-background';
 export * from './assets/code-thinking/code-thinking';
 export * from './assets/generate-galaxy-background/generate-galaxy-background';

@@ -1,5 +1,6 @@
 import { styled, useTheme } from '@mui/material';
 import { SVGProps } from 'react';
+import { cssImageSettings } from '../../lib/utilities/css-image-settings';
 import { hexToRgba } from '../../lib/utilities/hex-to-rgba';
 
 // CREDIT TO https://bgjar.com
@@ -15,9 +16,9 @@ export interface PolygonBackgroundProps extends SVGProps<SVGSVGElement> {
 export function PolygonBackground(props: PolygonBackgroundProps) {
   const theme = useTheme();
   const {
-    mainColor = theme.palette.secondary.main,
-    secondaryColor = theme.palette.secondary.main,
-    accentColor = theme.palette.secondary.light,
+    mainColor = theme.palette.primary.dark,
+    secondaryColor = theme.palette.primary.main,
+    accentColor = theme.palette.primary.light,
     ...rest
   } = props;
 
@@ -143,9 +144,7 @@ export function PolygonBackground(props: PolygonBackgroundProps) {
 }
 
 export const StyledPolygonBackground = styled(PolygonBackground)`
-  z-index: 0;
-  position: absolute;
-  // transform: translate(10%, 5%);
+  ${cssImageSettings}
 `;
 
 export default PolygonBackground;

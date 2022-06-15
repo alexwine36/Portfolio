@@ -6,6 +6,7 @@ import {
   DetailListDisplay,
   HeroDisplay,
   PageBackground,
+  ParallaxBackground,
   SectionDisplay,
   StyledGeneratePlanetBackground,
 } from '@portfolio/ui';
@@ -35,26 +36,20 @@ export function HomePage(props: HomePageProps) {
   return (
     <PageBackground>
       <HeroDisplay />
-      <Container
-        sx={{
-          marginY: 5,
+      <>
+        <Container>
+          <SectionDisplay title="Experience"></SectionDisplay>
+        </Container>
 
-          // backgroundImage: generateBackgroundUri(<GeneratePlanetBackground />),
-          // backgroundPosition: 'center',
-          // backgroundSize: 'cover',
-          // backgroundAttachment: 'fixed',
-        }}
-      >
-        <SectionDisplay title="Experience"></SectionDisplay>
         {/* <GeneratePlanetBackground /> */}
-        <StyledGeneratePlanetBackground>
+        <ParallaxBackground image={<StyledGeneratePlanetBackground />}>
           <Container>
             <Grid container spacing={3}>
               {/* <Container
-          sx={{
-            marginY: 5,
-          }}
-        > */}
+sx={{
+  marginY: 5,
+}}
+> */}
 
               {resume.workExperience.map((exp) => {
                 return (
@@ -70,47 +65,47 @@ export function HomePage(props: HomePageProps) {
                 );
               })}
               {/* <Grid item>
-              <DetailCardDisplay
-                pretitle=" | Abrazo Homes"
-                title="Business Intelligence Analyst"
-                subtitle="08/18 - Present"
-              >
-                <DetailListDisplay bullets={bullets} />
-              </DetailCardDisplay>
-            </Grid>
-            <Grid item>
-              <DetailCardDisplay
-                pretitle=" | Abrazo Homes"
-                title="Business Intelligence Analyst"
-                subtitle="08/18 - Present"
-              >
-                <DetailListDisplay bullets={bullets} />
-              </DetailCardDisplay>
-            </Grid>
-            <Grid item>
-              <DetailCardDisplay
-                pretitle=" | Abrazo Homes"
-                title="Business Intelligence Analyst"
-                subtitle="08/18 - Present"
-              >
-                <DetailListDisplay bullets={bullets} />
-              </DetailCardDisplay>
-            </Grid> */}
+    <DetailCardDisplay
+      pretitle=" | Abrazo Homes"
+      title="Business Intelligence Analyst"
+      subtitle="08/18 - Present"
+    >
+      <DetailListDisplay bullets={bullets} />
+    </DetailCardDisplay>
+  </Grid>
+  <Grid item>
+    <DetailCardDisplay
+      pretitle=" | Abrazo Homes"
+      title="Business Intelligence Analyst"
+      subtitle="08/18 - Present"
+    >
+      <DetailListDisplay bullets={bullets} />
+    </DetailCardDisplay>
+  </Grid>
+  <Grid item>
+    <DetailCardDisplay
+      pretitle=" | Abrazo Homes"
+      title="Business Intelligence Analyst"
+      subtitle="08/18 - Present"
+    >
+      <DetailListDisplay bullets={bullets} />
+    </DetailCardDisplay>
+  </Grid> */}
               {/* </Container> */}
 
               {/* <Grid item xs>
-            <DetailCardDisplay
-              pretitle=" | Abrazo Homes"
-              title="Business Intelligence Analyst"
-              subtitle="08/18 - Present"
-            >
-              <DetailListDisplay bullets={bullets} />
-            </DetailCardDisplay>
-          </Grid> */}
+  <DetailCardDisplay
+    pretitle=" | Abrazo Homes"
+    title="Business Intelligence Analyst"
+    subtitle="08/18 - Present"
+  >
+    <DetailListDisplay bullets={bullets} />
+  </DetailCardDisplay>
+</Grid> */}
             </Grid>
           </Container>
-        </StyledGeneratePlanetBackground>
-      </Container>
+        </ParallaxBackground>
+      </>
 
       <Card>
         <CardHeader title="Sample"></CardHeader>

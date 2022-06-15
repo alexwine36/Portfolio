@@ -1,7 +1,10 @@
 // import styled from '@emotion/styled';
-import { Grid, styled, Typography } from '@mui/material';
+import { Container, Grid, styled, Typography } from '@mui/material';
+import { SizeMe } from 'react-sizeme';
 // import hexRgb from 'hex-rgb';
-import PolygonBackground from '../../assets/polygon-background/polygon-background';
+import PolygonBackground, {
+  StyledPolygonBackground,
+} from '../../assets/polygon-background/polygon-background';
 import { generateBackgroundUri } from '../../lib/utilities/functions/generateBase64';
 import GradientText from '../gradient-text/gradient-text';
 
@@ -26,6 +29,7 @@ const StyledHeroDisplay = styled('div')(({ theme }) => {
 // background-size: cover;
 // background-position: center;
 height: 90vh;
+max-height: 500px;
 `;
 });
 
@@ -52,25 +56,39 @@ const formatRgba = (values: (number | string)[]) => {
 export function HeroDisplay(props: HeroDisplayProps) {
   // const theme = useTheme();
   return (
-    <StyledHeroDisplay>
-      {/* <StyledPolygonBackground accentColor={theme.palette.primary.main} /> */}
-      {/* <StyledGenerateGalaxyBackground /> */}
-      <Grid container>
-        <Grid item xs={6}>
-          <Typography variant="h3">
-            Alex Wine |{' '}
-            <GradientText primary as="span">
-              Portfolio
-            </GradientText>
-          </Typography>
-          {/* <GradientText variant="h3">Potfolio</GradientText> */}
-        </Grid>
-        <Grid item xs={6}>
-          {/* <CodeThinking /> */}
-          {/* <StyledBackground /> */}
-        </Grid>
-      </Grid>
-    </StyledHeroDisplay>
+    <SizeMe monitorHeight>
+      {({ size }) => {
+        console.log(size);
+
+        return (
+          <StyledHeroDisplay>
+            <StyledPolygonBackground />
+            {/* <StyledGenerateGalaxyBackground /> */}
+            <Container
+              sx={{
+                padding: 3,
+              }}
+            >
+              <Grid container>
+                <Grid item xs={6}>
+                  <Typography variant="h3">
+                    Alex Wine |{' '}
+                    <GradientText primary as="span">
+                      Portfolio
+                    </GradientText>
+                  </Typography>
+                  {/* <GradientText variant="h3">Potfolio</GradientText> */}
+                </Grid>
+                <Grid item xs={6}>
+                  {/* <CodeThinking /> */}
+                  {/* <StyledBackground /> */}
+                </Grid>
+              </Grid>
+            </Container>
+          </StyledHeroDisplay>
+        );
+      }}
+    </SizeMe>
   );
 }
 

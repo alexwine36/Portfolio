@@ -4,27 +4,24 @@ import random from 'random';
 import { SVGProps } from 'react';
 import seedrandom from 'seedrandom';
 import { generateGradient } from '../../lib/utilities/functions/generate-gradient';
-import { generateBackgroundUri } from '../../lib/utilities/functions/generateBase64';
 /* eslint-disable-next-line */
-export interface GeneratePlanetBackgroundProps
-  extends SVGProps<SVGSVGElement> {}
+export interface GeneratePlanetBackgroundProps extends SVGProps<SVGSVGElement> {
+  size?: {
+    width: number;
+    height: number;
+  };
+}
 
-export const StyledGeneratePlanetBackground = styled('div')(
+export const StyledGeneratePlanetBackground = styled(GeneratePlanetBackground)(
   ({ theme }) => `
-left: 50%;
-margin-left: -50vw;
-margin-right: -50vw;
-max-width: 100vw;
-position: relative;
-right: 50%;
-width: 100vw;
-background-image: ${generateBackgroundUri(<GeneratePlanetBackground />)};
-background-position: center;
-background-size: cover;
-background-attachment: fixed;
-// position: absolute;
-z-index: 0;
+
 `
+);
+
+export const StyledBackgroundContainer = styled('div')(
+  ({ theme }) => `
+  position: absolute;
+  `
 );
 
 const randomize = (data: { min: number; max: number }, seed?: string) => {
