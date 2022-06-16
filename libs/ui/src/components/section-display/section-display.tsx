@@ -13,6 +13,7 @@ const StyledSectionDisplay = styled('section')(
 // padding-top: ${theme.spacing(2)};
 // margin-bottom: ${theme.spacing(2)};
 // min-height: 50vh;
+padding-top: ${theme.spacing(3)};
 `
 );
 
@@ -38,9 +39,10 @@ export function SectionDisplay(props: SectionDisplayProps) {
   const theme = useTheme();
   const gradientColor = theme.palette.error.main;
   return (
-    <StyledSectionDisplay id={id}>
+    <StyledSectionDisplay>
       <Container>
         <TextHeaderDisplay
+          id={id}
           variant="h4"
           hideDivider
           title={title}

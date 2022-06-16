@@ -22,7 +22,7 @@ export interface HomePageProps {}
 const StyledHomePage = styled.div`
   // color: pink;
   // padding-top: 24px;
-  height: 50px;
+  // height: 50px;
 `;
 
 export function HomePage(props: HomePageProps) {
@@ -37,6 +37,7 @@ export function HomePage(props: HomePageProps) {
     icon?: React.ReactElement;
     background?: PredefinedBackgrounds;
     gridSize?: number;
+    chips?: boolean;
     items?: {
       pretitle?: string;
       subtitle?: string;
@@ -61,6 +62,7 @@ export function HomePage(props: HomePageProps) {
       name: 'Skills',
       id: 'skills',
       gridSize: 6,
+      chips: true,
       // icon:
       background: 'meteor',
       items: skillCategories.map((cat) => {
@@ -121,7 +123,10 @@ export function HomePage(props: HomePageProps) {
                             title={item.title || ''}
                             subtitle={item.subtitle}
                           >
-                            <DetailListDisplay bullets={item.bullets || []} />
+                            <DetailListDisplay
+                              chips={section.chips}
+                              bullets={item.bullets || []}
+                            />
                           </DetailCardDisplay>
                         </Grid>
                       ))}

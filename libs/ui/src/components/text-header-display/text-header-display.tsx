@@ -19,6 +19,7 @@ export interface TextHeaderDisplayProps {
     | 'error'
     | 'success';
   color?: string;
+  id?: string;
 }
 
 const StyledTextHeaderDisplay = styled('div')`
@@ -40,6 +41,7 @@ export function TextHeaderDisplay(props: TextHeaderDisplayProps) {
     hideDivider,
     gradientColor: baseColor,
     color,
+    id,
   } = props;
   const theme = useTheme();
   let gradientColor = theme.palette.error.main;
@@ -55,7 +57,7 @@ export function TextHeaderDisplay(props: TextHeaderDisplayProps) {
   }
 
   return (
-    <StyledTextHeaderDisplay>
+    <StyledTextHeaderDisplay id={id}>
       <TextBoxFormat>
         <GradientText color={gradientColor} variant={variant}>
           {title}
