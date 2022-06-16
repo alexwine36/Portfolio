@@ -24,11 +24,18 @@ export const StyledBackgroundContainer = styled('div')(
   `
 );
 
-const randomize = (data: { min: number; max: number }, seed?: string) => {
+const randomize = (
+  data: { min: number; max: number },
+  seed?: string,
+  int?: boolean
+) => {
   if (seed) {
     random.use((seedrandom as any)(seed));
   }
   const { min, max } = data;
+  if (int) {
+    return random.int(min, max);
+  }
   return random.float(min, max);
 };
 const randomItem = <T,>(arr: T[], seed?: string) => {
@@ -73,9 +80,17 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
 
   const linearGradients = [...Array(gradientCount).keys()].map((key) => {
     const randomLocX = (seed: string) =>
-      randomize({ min: 0, max: width }, `${baseSeed}-position-${key}-${seed}`);
+      `${randomize(
+        { min: 0, max: 100 },
+        `${baseSeed}-position-${key}-${seed}`,
+        true
+      )}%`;
     const randomLocY = (seed: string) =>
-      randomize({ min: 0, max: width }, `${baseSeed}-position-${key}-${seed}`);
+      `${randomize(
+        { min: 0, max: width },
+        `${baseSeed}-position-${key}-${seed}`,
+        true
+      )}%`;
 
     const colorOptions = [
       theme.palette.primary.main,
@@ -92,8 +107,8 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
     fillOptions.push(id);
 
     return {
-      x1: randomLocX('x1'),
-      y1: randomLocY('y1'),
+      x1: '0%',
+      y1: '0%',
       x2: randomLocX('x2'),
       y2: randomLocY('y2'),
       gradientUnits: 'userSpaceOnUse',

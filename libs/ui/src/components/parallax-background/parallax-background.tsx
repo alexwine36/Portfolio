@@ -49,9 +49,10 @@ export function ParallaxBackground(props: ParallaxBackgroundProps) {
 
           return (
             <Parallax
-            // bgStyle={{
-            //   height: size.height,
-            // }}
+              strength={300}
+              // bgStyle={{
+              //   height: size.height,
+              // }}
             >
               <Bg
                 className="custom-bg"
