@@ -70,7 +70,7 @@ export function HeroDisplay(props: HeroDisplayProps) {
               }}
             >
               <Grid container>
-                <Grid item xs={6}>
+                <Grid item sm={6}>
                   <Typography variant="h3">
                     Alex Wine |{' '}
                     <GradientText primary as="span">

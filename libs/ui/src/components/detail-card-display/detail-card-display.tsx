@@ -23,7 +23,7 @@ export function DetailCardDisplay(props: DetailCardDisplayProps) {
     <StyledDetailCardDisplay>
       <CardContent>
         <Grid container spacing={3}>
-          <Grid item xs={3}>
+          <Grid item sm={3} xs={12}>
             {/* <TextHeaderDisplay
               variant="h6"
               color="#efefef"
@@ -37,7 +37,7 @@ export function DetailCardDisplay(props: DetailCardDisplayProps) {
               subtitle={subtitle}
             ></InfoTextDisplay>
           </Grid>
-          <Grid item xs>
+          <Grid item sm>
             <InfoTextDisplay title={pretitle}></InfoTextDisplay>
             {children}
           </Grid>

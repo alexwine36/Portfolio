@@ -10,9 +10,9 @@ export interface SectionDisplayProps {
 
 const StyledSectionDisplay = styled('section')(
   ({ theme }) => `
-padding-top: ${theme.spacing(2)};
-padding-bottom: ${theme.spacing(2)};
-min-height: 50vh;
+// padding-top: ${theme.spacing(2)};
+// margin-bottom: ${theme.spacing(2)};
+// min-height: 50vh;
 `
 );
 
@@ -27,6 +27,9 @@ const StyledSectionChildrenDisplay = styled('div')(
 // backdrop-filter: 'blur(10px)';
 // box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
 // border: 1px solid ${theme.palette.divider};
+
+// padding-top: ${theme.spacing(2)};
+// padding-bottom: ${theme.spacing(2)};
 `
 );
 

@@ -14,12 +14,15 @@ import {
   SectionDisplay,
   SpeedDialNavigation,
 } from '@portfolio/ui';
+import React from 'react';
 
 /* eslint-disable-next-line */
 export interface HomePageProps {}
 
 const StyledHomePage = styled.div`
   // color: pink;
+  // padding-top: 24px;
+  height: 50px;
 `;
 
 export function HomePage(props: HomePageProps) {
@@ -47,8 +50,8 @@ export function HomePage(props: HomePageProps) {
       items: workExperience.map((exp) => {
         return {
           pretitle: exp.role,
-          subtitle: exp.company.name,
-          title: exp.dateDisplay,
+          title: exp.company.name,
+          subtitle: exp.dateDisplay,
           bullets: exp.bullets,
         };
       }),
@@ -61,6 +64,19 @@ export function HomePage(props: HomePageProps) {
       items: educationExperience.map((exp) => {
         return {
           title: exp.institute,
+          subtitle: exp.dateDisplay,
+          bullets: exp.bullets,
+        };
+      }),
+    },
+    {
+      name: 'Experience',
+      id: 'workExperience',
+      icon: <WorkIcon />,
+      items: workExperience.map((exp) => {
+        return {
+          pretitle: exp.role,
+          title: exp.company.name,
           subtitle: exp.dateDisplay,
           bullets: exp.bullets,
         };
@@ -86,31 +102,34 @@ export function HomePage(props: HomePageProps) {
         {/* <GeneratePlanetBackground /> */}
 
         <>
-          {sections.map((section) => (
-            <ParallaxBackground
-              key={section.id}
-              predefined={section.background || 'planet'}
-            >
-              <SectionDisplay
-                key={section.id}
-                id={section.id}
-                title={section.name}
-              >
-                <Grid container spacing={3}>
-                  {section.items?.map((item, key) => (
-                    <Grid item xs={12} key={key}>
-                      <DetailCardDisplay
-                        pretitle={item.pretitle}
-                        title={item.title || ''}
-                        subtitle={item.subtitle}
-                      >
-                        <DetailListDisplay bullets={item.bullets || []} />
-                      </DetailCardDisplay>
+          {sections.map((section, index) => (
+            <React.Fragment key={section.id}>
+              <ParallaxBackground predefined={section.background || 'planet'}>
+                <>
+                  {!!index && <StyledHomePage />}
+                  <SectionDisplay
+                    key={section.id}
+                    id={section.id}
+                    title={section.name}
+                  >
+                    <Grid container spacing={3}>
+                      {section.items?.map((item, key) => (
+                        <Grid item xs={12} key={key}>
+                          <DetailCardDisplay
+                            pretitle={item.pretitle}
+                            title={item.title || ''}
+                            subtitle={item.subtitle}
+                          >
+                            <DetailListDisplay bullets={item.bullets || []} />
+                          </DetailCardDisplay>
+                        </Grid>
+                      ))}
                     </Grid>
-                  ))}
-                </Grid>
-              </SectionDisplay>
-            </ParallaxBackground>
+                  </SectionDisplay>
+                  {!!index && <StyledHomePage />}
+                </>
+              </ParallaxBackground>
+            </React.Fragment>
           ))}
         </>
       </>
