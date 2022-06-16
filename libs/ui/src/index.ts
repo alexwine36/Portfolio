@@ -1,3 +1,4 @@
+export * from './components/speed-dial-navigation/speed-dial-navigation';
 export * from './components/parallax-background/parallax-background';
 export * from './components/page-background/page-background';
 export * from './assets/code-thinking/code-thinking';

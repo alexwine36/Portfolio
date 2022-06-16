@@ -8,6 +8,7 @@ import {
   PageBackground,
   ParallaxBackground,
   SectionDisplay,
+  SpeedDialNavigation,
 } from '@portfolio/ui';
 
 /* eslint-disable-next-line */
@@ -34,6 +35,7 @@ export function HomePage(props: HomePageProps) {
 
   return (
     <PageBackground>
+      <SpeedDialNavigation actions={[]} />
       <HeroDisplay />
       <>
         <Container>
