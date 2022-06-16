@@ -14,6 +14,9 @@ const StyledSectionDisplay = styled('section')(
 // margin-bottom: ${theme.spacing(2)};
 // min-height: 50vh;
 padding-top: ${theme.spacing(3)};
+min-height: 100vh;
+display: flex;
+align-items: center;
 `
 );
 

@@ -1,3 +1,6 @@
+export * from './assets/git-lab-icon/git-lab-icon';
+export * from './components/social-icon-button/social-icon-button';
+export * from './components/footer-display/footer-display';
 export * from './assets/generate-waves-background/generate-waves-background';
 export * from './assets/generate-circuit-board-background/generate-circuit-board-background';
 export * from './assets/generate-soundwave-background/generate-soundwave-background';

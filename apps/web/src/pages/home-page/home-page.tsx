@@ -7,6 +7,7 @@ import {
   Bullets,
   DetailCardDisplay,
   DetailListDisplay,
+  FooterDisplay,
   HeroDisplay,
   PageBackground,
   ParallaxBackground,
@@ -139,6 +140,7 @@ export function HomePage(props: HomePageProps) {
           ))}
         </>
       </>
+      <FooterDisplay></FooterDisplay>
     </PageBackground>
   );
 }
