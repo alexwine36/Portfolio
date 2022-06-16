@@ -1,3 +1,16 @@
+## [1.6.0](https://github.com/alexwine36/Portfolio/compare/v1.5.0...v1.6.0) (2022-06-16)
+
+
+### Features
+
+* **ui:** added chip display option to detail list display ([6436ac0](https://github.com/alexwine36/Portfolio/commit/6436ac0fe95e4c4fd1718f0a2330ae6725cec515))
+* **web:** added skills ([ce01c1e](https://github.com/alexwine36/Portfolio/commit/ce01c1ec4289a4d09465c99eb0191b1185bac568))
+
+
+### Bug Fixes
+
+* **ui:** updated galaxy svg for mobile display ([965caf0](https://github.com/alexwine36/Portfolio/commit/965caf0f5fd909152fe2febdd91f634d57dac613))
+
 ## [1.5.0](https://github.com/alexwine36/Portfolio/compare/v1.4.0...v1.5.0) (2022-06-16)
 
 
