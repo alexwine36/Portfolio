@@ -57,7 +57,7 @@ export function HomePage(props: HomePageProps) {
       name: 'Education',
       id: 'education',
       icon: <SchoolIcon />,
-      background: 'circuit',
+      background: 'waves',
       items: educationExperience.map((exp) => {
         return {
           title: exp.institute,

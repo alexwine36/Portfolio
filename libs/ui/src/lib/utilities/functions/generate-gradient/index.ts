@@ -6,3 +6,10 @@ export const generateGradient = (color: string) => {
     end: color,
   };
 };
+
+export const generateGradientStep = (color: string, i: number) => {
+  return {
+    start: analogue(color, i),
+    end: color,
+  };
+};

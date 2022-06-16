@@ -12,6 +12,7 @@ const StyledSectionDisplay = styled('section')(
   ({ theme }) => `
 padding-top: ${theme.spacing(2)};
 padding-bottom: ${theme.spacing(2)};
+min-height: 50vh;
 `
 );
 

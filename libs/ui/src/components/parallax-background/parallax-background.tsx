@@ -5,12 +5,14 @@ import GenerateCircuitBoardBackground from '../../assets/generate-circuit-board-
 import GenerateMeteorBackground from '../../assets/generate-meteor-background/generate-meteor-background';
 import GeneratePlanetBackground from '../../assets/generate-planet-background/generate-planet-background';
 import GenerateSoundwaveBackground from '../../assets/generate-soundwave-background/generate-soundwave-background';
+import GenerateWavesBackground from '../../assets/generate-waves-background/generate-waves-background';
 
 export type PredefinedBackgrounds =
   | 'planet'
   | 'meteor'
   | 'soundwave'
-  | 'circuit';
+  | 'circuit'
+  | 'waves';
 /* eslint-disable-next-line */
 
 export interface ParallaxBackgroundProps {
@@ -71,6 +73,8 @@ const GeneratePredefined = (props: {
       );
     case 'circuit':
       return <GenerateCircuitBoardBackground width={width} height={height} />;
+    case 'waves':
+      return <GenerateWavesBackground width={width} height={height} />;
     case 'soundwave':
       return <GenerateSoundwaveBackground width={width} height={height} />;
     default:
