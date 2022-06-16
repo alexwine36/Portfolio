@@ -12,6 +12,9 @@ root.render(
     <>
       <GlobalStyles
         styles={{
+          html: {
+            scrollBehavior: 'smooth',
+          },
           body: {
             backgroundImage: 'url(https://nextui.org/theming-gradient.svg)',
             backgroundColor: '#000',

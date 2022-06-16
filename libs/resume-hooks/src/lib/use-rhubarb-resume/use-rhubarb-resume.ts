@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { Bullets } from '../../../../ui/src';
 import data from '../data/rhubarb';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 // export interface UseRhubarbResume {
@@ -6,26 +7,50 @@ import data from '../data/rhubarb';
 //   increment: () => void;
 // }
 
+interface MainData {
+  startDate: string;
+  endDate?: string | null;
+  bullets?: {
+    // id: string;
+    // experience: string;
+    // createdAt: string;
+    // updatedAt: string;
+    contents: string;
+  }[];
+}
+
+type ReturnData<T> = Omit<T, 'bullets'> & {
+  startDate: dayjs.Dayjs;
+  endDate: dayjs.Dayjs | null;
+  bullets?: Bullets[];
+  dateDisplay: string;
+};
+
+const formatInfo = <T extends MainData>(data: T[]): ReturnData<T>[] => {
+  return data.map((e) => {
+    const { bullets } = e;
+    const startDate = dayjs(e.startDate);
+    const endDate = e.endDate ? dayjs(e.endDate) : null;
+    const startDisplay = startDate.format('MMM YYYY');
+    const endDisplay = endDate ? endDate.format('MMM YYYY') : 'Present';
+    const dateDisplay = `${startDisplay} - ${endDisplay}`;
+    return {
+      ...e,
+      startDate,
+      endDate,
+      bullets: bullets?.map((bullet) => bullet.contents),
+      dateDisplay,
+    };
+  });
+};
+
 const formatResume = () => {
-  const { workExperience } = data;
+  const { workExperience, educationExperience } = data;
 
   return {
     ...data,
-    workExperience: workExperience.map((e) => {
-      const { bullets } = e;
-      const startDate = dayjs(e.startDate);
-      const endDate = e.endDate ? dayjs(e.endDate) : null;
-      const startDisplay = startDate.format('MMM YYYY');
-      const endDisplay = endDate ? endDate.format('MMM YYYY') : 'Present';
-      const dateDisplay = `${startDisplay} - ${endDisplay}`;
-      return {
-        ...e,
-        startDate,
-        endDate,
-        bullets: bullets.map((bullet) => bullet.contents),
-        dateDisplay,
-      };
-    }),
+    workExperience: formatInfo(workExperience),
+    educationExperience: formatInfo(educationExperience),
   };
 };
 

@@ -1,12 +1,16 @@
 import styled from '@emotion/styled';
-import { Card, CardContent, CardHeader, Container, Grid } from '@mui/material';
+import SchoolIcon from '@mui/icons-material/School';
+import WorkIcon from '@mui/icons-material/Work';
+import { Card, CardContent, CardHeader, Grid } from '@mui/material';
 import { useRhubarbResume } from '@portfolio/resume-hooks';
 import {
+  Bullets,
   DetailCardDisplay,
   DetailListDisplay,
   HeroDisplay,
   PageBackground,
   ParallaxBackground,
+  PredefinedBackgrounds,
   SectionDisplay,
   SpeedDialNavigation,
 } from '@portfolio/ui';
@@ -19,93 +23,96 @@ const StyledHomePage = styled.div`
 `;
 
 export function HomePage(props: HomePageProps) {
-  const bullets = [
-    'Created an end-to-end analytics solution using Python and business intelligence tools, improving the efficiency and productivity of the team.',
-    'Created pipelines for merging data from data resources i.e. sales tools (CRM/SFA), spreadsheets, and ERP software, resulting in increased business insights and better-informed decisions.',
-    'Developed applications to automate repetitive tasks and streamline processes increasing productivity and reducing errors.',
-    'Used CI/CD tools to automate the process of delivering new services to users.',
-    'Created automated pipeline for sending customer surveys using Pulumi and Node under a Yarn monorepo.',
-    'Through automation and reporting increased house closings by at least 10% every year.',
-    'Planned and executed the transition from local server to google drive cloud server, achieving increased speed for employee file access and increased bandwidth onsite.',
-    'Managed department spending per annum through strategic procurement of equipment and services.',
-  ];
-
   const { resume } = useRhubarbResume();
   console.log(resume);
 
+  const { workExperience, educationExperience } = resume;
+
+  const sections: {
+    name: string;
+    id: string;
+    icon?: React.ReactElement;
+    background?: PredefinedBackgrounds;
+    items?: {
+      pretitle?: string;
+      subtitle?: string;
+      title?: string;
+      bullets?: Bullets[];
+    }[];
+  }[] = [
+    {
+      name: 'Experience',
+      id: 'workExperience',
+      icon: <WorkIcon />,
+      items: workExperience.map((exp) => {
+        return {
+          pretitle: exp.role,
+          subtitle: exp.company.name,
+          title: exp.dateDisplay,
+          bullets: exp.bullets,
+        };
+      }),
+    },
+    {
+      name: 'Education',
+      id: 'education',
+      icon: <SchoolIcon />,
+      background: 'circuit',
+      items: educationExperience.map((exp) => {
+        return {
+          title: exp.institute,
+          subtitle: exp.dateDisplay,
+          bullets: exp.bullets,
+        };
+      }),
+    },
+  ];
+
+  const actions = sections.map((section) => {
+    const { icon, name, id } = section;
+
+    return {
+      icon: icon || <WorkIcon />,
+      name,
+      href: `#${id}`,
+    };
+  });
+
   return (
     <PageBackground>
-      <SpeedDialNavigation actions={[]} />
+      <SpeedDialNavigation actions={actions} />
       <HeroDisplay />
       <>
-        <Container>
-          <SectionDisplay title="Experience"></SectionDisplay>
-        </Container>
-
         {/* <GeneratePlanetBackground /> */}
-        <ParallaxBackground planet>
-          <Container>
-            <Grid container spacing={3}>
-              {/* <Container
-sx={{
-  marginY: 5,
-}}
-> */}
 
-              {resume.workExperience.map((exp) => {
-                return (
-                  <Grid item xs={12}>
-                    <DetailCardDisplay
-                      pretitle={` | ${exp.role}`}
-                      title={exp.company.name}
-                      subtitle={exp.dateDisplay}
-                    >
-                      <DetailListDisplay bullets={exp.bullets} />
-                    </DetailCardDisplay>
-                  </Grid>
-                );
-              })}
-              {/* <Grid item>
-    <DetailCardDisplay
-      pretitle=" | Abrazo Homes"
-      title="Business Intelligence Analyst"
-      subtitle="08/18 - Present"
-    >
-      <DetailListDisplay bullets={bullets} />
-    </DetailCardDisplay>
-  </Grid>
-  <Grid item>
-    <DetailCardDisplay
-      pretitle=" | Abrazo Homes"
-      title="Business Intelligence Analyst"
-      subtitle="08/18 - Present"
-    >
-      <DetailListDisplay bullets={bullets} />
-    </DetailCardDisplay>
-  </Grid>
-  <Grid item>
-    <DetailCardDisplay
-      pretitle=" | Abrazo Homes"
-      title="Business Intelligence Analyst"
-      subtitle="08/18 - Present"
-    >
-      <DetailListDisplay bullets={bullets} />
-    </DetailCardDisplay>
-  </Grid> */}
-              {/* </Container> */}
-
-              {/* <Grid item xs>
-  <DetailCardDisplay
-    pretitle=" | Abrazo Homes"
-    title="Business Intelligence Analyst"
-    subtitle="08/18 - Present"
-  >
-    <DetailListDisplay bullets={bullets} />
-  </DetailCardDisplay>
-</Grid> */}
-            </Grid>
-          </Container>
-        </ParallaxBackground>
+        <>
+          {sections.map((section) => (
+            <ParallaxBackground
+              key={section.id}
+              predefined={section.background || 'planet'}
+            >
+              <SectionDisplay
+                key={section.id}
+                id={section.id}
+                title={section.name}
+              >
+                <Grid container spacing={3}>
+                  {section.items?.map((item, key) => (
+                    <Grid item xs={12} key={key}>
+                      <DetailCardDisplay
+                        pretitle={item.pretitle}
+                        title={item.title || ''}
+                        subtitle={item.subtitle}
+                      >
+                        <DetailListDisplay bullets={item.bullets || []} />
+                      </DetailCardDisplay>
+                    </Grid>
+                  ))}
+                </Grid>
+              </SectionDisplay>
+            </ParallaxBackground>
+          ))}
+        </>
       </>
 
       <Card>

@@ -40,6 +40,7 @@ const GradientText = styled(Typography)<GradientProps>(
   background-clip: text;
   text-fill-color: transparent;
   // background-image: linear-gradient(rgb(94, 162, 239) 25%, rgb(0, 114, 245) 100%);
+
   `
 );
 

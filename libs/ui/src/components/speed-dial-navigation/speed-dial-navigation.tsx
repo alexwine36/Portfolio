@@ -54,7 +54,10 @@ export function SpeedDialNavigation(props: SpeedDialNavigationProps) {
       //     backgroundColor: 'red',
       //   },
       // }}
-      color="secondary"
+
+      FabProps={{
+        color: 'secondary',
+      }}
       ariaLabel="Resume Navigation"
       // hidden={hidden}
       direction="left"
@@ -75,6 +78,9 @@ export function SpeedDialNavigation(props: SpeedDialNavigationProps) {
     >
       {actions.map((action) => (
         <SpeedDialAction
+          FabProps={{
+            href: action.href,
+          }}
           key={action.name}
           icon={action.icon}
           tooltipTitle={action.name}

@@ -1,6 +1,6 @@
 import { styled, Typography } from '@mui/material';
 
-type Bullets = string | string[];
+export type Bullets = string | string[];
 
 /* eslint-disable-next-line */
 export interface DetailListDisplayProps {

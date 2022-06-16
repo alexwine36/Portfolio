@@ -1,12 +1,24 @@
 import { styled } from '@mui/material';
 import { Background, Parallax } from 'react-parallax';
 import { SizeMe } from 'react-sizeme';
+import GenerateCircuitBoardBackground from '../../assets/generate-circuit-board-background/generate-circuit-board-background';
+import GenerateMeteorBackground from '../../assets/generate-meteor-background/generate-meteor-background';
 import GeneratePlanetBackground from '../../assets/generate-planet-background/generate-planet-background';
+import GenerateSoundwaveBackground from '../../assets/generate-soundwave-background/generate-soundwave-background';
+
+export type PredefinedBackgrounds =
+  | 'planet'
+  | 'meteor'
+  | 'soundwave'
+  | 'circuit';
 /* eslint-disable-next-line */
+
 export interface ParallaxBackgroundProps {
   image?: React.ReactElement;
-  planet?: boolean;
+  // planet?: boolean;
+  predefined?: PredefinedBackgrounds;
   children: React.ReactElement;
+  // meteor?: boolean;
 }
 
 const Bg: any = Background;
@@ -38,8 +50,36 @@ const StyledBackground = styled('div')<{ height?: number | null }>(
 `
 );
 
+const GeneratePredefined = (props: {
+  width?: number;
+  height?: number;
+  predefined: PredefinedBackgrounds;
+}) => {
+  const { width, height, predefined } = props;
+
+  switch (predefined) {
+    case 'meteor':
+      return <GenerateMeteorBackground />;
+    case 'planet':
+      return (
+        <GeneratePlanetBackground
+          dimensions={{
+            width: width || 560,
+            height: height || 560,
+          }}
+        />
+      );
+    case 'circuit':
+      return <GenerateCircuitBoardBackground width={width} height={height} />;
+    case 'soundwave':
+      return <GenerateSoundwaveBackground width={width} height={height} />;
+    default:
+      return <span></span>;
+  }
+};
+
 export function ParallaxBackground(props: ParallaxBackgroundProps) {
-  const { image, children, planet } = props;
+  const { image, children, predefined } = props;
 
   return (
     <StyledParallaxBackground>
@@ -61,16 +101,15 @@ export function ParallaxBackground(props: ParallaxBackgroundProps) {
                 // }}
               >
                 <StyledBackground height={size.height}>
-                  {planet ? (
-                    <GeneratePlanetBackground
-                      dimensions={{
-                        width: size.width || 560,
-                        height: size.height || 560,
-                      }}
+                  {predefined && (
+                    <GeneratePredefined
+                      predefined={predefined}
+                      width={size.width || undefined}
+                      height={size.height || undefined}
                     />
-                  ) : (
-                    image
                   )}
+
+                  {image && image}
                 </StyledBackground>
               </Bg>
               {children}

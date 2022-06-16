@@ -111,7 +111,7 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
       y1: '0%',
       x2: randomLocX('x2'),
       y2: randomLocY('y2'),
-      gradientUnits: 'userSpaceOnUse',
+      // gradientUnits: 'userSpaceOnUse',
       id: id,
       color: {
         start,

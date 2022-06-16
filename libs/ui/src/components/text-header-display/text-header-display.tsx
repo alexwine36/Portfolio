@@ -1,12 +1,15 @@
-import { styled, Typography, useTheme } from '@mui/material';
+import { styled, Typography, TypographyProps, useTheme } from '@mui/material';
 import GradientText, { generateGradient } from '../gradient-text/gradient-text';
 
+type VariantTypes = TypographyProps['variant'];
+
 /* eslint-disable-next-line */
+
 export interface TextHeaderDisplayProps {
   title: string;
   pretitle?: string;
   subtitle?: string;
-  variant?: 'h5' | 'h6';
+  variant?: VariantTypes;
   hideDivider?: boolean;
   gradientColor?:
     | 'primary'

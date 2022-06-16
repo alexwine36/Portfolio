@@ -1,13 +1,21 @@
-import { Card, styled, useTheme } from '@mui/material';
+import { Container, styled, useTheme } from '@mui/material';
 import TextHeaderDisplay from '../text-header-display/text-header-display';
 
 /* eslint-disable-next-line */
 export interface SectionDisplayProps {
   title: string;
   children?: React.ReactNode;
+  id?: string;
 }
 
-const StyledSectionDisplay = styled(Card)(
+const StyledSectionDisplay = styled('section')(
+  ({ theme }) => `
+padding-top: ${theme.spacing(2)};
+padding-bottom: ${theme.spacing(2)};
+`
+);
+
+const StyledSectionChildrenDisplay = styled('div')(
   ({ theme }) => `
 // color: pink;
 // background-image: linear-gradient(
@@ -22,22 +30,20 @@ const StyledSectionDisplay = styled(Card)(
 );
 
 export function SectionDisplay(props: SectionDisplayProps) {
-  const { title, children } = props;
+  const { title, children, id } = props;
   const theme = useTheme();
   const gradientColor = theme.palette.error.main;
   return (
-    <>
-      <TextHeaderDisplay hideDivider title={title}></TextHeaderDisplay>
-      <StyledSectionDisplay>
-        {/* <h1>Welcome to SectionDisplay!</h1> */}
-        {children}
-        {/* <CardHeader
-          title={
-
-          }
-        ></CardHeader> */}
-      </StyledSectionDisplay>
-    </>
+    <StyledSectionDisplay id={id}>
+      <Container>
+        <TextHeaderDisplay
+          variant="h4"
+          hideDivider
+          title={title}
+        ></TextHeaderDisplay>
+        <StyledSectionChildrenDisplay>{children}</StyledSectionChildrenDisplay>
+      </Container>
+    </StyledSectionDisplay>
   );
 }
 

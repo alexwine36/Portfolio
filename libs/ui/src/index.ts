@@ -1,3 +1,7 @@
+export * from './assets/generate-circuit-board-background/generate-circuit-board-background';
+export * from './assets/generate-soundwave-background/generate-soundwave-background';
+export * from './assets/generate-meteor-background/generate-meteor-background';
+export * from './components/info-text-display/info-text-display';
 export * from './components/speed-dial-navigation/speed-dial-navigation';
 export * from './components/parallax-background/parallax-background';
 export * from './components/page-background/page-background';

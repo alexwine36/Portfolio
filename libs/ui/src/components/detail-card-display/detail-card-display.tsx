@@ -1,6 +1,6 @@
 // import styled from '@emotion/styled';
-import { Card, CardContent, styled } from '@mui/material';
-import TextHeaderDisplay from '../text-header-display/text-header-display';
+import { Card, CardContent, Grid, styled } from '@mui/material';
+import InfoTextDisplay from '../info-text-display/info-text-display';
 
 /* eslint-disable-next-line */
 export interface DetailCardDisplayProps {
@@ -22,18 +22,29 @@ export function DetailCardDisplay(props: DetailCardDisplayProps) {
   return (
     <StyledDetailCardDisplay>
       <CardContent>
-        <TextHeaderDisplay
-          variant="h6"
-          color="#efefef"
-          // gradientColor="info"
-          title={title}
-          pretitle={pretitle}
-          subtitle={subtitle}
-        />
+        <Grid container spacing={3}>
+          <Grid item xs={3}>
+            {/* <TextHeaderDisplay
+              variant="h6"
+              color="#efefef"
+              // gradientColor="info"
+              title={title}
+              pretitle={pretitle}
+              subtitle={subtitle}
+            /> */}
+            <InfoTextDisplay
+              title={title}
+              subtitle={subtitle}
+            ></InfoTextDisplay>
+          </Grid>
+          <Grid item xs>
+            <InfoTextDisplay title={pretitle}></InfoTextDisplay>
+            {children}
+          </Grid>
+        </Grid>
         {/* <DetailListDisplay
             bullets={['Sample', 'Sample thing', ['More samples']]}
           /> */}
-        {children}
       </CardContent>
     </StyledDetailCardDisplay>
   );
