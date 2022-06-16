@@ -1,3 +1,17 @@
+## [1.4.0](https://github.com/alexwine36/Portfolio/compare/v1.3.1...v1.4.0) (2022-06-16)
+
+
+### Features
+
+* **ui:** added a parallax container for background displays ([85b49b5](https://github.com/alexwine36/Portfolio/commit/85b49b51375292560352c3ccdad59f7e2ff928a2))
+* **ui:** made Planet generation more dynamic ([8c3ed1f](https://github.com/alexwine36/Portfolio/commit/8c3ed1f0bb73726c8a11e5de396e4d1ec7968e2e))
+
+
+### Bug Fixes
+
+* **theme:** updated theme for more cohesive color display ([0655469](https://github.com/alexwine36/Portfolio/commit/0655469f8f9291d50adcfc8e3252894b4d7c1a27))
+* **ui:** updated parallax planet background ([b24c9ce](https://github.com/alexwine36/Portfolio/commit/b24c9cee39f0cebff8f0a0b348e66e952edce2d7))
+
 ## [1.3.1](https://github.com/alexwine36/Portfolio/compare/v1.3.0...v1.3.1) (2022-06-15)
 
 
