@@ -1,3 +1,12 @@
+## [1.5.0](https://github.com/alexwine36/Portfolio/compare/v1.4.0...v1.5.0) (2022-06-16)
+
+
+### Features
+
+* **ui:** added multiple backgrounds ([1c005ca](https://github.com/alexwine36/Portfolio/commit/1c005ca512734ea8f61f815643683c2a790bfe08))
+* **ui:** added waves generator vertical ([f6bcd5e](https://github.com/alexwine36/Portfolio/commit/f6bcd5e767a4ccb539bc93aff77923937233b7d4))
+* **ui:** speed Dial Navigation for going to sections quickly ([d65288d](https://github.com/alexwine36/Portfolio/commit/d65288d4b21a0cdc48b8ab52a3da0ec3484a656b))
+
 ## [1.4.0](https://github.com/alexwine36/Portfolio/compare/v1.3.1...v1.4.0) (2022-06-16)
 
 
