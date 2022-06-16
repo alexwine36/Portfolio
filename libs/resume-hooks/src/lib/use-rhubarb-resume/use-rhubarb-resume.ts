@@ -45,12 +45,21 @@ const formatInfo = <T extends MainData>(data: T[]): ReturnData<T>[] => {
 };
 
 const formatResume = () => {
-  const { workExperience, educationExperience } = data;
+  const { workExperience, educationExperience, skillCategories } = data;
 
   return {
     ...data,
     workExperience: formatInfo(workExperience),
     educationExperience: formatInfo(educationExperience),
+    skillCategories: skillCategories
+      .sort((a, b) => a.order - b.order)
+      .map((cat) => {
+        const { skills } = cat;
+        return {
+          ...cat,
+          bullets: skills.map((s) => s.name),
+        };
+      }),
   };
 };
 

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
-import { Card, CardContent, CardHeader, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import { useRhubarbResume } from '@portfolio/resume-hooks';
 import {
   Bullets,
@@ -29,13 +29,14 @@ export function HomePage(props: HomePageProps) {
   const { resume } = useRhubarbResume();
   console.log(resume);
 
-  const { workExperience, educationExperience } = resume;
+  const { workExperience, educationExperience, skillCategories } = resume;
 
   const sections: {
     name: string;
     id: string;
     icon?: React.ReactElement;
     background?: PredefinedBackgrounds;
+    gridSize?: number;
     items?: {
       pretitle?: string;
       subtitle?: string;
@@ -57,26 +58,26 @@ export function HomePage(props: HomePageProps) {
       }),
     },
     {
-      name: 'Education',
-      id: 'education',
-      icon: <SchoolIcon />,
-      background: 'waves',
-      items: educationExperience.map((exp) => {
+      name: 'Skills',
+      id: 'skills',
+      gridSize: 6,
+      // icon:
+      background: 'meteor',
+      items: skillCategories.map((cat) => {
         return {
-          title: exp.institute,
-          subtitle: exp.dateDisplay,
-          bullets: exp.bullets,
+          title: cat.name,
+          bullets: cat.bullets,
         };
       }),
     },
     {
-      name: 'Experience',
-      id: 'workExperience',
-      icon: <WorkIcon />,
-      items: workExperience.map((exp) => {
+      name: 'Education',
+      id: 'education',
+      icon: <SchoolIcon />,
+      background: 'soundwave',
+      items: educationExperience.map((exp) => {
         return {
-          pretitle: exp.role,
-          title: exp.company.name,
+          title: exp.institute,
           subtitle: exp.dateDisplay,
           bullets: exp.bullets,
         };
@@ -114,7 +115,7 @@ export function HomePage(props: HomePageProps) {
                   >
                     <Grid container spacing={3}>
                       {section.items?.map((item, key) => (
-                        <Grid item xs={12} key={key}>
+                        <Grid item xs={section.gridSize || 12} key={key}>
                           <DetailCardDisplay
                             pretitle={item.pretitle}
                             title={item.title || ''}
@@ -133,11 +134,6 @@ export function HomePage(props: HomePageProps) {
           ))}
         </>
       </>
-
-      <Card>
-        <CardHeader title="Sample"></CardHeader>
-        <CardContent>Sample stuff</CardContent>
-      </Card>
     </PageBackground>
   );
 }
