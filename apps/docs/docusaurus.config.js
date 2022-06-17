@@ -30,7 +30,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+            'https://github.com/alexwine36/Portfolio/edit/main/apps/docs/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
