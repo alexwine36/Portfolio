@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Portfolio Documentation',
   tagline: 'Displaying my resume and portfolio with ease',
-  url: 'https://alexwine36.github.io/Portfolio/docs/',
+  url: 'https://alexwine36.github.io',
   baseUrl: '/Portfolio/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
