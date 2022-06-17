@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import { Grid } from '@mui/material';
@@ -64,7 +65,7 @@ export function HomePage(props: HomePageProps) {
       id: 'skills',
       gridSize: 6,
       chips: true,
-      // icon:
+      icon: <FactCheckIcon />,
       background: 'meteor',
       items: skillCategories.map((cat) => {
         return {
