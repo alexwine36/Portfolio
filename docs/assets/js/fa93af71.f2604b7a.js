@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[2476],{7253:o=>{o.exports=JSON.parse('{"allTagsPath":"/Portfolio/docs/blog/tags","slug":"/Portfolio/docs/blog/tags/hola","name":"hola","count":1,"permalink":"/Portfolio/docs/blog/tags/hola"}')}}]);
