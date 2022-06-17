@@ -39,12 +39,6 @@
         "jestConfig": "libs/hex-rgb/jest.config.ts",
         "passWithNoTests": true
       }
-    },
-    "doc": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "typedoc libs/hex-rgb/src/index.ts --tsconfig libs/hex-rgb/tsconfig.json --out apps/docs/docs/libs/hex-rgb"
-      }
     }
   },
   "tags": []

@@ -6,6 +6,50 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  plugins: [
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        entryPoints: ['libs/ui/src/index.ts'],
+        tsconfig: 'libs/ui/tsconfig.json',
+        out: 'ui',
+        id: 'ui',
+        sidebar: {
+          categoryLabel: '@portfolio/ui',
+          position: 0,
+          fullNames: true,
+        },
+      },
+    ],
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        entryPoints: ['libs/hex-rgb/src/index.ts'],
+        tsconfig: 'libs/hex-rgb/tsconfig.json',
+        out: 'hex-rgb',
+        id: 'hex-rgb',
+        sidebar: {
+          categoryLabel: '@portfolio/hex-rgb',
+          position: 0,
+          fullNames: true,
+        },
+      },
+    ],
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        entryPoints: ['libs/resume-hooks/src/index.ts'],
+        tsconfig: 'libs/resume-hooks/tsconfig.json',
+        out: 'resume-hooks',
+        id: 'resume-hooks',
+        sidebar: {
+          categoryLabel: '@portfolio/resume-hooks',
+          position: 0,
+          fullNames: true,
+        },
+      },
+    ],
+  ],
   title: 'Portfolio Documentation',
   tagline: 'Displaying my resume and portfolio with ease',
   url: 'https://alexwine36.github.io',

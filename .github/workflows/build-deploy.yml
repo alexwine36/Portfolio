@@ -57,8 +57,6 @@ jobs:
       - uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
-      - name: Generate Docs
-        run: yarn doc
       - name: Build Docs
         run: yarn doc:build
 

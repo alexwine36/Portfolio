@@ -38,12 +38,6 @@
         "jestConfig": "libs/ui/jest.config.ts",
         "passWithNoTests": true
       }
-    },
-    "doc": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "typedoc libs/ui/src/index.ts --tsconfig libs/ui/tsconfig.json --out apps/docs/docs/libs/ui"
-      }
     }
   }
 }

@@ -11,9 +11,9 @@
     "test:ci": "nx run-many --target=test --all --parallel=3 --ci --code-coverage --coverageReporters=cobertura --coverageReporters=html --coverageReporters=text",
     "lint": "nx affected --target=lint --parallel=3",
     "format:check": "nx format:check",
-    "doc": "nx run-many --target=doc --all",
     "doc:build": "nx build docs",
-    "doc:start": "nx serve docs"
+    "doc:start": "nx serve docs",
+    "doc:version": "docusaurus --config apps/docs/docusaurus.config.js docs:version 1.0"
   },
   "private": true,
   "dependencies": {
@@ -71,6 +71,7 @@
     "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
     "cypress": "^9.1.0",
+    "docusaurus-plugin-typedoc": "^0.17.5",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",

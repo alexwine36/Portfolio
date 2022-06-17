@@ -1,1 +1,3 @@
-docs/libs/**/**.md
+docs/ui/**/**.md
+docs/hex-rgb/**/**.md
+docs/resume-hooks/**/*.md
