@@ -1,3 +1,16 @@
+## [1.8.1](https://github.com/alexwine36/Portfolio/compare/v1.8.0...v1.8.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* **docs:** updated baseUrl for docusaurus ([1f0bfb2](https://github.com/alexwine36/Portfolio/commit/1f0bfb2adf8cdb626108289f55fad5dc420e2c6a))
+
+
+### Docs
+
+* **resume-hooks:** updated documentation of rhubarb hook ([3856ab7](https://github.com/alexwine36/Portfolio/commit/3856ab7ef26d3293b81215440415d1621332e1d8))
+* **resume-hooks:** updated resume hooks readme ([02ba1be](https://github.com/alexwine36/Portfolio/commit/02ba1be67c0a5020a3283ad4630904e5fe63b659))
+
 ## [1.8.0](https://github.com/alexwine36/Portfolio/compare/v1.7.0...v1.8.0) (2022-06-17)
 
 
