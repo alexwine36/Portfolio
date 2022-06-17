@@ -142,6 +142,12 @@ export function HomePage(props: HomePageProps) {
         </>
       </>
       <FooterDisplay
+        links={[
+          {
+            display: 'Documentation',
+            link: 'https://alexwine36.github.io/Portfolio/docs',
+          },
+        ]}
         social={[
           {
             link: 'https://github.com/alexwine36',
