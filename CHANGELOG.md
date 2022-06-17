@@ -1,3 +1,15 @@
+## [1.8.0](https://github.com/alexwine36/Portfolio/compare/v1.7.0...v1.8.0) (2022-06-17)
+
+
+### Features
+
+* **docs:** added docs to the application with Docusaurus ([213c7c7](https://github.com/alexwine36/Portfolio/commit/213c7c70b36b15dd597460fd5cc9751fe4e490d6))
+
+
+### CI
+
+* **deploy:** updated needs to include docs before ran ([22064b3](https://github.com/alexwine36/Portfolio/commit/22064b354fdd0f9a4d9ad26ffca79f59f2d31d0c))
+
 ## [1.7.0](https://github.com/alexwine36/Portfolio/compare/v1.6.0...v1.7.0) (2022-06-17)
 
 
