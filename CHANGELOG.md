@@ -1,3 +1,12 @@
+## [1.8.3](https://github.com/alexwine36/Portfolio/compare/v1.8.2...v1.8.3) (2022-06-17)
+
+
+### Bug Fixes
+
+* **docs:** updated documentation site with theme and correct links ([566c154](https://github.com/alexwine36/Portfolio/commit/566c15410ae1ac22d451898ab7c5141af4106d06))
+* **docs:** updated edit blog link ([dffd0da](https://github.com/alexwine36/Portfolio/commit/dffd0da23a90f2a126a9da1f7bc5821983ce291c))
+* **doc:** updated config url ([a254bea](https://github.com/alexwine36/Portfolio/commit/a254bea8322d673e8bf5eb3bc1198b249edb37f3))
+
 ## [1.8.2](https://github.com/alexwine36/Portfolio/compare/v1.8.1...v1.8.2) (2022-06-17)
 
 
