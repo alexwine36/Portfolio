@@ -65,6 +65,10 @@ const formatResume = () => {
 
 type ResumeKeys = keyof typeof data;
 
+/**
+ * Get resume using "fake" hook
+ * @returns Parsed resume
+ */
 export function useRhubarbResume() {
   // const [resume] = useState(formatResume());
   const resume = formatResume();
