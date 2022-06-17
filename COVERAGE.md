@@ -22,7 +22,7 @@ libs.ui.src.assets.git-lab-icon | 50% | 100% | 0 | ➖
 libs.ui.src.assets.polygon-background | 20% | 0% | 0 | ❌
 libs.ui.src.components.detail-card-display | 40% | 100% | 0 | ❌
 libs.ui.src.components.detail-list-display | 30% | 0% | 0 | ❌
-libs.ui.src.components.footer-display | 86% | 100% | 0 | ✔
+libs.ui.src.components.footer-display | 100% | 100% | 0 | ✔
 libs.ui.src.components.gradient-text | 59% | 33% | 0 | ➖
 libs.ui.src.components.hero-display | 62% | 100% | 0 | ➖
 libs.ui.src.components.info-text-display | 25% | 100% | 0 | ❌
@@ -37,4 +37,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 20% | 100% | 0 | ❌
-**Summary** | **44%** (128 / 291) | **28%** (33 / 118) | **0** | ❌
+**Summary** | **44%** (129 / 291) | **28%** (33 / 118) | **0** | ❌

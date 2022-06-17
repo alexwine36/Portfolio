@@ -1,3 +1,16 @@
+## [1.8.2](https://github.com/alexwine36/Portfolio/compare/v1.8.1...v1.8.2) (2022-06-17)
+
+
+### Bug Fixes
+
+* **web:** added documentation link to footer ([6547918](https://github.com/alexwine36/Portfolio/commit/654791886b2ce80f16c9e4036f68be8a284fbd3d))
+
+
+### Docs
+
+* **readme:** updated readme with documentation link ([de03bab](https://github.com/alexwine36/Portfolio/commit/de03bab2d27fac703542245e1b66bb4bcf1b0388))
+* **ui:** updated component categories for display components and styles ([b081d01](https://github.com/alexwine36/Portfolio/commit/b081d0117e4f73546b60e7105669e1a0927b4e39))
+
 ## [1.8.1](https://github.com/alexwine36/Portfolio/compare/v1.8.0...v1.8.1) (2022-06-17)
 
 
