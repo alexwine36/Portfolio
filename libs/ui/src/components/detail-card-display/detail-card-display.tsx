@@ -1,5 +1,5 @@
 // import styled from '@emotion/styled';
-import { Card, CardContent, Grid, styled } from '@mui/material';
+import { Box, Card, CardContent, Grid, styled } from '@mui/material';
 import InfoTextDisplay from '../info-text-display/info-text-display';
 
 /* eslint-disable-next-line */
@@ -13,7 +13,7 @@ export interface DetailCardDisplayProps {
 const shadowColor = '255';
 const StyledDetailCardDisplay = styled(Card)(
   ({ theme }) => `
-
+height: 100%;
 `
 );
 
@@ -39,7 +39,16 @@ export function DetailCardDisplay(props: DetailCardDisplayProps) {
           </Grid>
           <Grid item sm>
             <InfoTextDisplay title={pretitle}></InfoTextDisplay>
-            {children}
+            <Box
+              sx={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              {children}
+            </Box>
           </Grid>
         </Grid>
         {/* <DetailListDisplay

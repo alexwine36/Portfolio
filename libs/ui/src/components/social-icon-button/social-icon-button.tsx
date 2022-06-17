@@ -1,8 +1,13 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { IconButton, Link, styled } from '@mui/material';
-import GitLabIcon from '../../assets/git-lab-icon/git-lab-icon';
-type SocialProviders = 'linkedin' | 'github' | 'gitlab';
+import { RiGitlabFill, RiStackOverflowFill } from 'react-icons/ri';
+export type SocialProviders =
+  | 'linkedin'
+  | 'github'
+  | 'gitlab'
+  | 'stackoverflow';
+
 /* eslint-disable-next-line */
 export interface SocialIconButtonProps {
   provider: SocialProviders;
@@ -22,7 +27,9 @@ const SelectIcon = (provider: SocialProviders) => {
     case 'github':
       return GitHubIcon;
     case 'gitlab':
-      return GitLabIcon;
+      return RiGitlabFill;
+    case 'stackoverflow':
+      return RiStackOverflowFill;
     default:
       return LinkedInIcon;
   }

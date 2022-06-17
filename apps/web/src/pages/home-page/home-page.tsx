@@ -140,7 +140,26 @@ export function HomePage(props: HomePageProps) {
           ))}
         </>
       </>
-      <FooterDisplay></FooterDisplay>
+      <FooterDisplay
+        social={[
+          {
+            link: 'https://github.com/alexwine36',
+            provider: 'github',
+          },
+          {
+            link: 'https://gitlab.com/alexwine',
+            provider: 'gitlab',
+          },
+          {
+            link: 'https://www.linkedin.com/in/alexwine/',
+            provider: 'linkedin',
+          },
+          {
+            link: 'https://stackoverflow.com/users/5237963/alex-wine',
+            provider: 'stackoverflow',
+          },
+        ]}
+      ></FooterDisplay>
     </PageBackground>
   );
 }

@@ -1,4 +1,7 @@
 import styled from '@emotion/styled';
+import { useTheme } from '@mui/material';
+import { generateGradient } from '../../lib/utilities/functions/generate-gradient';
+import { hexToRgba } from '../../lib/utilities/hex-to-rgba';
 
 /* eslint-disable-next-line */
 export interface GenerateMeteorBackgroundProps {}
@@ -8,6 +11,18 @@ const StyledGenerateMeteorBackground = styled.div`
 `;
 
 export function GenerateMeteorBackground(props: GenerateMeteorBackgroundProps) {
+  const theme = useTheme();
+
+  const { start: primaryStartRaw, end: primaryEnd } = generateGradient(
+    theme.palette.primary.main
+  );
+
+  const { start: secondaryStartRaw, end: secondaryEnd } = generateGradient(
+    theme.palette.primary.dark
+  );
+  const secondaryStart = hexToRgba(secondaryStartRaw, 0);
+  const primaryStart = hexToRgba(primaryStartRaw, 0);
+
   return (
     // <StyledGenerateMeteorBackground>
     //   <h1>Welcome to GenerateMeteorBackground!</h1>
@@ -392,8 +407,8 @@ export function GenerateMeteorBackground(props: GenerateMeteorBackgroundProps) {
           y2="100%"
           id="SvgjsLinearGradient1087"
         >
-          <stop stop-color="rgba(25, 37, 173, 0)" offset="0"></stop>
-          <stop stop-color="rgba(25, 37, 173, 1)" offset="1"></stop>
+          <stop stop-color={primaryStart} offset="0"></stop>
+          <stop stop-color={primaryEnd} offset="1"></stop>
         </linearGradient>
         <linearGradient
           x1="0%"
@@ -402,8 +417,8 @@ export function GenerateMeteorBackground(props: GenerateMeteorBackgroundProps) {
           y2="0%"
           id="SvgjsLinearGradient1088"
         >
-          <stop stop-color="rgba(25, 37, 173, 0)" offset="0"></stop>
-          <stop stop-color="rgba(25, 37, 173, 1)" offset="1"></stop>
+          <stop stop-color={primaryStart} offset="0"></stop>
+          <stop stop-color={primaryEnd} offset="1"></stop>
         </linearGradient>
         <linearGradient
           x1="100%"
@@ -412,8 +427,8 @@ export function GenerateMeteorBackground(props: GenerateMeteorBackgroundProps) {
           y2="100%"
           id="SvgjsLinearGradient1089"
         >
-          <stop stop-color="rgba(28, 83, 142, 0)" offset="0"></stop>
-          <stop stop-color="#1c538e" offset="1"></stop>
+          <stop stop-color={secondaryStart} offset="0"></stop>
+          <stop stop-color={secondaryEnd} offset="1"></stop>
         </linearGradient>
         <linearGradient
           x1="0%"
@@ -422,8 +437,8 @@ export function GenerateMeteorBackground(props: GenerateMeteorBackgroundProps) {
           y2="0%"
           id="SvgjsLinearGradient1090"
         >
-          <stop stop-color="rgba(28, 83, 142, 0)" offset="0"></stop>
-          <stop stop-color="#1c538e" offset="1"></stop>
+          <stop stop-color={secondaryStart} offset="0"></stop>
+          <stop stop-color={secondaryEnd} offset="1"></stop>
         </linearGradient>
       </defs>
     </svg>

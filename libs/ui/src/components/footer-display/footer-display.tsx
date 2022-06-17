@@ -1,11 +1,20 @@
 import { Box, Divider, Link, styled, Typography } from '@mui/material';
 import GradientText from '../gradient-text/gradient-text';
 import SocialIconButton, {
-  SocialIconButtonProps,
+  SocialProviders,
 } from '../social-icon-button/social-icon-button';
 
 /* eslint-disable-next-line */
-export interface FooterDisplayProps {}
+export interface FooterDisplayProps {
+  links?: {
+    display: string;
+    link: string;
+  }[];
+  social?: {
+    provider: SocialProviders;
+    link: string;
+  }[];
+}
 
 const StyledFooterDisplay = styled('footer')(
   ({ theme }) => `
@@ -20,26 +29,10 @@ const StyledBox = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-evenly',
   marginTop: theme.spacing(1),
-  '& > a': {
-    margin: `${theme.spacing(1)} ${theme.spacing(2)} !important`,
-  },
 }));
 
-const links = ['http://example.dample', 'pample', 'sample'];
-
-const social: SocialIconButtonProps[] = [
-  {
-    provider: 'gitlab',
-  },
-  {
-    provider: 'github',
-  },
-  {
-    provider: 'linkedin',
-  },
-];
-
 export function FooterDisplay(props: FooterDisplayProps) {
+  const { links, social } = props;
   return (
     <StyledFooterDisplay>
       <Box
@@ -62,8 +55,14 @@ export function FooterDisplay(props: FooterDisplayProps) {
             </GradientText>
           </Typography>
         </StyledBox>
-        <StyledBox>
-          {links.map((link, idx) => (
+        <StyledBox
+          sx={{
+            '& > a': {
+              margin: 2,
+            },
+          }}
+        >
+          {links?.map((item, idx) => (
             <Link
               target="_blank"
               rel="noopener"
@@ -71,17 +70,19 @@ export function FooterDisplay(props: FooterDisplayProps) {
               //   color: 'inherit',
               // }}
               color="inherit"
-              href={link}
+              href={item.link}
               underline="hover"
             >
-              {/* {link}    */}
-              sanodke
+              {item.display}
             </Link>
           ))}
         </StyledBox>
         <StyledBox>
-          {social.map((link, idx) => (
-            <SocialIconButton provider={link.provider}></SocialIconButton>
+          {social?.map((item, idx) => (
+            <SocialIconButton
+              link={item.link}
+              provider={item.provider}
+            ></SocialIconButton>
           ))}
         </StyledBox>
 

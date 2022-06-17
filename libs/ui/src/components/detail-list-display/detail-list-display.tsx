@@ -11,6 +11,7 @@ export interface DetailListDisplayProps {
 const StyledDetailListDisplay = styled('ul')`
   // color: pink;
   margin: 0;
+  width: inherit;
 `;
 
 const ChipListItem = styled('li')(({ theme }) => ({
