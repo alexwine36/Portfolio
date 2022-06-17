@@ -1,3 +1,16 @@
+## [1.7.0](https://github.com/alexwine36/Portfolio/compare/v1.6.0...v1.7.0) (2022-06-17)
+
+
+### Features
+
+* **ui:** scaffolded footer ([8d70672](https://github.com/alexwine36/Portfolio/commit/8d7067255330a3acb7d9b57cfdf5007f4b747186))
+
+
+### Bug Fixes
+
+* **ui:** updated component displays ([688d23d](https://github.com/alexwine36/Portfolio/commit/688d23db36e573d6dc022deb3a502704a54cd951))
+* **ui:** updated skill icon for display ([dca8d0a](https://github.com/alexwine36/Portfolio/commit/dca8d0a89a88ac3b16fb6cf1baffcf483b6b93e2))
+
 ## [1.6.0](https://github.com/alexwine36/Portfolio/compare/v1.5.0...v1.6.0) (2022-06-16)
 
 
