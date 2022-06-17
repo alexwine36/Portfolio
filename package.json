@@ -12,7 +12,8 @@
     "lint": "nx affected --target=lint --parallel=3",
     "format:check": "nx format:check",
     "doc": "nx run-many --target=doc --all",
-    "doc:build": "nx build docs"
+    "doc:build": "nx build docs",
+    "doc:start": "nx serve docs"
   },
   "private": true,
   "dependencies": {
