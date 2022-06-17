@@ -14,7 +14,11 @@ flex-direction: column;
 padding-bottom: ${theme.spacing(2)};
 `
 );
-
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
 export function InfoTextDisplay(props: InfoTextDisplayProps) {
   const { title, subtitle } = props;
   return (

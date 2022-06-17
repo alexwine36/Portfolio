@@ -17,6 +17,11 @@ height: 100%;
 `
 );
 
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
 export function DetailCardDisplay(props: DetailCardDisplayProps) {
   const { children, title, pretitle, subtitle } = props;
   return (

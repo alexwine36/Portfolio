@@ -82,6 +82,11 @@ const GeneratePredefined = (props: {
   }
 };
 
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
 export function ParallaxBackground(props: ParallaxBackgroundProps) {
   const { image, children, predefined } = props;
 

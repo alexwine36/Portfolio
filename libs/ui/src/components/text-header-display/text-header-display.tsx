@@ -31,7 +31,11 @@ const TextBoxFormat = styled('div')`
   justify-content: space-between;
   align-items: baseline;
 `;
-
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
 export function TextHeaderDisplay(props: TextHeaderDisplayProps) {
   const {
     title,

@@ -31,6 +31,12 @@ const StyledBox = styled(Box)(({ theme }) => ({
   marginTop: theme.spacing(1),
 }));
 
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
+
 export function FooterDisplay(props: FooterDisplayProps) {
   const { links, social } = props;
   return (

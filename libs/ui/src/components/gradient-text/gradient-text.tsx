@@ -34,6 +34,9 @@ interface GradientProps {
   color?: string;
 }
 
+/**
+ * @category Styles
+ */
 const GradientText = styled(Typography)<GradientProps>(
   ({ theme, ...rest }) => `
   background-image: ${generateGradient(theme, rest)};

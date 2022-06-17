@@ -36,7 +36,11 @@ const StyledSectionChildrenDisplay = styled('div')(
 // padding-bottom: ${theme.spacing(2)};
 `
 );
-
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
 export function SectionDisplay(props: SectionDisplayProps) {
   const { title, children, id } = props;
   const theme = useTheme();

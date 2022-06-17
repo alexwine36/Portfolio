@@ -23,6 +23,12 @@ const StyledListItem = styled('li')`
   text-align: match-parent;
 `;
 
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
+
 export function DetailListDisplay(props: DetailListDisplayProps) {
   const { bullets, chips } = props;
   return (

@@ -41,7 +41,11 @@ const StyledSpeedDialIcon = styled(SpeedDialIcon)(({ theme }) => ({
   //   transform: 'rotate(0 deg)',
   // },
 }));
-
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
 export function SpeedDialNavigation(props: SpeedDialNavigationProps) {
   const { actions } = props;
   const [open, setOpen] = React.useState(false);

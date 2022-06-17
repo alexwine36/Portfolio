@@ -42,7 +42,9 @@ background-position: center;
 //     </StyledPageBackground>
 //   );
 // }
-
+/**
+ * @category Styles
+ */
 export const PageBackground = StyledPageBackground;
 
 export default PageBackground;

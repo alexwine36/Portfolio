@@ -34,7 +34,11 @@ const SelectIcon = (provider: SocialProviders) => {
       return LinkedInIcon;
   }
 };
-
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
 export function SocialIconButton(props: SocialIconButtonProps) {
   const { provider, link } = props;
   const Icon = SelectIcon(provider);

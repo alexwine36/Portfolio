@@ -53,6 +53,11 @@ const formatRgba = (values: (number | string)[]) => {
 //   return res;
 // };
 
+/**
+ * @category Display
+ * @param props
+ * @returns
+ */
 export function HeroDisplay(props: HeroDisplayProps) {
   // const theme = useTheme();
   return (
