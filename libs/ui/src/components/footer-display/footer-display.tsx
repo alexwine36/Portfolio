@@ -73,9 +73,6 @@ export function FooterDisplay(props: FooterDisplayProps) {
               variant="body2"
               target="_blank"
               rel="noopener"
-              // sx={{
-              //   color: 'inherit',
-              // }}
               color="inherit"
               href={item.link}
               underline="hover"
@@ -114,29 +111,6 @@ export function FooterDisplay(props: FooterDisplayProps) {
           </Typography>
         </StyledBox>
       </Box>
-
-      {/* <Grid container spacing={3}>
-        <Grid
-          item
-          xs={12}
-          container
-          spacing={3}
-          sx={{
-            justifyContent: 'center',
-          }}
-        ></Grid>
-        <Grid
-          item
-          xs={12}
-          container
-          spacing={3}
-          sx={{
-            justifyContent: 'center',
-          }}
-        >
-
-        </Grid>
-      </Grid> */}
     </StyledFooterDisplay>
   );
 }
