@@ -1,15 +1,16 @@
-import styled from '@emotion/styled';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import PageLayout from '../layouts/page-layout/page-layout';
 import HomePage from '../pages/home-page/home-page';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
 
 export function App() {
   return (
-    // <Container>
-    <HomePage />
-    // </Container>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PageLayout />}>
+          <Route index element={<HomePage />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
