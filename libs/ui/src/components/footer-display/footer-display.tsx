@@ -70,6 +70,7 @@ export function FooterDisplay(props: FooterDisplayProps) {
         >
           {links?.map((item, idx) => (
             <Link
+              variant="body2"
               target="_blank"
               rel="noopener"
               // sx={{
