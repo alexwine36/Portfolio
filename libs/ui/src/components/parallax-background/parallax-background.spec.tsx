@@ -4,7 +4,11 @@ import ParallaxBackground from './parallax-background';
 
 describe('ParallaxBackground', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ParallaxBackground />);
+    const { baseElement } = render(
+      <ParallaxBackground>
+        <div>Sample </div>
+      </ParallaxBackground>
+    );
     expect(baseElement).toBeTruthy();
   });
 });

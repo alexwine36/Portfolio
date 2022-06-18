@@ -1,3 +1,4 @@
+export * from './assets/star-background/star-background';
 export * from './assets/code-thinking/code-thinking';
 export * from './assets/generate-circuit-board-background/generate-circuit-board-background';
 export * from './assets/generate-galaxy-background/generate-galaxy-background';
