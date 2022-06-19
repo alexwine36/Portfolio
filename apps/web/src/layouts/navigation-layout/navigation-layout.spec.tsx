@@ -1,13 +1,13 @@
 import { render } from '@testing-library/react';
 import { HashRouter } from 'react-router-dom';
 
-import PageLayout from './page-layout';
+import NavigationLayout from './navigation-layout';
 
-describe('PageLayout', () => {
+describe('NavigationLayout', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
       <HashRouter>
-        <PageLayout />
+        <NavigationLayout />
       </HashRouter>
     );
     expect(baseElement).toBeTruthy();

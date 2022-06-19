@@ -1,13 +1,13 @@
 import { render } from '@testing-library/react';
 import { HashRouter } from 'react-router-dom';
 
-import PageLayout from './page-layout';
+import SectionPage from './section-page';
 
-describe('PageLayout', () => {
+describe('SectionPage', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
       <HashRouter>
-        <PageLayout />
+        <SectionPage />
       </HashRouter>
     );
     expect(baseElement).toBeTruthy();

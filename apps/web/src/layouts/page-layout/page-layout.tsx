@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { FooterDisplay } from '@portfolio/ui';
 import { Outlet } from 'react-router-dom';
+import NavigationLayout from '../navigation-layout/navigation-layout';
 /* eslint-disable-next-line */
 export interface PageLayoutProps {
   // children: React.ReactElement | React.ReactElement[];
@@ -13,6 +14,7 @@ const StyledPageLayout = styled.div`
 export function PageLayout(props: PageLayoutProps) {
   return (
     <StyledPageLayout>
+      <NavigationLayout />
       {/* <h1>Welcome to PageLayout!</h1> */}
       <Outlet />
 
