@@ -24,13 +24,12 @@ export function SectionPage(props: SectionPageProps) {
     sectionId: SectionHook;
   }>();
   const navigate = useNavigate();
-
+  const { section } = useSectionHook(sectionId || 'work');
   if (!sectionId) {
     navigate('/');
     return <div>Sample</div>;
   }
 
-  const { section } = useSectionHook(sectionId);
   return (
     <StyledSectionPage>
       <React.Fragment>
