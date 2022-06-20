@@ -99,10 +99,17 @@ export function useActionsHook(includeHome?: boolean) {
   };
 }
 
-export const useSectionHook = (key: SectionHook) => {
+export const useSectionHook = (key: SectionHook | '') => {
   const { sections } = useSectionsHook();
-
-  return { section: sections[key] };
+  if (key in sections) {
+    const k: SectionHook = key as SectionHook;
+    return { section: sections[k], error: undefined };
+  }
+  return {
+    section: sections['work'],
+    error: 'Key not found',
+  };
+  // throw new Error('Section not defined');
 };
 
 export default useSectionHook;

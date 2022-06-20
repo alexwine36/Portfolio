@@ -7,7 +7,7 @@ import {
   SectionDisplay,
 } from '@portfolio/ui';
 import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import useSectionHook, {
   SectionHook,
 } from '../../hooks/use-section-hook/use-section-hook';
@@ -20,14 +20,16 @@ const StyledSectionPage = styled.div`
 `;
 
 export function SectionPage(props: SectionPageProps) {
-  const { sectionId } = useParams<{
+  const { sectionId = '' } = useParams<{
     sectionId: SectionHook;
   }>();
-  const navigate = useNavigate();
-  const { section } = useSectionHook(sectionId || 'work');
-  if (!sectionId) {
-    navigate('/');
-    return <div>Sample</div>;
+
+  const { section, error } = useSectionHook(sectionId);
+
+  if (error) {
+    // navigate({ pathname: '/' }, { replace: true });
+    return <Navigate to={'/'} replace={true}></Navigate>;
+    // return <div>Sample</div>;
   }
 
   return (

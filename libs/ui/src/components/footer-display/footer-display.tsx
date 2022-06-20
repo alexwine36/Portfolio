@@ -70,6 +70,7 @@ export function FooterDisplay(props: FooterDisplayProps) {
         >
           {links?.map((item, idx) => (
             <Link
+              key={idx}
               variant="body2"
               target="_blank"
               rel="noopener"
@@ -84,6 +85,7 @@ export function FooterDisplay(props: FooterDisplayProps) {
         <StyledBox>
           {social?.map((item, idx) => (
             <SocialIconButton
+              key={idx}
               link={item.link}
               provider={item.provider}
             ></SocialIconButton>

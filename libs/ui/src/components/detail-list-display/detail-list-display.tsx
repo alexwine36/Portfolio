@@ -52,7 +52,7 @@ export function DetailListDisplay(props: DetailListDisplayProps) {
           if (typeof bullet === 'string') {
             if (chips) {
               return (
-                <ChipListItem>
+                <ChipListItem key={idx}>
                   <Chip label={bullet}></Chip>
                 </ChipListItem>
               );
