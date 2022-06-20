@@ -39,7 +39,6 @@ export function NavigationLayout(props: NavigationLayoutProps) {
   const { actions } = useActionsHook(true);
   const [value, setValue] = React.useState(0);
   const { pathname } = useLocation();
-  console.log(location);
 
   const handleChange = (val: number) => {
     setValue(val);
