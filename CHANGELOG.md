@@ -1,3 +1,25 @@
+## [1.9.0](https://github.com/alexwine36/Portfolio/compare/v1.8.3...v1.9.0) (2022-06-18)
+
+
+### Features
+
+* **ui:** galaxy background added ([ebd5196](https://github.com/alexwine36/Portfolio/commit/ebd5196cf0f84cdcf6883b65d01657660857521e))
+
+
+### Bug Fixes
+
+* **footer:** updated footer links size ([7efc99d](https://github.com/alexwine36/Portfolio/commit/7efc99d40383b28668d90a57f0a43c6255491e35))
+
+
+### Docs
+
+* **generation:** updated generation of documentation ([52c83e0](https://github.com/alexwine36/Portfolio/commit/52c83e023b33efef5be6fd7de6c66b9b5b65cfa9))
+
+
+### Code Refactoring
+
+* **ui:** removed unneeded code from footer display ([c9280e6](https://github.com/alexwine36/Portfolio/commit/c9280e647a68710221494c98b42d8d49e08d85ab))
+
 ## [1.8.3](https://github.com/alexwine36/Portfolio/compare/v1.8.2...v1.8.3) (2022-06-17)
 
 

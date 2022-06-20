@@ -1,4 +1,4 @@
-![Code Coverage](https://img.shields.io/badge/Code%20Coverage-44%25-critical?style=flat)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-33%25-critical?style=flat)
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
@@ -20,21 +20,22 @@ libs.ui.src.assets.generate-soundwave-background | 14% | 0% | 0 | ❌
 libs.ui.src.assets.generate-waves-background | 10% | 0% | 0 | ❌
 libs.ui.src.assets.git-lab-icon | 50% | 100% | 0 | ➖
 libs.ui.src.assets.polygon-background | 20% | 0% | 0 | ❌
+libs.ui.src.assets.star-background | 33% | 0% | 0 | ❌
 libs.ui.src.components.detail-card-display | 40% | 100% | 0 | ❌
 libs.ui.src.components.detail-list-display | 30% | 0% | 0 | ❌
-libs.ui.src.components.footer-display | 100% | 100% | 0 | ✔
-libs.ui.src.components.gradient-text | 59% | 33% | 0 | ➖
-libs.ui.src.components.hero-display | 62% | 100% | 0 | ➖
+libs.ui.src.components.footer-display | 29% | 100% | 0 | ❌
+libs.ui.src.components.gradient-text | 12% | 0% | 0 | ❌
+libs.ui.src.components.hero-display | 25% | 100% | 0 | ❌
 libs.ui.src.components.info-text-display | 25% | 100% | 0 | ❌
 libs.ui.src.components.page-background | 100% | 100% | 0 | ✔
-libs.ui.src.components.parallax-background | 50% | 39% | 0 | ➖
+libs.ui.src.components.parallax-background | 22% | 0% | 0 | ❌
 libs.ui.src.components.section-display | 25% | 100% | 0 | ❌
-libs.ui.src.components.social-icon-button | 83% | 71% | 0 | ✔
-libs.ui.src.components.speed-dial-navigation | 100% | 50% | 0 | ✔
+libs.ui.src.components.social-icon-button | 17% | 0% | 0 | ❌
+libs.ui.src.components.speed-dial-navigation | 25% | 0% | 0 | ❌
 libs.ui.src.components.text-header-display | 17% | 0% | 0 | ❌
 libs.ui.src.lib | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 20% | 100% | 0 | ❌
-**Summary** | **44%** (129 / 291) | **28%** (33 / 118) | **0** | ❌
+**Summary** | **33%** (101 / 310) | **15%** (18 / 124) | **0** | ❌
