@@ -5,7 +5,7 @@ import SectionPage from '../pages/section-page/section-page';
 
 export function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Portfolio/">
       <Routes>
         <Route path="/" element={<PageLayout />}>
           <Route index element={<HomePage />}></Route>

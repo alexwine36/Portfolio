@@ -990,6 +990,7 @@ export const data = {
   skills: [],
   createdAt: '2022-03-07T16:47:46.566354Z',
   updatedAt: '2022-06-08T18:13:14.581470+01:00',
+  // TODO: Mention Acting scholarship and Reasoning behind starting business
   bio: 'A full-stack developer with 5+ years of experience developing web applications and services. Strong experience with React, Node.js, and Express. Also experienced with HTML/CSS, JavaScript, and TypeScript. Experienced in creating unit and end-to-end tests. Comfortable working in a Agile/Scrum environment.',
   recruiterBio: '',
   displayEmail: 'alexwine36@gmail.com',

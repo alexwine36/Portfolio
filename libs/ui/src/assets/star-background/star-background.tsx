@@ -44,8 +44,6 @@ const Stars = styled('div')<{ value: number; size?: number; dim: Dimension }>(
   ({ value, size, dim }) => {
     const s = size || 1;
     const shadows = generateShadows(value, s, dim);
-    console.log(shadows);
-    console.log(animStar);
 
     return `
 

@@ -1,4 +1,5 @@
 import FactCheckIcon from '@mui/icons-material/FactCheck';
+import HomeIcon from '@mui/icons-material/Home';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import { useRhubarbResume } from '@portfolio/resume-hooks';
@@ -70,7 +71,7 @@ export function useSectionsHook() {
   return { sections };
 }
 
-export function useActionsHook() {
+export function useActionsHook(includeHome?: boolean) {
   const { sections } = useSectionsHook();
   const actions = Object.entries(sections).map(([id, section]) => {
     const { icon, name } = section;
@@ -82,7 +83,20 @@ export function useActionsHook() {
     };
   });
 
-  return { actions };
+  return {
+    actions: [
+      ...(includeHome
+        ? [
+            {
+              icon: <HomeIcon />,
+              name: 'Home',
+              href: '/',
+            },
+          ]
+        : []),
+      ...actions,
+    ],
+  };
 }
 
 export const useSectionHook = (key: SectionHook) => {
