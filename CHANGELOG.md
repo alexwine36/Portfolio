@@ -1,3 +1,12 @@
+## [1.10.0](https://github.com/alexwine36/Portfolio/compare/v1.9.0...v1.10.0) (2022-06-20)
+
+
+### Features
+
+* **app:** added react router to application ([5865247](https://github.com/alexwine36/Portfolio/commit/5865247df42c34db3b66a29fdfc2f0c72bb4f93f))
+* **web:** added base navigation setup ([418f2e8](https://github.com/alexwine36/Portfolio/commit/418f2e800b55d692905c97d6936618462ee0aa73))
+* **web:** bottom navigation added with React Router ([64e8364](https://github.com/alexwine36/Portfolio/commit/64e8364cad14eaad379dd75d4a6e28fa6eac16f6))
+
 ## [1.9.0](https://github.com/alexwine36/Portfolio/compare/v1.8.3...v1.9.0) (2022-06-18)
 
 
