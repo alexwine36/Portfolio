@@ -43,5 +43,13 @@ module.exports = {
       },
     },
     "gatsby-plugin-mui-emotion",
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `work`,
+        path: `${__dirname}/src/work`,
+      },
+    },
   ],
 }
