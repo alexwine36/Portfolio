@@ -58,5 +58,11 @@ module.exports = {
         // extensions: [`.mdx`, `.md`],
       },
     },
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        // fileName: `./gatsby-graphql.ts`,
+      },
+    },
   ],
 }
