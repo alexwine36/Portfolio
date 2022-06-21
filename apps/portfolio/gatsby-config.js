@@ -44,6 +44,7 @@ module.exports = {
     },
     "gatsby-plugin-mui-emotion",
     // `gatsby-transformer-remark`,
+    "gatsby-plugin-mdx-source-name",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

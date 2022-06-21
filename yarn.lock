@@ -10412,6 +10412,11 @@ gatsby-plugin-material-ui@^4.1.0:
     "@emotion/cache" "^11.4.0"
     "@emotion/server" "^11.4.0"
 
+gatsby-plugin-mdx-source-name@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx-source-name/-/gatsby-plugin-mdx-source-name-1.0.1.tgz#729615aac57a55bb61e5c5df46067f64ea185cb7"
+  integrity sha512-D8DAOI84ZoWmx3c6BFYuKEnQc+Y1IU+VMhTJZbIOcKbQaoROKx66TkvjLbdHSlrpQ6Skozmi+b6NNrwIyZunzw==
+
 gatsby-plugin-mdx@^3.17.0:
   version "3.17.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.17.0.tgz#6df646cae67662fceb92ff5016c12347786ba10a"
