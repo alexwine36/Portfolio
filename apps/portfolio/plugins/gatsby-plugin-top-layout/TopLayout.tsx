@@ -1,8 +1,10 @@
+import { MDXProvider } from "@mdx-js/react"
 import CssBaseline from "@mui/material/CssBaseline"
 import { ThemeProvider } from "@mui/material/styles"
 import PropTypes from "prop-types"
 import * as React from "react"
 import { Helmet } from "react-helmet"
+import components from "./components"
 import theme from "./theme"
 
 export default function TopLayout(props) {
@@ -22,7 +24,7 @@ export default function TopLayout(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        {props.children}
+        <MDXProvider components={components}>{props.children}</MDXProvider>
       </ThemeProvider>
     </React.Fragment>
   )

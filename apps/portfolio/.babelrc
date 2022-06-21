@@ -3,8 +3,8 @@
     [
       "@nrwl/gatsby/babel",
       {
-        "reactRuntime": "automatic",
-        "reactImportSource": "@emotion/react"
+        "reactRuntime": "automatic"
+        // "reactImportSource": "react"
       }
     ]
   ],

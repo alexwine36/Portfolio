@@ -16,6 +16,7 @@ import {
   SpeedDialNavigation,
 } from "@portfolio/ui"
 import React from "react"
+import QueryComponent from "../components/query-component"
 
 const StyledApp = styled.div``
 
@@ -92,6 +93,7 @@ export function Index() {
   })
   return (
     <PageBackground>
+      <QueryComponent></QueryComponent>
       <SpeedDialNavigation actions={actions} />
       <HeroDisplay />
       <>
