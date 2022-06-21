@@ -1,2 +1,5 @@
 .prettierignore
 .docusaurus/
+/apps/portfolio/node_modules
+/apps/portfolio/public
+/apps/portfolio/.cache

@@ -4,6 +4,8 @@
   "projects": {
     "docs": "apps/docs",
     "hex-rgb": "libs/hex-rgb",
+    "portfolio": "apps/portfolio",
+    "portfolio-e2e": "apps/portfolio-e2e",
     "resume-hooks": "libs/resume-hooks",
     "ui": "libs/ui",
     "web": "apps/web",

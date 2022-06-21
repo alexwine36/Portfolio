@@ -1,5 +1,5 @@
 import { Chip, styled, Typography } from '@mui/material';
-
+import React from 'react';
 export type Bullets = string | string[];
 
 /* eslint-disable-next-line */
