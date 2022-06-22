@@ -57,6 +57,7 @@ export function NavigationLayout(props: NavigationLayoutProps) {
             <BottomNavigationAction
               component={Link}
               to={action.href}
+              activeClassName={"Mui-selected"}
               key={action.href}
               label={action.name}
               icon={action.icon}
