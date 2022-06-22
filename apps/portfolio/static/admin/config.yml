@@ -2,13 +2,13 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
-media_folder: src/images
-public_folder: src/images
+media_folder: apps/portfolio/src/images
+public_folder: apps/portfolio/src/images
 
 collections:
   - name: "projects"
     label: "Projects"
-    folder: "content/projects"
+    folder: "apps/portfolio/content/projects"
     create: true
     slug: "index"
     media_folder: ""
