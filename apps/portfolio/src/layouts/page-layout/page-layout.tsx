@@ -20,6 +20,10 @@ export function PageLayout(props: PageLayoutProps) {
       <FooterDisplay
         links={[
           {
+            display: "Admin",
+            link: "/admin",
+          },
+          {
             display: "Documentation",
             link: "https://alexwine36.github.io/Portfolio/docs",
           },
