@@ -9,7 +9,9 @@ import { generateBackgroundUri } from '../../lib/utilities/functions/generateBas
 import GradientText from '../gradient-text/gradient-text';
 
 /* eslint-disable-next-line */
-export interface HeroDisplayProps {}
+export interface HeroDisplayProps {
+  title?: string;
+}
 
 const StyledHeroDisplay = styled('div')(({ theme }) => {
   // const { dark, main } = theme.palette.secondary;
@@ -59,6 +61,7 @@ const formatRgba = (values: (number | string)[]) => {
  * @returns
  */
 export function HeroDisplay(props: HeroDisplayProps) {
+  const { title } = props;
   // const theme = useTheme();
   return (
     <SizeMe monitorHeight>
@@ -79,7 +82,7 @@ export function HeroDisplay(props: HeroDisplayProps) {
                   <Typography variant="h3">
                     Alex Wine |{' '}
                     <GradientText primary as="span">
-                      Portfolio
+                      {title || 'Portfolio'}
                     </GradientText>
                   </Typography>
                   {/* <GradientText variant="h3">Potfolio</GradientText> */}

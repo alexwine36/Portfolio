@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles"
 import PropTypes from "prop-types"
 import * as React from "react"
 import { Helmet } from "react-helmet"
+import PageLayout from "../../src/layouts/page-layout/page-layout"
 import components from "./components"
 import theme from "./theme"
 
@@ -24,7 +25,9 @@ export default function TopLayout(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <MDXProvider components={components}>{props.children}</MDXProvider>
+        <MDXProvider components={components}>
+          <PageLayout>{props.children}</PageLayout>
+        </MDXProvider>
       </ThemeProvider>
     </React.Fragment>
   )

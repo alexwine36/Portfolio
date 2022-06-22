@@ -48,7 +48,7 @@ export function DetailCardDisplay(props: DetailCardDisplayProps) {
               sx={{
                 width: '100%',
                 display: 'flex',
-                justifyContent: 'center',
+                // justifyContent: 'center',
                 alignItems: 'center',
               }}
             >

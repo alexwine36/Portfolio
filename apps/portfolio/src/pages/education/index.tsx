@@ -1,23 +1,21 @@
 import styled from "@emotion/styled"
-import { Container } from "@mui/system"
+import { Container } from "@mui/material"
 import { HeroDisplay, ParallaxBackground } from "@portfolio/ui"
 import { graphql, PageProps } from "gatsby"
-import { WorkQueryQuery } from "../../../graphql-types"
+import { EducationQueryQuery } from "../../../graphql-types"
 import SectionDataDisplay, {
   SectionDataDisplayProps,
 } from "../../display/section-data-display"
 import { pages } from "../../utilities/pages"
 
 /* eslint-disable-next-line */
-export interface WorkPageProps extends PageProps<WorkQueryQuery> {}
+export interface EducationPageProps extends PageProps<EducationQueryQuery> {}
 
-const StyledWorkPage = styled.div`
-  // color: pink;
-`
+const StyledEducationPage = styled.div``
 
-export const WorkPage = (props: WorkPageProps) => {
+export function EducationPage(props: EducationPageProps) {
   const data = props.data.allMdx.edges
-  const page = pages["work"]
+  const page = pages["education"]
   const parsedData: SectionDataDisplayProps = {
     items: data.map(d => {
       const { frontmatter, body } = d.node
@@ -26,30 +24,30 @@ export const WorkPage = (props: WorkPageProps) => {
         frontmatter.endDate || "Present"
       }`
       return {
-        title: frontmatter.company,
-        pretitle: frontmatter.position,
+        title: frontmatter.school,
+        pretitle: frontmatter.study,
         content: body,
         subtitle: displayDate,
       }
     }),
   }
-  return (
-    <StyledWorkPage>
-      <HeroDisplay title={page.name}></HeroDisplay>
 
-      <ParallaxBackground predefined={"planet"}>
+  return (
+    <StyledEducationPage>
+      <HeroDisplay title={page.name}></HeroDisplay>
+      <ParallaxBackground predefined={page.background}>
         <Container>
           <SectionDataDisplay {...parsedData} />
         </Container>
       </ParallaxBackground>
-    </StyledWorkPage>
+    </StyledEducationPage>
   )
 }
 
 export const pageQuery = graphql`
-  query WorkQuery {
+  query EducationQuery {
     allMdx(
-      filter: { fields: { source: { eq: "work" } } }
+      filter: { fields: { source: { eq: "education" } } }
       sort: { fields: frontmatter___endDate, order: DESC }
     ) {
       edges {
@@ -57,10 +55,10 @@ export const pageQuery = graphql`
           id
           fileAbsolutePath
           frontmatter {
-            startDate(formatString: "MMM YYYY")
-            company
-            position
-            endDate(formatString: "MMM YYYY")
+            startDate(formatString: "YYYY")
+            school
+            study
+            endDate(formatString: "YYYY")
           }
           fields {
             source
@@ -73,4 +71,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default WorkPage
+export default EducationPage

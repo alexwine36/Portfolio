@@ -54,6 +54,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `education`,
+        path: `${__dirname}/content/education`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-mdx",
       options: {
         // extensions: [`.mdx`, `.md`],
