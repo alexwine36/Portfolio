@@ -1,3 +1,47 @@
+## [1.11.0](https://github.com/alexwine36/Portfolio/compare/v1.10.0...v1.11.0) (2022-06-22)
+
+
+### Features
+
+* **gatsby:** added education and updated page layouts ([699a818](https://github.com/alexwine36/Portfolio/commit/699a8187877b1ca05596cf1266d8d68ad1261d69))
+* **gatsby:** added graphql codegen and work history ([f1b02fe](https://github.com/alexwine36/Portfolio/commit/f1b02fe01b75579c550928fb0ee8bace36473e79))
+* **gatsby:** added netlify for editing projects on the go ([9c45e6f](https://github.com/alexwine36/Portfolio/commit/9c45e6fb63c3ad01fee281e16ffe7083e13c4dc5))
+* **gatsby:** changed to gatsby web deploy ([2f6cd61](https://github.com/alexwine36/Portfolio/commit/2f6cd614fee55d9f33fa5697f7f3c2bba07ee1f5))
+* **gatsby:** moved to mdx and updated components used for display ([83f5d4c](https://github.com/alexwine36/Portfolio/commit/83f5d4cbe25fbbd3e15923a64426d59394c342c2))
+* **gatsby:** scaffolded starter pages ([f6b5f4a](https://github.com/alexwine36/Portfolio/commit/f6b5f4a186d9f27b1a834ab147da15a164766b8a))
+* **gatsby:** testing using gatsby as portfolio source ([8f803e5](https://github.com/alexwine36/Portfolio/commit/8f803e50bc650559278c7dac8c7cb0830dda35ad))
+* **gatsby:** updated frontmatter for easier queries ([60903b5](https://github.com/alexwine36/Portfolio/commit/60903b5a9dff278d059930e36793f1ca50404de7))
+
+
+### Bug Fixes
+
+* **cleanup:** removed react warnings and errors ([852cf5f](https://github.com/alexwine36/Portfolio/commit/852cf5f14e363a0f46d082d11dbbe04d7ea4a395))
+* **gatsby:** fixed bottom navigation display ([49e8d45](https://github.com/alexwine36/Portfolio/commit/49e8d45fd154c604d28c21e5fe1ff48432eae276))
+* **gatsby:** updated configuration and updated work display ([5da7ae5](https://github.com/alexwine36/Portfolio/commit/5da7ae543b4934021a2c9addd1a4045bb6edac1e))
+* **gatsby:** updated layout and made navigation labels bold ([ed529b7](https://github.com/alexwine36/Portfolio/commit/ed529b7811decb59414b9a58c8a0a85d34a32509))
+* **kem:** she said I'm a biggity bitch ([b13b41c](https://github.com/alexwine36/Portfolio/commit/b13b41c6f136748b60f4517e834056fc95b7e98a))
+* **netlify:** updated fields for work and projects ([a5d9416](https://github.com/alexwine36/Portfolio/commit/a5d941693f9fcffa976345cfe92c6aac2285117a))
+* **web:** removed location log from file ([af236e9](https://github.com/alexwine36/Portfolio/commit/af236e984b82270016a8fd793020b53c7067c9fe))
+* **web:** section page changed hook location ([93677b1](https://github.com/alexwine36/Portfolio/commit/93677b1b7c083885c407f327c6897c5b7cc3bc2f))
+
+
+### Docs
+
+* **gatsby:** updated abrazo data ([6938397](https://github.com/alexwine36/Portfolio/commit/693839763bca7edff7f115c944fd240fb2cf04cb))
+
+
+### Build System
+
+* **gatsby:** updated netlify configuration ([b05f8e8](https://github.com/alexwine36/Portfolio/commit/b05f8e8f64b0ef988a3bfd262da85b4cc5cfa17c))
+* **netlify:** updated netlify config and build command ([022720e](https://github.com/alexwine36/Portfolio/commit/022720ee7df25df6a91ff00eb9cbd3a7129d4c8d))
+
+
+### Tests
+
+* **gatsby:** updated failing tests until solution for transform ignore is found ([7d57e5c](https://github.com/alexwine36/Portfolio/commit/7d57e5c41dbc9287100098a4b5fc88c87fe554a5))
+* **netlify:** updated pages to md for testing added config site name ([efa50e8](https://github.com/alexwine36/Portfolio/commit/efa50e878a7ff13d573a07ecaa8a54d6cbda1f2d))
+* **web:** fixed failing web tests ([5006440](https://github.com/alexwine36/Portfolio/commit/5006440f0ca9049c6e93dca2a8ace92a9a2fcddc))
+
 ## [1.10.0](https://github.com/alexwine36/Portfolio/compare/v1.9.0...v1.10.0) (2022-06-20)
 
 
