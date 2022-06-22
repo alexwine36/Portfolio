@@ -20,8 +20,21 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          required: false,
+          format: "YYYY-MM-DD",
+          time_format: false,
+          date_format: "YYYY-MM-DD",
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "work"
@@ -37,7 +50,22 @@ collections:
     fields:
       - { label: "Company", name: "company", widget: "string" }
       - { label: "Postion", name: "position", widget: "string" }
-      - { label: "Start Date", name: "startDate", widget: "datetime" }
-      - { label: "End Date", name: "endDate", widget: "datetime" }
+      - {
+          label: "Start Date",
+          name: "startDate",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+          date_format: "YYYY-MM-DD",
+        }
+      - {
+          label: "End Date",
+          name: "endDate",
+          widget: "datetime",
+          required: false,
+          format: "YYYY-MM-DD",
+          time_format: false,
+          date_format: "YYYY-MM-DD",
+        }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
