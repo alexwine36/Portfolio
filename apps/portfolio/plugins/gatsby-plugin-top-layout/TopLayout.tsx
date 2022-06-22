@@ -1,4 +1,5 @@
 import { MDXProvider } from "@mdx-js/react"
+import { GlobalStyles } from "@mui/material"
 import CssBaseline from "@mui/material/CssBaseline"
 import { ThemeProvider } from "@mui/material/styles"
 import PropTypes from "prop-types"
@@ -23,6 +24,13 @@ export default function TopLayout(props) {
         ></link>
       </Helmet>
       <ThemeProvider theme={theme}>
+        <GlobalStyles
+          styles={{
+            ".MuiBottomNavigationAction-label": {
+              fontWeight: 800,
+            },
+          }}
+        ></GlobalStyles>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <MDXProvider components={components}>
