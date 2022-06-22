@@ -63,7 +63,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
       options: {
-        // extensions: [`.mdx`, `.md`],
+        extensions: [`.mdx`, `.md`],
       },
     },
     {
@@ -72,5 +72,6 @@ module.exports = {
         // fileName: `./gatsby-graphql.ts`,
       },
     },
+    `gatsby-plugin-netlify-cms`,
   ],
 }
