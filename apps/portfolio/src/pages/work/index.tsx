@@ -1,14 +1,16 @@
 import styled from "@emotion/styled"
 import { Container } from "@mui/system"
 import { HeroDisplay, ParallaxBackground } from "@portfolio/ui"
-import { graphql, PageProps } from "gatsby"
+import { graphql } from "gatsby"
 import { WorkQueryQuery } from "../../../graphql-types"
 import SectionDataDisplay, {
   SectionDataDisplayProps,
 } from "../../display/section-data-display"
 
 /* eslint-disable-next-line */
-export interface WorkPageProps extends PageProps<WorkQueryQuery> {}
+export interface WorkPageProps {
+  data: WorkQueryQuery
+}
 
 const StyledWorkPage = styled.div`
   // color: pink;

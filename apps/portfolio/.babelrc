@@ -10,3 +10,27 @@
   ],
   "plugins": []
 }
+
+// // .babelrc.js >> babel.config.js
+// Potential fix from https://stackoverflow.com/questions/58613492/how-to-resolve-cannot-use-import-statement-outside-a-module-in-jest
+// module.exports = {
+//   presets: [
+//     [
+//       "@nrwl/react/babel",
+//       {
+//         "runtime": "automatic",
+//         "targets": {
+//           "browsers": [">0.25%", "not dead"]
+//         },
+//         "preset-react": {
+//           runtime: "automatic",
+//           importSource: "@emotion/react",
+//         },
+//       }
+//     ],
+//     '@babel/preset-env',
+//     '@emotion/babel-preset-css-prop',
+//     '@babel/preset-typescript'
+//   ],
+//   plugins: ['@emotion', 'macros', '@babel/plugin-transform-runtime', 'react-docgen'],
+// }

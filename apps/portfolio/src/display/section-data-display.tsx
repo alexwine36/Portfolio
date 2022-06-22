@@ -2,7 +2,6 @@ import styled from "@emotion/styled"
 import { Grid } from "@mui/material"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { DetailCardDisplay } from "../../../../libs/ui/src"
-
 /* eslint-disable-next-line */
 export interface SectionDataDisplayProps {
   items: {
