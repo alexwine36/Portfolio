@@ -6,7 +6,7 @@ import SectionPage from './section-page';
 describe('SectionPage', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <HashRouter>
+      <HashRouter basename="/Portfolio/">
         <SectionPage />
       </HashRouter>
     );

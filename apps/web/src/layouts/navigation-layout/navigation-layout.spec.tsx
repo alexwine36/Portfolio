@@ -6,7 +6,7 @@ import NavigationLayout from './navigation-layout';
 describe('NavigationLayout', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <HashRouter>
+      <HashRouter basename="/Portfolio/">
         <NavigationLayout />
       </HashRouter>
     );

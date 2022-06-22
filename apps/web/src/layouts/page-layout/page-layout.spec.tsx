@@ -6,7 +6,7 @@ import PageLayout from './page-layout';
 describe('PageLayout', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <HashRouter>
+      <HashRouter basename="/Portfolio/">
         <PageLayout />
       </HashRouter>
     );
