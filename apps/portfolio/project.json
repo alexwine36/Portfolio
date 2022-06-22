@@ -16,6 +16,18 @@
         "production": {}
       }
     },
+    "build-net": {
+      "executor": "@nrwl/gatsby:build",
+      "options": {
+        "outputPath": "apps/portfolio/public",
+        "uglify": true,
+        "color": true,
+        "profile": false
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
     "serve": {
       "executor": "@nrwl/gatsby:server",
       "options": {
