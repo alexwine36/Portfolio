@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/alexwine36/Portfolio/compare/v1.11.0...v1.11.1) (2022-06-22)
+
+
+### Bug Fixes
+
+* **gatsby:** added projects path ([cb40d73](https://github.com/alexwine36/Portfolio/commit/cb40d7395ab25065a279aa918d85914436f683d3))
+
 ## [1.11.0](https://github.com/alexwine36/Portfolio/compare/v1.10.0...v1.11.0) (2022-06-22)
 
 
