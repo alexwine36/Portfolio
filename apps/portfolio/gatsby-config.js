@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/Portfolio",
   siteMetadata: {
     title: `portfolio`,
     description: `This is a gatsby application created by Nx.`,
