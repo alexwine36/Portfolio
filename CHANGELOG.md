@@ -1,3 +1,16 @@
+## [1.12.0](https://github.com/alexwine36/Portfolio/compare/v1.11.1...v1.12.0) (2022-06-23)
+
+
+### Features
+
+* **gatsby:** added skills page with basic layout ([6f90308](https://github.com/alexwine36/Portfolio/commit/6f90308f072f42e7dc9ea535fd73bdf49963797f))
+* **gatsby:** skills added with categories ([7cac130](https://github.com/alexwine36/Portfolio/commit/7cac130361245a44e99ddcea49ab127c53355621))
+
+
+### Tests
+
+* **netlify:** testing skill config using netlify ([5f69c14](https://github.com/alexwine36/Portfolio/commit/5f69c141e8363b14425e8d587200d942d94be9df))
+
 ## [1.11.1](https://github.com/alexwine36/Portfolio/compare/v1.11.0...v1.11.1) (2022-06-22)
 
 
