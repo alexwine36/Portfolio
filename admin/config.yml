@@ -8,6 +8,40 @@ media_folder: apps/portfolio/src/images
 public_folder: apps/portfolio/src/images
 
 collections:
+  - name: "skills"
+    label: "Skills"
+    folder: "apps/portfolio/content/skills"
+    create: true
+    slug: "index"
+    media_folder: ""
+    public_folder: ""
+    path: "{{title}}"
+    extension: "yaml"
+    editor:
+      preview: false
+    fields:
+      - { label: "Category", name: "category", widget: "string" }
+      - label: Skills
+        name: skills
+        widget: list
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Skill Level
+            name: skillLevel
+            widget: number
+            required: false
+            min: 1
+            max: 5
+          - label: Start Date
+            name: startDate
+            widget: datetime
+            required: false
+            format: "YYYY-MM-DD",
+            time_format: false,
+            date_format: "YYYY-MM-DD",
+
   - name: "projects"
     label: "Projects"
     folder: "apps/portfolio/content/projects"
