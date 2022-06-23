@@ -14,7 +14,7 @@
     - "Backend Development"
   rating: 5
   date: 2015-01-01
-- skill: Frontent Design
+- skill: Frontend Design
   category:
     - "Web Development"
   rating: 4
@@ -107,7 +107,7 @@
   rating: 4
 - skill: Jest
   category:
-    - "Frontend Development"
+    - "Web Development"
     - "CI/CD"
   date: 2015-01-01
   rating: 4
