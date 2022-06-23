@@ -1,13 +1,9 @@
 import styled from "@emotion/styled"
 import { Box, Grid, Rating, Typography } from "@mui/material"
-import {
-  DetailCardDisplay,
-  HeroDisplay,
-  ParallaxBackground,
-  SectionContainer,
-} from "@portfolio/ui"
+import { DetailCardDisplay } from "@portfolio/ui"
 import { graphql, PageProps } from "gatsby"
 import { SkillsPageQuery } from "../../../graphql-types"
+import ParallaxSectionDisplay from "../../components/parallax-section-display"
 import { pages } from "../../utilities/pages"
 
 /* eslint-disable-next-line */
@@ -42,49 +38,47 @@ export function Skills(props: SkillsProps) {
 
   return (
     <StyledSkills>
-      <HeroDisplay title={page.name}></HeroDisplay>
-      <ParallaxBackground predefined={page.background}>
-        <SectionContainer>
-          <Grid container spacing={3}>
-            {categories.map(category => {
-              // return <div>{category.fieldValue} </div>
+      <ParallaxSectionDisplay page={page}>
+        <Grid container spacing={3}>
+          {categories.map(category => {
+            // return <div>{category.fieldValue} </div>
 
-              return (
-                <Grid key={category.fieldValue} item xs={12} sm={6}>
-                  {/* <Grid container spacing={3}> */}
-                  <DetailCardDisplay title={category.fieldValue}>
-                    <Box
-                      sx={{
-                        paddingLeft: 3,
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
-                    >
-                      {category.nodes.map(skill => {
-                        return (
-                          <Box
-                            key={skill.skill}
+            return (
+              <Grid key={category.fieldValue} item xs={12} sm={6}>
+                {/* <Grid container spacing={3}> */}
+                <DetailCardDisplay title={category.fieldValue}>
+                  <Box
+                    sx={{
+                      paddingLeft: 3,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    {category.nodes.map(skill => {
+                      return (
+                        <Box
+                          key={skill.skill}
+                          sx={{
+                            display: "flex",
+                            // alignItems: "center",
+                            flexDirection: "row",
+                            // width: "100%",
+                          }}
+                        >
+                          <Rating readOnly value={skill.rating}></Rating>
+                          <Typography
                             sx={{
-                              display: "flex",
-                              // alignItems: "center",
-                              flexDirection: "row",
-                              // width: "100%",
+                              paddingX: 2,
                             }}
                           >
-                            <Rating readOnly value={skill.rating}></Rating>
-                            <Typography
-                              sx={{
-                                paddingX: 2,
-                              }}
-                            >
-                              {skill.skill}
-                            </Typography>
-                          </Box>
-                        )
-                      })}
-                    </Box>
-                  </DetailCardDisplay>
-                  {/* <Grid item sm={12} md={6}>
+                            {skill.skill}
+                          </Typography>
+                        </Box>
+                      )
+                    })}
+                  </Box>
+                </DetailCardDisplay>
+                {/* <Grid item sm={12} md={6}>
                       <Typography variant="h6">
                         {category.fieldValue}
                       </Typography>
@@ -108,13 +102,12 @@ export function Skills(props: SkillsProps) {
                         )
                       })}
                     </Grid> */}
-                  {/* </Grid> */}
-                </Grid>
-              )
-            })}
-          </Grid>
-        </SectionContainer>
-      </ParallaxBackground>
+                {/* </Grid> */}
+              </Grid>
+            )
+          })}
+        </Grid>
+      </ParallaxSectionDisplay>
     </StyledSkills>
   )
 }

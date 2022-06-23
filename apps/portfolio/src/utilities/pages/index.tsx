@@ -4,7 +4,7 @@ import LibraryBooksIcon from "@mui/icons-material/LibraryBooks"
 import SchoolIcon from "@mui/icons-material/School"
 import WorkIcon from "@mui/icons-material/Work"
 import { PredefinedBackgrounds } from "../../../../../libs/ui/src"
-type PageData = {
+export type PageData = {
   name: string
 
   icon?: React.ReactElement
@@ -21,13 +21,14 @@ export const pages: { [key: string]: PageData } = {
   work: {
     name: "Experience",
     icon: <WorkIcon />,
+
+    background: "meteor",
   },
   skills: {
     name: "Skills",
     gridSize: 6,
-
     icon: <FactCheckIcon />,
-    background: "meteor",
+    background: "planet",
   },
   projects: {
     name: "Projects",

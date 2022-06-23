@@ -1,7 +1,7 @@
 import { Grid, styled } from "@mui/material"
 import { graphql, PageProps } from "gatsby"
-import { HeroDisplay, SectionContainer } from "../../../../../libs/ui/src"
 import { ProjectsPageQuery } from "../../../graphql-types"
+import ParallaxSectionDisplay from "../../components/parallax-section-display"
 import ProjectCard from "../../components/project-card"
 import { pages } from "../../utilities/pages"
 
@@ -17,8 +17,7 @@ export function ProjectsPage(props: ProjectsPageProps) {
   const page = pages["projects"]
   return (
     <StyledProjectsPage>
-      <HeroDisplay title={page.name}></HeroDisplay>
-      <SectionContainer>
+      <ParallaxSectionDisplay page={page}>
         <Grid container spacing={3}>
           {nodes.map(node => {
             return (
@@ -28,7 +27,7 @@ export function ProjectsPage(props: ProjectsPageProps) {
             )
           })}
         </Grid>
-      </SectionContainer>
+      </ParallaxSectionDisplay>
     </StyledProjectsPage>
   )
 }

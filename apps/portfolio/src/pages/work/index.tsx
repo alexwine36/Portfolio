@@ -1,12 +1,8 @@
 import styled from "@emotion/styled"
-import {
-  HeroDisplay,
-  ParallaxBackground,
-  SectionContainer,
-} from "@portfolio/ui"
 import { graphql, PageProps } from "gatsby"
 
 import { WorkQueryQuery } from "../../../graphql-types"
+import ParallaxSectionDisplay from "../../components/parallax-section-display"
 import SectionDataDisplay, {
   SectionDataDisplayProps,
 } from "../../display/section-data-display"
@@ -39,13 +35,9 @@ export const WorkPage = (props: WorkPageProps) => {
   }
   return (
     <StyledWorkPage>
-      <HeroDisplay title={page.name}></HeroDisplay>
-
-      <ParallaxBackground predefined={"planet"}>
-        <SectionContainer>
-          <SectionDataDisplay {...parsedData} />
-        </SectionContainer>
-      </ParallaxBackground>
+      <ParallaxSectionDisplay page={page}>
+        <SectionDataDisplay {...parsedData} />
+      </ParallaxSectionDisplay>
     </StyledWorkPage>
   )
 }
