@@ -8,6 +8,10 @@ describe("ProjectCard", () => {
     const { baseElement } = render(
       <ProjectCard
         node={{
+          frontmatter: {
+            title: "Sample Title",
+            tags: [],
+          },
           excerpt: "Sample excerpt data",
         }}
       />
