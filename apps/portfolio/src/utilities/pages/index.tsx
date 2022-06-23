@@ -1,9 +1,9 @@
 import FactCheckIcon from "@mui/icons-material/FactCheck"
 import HomeIcon from "@mui/icons-material/Home"
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks"
 import SchoolIcon from "@mui/icons-material/School"
 import WorkIcon from "@mui/icons-material/Work"
 import { PredefinedBackgrounds } from "../../../../../libs/ui/src"
-
 type PageData = {
   name: string
 
@@ -28,6 +28,11 @@ export const pages: { [key: string]: PageData } = {
 
     icon: <FactCheckIcon />,
     background: "meteor",
+  },
+  projects: {
+    name: "Projects",
+    icon: <LibraryBooksIcon />,
+    background: "circuit",
   },
   education: {
     name: "Education",
