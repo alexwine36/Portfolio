@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-projects-index-tsx",
+    "path": "/projects/",
+    "result": {"data":{"allMdx":{"totalCount":2,"nodes":[{"frontmatter":{"tags":["Pulumi","AWS","Step Functions","React"],"title":"Customer Surveys"},"excerpt":"Sample This has been one of the longest-running projects I've worked on. The goal is to send a survey to customers throughout the…","slug":"customer-surveys/","timeToRead":1},{"frontmatter":{"tags":["React","Typescript","Prisma","GraphQL"],"title":"Start Pack Generator"},"excerpt":"Application to generate documentation for construction starts.","slug":"start-pack-generator/","timeToRead":1}]}},"pageContext":{}},
+    "staticQueryHashes": []}
