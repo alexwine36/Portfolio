@@ -27,9 +27,9 @@ export function SectionDataDisplay(props: SectionDataDisplayProps) {
           return (
             <Grid item xs={gridSize || 12} key={idx}>
               <DetailCardDisplay
-                pretitle={item.pretitle}
-                title={item.title || ""}
-                subtitle={item.subtitle}
+                pretitle={pretitle}
+                title={title || ""}
+                subtitle={subtitle}
               >
                 <MDXRenderer>{content}</MDXRenderer>
               </DetailCardDisplay>

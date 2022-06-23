@@ -123,6 +123,11 @@
     - "Backend Development"
   date: 2016-01-01
   rating: 4
+- skill: "Github Actions"
+  category:
+    - "CI/CD"
+  date: 2022-01-01
+  rating: 3
 
 - skill: "Project Management"
   category:
