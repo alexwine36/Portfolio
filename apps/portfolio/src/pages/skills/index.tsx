@@ -1,9 +1,10 @@
 import styled from "@emotion/styled"
-import { Box, Container, Grid, Rating, Typography } from "@mui/material"
+import { Box, Grid, Rating, Typography } from "@mui/material"
 import {
   DetailCardDisplay,
   HeroDisplay,
   ParallaxBackground,
+  SectionContainer,
 } from "@portfolio/ui"
 import { graphql, PageProps } from "gatsby"
 import { SkillsPageQuery } from "../../../graphql-types"
@@ -37,7 +38,7 @@ export function Skills(props: SkillsProps) {
     <StyledSkills>
       <HeroDisplay title={page.name}></HeroDisplay>
       <ParallaxBackground predefined={page.background}>
-        <Container>
+        <SectionContainer>
           <Grid container spacing={3}>
             {categories.map(category => {
               // return <div>{category.fieldValue} </div>
@@ -105,7 +106,7 @@ export function Skills(props: SkillsProps) {
               )
             })}
           </Grid>
-        </Container>
+        </SectionContainer>
       </ParallaxBackground>
     </StyledSkills>
   )

@@ -1,6 +1,9 @@
 import styled from "@emotion/styled"
-import { Container } from "@mui/material"
-import { HeroDisplay, ParallaxBackground } from "@portfolio/ui"
+import {
+  HeroDisplay,
+  ParallaxBackground,
+  SectionContainer,
+} from "@portfolio/ui"
 import { graphql, PageProps } from "gatsby"
 import { EducationQueryQuery } from "../../../graphql-types"
 import SectionDataDisplay, {
@@ -36,9 +39,9 @@ export function EducationPage(props: EducationPageProps) {
     <StyledEducationPage>
       <HeroDisplay title={page.name}></HeroDisplay>
       <ParallaxBackground predefined={page.background}>
-        <Container>
+        <SectionContainer>
           <SectionDataDisplay {...parsedData} />
-        </Container>
+        </SectionContainer>
       </ParallaxBackground>
     </StyledEducationPage>
   )
