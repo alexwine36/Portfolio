@@ -1,4 +1,4 @@
-![Code Coverage](https://img.shields.io/badge/Code%20Coverage-25%25-critical?style=flat)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-26%25-critical?style=flat)
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
@@ -33,6 +33,7 @@ libs.ui.src.components.hero-display | 22% | 0% | 0 | ❌
 libs.ui.src.components.info-text-display | 25% | 100% | 0 | ❌
 libs.ui.src.components.page-background | 40% | 100% | 0 | ❌
 libs.ui.src.components.parallax-background | 22% | 0% | 0 | ❌
+libs.ui.src.components.section-container | 67% | 100% | 0 | ➖
 libs.ui.src.components.section-display | 25% | 100% | 0 | ❌
 libs.ui.src.components.social-icon-button | 17% | 0% | 0 | ❌
 libs.ui.src.components.speed-dial-navigation | 25% | 0% | 0 | ❌
@@ -42,4 +43,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generateBase64 | 29% | 100% | 0 | ❌
 libs.ui.src.lib.utilities.hex-to-rgba | 20% | 100% | 0 | ❌
-**Summary** | **25%** (90 / 355) | **3%** (4 / 145) | **0** | ❌
+**Summary** | **26%** (92 / 358) | **3%** (4 / 145) | **0** | ❌
