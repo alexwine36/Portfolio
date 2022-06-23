@@ -68,6 +68,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `skills`,
+        path: `${__dirname}/content/skills`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [`.mdx`, `.md`],
@@ -79,6 +86,7 @@ module.exports = {
         // fileName: `./gatsby-graphql.ts`,
       },
     },
+    `gatsby-transformer-yaml`,
     `gatsby-plugin-netlify-cms`,
   ],
 }

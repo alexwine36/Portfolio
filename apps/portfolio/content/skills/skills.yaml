@@ -1,0 +1,136 @@
+- skill: React
+  category:
+    - "Web Development"
+  rating: 5
+  date: 2013-01-01
+- skill: "Javascript"
+  category:
+    - "Web Development"
+  rating: 5
+  date: 2012-01-01
+- skill: Typescript
+  category:
+    - "Web Development"
+    - "Backend Development"
+  rating: 5
+  date: 2015-01-01
+- skill: Frontent Design
+  category:
+    - "Web Development"
+  rating: 4
+  date: 2013-01-01
+- skill: Rust
+  category:
+    - "Web Development"
+  rating: 3
+  date: 2021-01-01
+
+- skill: "Node JS"
+  category:
+    - "Backend Development"
+  rating: 5
+  date: 2013-01-01
+- skill: "Python"
+  category:
+    - "Backend Development"
+    - "Data Analysis"
+  rating: 4
+  date: 2014-01-01
+- skill: "Prisma"
+  category:
+    - "Backend Development"
+  rating: 5
+  date: 2017-01-01
+- skill: "GraphQL"
+  category:
+    - "Backend Development"
+  rating: 5
+  date: 2017-01-01
+- skill: "API"
+  category:
+    - "Backend Development"
+  rating: 5
+  date: 2014-01-01
+- skill: Pulumi
+  category:
+    - "Backend Development"
+    - "CI/CD"
+  rating: 4
+  date: 2021-01-01
+- skill: Serverless
+  category:
+    - "Backend Development"
+  rating: 4
+  date: 2020-01-01
+
+- skill: MySQL
+  category:
+    - "Database"
+  rating: 4
+  date: 2012-01-01
+- skill: PostgreSQL
+  category:
+    - "Database"
+  rating: 4
+  date: 2012-01-01
+- skill: MongoDB
+  category:
+    - "Database"
+  rating: 3
+  date: 2012-01-01
+- skill: Redis
+  category:
+    - "Database"
+  rating: 3
+  date: 2012-01-01
+
+- skill: Tableau
+  category:
+    - "Data Analysis"
+  rating: 5
+  date: 2018-01-01
+- skill: Jupyter
+  category:
+    - "Data Analysis"
+  date: 2017-01-01
+  rating: 4
+
+- skill: "GitLab CI"
+  category:
+    - "CI/CD"
+  date: 2016-01-01
+  rating: 5
+- skill: Docker
+  category:
+    - "CI/CD"
+  date: 2014-01-01
+  rating: 4
+- skill: Jest
+  category:
+    - "Frontend Development"
+    - "CI/CD"
+  date: 2015-01-01
+  rating: 4
+- skill: Kubernetes
+  category:
+    - "CI/CD"
+    - "Backend Development"
+  date: 2016-01-01
+  rating: 4
+- skill: Containerization
+  category:
+    - "CI/CD"
+    - "Backend Development"
+  date: 2016-01-01
+  rating: 4
+
+- skill: "Project Management"
+  category:
+    - "General"
+  date: 2013-01-01
+  rating: 5
+- skill: "Account Management"
+  category:
+    - "General"
+  date: 2018-01-01
+  rating: 4
