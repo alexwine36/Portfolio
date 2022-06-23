@@ -1,3 +1,10 @@
+## [1.13.0](https://github.com/alexwine36/Portfolio/compare/v1.12.1...v1.13.0) (2022-06-23)
+
+
+### Features
+
+* **gatsby:** added basic projects page ([e3b61e4](https://github.com/alexwine36/Portfolio/commit/e3b61e425dbea5df685026871dfae27cbc4ca740))
+
 ## [1.12.1](https://github.com/alexwine36/Portfolio/compare/v1.12.0...v1.12.1) (2022-06-23)
 
 
