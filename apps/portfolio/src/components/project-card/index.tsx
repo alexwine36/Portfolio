@@ -6,6 +6,7 @@ import {
   CardActions,
   CardContent,
   CardHeader,
+  CardMedia,
   Chip,
   styled,
   Typography,
@@ -32,7 +33,7 @@ const ListItem = styled("li")(({ theme }) => ({
 export function ProjectCard(props: ProjectCardProps) {
   const { node } = props
   const { slug, timeToRead, frontmatter, excerpt } = node
-  const { title, tags } = frontmatter
+  const { title, tags, hero } = frontmatter
   return (
     <CardActionArea component={Link} to={`projects/${slug}`}>
       <Card>
@@ -43,6 +44,14 @@ export function ProjectCard(props: ProjectCardProps) {
           title={title}
           subheader={`${pluralize("minute", timeToRead, true)}`}
         />
+        {hero && (
+          <CardMedia
+            component={"img"}
+            srcSet={hero.childImageSharp.fluid.srcSet}
+            // height={hero.childImageSharp.fluid.presentationHeight}
+            src={hero.childImageSharp.fluid.src}
+          ></CardMedia>
+        )}
         <Box
           sx={{
             display: "flex",
