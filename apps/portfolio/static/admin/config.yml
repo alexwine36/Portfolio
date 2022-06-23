@@ -73,6 +73,7 @@ collections:
           widget: "string",
           required: false,
         }
+      - { label: "Hero Image", name: "hero", widget: "image", required: false }
       - {
           label: "Tags",
           name: "tags",
