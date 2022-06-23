@@ -1,23 +1,14 @@
-import styled from "@emotion/styled"
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-  Grid,
-  Typography,
-} from "@mui/material"
+import { Grid, styled } from "@mui/material"
 import { graphql, PageProps } from "gatsby"
-import pluralize from "pluralize"
 import { HeroDisplay, SectionContainer } from "../../../../../libs/ui/src"
 import { ProjectsPageQuery } from "../../../graphql-types"
+import ProjectCard from "../../components/project-card"
 import { pages } from "../../utilities/pages"
 
 /* eslint-disable-next-line */
 export interface ProjectsPageProps extends PageProps<ProjectsPageQuery> {}
 
-const StyledProjectsPage = styled.div`
+const StyledProjectsPage = styled("div")`
   // color: pink;
 `
 
@@ -30,27 +21,9 @@ export function ProjectsPage(props: ProjectsPageProps) {
       <SectionContainer>
         <Grid container spacing={3}>
           {nodes.map(node => {
-            const { frontmatter, timeToRead, excerpt } = node
-            const { title, tags } = frontmatter
             return (
-              <Grid item xs>
-                <Card>
-                  <CardHeader
-                    subheaderTypographyProps={{
-                      variant: "overline",
-                    }}
-                    title={title}
-                    subheader={`${pluralize("minute", timeToRead, true)}`}
-                  />
-                  <CardContent>
-                    <Typography>{excerpt}</Typography>
-                  </CardContent>
-                  <CardActions>
-                    {tags?.map(tag => (
-                      <Button>{tag}</Button>
-                    ))}
-                  </CardActions>
-                </Card>
+              <Grid key={node.slug} item xs>
+                <ProjectCard node={node}></ProjectCard>
               </Grid>
             )
           })}
