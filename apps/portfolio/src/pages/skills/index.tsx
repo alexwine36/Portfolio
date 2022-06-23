@@ -50,7 +50,7 @@ export function Skills(props: SkillsProps) {
               // return <div>{category.fieldValue} </div>
 
               return (
-                <Grid item xs={12} sm={6}>
+                <Grid key={category.fieldValue} item xs={12} sm={6}>
                   {/* <Grid container spacing={3}> */}
                   <DetailCardDisplay title={category.fieldValue}>
                     <Box
@@ -63,6 +63,7 @@ export function Skills(props: SkillsProps) {
                       {category.nodes.map(skill => {
                         return (
                           <Box
+                            key={skill.skill}
                             sx={{
                               display: "flex",
                               // alignItems: "center",
