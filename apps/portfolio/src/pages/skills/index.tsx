@@ -19,6 +19,12 @@ const StyledSkills = styled.div`
 
 export function Skills(props: SkillsProps) {
   const page = pages["skills"]
+
+  // Function to return select options for projects
+
+  // const select = props.data.allSkillsYaml.nodes.map(d => `"${d.skill}"`)
+  // console.log(select.join(", "))
+
   const categories = props.data.allSkillsYaml.group
     .map(cat => {
       const avg = cat.sum / cat.totalCount
@@ -125,6 +131,9 @@ export const pageQuery = graphql`
           skill
         }
       }
+      # nodes {
+      #   skill
+      # }
     }
   }
 `

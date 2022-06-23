@@ -1,3 +1,4 @@
+# Web Development
 - skill: React
   category:
     - "Web Development"
@@ -25,6 +26,7 @@
   rating: 3
   date: 2021-01-01
 
+# Backend Development
 - skill: "Node JS"
   category:
     - "Backend Development"
@@ -62,7 +64,23 @@
     - "Backend Development"
   rating: 4
   date: 2020-01-01
+- skill: AWS
+  category:
+    - "Backend Development"
+  rating: 4
+  date: 2019-01-01
+- skill: GCP
+  category:
+    - "Backend Development"
+  rating: 4
+  date: 2017-01-01
+- skill: "Step Functions"
+  category:
+    - "Backend Development"
+  rating: 4
+  date: 2020-01-01
 
+# Database Development
 - skill: MySQL
   category:
     - "Database"
@@ -84,6 +102,7 @@
   rating: 3
   date: 2012-01-01
 
+# Data Analysis
 - skill: Tableau
   category:
     - "Data Analysis"
@@ -95,6 +114,7 @@
   date: 2017-01-01
   rating: 4
 
+# CI/CD
 - skill: "GitLab CI"
   category:
     - "CI/CD"
@@ -129,6 +149,7 @@
   date: 2022-01-01
   rating: 3
 
+# General
 - skill: "Project Management"
   category:
     - "General"

@@ -69,7 +69,45 @@ collections:
           widget: "string",
           required: false,
         }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          min: 1,
+          options:
+            [
+              "React",
+              "Javascript",
+              "Typescript",
+              "Frontend Design",
+              "Rust",
+              "Node JS",
+              "Python",
+              "Prisma",
+              "GraphQL",
+              "API",
+              "Pulumi",
+              "Serverless",
+              "AWS",
+              "GCP",
+              "Step Functions",
+              "MySQL",
+              "PostgreSQL",
+              "MongoDB",
+              "Redis",
+              "Tableau",
+              "Jupyter",
+              "GitLab CI",
+              "Docker",
+              "Jest",
+              "Kubernetes",
+              "Containerization",
+              "Github Actions",
+              "Project Management",
+              "Account Management",
+            ],
+        }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "work"
     label: "Work Experience"
