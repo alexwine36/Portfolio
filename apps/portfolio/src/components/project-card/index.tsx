@@ -34,8 +34,10 @@ export function ProjectCard(props: ProjectCardProps) {
   const { node } = props
   const { slug, timeToRead, frontmatter, excerpt } = node
   const { title, tags, hero } = frontmatter
+
+  const link = `/projects/${slug}`
   return (
-    <CardActionArea component={Link} to={`projects/${slug}`}>
+    <CardActionArea component={Link} to={link}>
       <Card>
         <CardHeader
           subheaderTypographyProps={{
@@ -75,7 +77,7 @@ export function ProjectCard(props: ProjectCardProps) {
           <Typography>{excerpt}</Typography>
         </CardContent>
         <CardActions>
-          <Button component={Link} to={`/projects/${slug}`}>
+          <Button component={Link} to={link}>
             Keep Reading
           </Button>
         </CardActions>
