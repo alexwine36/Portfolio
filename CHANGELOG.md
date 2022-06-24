@@ -1,3 +1,33 @@
+## [1.14.0](https://github.com/alexwine36/Portfolio/compare/v1.13.0...v1.14.0) (2022-06-23)
+
+
+### Features
+
+* **ui:** added a masonry grid component ([c0de4fb](https://github.com/alexwine36/Portfolio/commit/c0de4fb1207bb81f9ff100f300a253ea35334ff4))
+
+
+### Bug Fixes
+
+* **gatsby:** skills page fixed key required ([e447aa4](https://github.com/alexwine36/Portfolio/commit/e447aa41b3146cd2f28369610a52fe6560b10f0a))
+* **netlify:** updated projects to include optional hero image ([c697833](https://github.com/alexwine36/Portfolio/commit/c6978339f6bdd4b7b9a7a5ada7a2cacc088a01bd))
+* **ui:** soundwave background fixed svg attributes ([c61429b](https://github.com/alexwine36/Portfolio/commit/c61429b036e9aa4b5e2a1f017d0d0214496ea3a4))
+
+
+### Docs
+
+* **update Projects:** customer-surveys/index ([cc79d0f](https://github.com/alexwine36/Portfolio/commit/cc79d0f140a589bb5922df294085c1232ebddfc9))
+
+
+### Code Refactoring
+
+* **gatsby:** inlined parallax sections for easier coding ([5a963b0](https://github.com/alexwine36/Portfolio/commit/5a963b0d5d0c6d23862ef5a712876d88a47491b7))
+* **gatsby:** updated project display cards ([02014f7](https://github.com/alexwine36/Portfolio/commit/02014f7823e68b763edb712115b1be005a8a69a5))
+
+
+### Tests
+
+* **gatsby:** project card was failing because of missing props ([0ba3c68](https://github.com/alexwine36/Portfolio/commit/0ba3c6830a37c78d1739b3d05adc24e088f33b5e))
+
 ## [1.13.0](https://github.com/alexwine36/Portfolio/compare/v1.12.1...v1.13.0) (2022-06-23)
 
 
