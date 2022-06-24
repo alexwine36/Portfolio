@@ -2,12 +2,12 @@ import { MDXProvider } from "@mdx-js/react"
 import { GlobalStyles } from "@mui/material"
 import CssBaseline from "@mui/material/CssBaseline"
 import { ThemeProvider } from "@mui/material/styles"
+import { theme } from "@portfolio/theme"
 import PropTypes from "prop-types"
 import * as React from "react"
 import { Helmet } from "react-helmet"
 import PageLayout from "../../src/layouts/page-layout/page-layout"
 import components from "./components"
-import theme from "./theme"
 
 export default function TopLayout(props) {
   return (
