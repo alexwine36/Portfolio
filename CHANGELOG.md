@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/alexwine36/Portfolio/compare/v1.14.0...v1.14.1) (2022-06-24)
+
+
+### Bug Fixes
+
+* **gatsby:** project card link generation fixed ([ec4f440](https://github.com/alexwine36/Portfolio/commit/ec4f4405490c17729b70200a5bcb2d19ec54672c))
+
 ## [1.14.0](https://github.com/alexwine36/Portfolio/compare/v1.13.0...v1.14.0) (2022-06-23)
 
 
