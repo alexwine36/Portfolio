@@ -123,12 +123,30 @@ const componentTheme = createTheme({
             rgba(255, 255, 255, 0.15),
             rgba(255, 255, 255, 0)
           )`,
-          backdropFilter: 'blur(25px)',
+          backdropFilter: 'blur(20px)',
           boxShadow: `${baseTheme.shadows[1].replace(
             /rgba\(0,0,0/gm,
             `rgba(${shadowColor},${shadowColor},${shadowColor}`
           )}`,
           border: `1px solid ${baseTheme.palette.divider}`,
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          background: 'transparent',
+          backgroundImage: `radial-gradient(
+
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0)
+          )`,
+          backdropFilter: 'blur(10px)',
+          // boxShadow: `${baseTheme.shadows[1].replace(
+          //   /rgba\(0,0,0/gm,
+          //   `rgba(${shadowColor},${shadowColor},${shadowColor}`
+          // )}`,
+          // border: `1px solid ${baseTheme.palette.divider}`,
         },
       },
     },
