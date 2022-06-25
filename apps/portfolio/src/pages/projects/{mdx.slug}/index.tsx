@@ -11,6 +11,7 @@ import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import pluralize from "pluralize"
 import { ProjectPageQuery } from "../../../../graphql-types"
+import ParallaxSectionDisplay from "../../../components/parallax-section-display"
 
 /* eslint-disable-next-line */
 export interface ProjectPageProps extends PageProps<ProjectPageQuery> {}
@@ -52,19 +53,26 @@ export function ProjectPage(props: ProjectPageProps) {
           </Typography>
         </Box>
       </HeroImage>
+      <ParallaxSectionDisplay
+        page={{
+          background: "meteor",
+          name: "",
+        }}
+        hideHeader
+      >
+        <Container>
+          <ChipListDisplay tags={tags} />
+          <Card>
+            <CardContent>
+              <MDXRenderer>{body}</MDXRenderer>
+            </CardContent>
+          </Card>
 
-      <Container>
-        <ChipListDisplay tags={tags} />
-        <Card>
-          <CardContent>
-            <MDXRenderer>{body}</MDXRenderer>
-          </CardContent>
-        </Card>
-
-        {/* <Typography variant="h1" component="h1">
+          {/* <Typography variant="h1" component="h1">
           {title}
         </Typography> */}
-      </Container>
+        </Container>
+      </ParallaxSectionDisplay>
     </StyledProjectPage>
   )
 }

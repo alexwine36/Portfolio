@@ -9,6 +9,7 @@ import { PageData } from "../../utilities/pages"
 export interface ParallaxSectionDisplayProps {
   page: PageData
   children: React.ReactElement | React.ReactElement[]
+  hideHeader?: boolean
 }
 
 const StyledParallaxSectionDisplay = styled.div`
@@ -16,10 +17,10 @@ const StyledParallaxSectionDisplay = styled.div`
 `
 
 export function ParallaxSectionDisplay(props: ParallaxSectionDisplayProps) {
-  const { page, children } = props
+  const { page, children, hideHeader } = props
   return (
     <StyledParallaxSectionDisplay>
-      <HeroDisplay title={page.name}></HeroDisplay>
+      {!hideHeader && <HeroDisplay title={page.name}></HeroDisplay>}
       <ParallaxBackground predefined={page.background}>
         <SectionContainer>{children}</SectionContainer>
       </ParallaxBackground>

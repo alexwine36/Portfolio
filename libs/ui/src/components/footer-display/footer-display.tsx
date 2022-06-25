@@ -20,7 +20,7 @@ const StyledFooterDisplay = styled('footer')(
   ({ theme }) => `
 padding: ${theme.spacing(4)};
   display: flex;
-
+margin-bottom: ${theme.spacing(4)};
   justify-content: center;
 `
 );
@@ -52,7 +52,7 @@ export function FooterDisplay(props: FooterDisplayProps) {
           <Typography
             variant="h3"
             sx={{
-              fontSize: '1.2em',
+              fontSize: '1.2em !important',
             }}
           >
             Alex Wine |{' '}

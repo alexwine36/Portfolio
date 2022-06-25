@@ -1,6 +1,7 @@
 import {
   Checkbox,
   Divider,
+  Link,
   Paper,
   TableBody,
   TableCell,
@@ -8,8 +9,8 @@ import {
   TableRow,
   Typography,
 } from "@mui/material"
+import { Link as GLink } from "gatsby"
 import { memo } from "react"
-
 const space = 3
 
 const components = {
@@ -141,6 +142,17 @@ const components = {
   wrapper: (() => {
     const Wrapper = props => <div {...props} className="markdown-body" />
     return memo(Wrapper)
+  })(),
+  a: (() => {
+    const LinkDisplay = props => {
+      console.log(props)
+      if (`${props.href}`.startsWith("/")) {
+        const { href, ...p } = props
+        return <Link component={GLink} to={href} {...p} />
+      }
+      return <Link {...props} />
+    }
+    return memo(LinkDisplay)
   })(),
 }
 

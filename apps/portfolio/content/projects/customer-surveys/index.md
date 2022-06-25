@@ -10,14 +10,22 @@ tags:
 ---
 
 
-# The Problem
-Construction is a long process and making sure a customer is happy throughout a build is challenging and, a priority.
+## The Problem
+Construction is a long process and making sure a customer is happy throughout a build is challenging and the highest priority.
 
-This has been one of the longest-running projects I've worked on. The goal is to send a survey to customers throughout the construction process.
+---
+
+## The Solution
+
+- Infrastructure
+  - [Pulumi](/projects/pulumi) to create the backend
+  - GitLab as the CI/CD environment
+
+<!-- This has been one of the longest-running projects I've worked on. The goal is to send a survey to customers throughout the construction process. -->
 
 
 
 
 
-## Sample 2
+
 

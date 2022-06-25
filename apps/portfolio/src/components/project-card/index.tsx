@@ -6,7 +6,6 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
-  styled,
   Typography,
 } from "@mui/material"
 import { ChipListDisplay } from "@portfolio/ui"
@@ -24,10 +23,6 @@ export interface ProjectCardProps {
 // const StyledProjectCard = styled("div")`
 //   // color: pink;
 // `
-
-const ListItem = styled("li")(({ theme }) => ({
-  margin: theme.spacing(0.5),
-}))
 
 export function ProjectCard(props: ProjectCardProps) {
   const { node } = props

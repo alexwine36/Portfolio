@@ -29,6 +29,13 @@ export default function TopLayout(props) {
             ".MuiBottomNavigationAction-label": {
               fontWeight: 800,
             },
+            ".markdown-body": {
+              ">": {
+                "h1, h2, h3, h4, h6, hr, p": {
+                  margin: theme.spacing(3),
+                },
+              },
+            },
           }}
         ></GlobalStyles>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
