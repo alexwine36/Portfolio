@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material';
+import { createTheme, responsiveFontSizes } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 
 const baseTheme = createTheme({
@@ -135,5 +135,7 @@ const componentTheme = createTheme({
   },
 });
 
-export const theme = createTheme(deepmerge(componentTheme, baseTheme));
+export const theme = responsiveFontSizes(
+  createTheme(deepmerge(componentTheme, baseTheme))
+);
 // export default theme

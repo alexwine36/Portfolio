@@ -10,7 +10,9 @@ tags:
 ---
 
 
-# Sample
+# The Problem
+Construction is a long process and making sure a customer is happy throughout a build is challenging and, a priority.
+
 This has been one of the longest-running projects I've worked on. The goal is to send a survey to customers throughout the construction process.
 
 
@@ -18,3 +20,4 @@ This has been one of the longest-running projects I've worked on. The goal is to
 
 
 ## Sample 2
+

@@ -10,30 +10,74 @@ import {
 } from "@mui/material"
 import { memo } from "react"
 
+const space = 3
+
 const components = {
   p: Typography,
   h1: (() => {
-    const H1 = props => <Typography {...props} component="h1" variant="h1" />
+    const H1 = props => (
+      <Typography
+        sx={{ marginY: space }}
+        {...props}
+        component="h1"
+        variant="h2"
+      />
+    )
     return memo(H1)
   })(),
   h2: (() => {
-    const H2 = props => <Typography {...props} component="h2" variant="h2" />
+    const H2 = props => (
+      <Typography
+        sx={{ marginY: space }}
+        {...props}
+        component="h2"
+        variant="h3"
+      />
+    )
     return memo(H2)
   })(),
   h3: (() => {
-    const H3 = props => <Typography {...props} component="h3" variant="h3" />
+    const H3 = props => (
+      <Typography
+        sx={{ marginY: space }}
+        {...props}
+        component="h3"
+        variant="h4"
+      />
+    )
     return memo(H3)
   })(),
   h4: (() => {
-    const H4 = props => <Typography {...props} component="h4" variant="h4" />
+    const H4 = props => (
+      <Typography
+        sx={{ marginY: space }}
+        {...props}
+        component="h4"
+        variant="h5"
+      />
+    )
     return memo(H4)
   })(),
   h5: (() => {
-    const H5 = props => <Typography {...props} component="h5" variant="h5" />
+    const H5 = props => (
+      <Typography
+        sx={{ marginY: space }}
+        {...props}
+        component="h5"
+        variant="h6"
+      />
+    )
     return memo(H5)
   })(),
   h6: (() => {
-    const H6 = props => <Typography {...props} component="h6" variant="h6" />
+    const H6 = props => (
+      <Typography
+        sx={{ marginY: space }}
+        {...props}
+        component="h6"
+        variant="h6"
+      />
+    )
     return memo(H6)
   })(),
   blockquote: (() => {
@@ -94,10 +138,10 @@ const components = {
     }
     return memo(Input)
   })(),
-  // wrapper: (() => {
-  //   const Wrapper = props => <div {...props} className="markdown-body" />;
-  //   return memo(Wrapper);
-  // })(),
+  wrapper: (() => {
+    const Wrapper = props => <div {...props} className="markdown-body" />
+    return memo(Wrapper)
+  })(),
 }
 
 export default components

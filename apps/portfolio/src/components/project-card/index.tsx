@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Card,
   CardActionArea,
@@ -7,10 +6,10 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
-  Chip,
   styled,
   Typography,
 } from "@mui/material"
+import { ChipListDisplay } from "@portfolio/ui"
 import { Link } from "gatsby"
 import pluralize from "pluralize"
 import { ProjectsPageQuery } from "../../../graphql-types"
@@ -54,24 +53,7 @@ export function ProjectCard(props: ProjectCardProps) {
             src={hero.childImageSharp.fluid.src}
           ></CardMedia>
         )}
-        <Box
-          sx={{
-            display: "flex",
-            // justifyContent: "center",
-            // flexWrap: "wrap",
-            listStyle: "none",
-            p: 0.5,
-            m: 0,
-            overflowX: "scroll",
-          }}
-          component="ul"
-        >
-          {tags.map((tag, idx) => (
-            <ListItem key={idx}>
-              <Chip label={tag}></Chip>
-            </ListItem>
-          ))}
-        </Box>
+        <ChipListDisplay tags={tags} />
 
         <CardContent>
           <Typography>{excerpt}</Typography>
