@@ -82,9 +82,26 @@ module.exports = {
         gatsbyRemarkPlugins: [
           "gatsby-remark-heading-slug",
           {
+            resolve: "gatsby-remark-graph",
+            options: {
+              language: "mermaid",
+              theme: "dark",
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
+            },
+          },
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
             },
           },
         ],

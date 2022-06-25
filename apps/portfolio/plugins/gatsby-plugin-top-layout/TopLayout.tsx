@@ -22,6 +22,7 @@ export default function TopLayout(props) {
           href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Franklin&family=Open+Sans:wght@300;400;500;700;800&display=swap"
           rel="stylesheet"
         ></link>
+        {/* <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" /> */}
       </Helmet>
       <ThemeProvider theme={theme}>
         <GlobalStyles
