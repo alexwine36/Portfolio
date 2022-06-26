@@ -43,7 +43,23 @@ With some time away from the project I realized there were many opportunities fo
  -->
 Initially the project had surveys built in because we wanted custom functionality in the surveys. Later I found out that Typeform has methods for embedding data into forms that would take care of our use case and ease the programming load.
 
-The app structure
+Basic app structure
+
+```mermaid
+graph LR
+  App --> packages
+  App --> client
+  App --> serverless
+  client --> |Dashboard|survey-dashboard
+  serverless --> |Pulumi Package|send-surveys
+  packages --> |Formats Emails|email
+```
+
+Using a monorepo for this project was ideal to share types between projects. The Pulumi package uses Step Functions and a simple Rest API to expose endpoints to the dashboard.
+
+
+#### State Machine
+
 
 ```mermaid
 stateDiagram-v2
@@ -65,14 +81,13 @@ Contacts --> [*]
 }
 }
 RemapSurveys --> InsertSurveys
-InsertSurveys --> Hello: $.surveys
+InsertSurveys --> [*]: $.surveys
 InsertSurveys --> InsertSurvey
 state InsertSurveys {
 [*] --> InsertSurvey
 InsertSurvey --> [*]
 }
-Hello --> World
-World --> [*]
+
 ```
 
 

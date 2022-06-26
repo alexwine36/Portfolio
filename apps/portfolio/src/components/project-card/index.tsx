@@ -43,9 +43,9 @@ export function ProjectCard(props: ProjectCardProps) {
         {hero && (
           <CardMedia
             component={"img"}
-            srcSet={hero.childImageSharp.fluid.srcSet}
-            // height={hero.childImageSharp.fluid.presentationHeight}
-            src={hero.childImageSharp.fluid.src}
+            srcSet={hero.childImageSharp.fixed.srcSet}
+            // height={hero.childImageSharp.fixed.presentationHeight}
+            src={hero.childImageSharp.fixed.src}
           ></CardMedia>
         )}
         <ChipListDisplay tags={tags} />

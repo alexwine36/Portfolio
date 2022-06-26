@@ -49,10 +49,9 @@ export const pageQuery = graphql`
           title
           hero {
             childImageSharp {
-              fluid {
+              fixed {
                 src
                 srcSet
-                presentationHeight
               }
             }
           }

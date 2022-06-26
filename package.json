@@ -33,7 +33,7 @@
     "dayjs": "^1.11.3",
     "gatsby": "4.13.1",
     "gatsby-plugin-graphql-codegen": "^3.1.1",
-    "gatsby-plugin-image": "2.13.0",
+    "gatsby-plugin-image": "^2.17.0",
     "gatsby-plugin-manifest": "4.13.0",
     "gatsby-plugin-mdx": "^3.17.0",
     "gatsby-plugin-mdx-source-name": "^1.0.1",

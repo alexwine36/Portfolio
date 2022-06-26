@@ -40,7 +40,7 @@ export function ProjectPage(props: ProjectPageProps) {
   const { title, tags, hero } = frontmatter
   return (
     <StyledProjectPage>
-      <HeroImage image={hero.childImageSharp.fluid.src}>
+      <HeroImage image={hero && hero.childImageSharp.fixed.src}>
         <Box>
           <Typography variant="h1">{title}</Typography>
           <Typography
@@ -85,10 +85,9 @@ export const pageQuery = graphql`
         title
         hero {
           childImageSharp {
-            fluid {
-              src
+            fixed {
               srcSet
-              presentationHeight
+              src
             }
           }
         }
