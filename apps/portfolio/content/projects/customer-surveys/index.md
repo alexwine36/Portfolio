@@ -46,6 +46,7 @@ Initially the project had surveys built in because we wanted custom functionalit
 Basic app structure
 
 ```mermaid
+%%{init: {'theme': 'dark'} }%%
 graph LR
   App --> packages
   App --> client
@@ -62,6 +63,7 @@ Using a monorepo for this project was ideal to share types between projects. The
 
 
 ```mermaid
+%%{init: {'theme': 'dark'} }%%
 stateDiagram-v2
 [*] --> SurveyBase
 SurveyBase --> QueryBase
