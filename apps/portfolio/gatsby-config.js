@@ -1,14 +1,14 @@
 module.exports = {
-  pathPrefix: "/Portfolio",
+  pathPrefix: '/Portfolio',
   siteMetadata: {
     title: `portfolio`,
     description: `This is a gatsby application created by Nx.`,
   },
   plugins: [
-    "gatsby-plugin-emotion",
-    "gatsby-plugin-top-layout",
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-top-layout',
     {
-      resolve: "gatsby-plugin-svgr",
+      resolve: 'gatsby-plugin-svgr',
       options: {
         svgo: false,
         ref: true,
@@ -43,9 +43,9 @@ module.exports = {
         icon: `src/images/logo.svg`,
       },
     },
-    "gatsby-plugin-mui-emotion",
+    'gatsby-plugin-mui-emotion',
     // `gatsby-transformer-remark`,
-    "gatsby-plugin-mdx-source-name",
+    'gatsby-plugin-mdx-source-name',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -70,17 +70,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `pages`,
+        path: `${__dirname}/content/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `skills`,
         path: `${__dirname}/content/skills`,
       },
     },
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: [`.mdx`, `.md`],
 
         gatsbyRemarkPlugins: [
-          "gatsby-remark-heading-slug",
+          'gatsby-remark-heading-slug',
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -88,19 +95,19 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-graph",
+            resolve: 'gatsby-remark-graph',
             options: {
-              language: "mermaid",
-              theme: "dark",
+              language: 'mermaid',
+              theme: 'dark',
             },
           },
 
           {
-            resolve: "gatsby-remark-prismjs",
+            resolve: 'gatsby-remark-prismjs',
             options: {
               prompt: {
-                user: "root",
-                host: "localhost",
+                user: 'root',
+                host: 'localhost',
                 global: false,
               },
             },
@@ -116,6 +123,6 @@ module.exports = {
     },
     `gatsby-transformer-yaml`,
     `gatsby-plugin-netlify-cms`,
-    "gatsby-plugin-transition-link",
+    'gatsby-plugin-transition-link',
   ],
-}
+};

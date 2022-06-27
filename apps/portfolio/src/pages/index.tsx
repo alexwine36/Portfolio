@@ -1,137 +1,50 @@
-import styled from '@emotion/styled';
-import FactCheckIcon from '@mui/icons-material/FactCheck';
-import SchoolIcon from '@mui/icons-material/School';
-import WorkIcon from '@mui/icons-material/Work';
-import { Grid } from '@mui/material';
-import { useRhubarbResume } from '@portfolio/resume-hooks';
-import {
-  Bullets,
-  DetailCardDisplay,
-  DetailListDisplay,
-  PageBackground,
-  ParallaxBackground,
-  PredefinedBackgrounds,
-  SectionDisplay,
-} from '@portfolio/ui';
-import React from 'react';
+import { styled } from '@mui/material';
+import { PageBackground } from '@portfolio/ui';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { HomePageQuery } from '../../graphql-types';
 import HeroBannerImplementation from '../components/hero-banner-implementation/hero-banner-implementation';
 
-const StyledApp = styled.div``;
+interface HomePageProps {
+  data: HomePageQuery;
+}
 
-export function Index() {
-  const { resume } = useRhubarbResume();
+const StyledApp = styled('div')`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .markdown-body {
+    max-width: 630px;
+    h3 {
+      text-transform: uppercase;
+      text-align: justify;
+    }
+    p {
+      font-size: 1.25em;
+      text-align: justify;
+    }
+  }
+`;
 
-  const { workExperience, educationExperience, skillCategories } = resume;
-
-  const sections: {
-    name: string;
-    id: string;
-    icon?: React.ReactElement;
-    background?: PredefinedBackgrounds;
-    gridSize?: number;
-    chips?: boolean;
-    items?: {
-      pretitle?: string;
-      subtitle?: string;
-      title?: string;
-      bullets?: Bullets[];
-    }[];
-  }[] = [
-    {
-      name: 'Experience',
-      id: 'workExperience',
-      icon: <WorkIcon />,
-      items: workExperience.map((exp) => {
-        return {
-          pretitle: exp.role,
-          title: exp.company.name,
-          subtitle: exp.dateDisplay,
-          bullets: exp.bullets,
-        };
-      }),
-    },
-    {
-      name: 'Skills',
-      id: 'skills',
-      gridSize: 6,
-      chips: true,
-      icon: <FactCheckIcon />,
-      background: 'meteor',
-      items: skillCategories.map((cat) => {
-        return {
-          title: cat.name,
-          bullets: cat.bullets,
-        };
-      }),
-    },
-    {
-      name: 'Education',
-      id: 'education',
-      icon: <SchoolIcon />,
-      background: 'soundwave',
-      items: educationExperience.map((exp) => {
-        return {
-          title: exp.institute,
-          subtitle: exp.dateDisplay,
-          bullets: exp.bullets,
-        };
-      }),
-    },
-  ];
-
-  const actions = sections.map((section) => {
-    const { icon, name, id } = section;
-
-    return {
-      icon: icon || <WorkIcon />,
-      name,
-      href: `#${id}`,
-    };
-  });
+export function Index(props: HomePageProps) {
+  const { data } = props;
   return (
     <PageBackground>
       <HeroBannerImplementation />
-
-      <>
-        {/* <GeneratePlanetBackground /> */}
-
-        <>
-          {sections.map((section, index) => (
-            <React.Fragment key={section.id}>
-              <ParallaxBackground predefined={'waves'}>
-                <>
-                  {!!index && <StyledApp />}
-                  <SectionDisplay
-                    key={section.id}
-                    id={section.id}
-                    title={section.name}
-                  >
-                    <Grid container spacing={3}>
-                      {section.items?.map((item, key) => (
-                        <Grid item xs={section.gridSize || 12} key={key}>
-                          <DetailCardDisplay
-                            pretitle={item.pretitle}
-                            title={item.title || ''}
-                            subtitle={item.subtitle}
-                          >
-                            <DetailListDisplay
-                              chips={section.chips}
-                              bullets={item.bullets || []}
-                            />
-                          </DetailCardDisplay>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </SectionDisplay>
-                  {!!index && <StyledApp />}
-                </>
-              </ParallaxBackground>
-            </React.Fragment>
-          ))}
-        </>
-      </>
+      <StyledApp>
+        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      </StyledApp>
     </PageBackground>
   );
 }
+
+export const pageQuery = graphql`
+  query HomePage {
+    mdx(slug: { eq: "about/" }) {
+      body
+    }
+  }
+`;
 
 export default Index;

@@ -2,9 +2,9 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
   commit_messages:
-    create: "docs(create {{collection}}): {{slug}}"
-    update: "docs(update {{collection}}): {{slug}}"
-    delete: "docs(delete {{collection}}): {{slug}}"
+    create: 'docs(create {{collection}}): {{slug}}'
+    update: 'docs(update {{collection}}): {{slug}}'
+    delete: 'docs(delete {{collection}}): {{slug}}'
 
 site_url: https://alex-wine-portfolio.netlify.app/
 
@@ -46,103 +46,117 @@ collections:
   #           time_format: false,
   #           date_format: "YYYY-MM-DD",
 
-  - name: "projects"
-    label: "Projects"
-    folder: "apps/portfolio/content/projects"
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'apps/portfolio/content/projects'
     create: true
-    slug: "index"
-    media_folder: ""
-    public_folder: ""
-    path: "{{title}}/index"
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: 'Title', name: 'title', widget: 'string' }
       - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
           required: false,
-          format: "YYYY-MM-DD",
+          format: 'YYYY-MM-DD',
           time_format: false,
-          date_format: "YYYY-MM-DD",
+          date_format: 'YYYY-MM-DD',
         }
       - {
-          label: "Description",
-          name: "description",
-          widget: "string",
+          label: 'Description',
+          name: 'description',
+          widget: 'string',
           required: false,
         }
-      - { label: "Hero Image", name: "hero", widget: "image", required: false }
+      - { label: 'Hero Image', name: 'hero', widget: 'image', required: false }
       - {
-          label: "Tags",
-          name: "tags",
-          widget: "select",
+          label: 'Tags',
+          name: 'tags',
+          widget: 'select',
           multiple: true,
           min: 1,
           options:
             [
-              "React",
-              "Javascript",
-              "Typescript",
-              "Frontend Design",
-              "Rust",
-              "Node JS",
-              "Python",
-              "Prisma",
-              "GraphQL",
-              "API",
-              "Pulumi",
-              "Serverless",
-              "AWS",
-              "GCP",
-              "Step Functions",
-              "MySQL",
-              "PostgreSQL",
-              "MongoDB",
-              "Redis",
-              "Tableau",
-              "Jupyter",
-              "GitLab CI",
-              "Docker",
-              "Jest",
-              "Kubernetes",
-              "Containerization",
-              "Github Actions",
-              "Project Management",
-              "Account Management",
+              'React',
+              'Javascript',
+              'Typescript',
+              'Frontend Design',
+              'Rust',
+              'Node JS',
+              'Python',
+              'Prisma',
+              'GraphQL',
+              'API',
+              'Pulumi',
+              'Serverless',
+              'AWS',
+              'GCP',
+              'Step Functions',
+              'MySQL',
+              'PostgreSQL',
+              'MongoDB',
+              'Redis',
+              'Tableau',
+              'Jupyter',
+              'GitLab CI',
+              'Docker',
+              'Jest',
+              'Kubernetes',
+              'Containerization',
+              'Github Actions',
+              'Project Management',
+              'Account Management',
             ],
         }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "work"
-    label: "Work Experience"
-    folder: "apps/portfolio/content/work"
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'work'
+    label: 'Work Experience'
+    folder: 'apps/portfolio/content/work'
     create: true
-    slug: "index"
-    media_folder: ""
-    public_folder: ""
-    path: "{{title}}/index"
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
     editor:
       preview: false
     fields:
-      - { label: "Company", name: "company", widget: "string" }
-      - { label: "Postion", name: "position", widget: "string" }
+      - { label: 'Company', name: 'company', widget: 'string' }
+      - { label: 'Postion', name: 'position', widget: 'string' }
       - {
-          label: "Start Date",
-          name: "startDate",
-          widget: "datetime",
-          format: "YYYY-MM-DD",
+          label: 'Start Date',
+          name: 'startDate',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD',
           time_format: false,
-          date_format: "YYYY-MM-DD",
+          date_format: 'YYYY-MM-DD',
         }
       - {
-          label: "End Date",
-          name: "endDate",
-          widget: "datetime",
+          label: 'End Date',
+          name: 'endDate',
+          widget: 'datetime',
           required: false,
-          format: "YYYY-MM-DD",
+          format: 'YYYY-MM-DD',
           time_format: false,
-          date_format: "YYYY-MM-DD",
+          date_format: 'YYYY-MM-DD',
         }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'apps/portfolio/content/pages'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

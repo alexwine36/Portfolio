@@ -142,7 +142,7 @@ export const pageQuery = graphql`
         title
         hero {
           childImageSharp {
-            fixed {
+            fixed(jpegProgressive: true, width: 1500) {
               srcSet
               src
             }
