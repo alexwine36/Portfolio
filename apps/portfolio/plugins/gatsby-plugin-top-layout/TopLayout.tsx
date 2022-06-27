@@ -28,6 +28,9 @@ export default function TopLayout(props) {
       <ThemeProvider theme={theme}>
         <GlobalStyles
           styles={{
+            html: {
+              scrollBehavior: 'smooth',
+            },
             '.MuiBottomNavigationAction-label': {
               fontWeight: 800,
             },
