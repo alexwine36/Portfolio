@@ -7,9 +7,10 @@ import {
   CardHeader,
   CardMedia,
   Typography,
+  useTheme,
 } from "@mui/material"
 import { ChipListDisplay } from "@portfolio/ui"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import pluralize from "pluralize"
 import { ProjectsPageQuery } from "../../../graphql-types"
 
@@ -28,10 +29,16 @@ export function ProjectCard(props: ProjectCardProps) {
   const { node } = props
   const { slug, timeToRead, frontmatter, excerpt } = node
   const { title, tags, hero } = frontmatter
-
+  const theme = useTheme()
   const link = `/projects/${slug}`
   return (
-    <CardActionArea component={Link} to={link}>
+    <CardActionArea
+      component={AniLink}
+      cover
+      direction="up"
+      bg={theme.palette.background.default}
+      to={link}
+    >
       <Card>
         <CardHeader
           subheaderTypographyProps={{
@@ -54,7 +61,13 @@ export function ProjectCard(props: ProjectCardProps) {
           <Typography>{excerpt}</Typography>
         </CardContent>
         <CardActions>
-          <Button component={Link} to={link}>
+          <Button
+            component={AniLink}
+            cover
+            direction="up"
+            bg={theme.palette.background.default}
+            to={link}
+          >
             Keep Reading
           </Button>
         </CardActions>

@@ -3,8 +3,10 @@ import {
   BottomNavigationAction,
   Box,
   styled,
+  useTheme,
 } from "@mui/material"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from "react"
 import { pageArray } from "../../utilities/pages"
 
 /* eslint-disable-next-line */
@@ -32,13 +34,13 @@ border: 1px solid ${theme.palette.divider};
 )
 
 export function NavigationLayout(props: NavigationLayoutProps) {
-  // const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0)
   // const { pathname } = useLocation();
-
+  const theme = useTheme()
   const handleChange = (val: number) => {
     console.log(val)
 
-    // setValue(val);
+    setValue(val)
   }
   return (
     <StyledNavigationLayout>
@@ -52,10 +54,13 @@ export function NavigationLayout(props: NavigationLayoutProps) {
           handleChange(newValue)
         }}
       >
-        {pageArray.map(action => {
+        {pageArray.map((action, idx) => {
           return (
             <BottomNavigationAction
-              component={Link}
+              component={AniLink}
+              cover
+              direction={idx < value ? "right" : "left"}
+              bg={theme.palette.background.default}
               to={action.href}
               activeClassName={"Mui-selected"}
               key={action.href}

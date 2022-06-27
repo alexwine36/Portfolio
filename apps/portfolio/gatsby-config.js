@@ -116,5 +116,6 @@ module.exports = {
     },
     `gatsby-transformer-yaml`,
     `gatsby-plugin-netlify-cms`,
+    "gatsby-plugin-transition-link",
   ],
 }
