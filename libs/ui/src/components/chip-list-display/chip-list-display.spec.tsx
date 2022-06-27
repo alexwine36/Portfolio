@@ -4,7 +4,7 @@ import ChipListDisplay from './chip-list-display';
 
 describe('ChipListDisplay', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ChipListDisplay />);
+    const { baseElement } = render(<ChipListDisplay tags={[]} />);
     expect(baseElement).toBeTruthy();
   });
 });

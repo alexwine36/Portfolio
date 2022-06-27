@@ -30,7 +30,7 @@ module.exports = {
         path: __dirname,
       },
     },
-    `gatsby-plugin-sharp`,
+    { resolve: `gatsby-plugin-sharp` },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

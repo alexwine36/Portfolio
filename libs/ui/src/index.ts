@@ -1,3 +1,4 @@
+export * from './components/hero-banner/hero-banner';
 export * from './components/chip-list-display/chip-list-display';
 export * from './assets/code-thinking/code-thinking';
 export * from './assets/generate-circuit-board-background/generate-circuit-board-background';

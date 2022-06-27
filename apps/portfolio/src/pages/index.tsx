@@ -16,6 +16,7 @@ import {
   SpeedDialNavigation,
 } from "@portfolio/ui"
 import React from "react"
+import HeroBannerImplementation from "../components/hero-banner-implementation/hero-banner-implementation"
 
 const StyledApp = styled.div``
 
@@ -92,6 +93,7 @@ export function Index() {
   })
   return (
     <PageBackground>
+      <HeroBannerImplementation />
       <SpeedDialNavigation actions={actions} />
       <HeroDisplay />
       <>
