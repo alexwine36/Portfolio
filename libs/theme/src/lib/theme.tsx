@@ -114,6 +114,14 @@ const componentTheme = createTheme({
         },
       },
     },
+
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          maxWidth: '700px',
+        },
+      },
+    },
     MuiPaper: {
       styleOverrides: {
         root: {

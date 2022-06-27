@@ -5,22 +5,22 @@ import {
   Container,
   styled,
   Typography,
-} from "@mui/material"
-import { ChipListDisplay } from "@portfolio/ui"
-import { graphql, PageProps } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import pluralize from "pluralize"
-import { ProjectPageQuery } from "../../../../graphql-types"
-import ParallaxSectionDisplay from "../../../components/parallax-section-display"
+} from '@mui/material';
+import { ChipListDisplay } from '@portfolio/ui';
+import { graphql, PageProps } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import pluralize from 'pluralize';
+import { ProjectPageQuery } from '../../../../graphql-types';
+import ParallaxSectionDisplay from '../../../components/parallax-section-display';
 
 /* eslint-disable-next-line */
 export interface ProjectPageProps extends PageProps<ProjectPageQuery> {}
 
-const StyledProjectPage = styled("div")`
+const StyledProjectPage = styled('div')`
   // color: pink;
-`
+`;
 
-const HeroImage = styled("div")<{ image: string }>(
+const HeroImage = styled('div')<{ image: string }>(
   ({ theme, image }) => `
 background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(${image});
 background-position: center;
@@ -31,13 +31,13 @@ align-items: end;
 padding: ${theme.spacing(3)};
 margin-bottom: ${theme.spacing(3)};
 `
-)
+);
 
 export function ProjectPage(props: ProjectPageProps) {
-  console.log(props.data.mdx)
-  const { mdx } = props.data
-  const { frontmatter, body, timeToRead } = mdx
-  const { title, tags, hero } = frontmatter
+  console.log(props.data.mdx);
+  const { mdx } = props.data;
+  const { frontmatter, body, timeToRead } = mdx;
+  const { title, tags, hero } = frontmatter;
   return (
     <StyledProjectPage>
       <HeroImage image={hero && hero.childImageSharp.fixed.src}>
@@ -49,21 +49,26 @@ export function ProjectPage(props: ProjectPageProps) {
             }}
             variant="overline"
           >
-            {pluralize("minute", timeToRead, true)}
+            {pluralize('minute', timeToRead, true)}
           </Typography>
         </Box>
       </HeroImage>
       <ParallaxSectionDisplay
         page={{
-          background: "meteor",
-          name: "",
+          background: 'meteor',
+          name: '',
         }}
         hideHeader
       >
         <Container>
           <ChipListDisplay tags={tags} />
           <Card>
-            <CardContent>
+            <CardContent
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
               <MDXRenderer>{body}</MDXRenderer>
             </CardContent>
           </Card>
@@ -74,7 +79,7 @@ export function ProjectPage(props: ProjectPageProps) {
         </Container>
       </ParallaxSectionDisplay>
     </StyledProjectPage>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -97,6 +102,6 @@ export const pageQuery = graphql`
       body
     }
   }
-`
+`;
 
-export default ProjectPage
+export default ProjectPage;

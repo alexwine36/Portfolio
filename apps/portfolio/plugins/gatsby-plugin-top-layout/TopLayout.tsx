@@ -1,14 +1,14 @@
-import { MDXProvider } from "@mdx-js/react"
-import { GlobalStyles } from "@mui/material"
-import CssBaseline from "@mui/material/CssBaseline"
-import { ThemeProvider } from "@mui/material/styles"
-import { theme } from "@portfolio/theme"
-import PropTypes from "prop-types"
-import * as React from "react"
-import { Helmet } from "react-helmet"
-import { ParallaxProvider } from "react-scroll-parallax"
-import PageLayout from "../../src/layouts/page-layout/page-layout"
-import components from "./components"
+import { MDXProvider } from '@mdx-js/react';
+import { GlobalStyles } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from '@portfolio/theme';
+import PropTypes from 'prop-types';
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import PageLayout from '../../src/layouts/page-layout/page-layout';
+import components from './components';
 
 export default function TopLayout(props) {
   return (
@@ -28,12 +28,16 @@ export default function TopLayout(props) {
       <ThemeProvider theme={theme}>
         <GlobalStyles
           styles={{
-            ".MuiBottomNavigationAction-label": {
+            '.MuiBottomNavigationAction-label': {
               fontWeight: 800,
             },
-            ".markdown-body": {
-              ">": {
-                "h1, h2, h3, h4, h6, hr, p": {
+            '.mermaid': {
+              display: 'flex',
+              justifyContent: 'center',
+            },
+            '.markdown-body': {
+              '>': {
+                'h1, h2, h3, h4, h6, hr, p': {
                   margin: theme.spacing(3),
                 },
               },
@@ -49,9 +53,9 @@ export default function TopLayout(props) {
         </MDXProvider>
       </ThemeProvider>
     </React.Fragment>
-  )
+  );
 }
 
 TopLayout.propTypes = {
   children: PropTypes.node,
-}
+};
