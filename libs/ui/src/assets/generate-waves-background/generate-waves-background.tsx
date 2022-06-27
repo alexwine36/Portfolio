@@ -19,7 +19,7 @@ export function GenerateWavesBackground(props: GenerateWavesBackgroundProps) {
   const secondary = theme.palette.secondary.main;
   const primary = theme.palette.primary.main;
   const shades = [...Array(3).keys()].map((i) => {
-    const { start } = generateGradientStep(primary, -i);
+    const { start } = generateGradientStep(secondary, -i);
     return start;
   });
   return (
@@ -51,8 +51,8 @@ export function GenerateWavesBackground(props: GenerateWavesBackgroundProps) {
     <svg
       id="visual"
       viewBox="0 0 675 900"
-      width={max * 1.25}
-      // height={max}
+      width={max}
+      height={max}
       preserveAspectRatio="xMidYMid slice"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"

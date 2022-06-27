@@ -1,7 +1,7 @@
 // import styled from '@emotion/styled';
 import { styled, useTheme } from '@mui/material';
 import random from 'random';
-import { SVGProps } from 'react';
+import React, { SVGProps } from 'react';
 import seedrandom from 'seedrandom';
 import { generateGradient } from '../../lib/utilities/functions/generate-gradient';
 /* eslint-disable-next-line */
@@ -11,12 +11,6 @@ export interface GeneratePlanetBackgroundProps extends SVGProps<SVGSVGElement> {
     height: number;
   };
 }
-
-export const StyledGeneratePlanetBackground = styled(GeneratePlanetBackground)(
-  ({ theme }) => `
-
-`
-);
 
 export const StyledBackgroundContainer = styled('div')(
   ({ theme }) => `
@@ -47,7 +41,9 @@ const randomItem = <T,>(arr: T[], seed?: string) => {
   return arr[index];
 };
 
-export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
+export const GeneratePlanetBackgroundRaw = (
+  props: GeneratePlanetBackgroundProps
+) => {
   let size = 560;
   const { dimensions } = props;
   // const {width = size, height = size} = dimensions;
@@ -147,7 +143,7 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
       {...{ 'xmlns:svgjs': 'http://svgjs.com/svgjs' }}
       // width="1440"
       // height="560"
-      // preserveAspectRatio="none"
+      preserveAspectRatio="none"
       viewBox={`0 0 ${width} ${height}`}
       {...props}
     >
@@ -176,9 +172,13 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
           const { color, ...rest } = gradient;
           const { start, end } = color;
           return (
-            <linearGradient {...rest} key={idx}>
-              <stop stopColor={start} offset="0.1"></stop>
-              <stop stopColor={end} offset="0.9"></stop>
+            <linearGradient
+              id={rest.id}
+              gradientTransform={`rotate(${random.int(0, 180)})`}
+              key={idx}
+            >
+              <stop stopColor={start} offset="0%"></stop>
+              <stop stopColor={end} offset="100%"></stop>
             </linearGradient>
           );
         })}
@@ -188,6 +188,24 @@ export function GeneratePlanetBackground(props: GeneratePlanetBackgroundProps) {
     //   <h1>Welcome to GeneratePlanetBackground!</h1>
     // </StyledGeneratePlanetBackground>
   );
-}
+};
+
+export const GeneratePlanetBackground = React.memo(
+  GeneratePlanetBackgroundRaw,
+  (prev, next) => {
+    console.log('prev', prev);
+    console.log('next', next);
+
+    return (
+      prev.dimensions?.height === next.dimensions?.height &&
+      prev.dimensions?.width === next.dimensions?.width
+    );
+  }
+);
+export const StyledGeneratePlanetBackground = styled(GeneratePlanetBackground)(
+  ({ theme }) => `
+
+`
+);
 
 export default GeneratePlanetBackground;

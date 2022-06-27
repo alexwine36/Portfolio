@@ -2,6 +2,7 @@ import { styled } from '@mui/material';
 import { Background, Parallax } from 'react-parallax';
 import { SizeMe } from 'react-sizeme';
 import GenerateCircuitBoardBackground from '../../assets/generate-circuit-board-background/generate-circuit-board-background';
+import GenerateLowPolyBackground from '../../assets/generate-low-poly-background/generate-low-poly-background';
 import GenerateMeteorBackground from '../../assets/generate-meteor-background/generate-meteor-background';
 import GeneratePlanetBackground from '../../assets/generate-planet-background/generate-planet-background';
 import GenerateSoundwaveBackground from '../../assets/generate-soundwave-background/generate-soundwave-background';
@@ -12,7 +13,8 @@ export type PredefinedBackgrounds =
   | 'meteor'
   | 'soundwave'
   | 'circuit'
-  | 'waves';
+  | 'waves'
+  | 'polygon';
 /* eslint-disable-next-line */
 
 export interface ParallaxBackgroundProps {
@@ -60,6 +62,8 @@ const GeneratePredefined = (props: {
   const { width, height, predefined } = props;
 
   switch (predefined) {
+    case 'polygon':
+      return <GenerateLowPolyBackground width={width} height={height} />;
     case 'meteor':
       return <GenerateMeteorBackground />;
     case 'planet':

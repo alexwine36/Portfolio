@@ -1,3 +1,4 @@
+export * from './assets/generate-low-poly-background/generate-low-poly-background';
 export * from './components/hero-banner/hero-banner';
 export * from './components/chip-list-display/chip-list-display';
 export * from './assets/code-thinking/code-thinking';

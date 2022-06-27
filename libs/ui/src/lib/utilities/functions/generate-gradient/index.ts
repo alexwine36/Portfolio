@@ -1,4 +1,4 @@
-import { analogue } from 'simpler-color';
+import { analogue, lightness } from 'simpler-color';
 
 export const generateGradient = (color: string) => {
   return {
@@ -12,4 +12,8 @@ export const generateGradientStep = (color: string, i: number) => {
     start: analogue(color, i),
     end: color,
   };
+};
+
+export const generateColorLightness = (color: string, i: number) => {
+  return lightness(color, i);
 };
