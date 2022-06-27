@@ -117,7 +117,7 @@ export function ProjectPage(props: ProjectPageProps) {
                   variant="text"
                   color="info"
                 >
-                  {tableOfContents.items.map((item) => (
+                  {tableOfContents.items?.map((item) => (
                     <Button href={item.url}>{item.title}</Button>
                   ))}
                 </ButtonGroup>
