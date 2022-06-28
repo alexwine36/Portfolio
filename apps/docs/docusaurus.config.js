@@ -49,6 +49,20 @@ const config = {
         },
       },
     ],
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        entryPoints: ['libs/resume-hooks/src/index.ts'],
+        tsconfig: 'libs/resume-hooks/tsconfig.json',
+        out: 'theme',
+        id: 'theme',
+        sidebar: {
+          categoryLabel: '@portfolio/theme',
+          position: 0,
+          fullNames: true,
+        },
+      },
+    ],
   ],
   title: 'Portfolio Documentation',
   tagline: 'Displaying my resume and portfolio with ease',
