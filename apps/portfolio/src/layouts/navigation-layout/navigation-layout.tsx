@@ -3,16 +3,17 @@ import {
   BottomNavigationAction,
   Box,
   styled,
+  useMediaQuery,
   useTheme,
-} from "@mui/material"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import React from "react"
-import { pageArray } from "../../utilities/pages"
+} from '@mui/material';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import React from 'react';
+import { pageArray } from '../../utilities/pages';
 
 /* eslint-disable-next-line */
 export interface NavigationLayoutProps {}
-const shadowColor = 100
-const backgroundColor = 0
+const shadowColor = 100;
+const backgroundColor = 0;
 const StyledNavigationLayout = styled(Box)(
   ({ theme }) => `
 // color: pink;
@@ -31,27 +32,29 @@ box-shadow: ${theme.shadows[1].replace(
   )};
 border: 1px solid ${theme.palette.divider};
 `
-)
+);
 
 export function NavigationLayout(props: NavigationLayoutProps) {
-  const [value, setValue] = React.useState(0)
+  const [value, setValue] = React.useState(0);
   // const { pathname } = useLocation();
-  const theme = useTheme()
+  const theme = useTheme();
   const handleChange = (val: number) => {
-    console.log(val)
+    console.log(val);
 
-    setValue(val)
-  }
+    setValue(val);
+  };
+
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   return (
     <StyledNavigationLayout>
       <BottomNavigation
         sx={{
-          background: "transparent",
+          background: 'transparent',
         }}
-        showLabels
+        showLabels={matches}
         // value={value}
         onChange={(_event, newValue) => {
-          handleChange(newValue)
+          handleChange(newValue);
         }}
       >
         {pageArray.map((action, idx) => {
@@ -59,10 +62,10 @@ export function NavigationLayout(props: NavigationLayoutProps) {
             <BottomNavigationAction
               component={AniLink}
               cover
-              direction={idx < value ? "right" : "left"}
+              direction={idx < value ? 'right' : 'left'}
               bg={theme.palette.background.default}
               to={action.href}
-              activeClassName={"Mui-selected"}
+              activeClassName={'Mui-selected'}
               key={action.href}
               label={action.name}
               icon={action.icon}
@@ -70,11 +73,11 @@ export function NavigationLayout(props: NavigationLayoutProps) {
             // <Button component={Link} to={action.href}>
             //   {action.name}
             // </Button>
-          )
+          );
         })}
       </BottomNavigation>
     </StyledNavigationLayout>
-  )
+  );
 }
 
-export default NavigationLayout
+export default NavigationLayout;
