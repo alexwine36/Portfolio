@@ -8,4 +8,12 @@ tags:
   - GraphQL
 hero: sharon-mccutcheon-tn57JI3CewI-unsplash.jpg
 ---
-Application to generate documentation for construction starts.
+
+- The Problem
+  - Starpacks used for job starts
+  - Used for preconstruction meeting
+
+- The Solution
+  - Includes all options for a house
+  - Includes colors for the house
+  - Includes vendors for the house

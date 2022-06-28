@@ -11,6 +11,7 @@ import GradientText from '../gradient-text/gradient-text';
 /* eslint-disable-next-line */
 export interface HeroDisplayProps {
   title?: string;
+  hideSvg?: boolean;
 }
 
 const StyledHeroDisplay = styled('div')(({ theme }) => {
@@ -61,7 +62,7 @@ const formatRgba = (values: (number | string)[]) => {
  * @returns
  */
 export function HeroDisplay(props: HeroDisplayProps) {
-  const { title } = props;
+  const { title, hideSvg } = props;
   // const theme = useTheme();
   return (
     <SizeMe monitorHeight>
@@ -70,7 +71,14 @@ export function HeroDisplay(props: HeroDisplayProps) {
 
         return (
           <StyledHeroDisplay>
-            <StyledPolygonBackground />
+            {!hideSvg && (
+              <StyledPolygonBackground
+                sx={{
+                  backgroundPosition: 'center',
+                  backgroundSize: 'cover',
+                }}
+              />
+            )}
             {/* <StyledGenerateGalaxyBackground /> */}
             <Container
               sx={{

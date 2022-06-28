@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import { useTheme } from '@mui/material';
+import { styled, useTheme } from '@mui/material';
+import { cssImageSettings } from '../../lib/utilities/css-image-settings';
 import { generateGradientStep } from '../../lib/utilities/functions/generate-gradient';
 
 /* eslint-disable-next-line */
@@ -8,13 +8,14 @@ export interface GenerateWavesBackgroundProps {
   height?: number;
 }
 
-const StyledGenerateWavesBackground = styled.div`
-  color: pink;
+export const StyledGenerateWavesBackground = styled(GenerateWavesBackground)`
+  // color: pink;
+  ${cssImageSettings}
 `;
 
 export function GenerateWavesBackground(props: GenerateWavesBackgroundProps) {
   const theme = useTheme();
-  const { width = 1440, height = 560 } = props;
+  const { width = 1440, height = 560, ...rest } = props;
   const max = Math.max(width, height);
   const secondary = theme.palette.secondary.main;
   const primary = theme.palette.primary.main;
@@ -57,6 +58,7 @@ export function GenerateWavesBackground(props: GenerateWavesBackgroundProps) {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
+      {...rest}
     >
       <rect x="0" y="0" width="675" height="900" fill="none"></rect>
       <path

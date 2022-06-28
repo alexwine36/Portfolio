@@ -21,7 +21,8 @@ const formatSrcSet = (d: string) => {
     .join(',\n');
   // console.log(data)
 };
-
+// Duotone
+// duotone: { highlight: "#49afe2", shadow: "#b11733" }
 export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
   const { mountains, background } = useStaticQuery<HeroBannerQuery>(graphql`
     query HeroBanner {
