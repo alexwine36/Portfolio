@@ -49,10 +49,15 @@ export const pageQuery = graphql`
           title
           hero {
             childImageSharp {
-              fixed {
-                src
-                srcSet
-              }
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: CONSTRAINED
+                formats: [AUTO, WEBP]
+              )
+              # fixed {
+              #   src
+              #   srcSet
+              # }
             }
           }
         }

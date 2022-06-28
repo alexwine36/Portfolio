@@ -14,9 +14,11 @@ export interface HeroBannerProps {
   title?: string;
   fg?: ImageProps;
   bg?: ImageProps;
+  fgChild?: React.ReactElement;
+  bgChild?: React.ReactElement;
 }
 
-const StyledHeroBanner = styled('div')(
+export const StyledHeroBanner = styled('div')(
   ({ theme }) => `
 // color: pink;
 .headline {
@@ -73,7 +75,7 @@ height: 100%;
 );
 
 export function HeroBanner(props: HeroBannerProps) {
-  const { title, fg, bg } = props;
+  const { title, fg, bg, fgChild, bgChild } = props;
   const theme = useTheme();
   const background: BannerLayer = {
     // image:
@@ -83,7 +85,7 @@ export function HeroBanner(props: HeroBannerProps) {
     scale: [1.05, 1, 'easeOutCubic'],
     shouldAlwaysCompleteAnimation: true,
     expanded: true,
-    children: <StyledImage data={bg}></StyledImage>,
+    children: bgChild || <StyledImage data={bg}></StyledImage>,
   };
 
   const headline: BannerLayer = {
@@ -106,7 +108,7 @@ export function HeroBanner(props: HeroBannerProps) {
 
   const foreground: BannerLayer = {
     // image: '/static/d407778d51249ba59807b0edebea6801/mountains.png',
-    children: <StyledImage data={fg}></StyledImage>,
+    children: fgChild || <StyledImage data={fg}></StyledImage>,
     translateY: [0, 15],
     scale: [1, 1.1, 'easeOutCubic'],
     shouldAlwaysCompleteAnimation: true,

@@ -5,20 +5,20 @@ import {
   CardActions,
   CardContent,
   CardHeader,
-  CardMedia,
   Typography,
   useTheme,
-} from "@mui/material"
-import { ChipListDisplay } from "@portfolio/ui"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import pluralize from "pluralize"
-import { ProjectsPageQuery } from "../../../graphql-types"
+} from '@mui/material';
+import { ChipListDisplay } from '@portfolio/ui';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import pluralize from 'pluralize';
+import { ProjectsPageQuery } from '../../../graphql-types';
 
-type ProjectPreview = ProjectsPageQuery["allMdx"]["nodes"][0]
+type ProjectPreview = ProjectsPageQuery['allMdx']['nodes'][0];
 
 /* eslint-disable-next-line */
 export interface ProjectCardProps {
-  node: ProjectPreview
+  node: ProjectPreview;
 }
 
 // const StyledProjectCard = styled("div")`
@@ -26,11 +26,13 @@ export interface ProjectCardProps {
 // `
 
 export function ProjectCard(props: ProjectCardProps) {
-  const { node } = props
-  const { slug, timeToRead, frontmatter, excerpt } = node
-  const { title, tags, hero } = frontmatter
-  const theme = useTheme()
-  const link = `/projects/${slug}`
+  const { node } = props;
+  const { slug, timeToRead, frontmatter, excerpt } = node;
+  const { title, tags, hero } = frontmatter;
+  console.log('HERO', hero);
+
+  const theme = useTheme();
+  const link = `/projects/${slug}`;
   return (
     <CardActionArea
       component={AniLink}
@@ -42,19 +44,16 @@ export function ProjectCard(props: ProjectCardProps) {
       <Card>
         <CardHeader
           subheaderTypographyProps={{
-            variant: "overline",
+            variant: 'overline',
           }}
           title={title}
-          subheader={`${pluralize("minute", timeToRead, true)}`}
+          subheader={`${pluralize('minute', timeToRead, true)}`}
         />
-        {hero && (
-          <CardMedia
-            component={"img"}
-            srcSet={hero.childImageSharp.fixed.srcSet}
-            // height={hero.childImageSharp.fixed.presentationHeight}
-            src={hero.childImageSharp.fixed.src}
-          ></CardMedia>
-        )}
+        <GatsbyImage
+          alt={`${title} image`}
+          image={hero.childImageSharp.gatsbyImageData}
+        ></GatsbyImage>
+
         <ChipListDisplay tags={tags} />
 
         <CardContent>
@@ -73,7 +72,7 @@ export function ProjectCard(props: ProjectCardProps) {
         </CardActions>
       </Card>
     </CardActionArea>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

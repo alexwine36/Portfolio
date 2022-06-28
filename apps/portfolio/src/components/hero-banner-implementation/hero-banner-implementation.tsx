@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { HeroBanner } from '../../../../../libs/ui/src';
 import { HeroBannerQuery } from '../../../graphql-types';
-
 /* eslint-disable-next-line */
 export interface HeroBannerImplementationProps {}
 
@@ -24,20 +24,29 @@ const formatSrcSet = (d: string) => {
 // Duotone
 // duotone: { highlight: "#49afe2", shadow: "#b11733" }
 export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
-  const { mountains, background } = useStaticQuery<HeroBannerQuery>(graphql`
+  const { mtns, bkg } = useStaticQuery<HeroBannerQuery>(graphql`
     query HeroBanner {
-      mountains: file(name: { eq: "mountains" }) {
+      mtns: file(name: { eq: "mountains" }) {
         childImageSharp {
-          ...ImageSharpFragment
+          ...FluidSharpFragment
         }
       }
-      background: file(name: { eq: "background" }) {
+      bkg: file(name: { eq: "background" }) {
         childImageSharp {
-          ...ImageSharpFragment
+          ...FluidSharpFragment
         }
       }
     }
-
+    fragment FluidSharpFragment on ImageSharp {
+      # fluid(quality: 90, maxWidth: 1920) {
+      #   ...GatsbyImageSharpFluid_withWebp
+      # }
+      gatsbyImageData(
+        placeholder: BLURRED
+        layout: FULL_WIDTH
+        formats: [AUTO, WEBP]
+      )
+    }
     fragment ImageSharpFragment on ImageSharp {
       fixed(
         jpegProgressive: true
@@ -48,26 +57,54 @@ export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
         src
         srcSet
         width
+        # ...GatsbyImageSharpFixed
       }
     }
   `);
 
-  console.log(mountains, background);
-
-  const src = formatSrcSet(mountains.childImageSharp.fixed.srcSet);
-  console.log(src);
+  console.log(bkg);
 
   return (
     <StyledHeroBannerImplementation>
       <HeroBanner
-        fg={{
-          srcSet: formatSrcSet(mountains.childImageSharp.fixed.srcSet),
-          src: mountains.childImageSharp.fixed.src,
-        }}
-        bg={{
-          srcSet: formatSrcSet(background.childImageSharp.fixed.srcSet),
-          src: background.childImageSharp.fixed.src,
-        }}
+        // fg={{
+        //   srcSet: formatSrcSet(mountains.childImageSharp.fixed.srcSet),
+        //   src: mountains.childImageSharp.fixed.src,
+        // }}
+        fgChild={
+          // <BackgroundImage
+          //   style={{
+          //     height: '100%',
+          //   }}
+          //   fluid={(mtns as any).childImageSharp.fluid}
+          // ></BackgroundImage>
+          <GatsbyImage
+            alt="Mountains"
+            style={{
+              height: '100%',
+            }}
+            image={mtns.childImageSharp.gatsbyImageData}
+          ></GatsbyImage>
+        }
+        bgChild={
+          // <BackgroundImage
+          //   style={{
+          //     height: '100%',
+          //   }}
+          //   fluid={(bkg as any).childImageSharp.fluid}
+          // ></BackgroundImage>
+          <GatsbyImage
+            alt="Background Sky"
+            style={{
+              height: '100%',
+            }}
+            image={bkg.childImageSharp.gatsbyImageData}
+          ></GatsbyImage>
+        }
+        // bg={{
+        //   srcSet: formatSrcSet(background.childImageSharp.fixed.srcSet),
+        //   src: background.childImageSharp.fixed.src,
+        // }}
       />
     </StyledHeroBannerImplementation>
   );
