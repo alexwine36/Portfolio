@@ -1,3 +1,45 @@
+## [1.15.0](https://github.com/alexwine36/Portfolio/compare/v1.14.1...v1.15.0) (2022-06-28)
+
+
+### Features
+
+* **gatsby:** added about content for homepage ([d23d285](https://github.com/alexwine36/Portfolio/commit/d23d2856555d5ecf3c29c94adde02da718f5fc0e))
+* **gatsby:** added mermaid chart display ([5f660ed](https://github.com/alexwine36/Portfolio/commit/5f660ed9422d1523fb9931a1094338db2e57c91d))
+* **gatsby:** added page transitions ([7204017](https://github.com/alexwine36/Portfolio/commit/7204017303588ee44a53f0a4777345df220ab2f8))
+* **gatsby:** added Table of Contents display ([355c1fe](https://github.com/alexwine36/Portfolio/commit/355c1fea145e84bcb85783ba704dffcb3efc4f4b))
+* **gatsby:** project page has been updated ([455bd22](https://github.com/alexwine36/Portfolio/commit/455bd22e04fb76a414d537151cba4e4d3e55d3c8))
+* **theme:** separated theme for easier updates ([a3176ce](https://github.com/alexwine36/Portfolio/commit/a3176cefd722f9338476150657e38014c4dcc990))
+* **ui:** added parallax hero ([c893fe7](https://github.com/alexwine36/Portfolio/commit/c893fe771d2b583022df7fa10e91d87716e68785))
+
+
+### Bug Fixes
+
+* **gatsby:** formatting update for components ([d43a441](https://github.com/alexwine36/Portfolio/commit/d43a441aabe561b66d040dabda4480ea489bb7b4))
+* **gatsby:** hero polygon image display problems fixed by changing to background image ([dc8cbb0](https://github.com/alexwine36/Portfolio/commit/dc8cbb0a019b9558604d2666ba362a66e4c008a0))
+* **gatsby:** project page items fix ([11827f1](https://github.com/alexwine36/Portfolio/commit/11827f1c42f4a6776ad5b147739a60cc9af47a8d))
+* **gatsby:** updated mermaid theme ([55756cb](https://github.com/alexwine36/Portfolio/commit/55756cb8197e9b3143b5bc7b266c9066d1b2a2e4))
+* **gatsby:** updated planet background ([f8a0622](https://github.com/alexwine36/Portfolio/commit/f8a0622c41a3e3f52dede1b31e37222485778824))
+* **theme:** updated chip display ([fdf1339](https://github.com/alexwine36/Portfolio/commit/fdf1339e052692ab8f06fcdbaed5395a0c93a362))
+* **ui:** updated max typography length for ease of reading ([2435851](https://github.com/alexwine36/Portfolio/commit/24358511fda6f5b3aab2918f149532b3f92071ae))
+
+
+### Build System
+
+* **gatsby:** updated image source to fix failing build ([b0355b6](https://github.com/alexwine36/Portfolio/commit/b0355b67887124cd73b4cc06f72bab9781b94924))
+
+
+### Tests
+
+* **gatsby:** removed homepage test to fix mdx error ([e2c018b](https://github.com/alexwine36/Portfolio/commit/e2c018bb62356557ef8eba54ffaa1f4ca0ab6b46))
+
+
+### Docs
+
+* **create Projects:** receipt-manager/index ([52ac0c6](https://github.com/alexwine36/Portfolio/commit/52ac0c6a968cdeb180993ae53400a9dab95b03bd))
+* **docs:** updated packages to include theme package ([a142626](https://github.com/alexwine36/Portfolio/commit/a14262675ad5ecd410c9bef3a70bc0b0897487ee))
+* **gatsby:** updated about me ([3dd8a45](https://github.com/alexwine36/Portfolio/commit/3dd8a45491a752117cb6a43aef89c3ad04172a4c))
+* **update Pages:** about/index ([cbdc8fc](https://github.com/alexwine36/Portfolio/commit/cbdc8fce5279cf2fe48d92e6dfb256289c06dfef))
+
 ## [1.14.1](https://github.com/alexwine36/Portfolio/compare/v1.14.0...v1.14.1) (2022-06-24)
 
 
