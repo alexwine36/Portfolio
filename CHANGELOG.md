@@ -1,3 +1,10 @@
+## [1.16.0](https://github.com/alexwine36/Portfolio/compare/v1.15.0...v1.16.0) (2022-06-28)
+
+
+### Features
+
+* **gatsby:** scaffolded skills to tags ([4ec2f32](https://github.com/alexwine36/Portfolio/commit/4ec2f32267931976aad96b8c53bfdae7c916d38f))
+
 ## [1.15.0](https://github.com/alexwine36/Portfolio/compare/v1.14.1...v1.15.0) (2022-06-28)
 
 
