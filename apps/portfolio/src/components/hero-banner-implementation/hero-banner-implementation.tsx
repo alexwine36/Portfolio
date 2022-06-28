@@ -1,26 +1,26 @@
-import styled from "@emotion/styled"
-import { graphql, useStaticQuery } from "gatsby"
-import { HeroBanner } from "../../../../../libs/ui/src"
-import { HeroBannerQuery } from "../../../graphql-types"
+import styled from '@emotion/styled';
+import { graphql, useStaticQuery } from 'gatsby';
+import { HeroBanner } from '../../../../../libs/ui/src';
+import { HeroBannerQuery } from '../../../graphql-types';
 
 /* eslint-disable-next-line */
 export interface HeroBannerImplementationProps {}
 
 const StyledHeroBannerImplementation = styled.div`
   // color: pink;
-`
+`;
 
 const formatSrcSet = (d: string) => {
-  const data = d.split("\n")
+  const data = d.split('\n');
   return data
-    .map(s => {
-      const [url, size] = s.split(" ")
+    .map((s) => {
+      const [url, size] = s.split(' ');
 
-      return `url(${url}) ${size.replace(",", "")}`
+      return `url(${url}) ${size.replace(',', '')}`;
     })
-    .join(",\n")
+    .join(',\n');
   // console.log(data)
-}
+};
 
 export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
   const { mountains, background } = useStaticQuery<HeroBannerQuery>(graphql`
@@ -38,18 +38,23 @@ export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
     }
 
     fragment ImageSharpFragment on ImageSharp {
-      fixed(jpegProgressive: true, width: 1500) {
+      fixed(
+        jpegProgressive: true
+        width: 2500
+        pngQuality: 50
+        jpegQuality: 50
+      ) {
         src
         srcSet
         width
       }
     }
-  `)
+  `);
 
-  console.log(mountains, background)
+  console.log(mountains, background);
 
-  const src = formatSrcSet(mountains.childImageSharp.fixed.srcSet)
-  console.log(src)
+  const src = formatSrcSet(mountains.childImageSharp.fixed.srcSet);
+  console.log(src);
 
   return (
     <StyledHeroBannerImplementation>
@@ -64,7 +69,7 @@ export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
         }}
       />
     </StyledHeroBannerImplementation>
-  )
+  );
 }
 
-export default HeroBannerImplementation
+export default HeroBannerImplementation;

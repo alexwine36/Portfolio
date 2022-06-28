@@ -2,6 +2,8 @@
 title: About
 ---
 
-### Alex Wine - Frontend, Backend, and DevOps Programmer
+### Alex Wine - Developer, Project Manager, Designer, and Nerd
 
-I'm Alex Wine a multidisciplinary programmer from Albuquerque, New Mexico. I develop applications for businesses to expedite processes.
+I'm Alex Wine a multidisciplinary programmer with 10+ years of experience from Albuquerque, New Mexico. I develop applications to streamline processes, optimize workflows and, make better decisions.
+
+
