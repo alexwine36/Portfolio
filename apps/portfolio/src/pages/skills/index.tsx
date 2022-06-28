@@ -1,40 +1,41 @@
-import styled from "@emotion/styled"
-import { Box, Rating, Typography } from "@mui/material"
-import { DetailCardDisplay, MasonryGridComponent } from "@portfolio/ui"
-import { graphql, PageProps } from "gatsby"
-import { SkillsPageQuery } from "../../../graphql-types"
-import ParallaxSectionDisplay from "../../components/parallax-section-display"
-import { pages } from "../../utilities/pages"
+import styled from '@emotion/styled';
+import { Box, Rating, Typography, useTheme } from '@mui/material';
+import { DetailCardDisplay, MasonryGridComponent } from '@portfolio/ui';
+import { graphql, Link, PageProps } from 'gatsby';
+import { SkillsPageQuery } from '../../../graphql-types';
+import ParallaxSectionDisplay from '../../components/parallax-section-display';
+import { pages } from '../../utilities/pages';
 
 /* eslint-disable-next-line */
 export interface SkillsProps extends PageProps<SkillsPageQuery> {}
 
 const StyledSkills = styled.div`
   // color: pink;
-`
+`;
 
 export function Skills(props: SkillsProps) {
-  const page = pages["skills"]
-
+  const page = pages['skills'];
+  const theme = useTheme();
   // Function to return select options for projects
 
   // const select = props.data.allSkillsYaml.nodes.map(d => `"${d.skill}"`)
   // console.log(select.join(", "))
 
   const categories = props.data.allSkillsYaml.group
-    .map(cat => {
-      const avg = cat.sum / cat.totalCount
-      const { nodes } = cat
+    .map((cat) => {
+      const avg = cat.sum / cat.totalCount;
+      const { nodes } = cat;
 
       return {
         ...cat,
         nodes: nodes.sort((a, b) => b.rating - a.rating),
         avg,
-      }
+      };
     })
-    .sort((a, b) => b.sum - a.sum)
+    .sort((a, b) => b.sum - a.sum);
+  const tags = props.data.tags.group.map((d) => d.fieldValue);
 
-  console.log(categories)
+  console.log(categories, tags);
 
   return (
     <StyledSkills>
@@ -47,7 +48,7 @@ export function Skills(props: SkillsProps) {
             default: 2,
           }}
         >
-          {categories.map(category => {
+          {categories.map((category) => {
             // return <div>{category.fieldValue} </div>
 
             return (
@@ -57,18 +58,18 @@ export function Skills(props: SkillsProps) {
                 <Box
                   sx={{
                     paddingLeft: 3,
-                    display: "flex",
-                    flexDirection: "column",
+                    display: 'flex',
+                    flexDirection: 'column',
                   }}
                 >
-                  {category.nodes.map(skill => {
+                  {category.nodes.map((skill) => {
                     return (
                       <Box
                         key={skill.skill}
                         sx={{
-                          display: "flex",
+                          display: 'flex',
                           // alignItems: "center",
-                          flexDirection: "row",
+                          flexDirection: 'row',
                           // width: "100%",
                         }}
                       >
@@ -76,21 +77,26 @@ export function Skills(props: SkillsProps) {
                         <Typography
                           sx={{
                             paddingX: 2,
+                            color: theme.palette.text.primary,
                           }}
+                          {...(tags.includes(skill.skill) && {
+                            component: Link,
+                            to: '/',
+                          })}
                         >
                           {skill.skill}
                         </Typography>
                       </Box>
-                    )
+                    );
                   })}
                 </Box>
               </DetailCardDisplay>
-            )
+            );
           })}
         </MasonryGridComponent>
       </ParallaxSectionDisplay>
     </StyledSkills>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -110,7 +116,13 @@ export const pageQuery = graphql`
       #   skill
       # }
     }
+    tags: allMdx {
+      group(field: frontmatter___tags) {
+        field
+        fieldValue
+      }
+    }
   }
-`
+`;
 
-export default Skills
+export default Skills;
