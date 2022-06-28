@@ -14,9 +14,10 @@ const StyledHeroDisplay = styled.div`
 `;
 
 export function HeroDisplay(props: HeroDisplayProps) {
+  const { title } = props;
   return (
     <StyledHeroDisplay>
-      <BaseHeroDisplay hideSvg />
+      <BaseHeroDisplay hideSvg title={title} />
     </StyledHeroDisplay>
   );
 }

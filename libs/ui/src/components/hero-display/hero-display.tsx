@@ -31,7 +31,7 @@ const StyledHeroDisplay = styled('div')(({ theme }) => {
 // background-image: ${polygonRes};
 // background-size: cover;
 // background-position: center;
-height: 90vh;
+height: 50vh;
 max-height: 500px;
 `;
 });
