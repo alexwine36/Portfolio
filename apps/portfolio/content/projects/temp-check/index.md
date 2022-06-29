@@ -6,6 +6,7 @@ tags:
   - Typescript
   - GraphQL
   - PostgreSQL
+hero: anton-SZ1DDwCPqkE-unsplash.jpg
 ---
 - The problem
   - local school needed a way to log children’s temperature quickly during drop off

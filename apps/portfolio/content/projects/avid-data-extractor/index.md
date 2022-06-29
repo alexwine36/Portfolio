@@ -4,6 +4,7 @@ date: 2022-06-29
 tags:
   - PostgreSQL
   - Serverless
+hero: jon-tyson-vVSleEYPSGY-unsplash.jpg
 ---
 - The problem
   - The reviews we receive need to be viewable to managers 
