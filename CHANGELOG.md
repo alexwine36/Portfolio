@@ -1,3 +1,11 @@
+## [1.17.1](https://github.com/alexwine36/Portfolio/compare/v1.17.0...v1.17.1) (2022-06-29)
+
+
+### Bug Fixes
+
+* **gatsby:** hero Banner updated image used for background ([3153824](https://github.com/alexwine36/Portfolio/commit/3153824f52aa24816209ecc285f68a354dedc920))
+* **ui:** updated hero banner ([c22c8b9](https://github.com/alexwine36/Portfolio/commit/c22c8b9cfc55b8d311052592d65d1d4b72da2614))
+
 ## [1.17.0](https://github.com/alexwine36/Portfolio/compare/v1.16.0...v1.17.0) (2022-06-28)
 
 
