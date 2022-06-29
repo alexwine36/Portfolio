@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-components-pages-tags-index-tsx",
     "path": "/tags/postgre-sql/",
-    "result": {"data":{"projects":{"totalCount":1,"nodes":[{"frontmatter":{"tags":["PostgreSQL","Serverless"],"title":"Avid Data Extractor","hero":null},"excerpt":"The problem The reviews we receive need to be viewable to managers  the solution scrape Avid Reports website for information on reviews save…","slug":"avid-data-extractor/","timeToRead":1}]},"skill":{"date":"10 years ago","rating":4,"skill":"PostgreSQL"}},"pageContext":{"tag":"PostgreSQL"}},
+    "result": {"data":{"projects":{"totalCount":2,"nodes":[{"frontmatter":{"tags":["PostgreSQL","Serverless"],"title":"Avid Data Extractor","hero":null},"excerpt":"The problem The reviews we receive need to be viewable to managers  the solution scrape Avid Reports website for information on reviews save…","slug":"avid-data-extractor/","timeToRead":1},{"frontmatter":{"tags":["React","Typescript","GraphQL","PostgreSQL"],"title":"Temp Check","hero":null},"excerpt":"The problem local school needed a way to log children’s temperature quickly during drop off the solution prisma orm ","slug":"temp-check/","timeToRead":1}]},"skill":{"date":"10 years ago","rating":4,"skill":"PostgreSQL"}},"pageContext":{"tag":"PostgreSQL"}},
     "staticQueryHashes": ["374626863"]}
