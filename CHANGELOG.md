@@ -1,3 +1,39 @@
+## [2.0.0](https://github.com/alexwine36/Portfolio/compare/v1.17.1...v2.0.0) (2022-06-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gatsby:** UI Chip Display chips now have to be an array of objects using name and possibly
+link
+
+### Features
+
+* **gatsby:** added related projects display to the bottom of project page ([3a2111b](https://github.com/alexwine36/Portfolio/commit/3a2111b5b2d0338ad7b019a81a685c0ff30b4d2f))
+* **gatsby:** project card added small variant limiting the size of pictures ([a70c7ac](https://github.com/alexwine36/Portfolio/commit/a70c7ac27a6a528ba6959ffad217045d68351a0f))
+* **gatsby:** tag page has been created for linking articles together ([3ddc353](https://github.com/alexwine36/Portfolio/commit/3ddc35355898eeea1f068486a65a78746c4e3e09))
+
+
+### Bug Fixes
+
+* **gatsby:** changed to create page for projects ([8a87db5](https://github.com/alexwine36/Portfolio/commit/8a87db57bf951fbd391329fee8cc84d096208e56))
+* **gatsby:** updated project card and added tableau extensions project ([78146f6](https://github.com/alexwine36/Portfolio/commit/78146f6398dcc17af7bd99e472093a08ac1a3ca8))
+* **gatsby:** updated title and title template ([6b87381](https://github.com/alexwine36/Portfolio/commit/6b87381de7fcb4a0edc59306de6ab34ca328e5ba))
+
+
+### Code Refactoring
+
+* **gatsby:** changed to hook for page data ([dda7bb8](https://github.com/alexwine36/Portfolio/commit/dda7bb8723a9ef85b0a293b73475a42f00bac9d1))
+
+
+### Docs
+
+* **create Projects:** federated-graphql-api/index ([9ce9bc8](https://github.com/alexwine36/Portfolio/commit/9ce9bc8c75bcbf9ad3a7d41700b4491399657f72))
+
+
+### Tests
+
+* **gatsby:** updated parallax section display test ([1c7d771](https://github.com/alexwine36/Portfolio/commit/1c7d771d0c0a230c66cf5ba33afa8d4a6107fc64))
+
 ## [1.17.1](https://github.com/alexwine36/Portfolio/compare/v1.17.0...v1.17.1) (2022-06-29)
 
 

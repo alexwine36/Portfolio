@@ -26,7 +26,7 @@ libs.ui.src.assets.generate-waves-background | 10% | 0% | 0 | ❌
 libs.ui.src.assets.git-lab-icon | 50% | 100% | 0 | ➖
 libs.ui.src.assets.polygon-background | 20% | 0% | 0 | ❌
 libs.ui.src.assets.star-background | 25% | 0% | 0 | ❌
-libs.ui.src.components.chip-list-display | 33% | 100% | 0 | ❌
+libs.ui.src.components.chip-list-display | 29% | 0% | 0 | ❌
 libs.ui.src.components.detail-card-display | 40% | 100% | 0 | ❌
 libs.ui.src.components.detail-list-display | 30% | 0% | 0 | ❌
 libs.ui.src.components.footer-display | 29% | 100% | 0 | ❌
@@ -47,4 +47,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generateBase64 | 29% | 100% | 0 | ❌
 libs.ui.src.lib.utilities.hex-to-rgba | 20% | 100% | 0 | ❌
-**Summary** | **25%** (102 / 410) | **2%** (4 / 168) | **0** | ❌
+**Summary** | **25%** (102 / 411) | **2%** (4 / 170) | **0** | ❌
