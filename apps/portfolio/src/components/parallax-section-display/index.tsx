@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 import { ParallaxBackground, SectionContainer } from '@portfolio/ui';
-import { PageData } from '../../utilities/pages';
+import { UsePage } from '../../hooks/use-pages/use-pages';
+
 import { HeroDisplay } from '../hero-display/hero-display';
 /* eslint-disable-next-line */
 export interface ParallaxSectionDisplayProps {
-  page: PageData;
+  page: UsePage;
   children: React.ReactElement | React.ReactElement[];
   hideHeader?: boolean;
 }

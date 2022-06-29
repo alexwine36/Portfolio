@@ -1,15 +1,16 @@
-import { render } from "@testing-library/react"
-import React from "react"
-import { pages } from "../../utilities/pages"
-import ParallaxSectionDisplay from "./index"
+import { render } from '@testing-library/react';
+import React from 'react';
+import { usePage } from '../../hooks/use-pages/use-pages';
+import ParallaxSectionDisplay from './index';
 
-describe("ParallaxSectionDisplay", () => {
-  it("should render successfully", () => {
+describe('ParallaxSectionDisplay', () => {
+  it('should render successfully', () => {
+    const page = usePage('work');
     const { baseElement } = render(
-      <ParallaxSectionDisplay page={pages["work"]}>
+      <ParallaxSectionDisplay page={page}>
         <div>Sample</div>
       </ParallaxSectionDisplay>
-    )
-    expect(baseElement).toBeTruthy()
-  })
-})
+    );
+    expect(baseElement).toBeTruthy();
+  });
+});

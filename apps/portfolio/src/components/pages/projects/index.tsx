@@ -17,6 +17,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
 import Sticky from 'react-stickynode';
 import { ProjectPageQuery } from '../../../../graphql-types';
+import { usePage } from '../../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../../utilities/generate-tag-link';
 import ParallaxSectionDisplay from '../../parallax-section-display';
 import ProjectCard from '../../project-card';
@@ -43,7 +44,7 @@ margin-bottom: ${theme.spacing(3)};
 export function ProjectPage(props: ProjectPageProps) {
   // console.log(props.data.mdx);
   // console.log(props.data.related);
-
+  const page = usePage('projects');
   const { mdx, related } = props.data;
   const { frontmatter, body, timeToRead, tableOfContents } = mdx;
   const { title, tags, hero } = frontmatter;
@@ -65,13 +66,7 @@ export function ProjectPage(props: ProjectPageProps) {
           </Typography>
         </Box>
       </HeroImage>
-      <ParallaxSectionDisplay
-        page={{
-          background: 'meteor',
-          name: '',
-        }}
-        hideHeader
-      >
+      <ParallaxSectionDisplay page={page} hideHeader>
         <Container>
           <ChipListDisplay
             tags={tags.map((t) => ({
