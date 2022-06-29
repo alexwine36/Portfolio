@@ -2,7 +2,7 @@ import { Chip, styled } from '@mui/material';
 import { Link } from 'gatsby';
 /* eslint-disable-next-line */
 export interface ChipListDisplayProps {
-  tags: {
+  tags?: {
     name: string;
     link?: string;
   }[];
@@ -27,10 +27,10 @@ export function ChipListDisplay(props: ChipListDisplayProps) {
   const { tags } = props;
   return (
     <StyledChipListDisplay>
-      {tags.map((tag, idx) => {
+      {tags?.map((tag, idx) => {
         const { name, link } = tag;
         return (
-          <ListItem key={idx}>
+          <ListItem key={link}>
             <Chip
               label={name}
               {
