@@ -11,7 +11,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { ChipListDisplay } from '@portfolio/ui';
+import { ChipListDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
@@ -19,6 +19,7 @@ import Sticky from 'react-stickynode';
 import { ProjectPageQuery } from '../../../../graphql-types';
 import { generateTagLink } from '../../../utilities/generate-tag-link';
 import ParallaxSectionDisplay from '../../parallax-section-display';
+import ProjectCard from '../../project-card';
 /* eslint-disable-next-line */
 export interface ProjectPageProps extends PageProps<ProjectPageQuery> {}
 
@@ -40,8 +41,10 @@ margin-bottom: ${theme.spacing(3)};
 );
 
 export function ProjectPage(props: ProjectPageProps) {
-  console.log(props.data.mdx);
-  const { mdx } = props.data;
+  // console.log(props.data.mdx);
+  // console.log(props.data.related);
+
+  const { mdx, related } = props.data;
   const { frontmatter, body, timeToRead, tableOfContents } = mdx;
   const { title, tags, hero } = frontmatter;
   const theme = useTheme();
@@ -134,6 +137,21 @@ export function ProjectPage(props: ProjectPageProps) {
           {/* <Typography variant="h1" component="h1">
           {title}
         </Typography> */}
+          <Box
+            sx={{
+              marginTop: 4,
+            }}
+          >
+            <MasonryGridComponent>
+              {related.nodes.map((node) => {
+                return (
+                  // <Grid key={node.slug} item xs>
+                  <ProjectCard node={node}></ProjectCard>
+                  // </Grid>
+                );
+              })}
+            </MasonryGridComponent>
+          </Box>
         </Container>
       </ParallaxSectionDisplay>
     </StyledProjectPage>
@@ -141,7 +159,7 @@ export function ProjectPage(props: ProjectPageProps) {
 }
 
 export const pageQuery = graphql`
-  query ProjectPage($slug: String) {
+  query ProjectPage($slug: String, $tags: [String]) {
     mdx(slug: { eq: $slug }) {
       frontmatter {
         tags
@@ -158,6 +176,11 @@ export const pageQuery = graphql`
       tableOfContents
       timeToRead
       body
+    }
+    related: allMdx(
+      filter: { frontmatter: { tags: { in: $tags } }, slug: { ne: $slug } }
+    ) {
+      ...ProjectExcerptFragment
     }
   }
 `;

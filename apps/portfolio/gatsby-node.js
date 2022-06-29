@@ -22,6 +22,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       projects: allMdx(filter: { fields: { source: { eq: "projects" } } }) {
         nodes {
           slug
+          frontmatter {
+            tags
+          }
         }
       }
     }
@@ -42,6 +45,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: projectTemplate,
       context: {
         slug: project.slug,
+        tags: project.frontmatter.tags,
       },
     });
   });
