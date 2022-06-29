@@ -17,8 +17,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
 import Sticky from 'react-stickynode';
 import { ProjectPageQuery } from '../../../../graphql-types';
-import ParallaxSectionDisplay from '../../../components/parallax-section-display';
 import { generateTagLink } from '../../../utilities/generate-tag-link';
+import ParallaxSectionDisplay from '../../parallax-section-display';
 /* eslint-disable-next-line */
 export interface ProjectPageProps extends PageProps<ProjectPageQuery> {}
 

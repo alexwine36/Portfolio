@@ -14,9 +14,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     query CreatePage {
-      allMdx {
+      tags: allMdx {
         group(field: frontmatter___tags) {
           fieldValue
+        }
+      }
+      projects: allMdx(filter: { fields: { source: { eq: "projects" } } }) {
+        nodes {
+          slug
         }
       }
     }
@@ -27,8 +32,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
-
-  const tags = result.data.allMdx.group;
+  const projects = result.data.projects.nodes;
+  const projectTemplate = path.resolve(
+    'src/components/pages/projects/index.tsx'
+  );
+  projects.forEach((project) => {
+    createPage({
+      path: `/projects/${project.slug}`,
+      component: projectTemplate,
+      context: {
+        slug: project.slug,
+      },
+    });
+  });
+  const tags = result.data.tags.group;
   const tagTemplate = path.resolve('src/components/pages/tags/index.tsx');
 
   tags.forEach((tag) => {
