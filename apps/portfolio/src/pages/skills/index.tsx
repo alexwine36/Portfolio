@@ -4,6 +4,7 @@ import { DetailCardDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { graphql, Link, PageProps } from 'gatsby';
 import { SkillsPageQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
+import { generateTagLink } from '../../utilities/generate-tag-link';
 import { pages } from '../../utilities/pages';
 
 /* eslint-disable-next-line */
@@ -81,7 +82,7 @@ export function Skills(props: SkillsProps) {
                           }}
                           {...(tags.includes(skill.skill) && {
                             component: Link,
-                            to: '/',
+                            to: generateTagLink(skill.skill),
                           })}
                         >
                           {skill.skill}

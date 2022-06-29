@@ -1,8 +1,11 @@
 import { Chip, styled } from '@mui/material';
-
+import { Link } from 'gatsby';
 /* eslint-disable-next-line */
 export interface ChipListDisplayProps {
-  tags: string[];
+  tags: {
+    name: string;
+    link?: string;
+  }[];
 }
 
 const StyledChipListDisplay = styled('ul')(
@@ -24,11 +27,28 @@ export function ChipListDisplay(props: ChipListDisplayProps) {
   const { tags } = props;
   return (
     <StyledChipListDisplay>
-      {tags.map((tag, idx) => (
-        <ListItem key={idx}>
-          <Chip label={tag}></Chip>
-        </ListItem>
-      ))}
+      {tags.map((tag, idx) => {
+        const { name, link } = tag;
+        return (
+          <ListItem key={idx}>
+            <Chip
+              label={name}
+              {
+                ...(link && {
+                  to: link,
+                  component: Link,
+                  sx: {
+                    cursor: 'pointer',
+                  },
+                })
+
+                //   to={link}
+                // label={name}
+              }
+            ></Chip>
+          </ListItem>
+        );
+      })}
     </StyledChipListDisplay>
   );
 }

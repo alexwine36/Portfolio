@@ -54,7 +54,11 @@ export function ProjectCard(props: ProjectCardProps) {
           image={hero.childImageSharp.gatsbyImageData}
         ></GatsbyImage>
 
-        <ChipListDisplay tags={tags} />
+        <ChipListDisplay
+          tags={tags.map((t) => ({
+            name: t,
+          }))}
+        />
 
         <CardContent>
           <Typography>{excerpt}</Typography>

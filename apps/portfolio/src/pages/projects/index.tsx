@@ -42,29 +42,28 @@ export function ProjectsPage(props: ProjectsPageProps) {
 export const pageQuery = graphql`
   query ProjectsPage {
     allMdx(filter: { fields: { source: { eq: "projects" } } }) {
-      totalCount
-      nodes {
-        frontmatter {
-          tags
-          title
-          hero {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: BLURRED
-                layout: CONSTRAINED
-                formats: [AUTO, WEBP]
-              )
-              # fixed {
-              #   src
-              #   srcSet
-              # }
-            }
+      ...ProjectExcerptFragment
+    }
+  }
+  fragment ProjectExcerptFragment on MdxConnection {
+    totalCount
+    nodes {
+      frontmatter {
+        tags
+        title
+        hero {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP]
+            )
           }
         }
-        excerpt
-        slug
-        timeToRead
       }
+      excerpt
+      slug
+      timeToRead
     }
   }
 `;

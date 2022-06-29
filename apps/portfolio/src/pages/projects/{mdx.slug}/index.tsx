@@ -18,6 +18,7 @@ import pluralize from 'pluralize';
 import Sticky from 'react-stickynode';
 import { ProjectPageQuery } from '../../../../graphql-types';
 import ParallaxSectionDisplay from '../../../components/parallax-section-display';
+import { generateTagLink } from '../../../utilities/generate-tag-link';
 /* eslint-disable-next-line */
 export interface ProjectPageProps extends PageProps<ProjectPageQuery> {}
 
@@ -69,7 +70,12 @@ export function ProjectPage(props: ProjectPageProps) {
         hideHeader
       >
         <Container>
-          <ChipListDisplay tags={tags} />
+          <ChipListDisplay
+            tags={tags.map((t) => ({
+              name: t,
+              link: generateTagLink(t),
+            }))}
+          />
 
           <Grid
             container
