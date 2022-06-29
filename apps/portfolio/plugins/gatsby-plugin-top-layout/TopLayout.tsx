@@ -13,7 +13,8 @@ import components from './components';
 export default function TopLayout(props) {
   return (
     <React.Fragment>
-      <Helmet>
+      <Helmet titleTemplate="Alex Wine | %s">
+        <title>Porfolio</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link
           rel="stylesheet"
@@ -23,6 +24,7 @@ export default function TopLayout(props) {
           href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Franklin&family=Open+Sans:wght@300;400;500;700;800&display=swap"
           rel="stylesheet"
         ></link>
+
         {/* <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" /> */}
       </Helmet>
       <ThemeProvider theme={theme}>
