@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
+import { HeroBanner } from '@portfolio/ui';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { HeroBanner } from '../../../../../libs/ui/src';
 import { HeroBannerQuery } from '../../../graphql-types';
 /* eslint-disable-next-line */
 export interface HeroBannerImplementationProps {}

@@ -98,7 +98,11 @@ export function HeroBanner(props: HeroBannerProps) {
         {/* <h1 className="headline white">Hello World!</h1> */}
         <Typography variant="h3">
           Alex Wine |{' '}
-          <GradientText color={theme.palette.success.main} as="span">
+          <GradientText
+            primary
+            // color={theme.palette.primary.main}
+            as="span"
+          >
             {title || 'Portfolio'}
           </GradientText>
         </Typography>
