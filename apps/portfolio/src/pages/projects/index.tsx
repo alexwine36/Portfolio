@@ -1,11 +1,12 @@
 import { styled } from '@mui/material';
 import { graphql, PageProps } from 'gatsby';
 
-import { MasonryGridComponent } from '@portfolio/ui';
+import { ChipListDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { ProjectsPageQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import ProjectCard from '../../components/project-card';
 import { usePage } from '../../hooks/use-pages/use-pages';
+import { generateTagLink } from '../../utilities/generate-tag-link';
 /* eslint-disable-next-line */
 export interface ProjectsPageProps extends PageProps<ProjectsPageQuery> {}
 
@@ -14,7 +15,8 @@ const StyledProjectsPage = styled('div')`
 `;
 
 export function ProjectsPage(props: ProjectsPageProps) {
-  const { nodes } = props.data.allMdx;
+  const { allMdx, tags } = props.data;
+  const { nodes } = allMdx;
   const page = usePage('projects');
 
   // nodes = [...nodes, ...nodes, ...nodes]
@@ -23,6 +25,13 @@ export function ProjectsPage(props: ProjectsPageProps) {
     <StyledProjectsPage>
       <ParallaxSectionDisplay page={page}>
         {/* <Grid container spacing={3}> */}
+
+        <ChipListDisplay
+          tags={tags.group.map((tag) => ({
+            name: tag.fieldValue,
+            link: generateTagLink(tag.fieldValue),
+          }))}
+        ></ChipListDisplay>
         <MasonryGridComponent>
           {nodes.map((node) => {
             return (
@@ -43,6 +52,12 @@ export const pageQuery = graphql`
   query ProjectsPage {
     allMdx(filter: { fields: { source: { eq: "projects" } } }) {
       ...ProjectExcerptFragment
+    }
+    tags: allMdx {
+      group(field: frontmatter___tags) {
+        field
+        fieldValue
+      }
     }
   }
   fragment ProjectExcerptFragment on MdxConnection {
