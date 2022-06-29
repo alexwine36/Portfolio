@@ -146,7 +146,7 @@ export function ProjectPage(props: ProjectPageProps) {
               {related.nodes.map((node) => {
                 return (
                   // <Grid key={node.slug} item xs>
-                  <ProjectCard node={node}></ProjectCard>
+                  <ProjectCard small node={node}></ProjectCard>
                   // </Grid>
                 );
               })}

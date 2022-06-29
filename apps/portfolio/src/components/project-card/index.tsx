@@ -19,6 +19,7 @@ type ProjectPreview = ProjectsPageQuery['allMdx']['nodes'][0];
 /* eslint-disable-next-line */
 export interface ProjectCardProps {
   node: ProjectPreview;
+  small?: boolean;
 }
 
 // const StyledProjectCard = styled("div")`
@@ -26,7 +27,7 @@ export interface ProjectCardProps {
 // `
 
 export function ProjectCard(props: ProjectCardProps) {
-  const { node } = props;
+  const { node, small } = props;
   const { slug, timeToRead, frontmatter, excerpt } = node;
   const { title, tags, hero } = frontmatter;
   console.log('HERO', hero);
@@ -50,6 +51,11 @@ export function ProjectCard(props: ProjectCardProps) {
           subheader={`${pluralize('minute', timeToRead, true)}`}
         />
         <GatsbyImage
+          {...(small && {
+            style: {
+              maxHeight: 250,
+            },
+          })}
           alt={`${title} image`}
           image={hero.childImageSharp.gatsbyImageData}
         ></GatsbyImage>
