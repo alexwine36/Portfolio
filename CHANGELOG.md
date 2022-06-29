@@ -1,3 +1,17 @@
+## [2.1.0](https://github.com/alexwine36/Portfolio/compare/v2.0.0...v2.1.0) (2022-06-29)
+
+
+### Features
+
+* **gatsby:** project page updated to include a minimum filter ([add1fe0](https://github.com/alexwine36/Portfolio/commit/add1fe037636e00e9aa359499821005ac439bc17))
+
+
+### Docs
+
+* **create Projects:** avid-data-extractor/index ([0d08595](https://github.com/alexwine36/Portfolio/commit/0d0859577797493fd8fc4ed792b7f7e5bad9828d))
+* **create Projects:** temp-check/index ([ee04810](https://github.com/alexwine36/Portfolio/commit/ee0481091988f1276413c8c4888f99f4656bfbb9))
+* **update projects:** updated avid and temp-check ([bfb04b1](https://github.com/alexwine36/Portfolio/commit/bfb04b101597baa2a69e2b7a3ed081842dfa0bed))
+
 ## [2.0.0](https://github.com/alexwine36/Portfolio/compare/v1.17.1...v2.0.0) (2022-06-29)
 
 
