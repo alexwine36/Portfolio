@@ -31,7 +31,7 @@ export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
           ...FluidSharpFragment
         }
       }
-      bkg: file(name: { eq: "background" }) {
+      bkg: file(name: { eq: "background-purp" }) {
         childImageSharp {
           ...FluidSharpFragment
         }
