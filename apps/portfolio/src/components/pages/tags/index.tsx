@@ -3,7 +3,7 @@ import { Box } from '@mui/system';
 import { MasonryGridComponent, PageBackground } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
 import { TagPageQuery } from '../../../../graphql-types';
-import { pages } from '../../../utilities/pages';
+import { usePage } from '../../../hooks/use-pages/use-pages';
 
 import ParallaxSectionDisplay from '../../parallax-section-display';
 import ProjectCard from '../../project-card';
@@ -33,7 +33,7 @@ export function TagPage(props: TagPageProps) {
   console.log(props);
   const { skill, projects } = props.data;
   const { nodes } = projects;
-  const page = pages['projects'];
+  const page = usePage('projects');
   return (
     <StyledTagPage>
       <PageBackground>

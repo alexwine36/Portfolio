@@ -5,7 +5,7 @@ import { MasonryGridComponent } from '@portfolio/ui';
 import { ProjectsPageQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import ProjectCard from '../../components/project-card';
-import { pages } from '../../utilities/pages';
+import { usePage } from '../../hooks/use-pages/use-pages';
 /* eslint-disable-next-line */
 export interface ProjectsPageProps extends PageProps<ProjectsPageQuery> {}
 
@@ -15,7 +15,7 @@ const StyledProjectsPage = styled('div')`
 
 export function ProjectsPage(props: ProjectsPageProps) {
   const { nodes } = props.data.allMdx;
-  const page = pages['projects'];
+  const page = usePage('projects');
 
   // nodes = [...nodes, ...nodes, ...nodes]
   // const masonNodes = _.chunk(nodes, nodes.length / 3)

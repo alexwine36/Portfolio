@@ -6,7 +6,7 @@ import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import SectionDataDisplay, {
   SectionDataDisplayProps,
 } from '../../display/section-data-display';
-import { pages } from '../../utilities/pages';
+import { usePage } from '../../hooks/use-pages/use-pages';
 
 /* eslint-disable-next-line */
 export interface WorkPageProps extends PageProps<WorkQueryQuery> {}
@@ -17,7 +17,7 @@ const StyledWorkPage = styled.div`
 
 export const WorkPage = (props: WorkPageProps) => {
   const data = props.data.allMdx.edges;
-  const page = pages['work'];
+  const page = usePage('work');
   const parsedData: SectionDataDisplayProps = {
     items: data.map((d) => {
       const { frontmatter, body } = d.node;

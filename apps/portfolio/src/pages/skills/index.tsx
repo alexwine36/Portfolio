@@ -4,8 +4,8 @@ import { DetailCardDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { graphql, Link, PageProps } from 'gatsby';
 import { SkillsPageQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
+import { usePage } from '../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../utilities/generate-tag-link';
-import { pages } from '../../utilities/pages';
 
 /* eslint-disable-next-line */
 export interface SkillsProps extends PageProps<SkillsPageQuery> {}
@@ -15,7 +15,7 @@ const StyledSkills = styled.div`
 `;
 
 export function Skills(props: SkillsProps) {
-  const page = pages['skills'];
+  const page = usePage('skills');
   const theme = useTheme();
   // Function to return select options for projects
 

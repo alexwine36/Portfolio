@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import React from 'react';
-import { pageArray } from '../../utilities/pages';
+import { usePages } from '../../hooks/use-pages/use-pages';
 
 /* eslint-disable-next-line */
 export interface NavigationLayoutProps {}
@@ -36,6 +36,7 @@ border: 1px solid ${theme.palette.divider};
 
 export function NavigationLayout(props: NavigationLayoutProps) {
   const [value, setValue] = React.useState(0);
+  const pageArray = usePages();
   // const { pathname } = useLocation();
   const theme = useTheme();
   const handleChange = (val: number) => {

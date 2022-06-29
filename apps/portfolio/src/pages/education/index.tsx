@@ -1,39 +1,39 @@
-import styled from "@emotion/styled"
+import styled from '@emotion/styled';
 import {
   HeroDisplay,
   ParallaxBackground,
   SectionContainer,
-} from "@portfolio/ui"
-import { graphql, PageProps } from "gatsby"
-import { EducationQueryQuery } from "../../../graphql-types"
+} from '@portfolio/ui';
+import { graphql, PageProps } from 'gatsby';
+import { EducationQueryQuery } from '../../../graphql-types';
 import SectionDataDisplay, {
   SectionDataDisplayProps,
-} from "../../display/section-data-display"
-import { pages } from "../../utilities/pages"
+} from '../../display/section-data-display';
+import { usePage } from '../../hooks/use-pages/use-pages';
 
 /* eslint-disable-next-line */
 export interface EducationPageProps extends PageProps<EducationQueryQuery> {}
 
-const StyledEducationPage = styled.div``
+const StyledEducationPage = styled.div``;
 
 export function EducationPage(props: EducationPageProps) {
-  const data = props.data.allMdx.edges
-  const page = pages["education"]
+  const data = props.data.allMdx.edges;
+  const page = usePage('education');
   const parsedData: SectionDataDisplayProps = {
-    items: data.map(d => {
-      const { frontmatter, body } = d.node
+    items: data.map((d) => {
+      const { frontmatter, body } = d.node;
 
       const displayDate = `${frontmatter.startDate} - ${
-        frontmatter.endDate || "Present"
-      }`
+        frontmatter.endDate || 'Present'
+      }`;
       return {
         title: frontmatter.school,
         pretitle: frontmatter.study,
         content: body,
         subtitle: displayDate,
-      }
+      };
     }),
-  }
+  };
 
   return (
     <StyledEducationPage>
@@ -44,7 +44,7 @@ export function EducationPage(props: EducationPageProps) {
         </SectionContainer>
       </ParallaxBackground>
     </StyledEducationPage>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -72,6 +72,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default EducationPage
+export default EducationPage;
