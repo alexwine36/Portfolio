@@ -47,4 +47,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generateBase64 | 29% | 100% | 0 | ❌
 libs.ui.src.lib.utilities.hex-to-rgba | 20% | 100% | 0 | ❌
-**Summary** | **25%** (102 / 410) | **2%** (4 / 164) | **0** | ❌
+**Summary** | **25%** (102 / 410) | **2%** (4 / 168) | **0** | ❌

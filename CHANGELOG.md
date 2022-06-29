@@ -1,3 +1,16 @@
+## [1.17.0](https://github.com/alexwine36/Portfolio/compare/v1.16.0...v1.17.0) (2022-06-28)
+
+
+### Features
+
+* **gatsby:** changed to gatsby image for source ([f376dbf](https://github.com/alexwine36/Portfolio/commit/f376dbf0d8dbebff9815642bf00cd994cb693ceb))
+
+
+### Bug Fixes
+
+* **gatsby:** updated bottom navigation ([d1ee43d](https://github.com/alexwine36/Portfolio/commit/d1ee43d76ed042bd6445777560f93d3f274b03ef))
+* **gatsby:** updated hero display to include title ([c525444](https://github.com/alexwine36/Portfolio/commit/c525444838739d30bdacb9ad53a2180bc994d6a3))
+
 ## [1.16.0](https://github.com/alexwine36/Portfolio/compare/v1.15.0...v1.16.0) (2022-06-28)
 
 
