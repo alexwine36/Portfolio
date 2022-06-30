@@ -30,7 +30,6 @@ export function ProjectCard(props: ProjectCardProps) {
   const { node, small } = props;
   const { slug, timeToRead, frontmatter, excerpt } = node;
   const { title, tags, hero } = frontmatter;
-  console.log('HERO', hero);
 
   const theme = useTheme();
   const link = `/projects/${slug}`;

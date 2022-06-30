@@ -36,7 +36,7 @@ export function ProjectsPage(props: ProjectsPageProps) {
           {nodes.map((node) => {
             return (
               // <Grid key={node.slug} item xs>
-              <ProjectCard node={node}></ProjectCard>
+              <ProjectCard key={node.slug} node={node}></ProjectCard>
               // </Grid>
             );
           })}

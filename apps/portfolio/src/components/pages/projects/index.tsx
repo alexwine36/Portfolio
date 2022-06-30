@@ -138,7 +138,9 @@ export function ProjectPage(props: ProjectPageProps) {
                   color="info"
                 >
                   {tableOfContents.items?.map((item) => (
-                    <Button href={item.url}>{item.title}</Button>
+                    <Button key={item.url} href={item.url}>
+                      {item.title}
+                    </Button>
                   ))}
                 </ButtonGroup>
               </Sticky>
@@ -157,7 +159,7 @@ export function ProjectPage(props: ProjectPageProps) {
               {related.nodes.map((node) => {
                 return (
                   // <Grid key={node.slug} item xs>
-                  <ProjectCard small node={node}></ProjectCard>
+                  <ProjectCard small key={node.slug} node={node}></ProjectCard>
                   // </Grid>
                 );
               })}

@@ -67,8 +67,6 @@ export function HeroDisplay(props: HeroDisplayProps) {
   return (
     <SizeMe monitorHeight>
       {({ size }) => {
-        console.log(size);
-
         return (
           <StyledHeroDisplay>
             {!hideSvg && (

@@ -98,7 +98,7 @@ export function ParallaxBackground(props: ParallaxBackgroundProps) {
     <StyledParallaxBackground>
       <SizeMe monitorHeight>
         {({ size }) => {
-          console.log('Parallax Size', size);
+          // console.log('Parallax Size', size);
 
           return (
             <Parallax
