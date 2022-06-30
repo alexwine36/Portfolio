@@ -1,23 +1,8 @@
 import { Container } from '@mui/material';
-import { graphql, useStaticQuery } from 'gatsby';
-import { ArcadeVideoQuery } from '../../../graphql-types';
 export const VideoDisplay = () => {
-  const { file } = useStaticQuery<ArcadeVideoQuery>(graphql`
-    query ArcadeVideo {
-      file(relativePath: { eq: "arcade/build-it-arcade.mp4" }) {
-        id
-        videoH264 {
-          path
-        }
-        videoH265 {
-          path
-        }
-        # videoVP9 {
-        #   path
-        # }
-      }
-    }
-  `);
+  const h265 = `/videos/build-it-arcade-626c0c9bce35c23c177a7f88ba3cad52-027100cb7de302045ba5d79a590b2233-h265.mp4`;
+  const h264 = `/videos/build-it-arcade-626c0c9bce35c23c177a7f88ba3cad52-cd2d2d1c8620b4b9bf8529b5962aa8f4-h264.mp4`;
+
   return (
     <Container>
       <video
@@ -30,12 +15,12 @@ export const VideoDisplay = () => {
         // poster={videoScreenshots[0].publicURL}
         controls
       >
-        <source src={file.videoH265.path} type="video/mp4; codecs=hevc" />
+        <source src={h265} type="video/mp4; codecs=hevc" />
         {/* <source
           src={file.videoVP9.path}
           type="video/webm; codecs=vp9,opus"
         /> */}
-        <source src={file.videoH264.path} type="video/mp4; codecs=avc1" />
+        <source src={h264} type="video/mp4; codecs=avc1" />
       </video>
     </Container>
   );
