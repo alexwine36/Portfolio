@@ -1,3 +1,50 @@
+## [2.2.0](https://github.com/alexwine36/Portfolio/compare/v2.1.0...v2.2.0) (2022-06-30)
+
+
+### Features
+
+* **gatsby:** added google analytics to page ([4591647](https://github.com/alexwine36/Portfolio/commit/45916472d83b9118ceb80015419ada0355278bc6))
+* **gatsby:** added page titles ([4c59c48](https://github.com/alexwine36/Portfolio/commit/4c59c481ede34c7636c0120375d39731eca13ffb))
+* **gatsby:** added published field to projects ([546879a](https://github.com/alexwine36/Portfolio/commit/546879a2800ec7b881b57e5bb807cc79ee01a575))
+* **gatsby:** added video processing ([47fe91c](https://github.com/alexwine36/Portfolio/commit/47fe91c0a5f56892b381c67431bb0fc1a33a41fa))
+* **gatsby:** updated project page pictures to use duotone ([2aa220d](https://github.com/alexwine36/Portfolio/commit/2aa220d20dd6fe14c90791abf9cd49324fcbbd4f))
+
+
+### Bug Fixes
+
+* **docs:** updated docusaurus base link ([7a99fed](https://github.com/alexwine36/Portfolio/commit/7a99feda35a1da20f1ed366c167f3cba0ac1fac1))
+* **gatsby:** updated content and manifest ([75941bd](https://github.com/alexwine36/Portfolio/commit/75941bd60eff08d9c05efc9c28a81fd4277fb863))
+* updated code to remove warnings from react ([907fcdf](https://github.com/alexwine36/Portfolio/commit/907fcdf478e8fff60e9eedb8b9f32336ae87f86a))
+
+
+### Docs
+
+* **gatsby:** updated abrazo data ([55dd33b](https://github.com/alexwine36/Portfolio/commit/55dd33b1d85d8a6aae9b9b39e049b8d022803fe3))
+
+
+### Tests
+
+* **gatsby:** trying to include video cache ([3e59a56](https://github.com/alexwine36/Portfolio/commit/3e59a56ae17db5bdf9ba6888d0503444b212035a))
+
+
+### Build System
+
+* **gatsby:** changed method of serving videos ([395dcb6](https://github.com/alexwine36/Portfolio/commit/395dcb64f995a6a557ec7283838464ae640b3f90))
+
+
+### Code Refactoring
+
+* **lint:** fixed more lint errors ([5858d60](https://github.com/alexwine36/Portfolio/commit/5858d60be8298a02ffedf3a07850ef990898515c))
+* **lint:** linted and cleaned projects ([5752d6d](https://github.com/alexwine36/Portfolio/commit/5752d6d9d1dc0c07b410f989ffd418f060c30665))
+* **video:** updated video name ([cb62757](https://github.com/alexwine36/Portfolio/commit/cb627579c77717e2b2750c60c5d0aa90dee29ef8))
+
+
+### CI
+
+* **github:** potential workflow fix setting locksverify to false ([4d19bbb](https://github.com/alexwine36/Portfolio/commit/4d19bbb6de39aea46d37bf5ad53ccaf0122fe1a4))
+* **github:** updated actions to only deploy docs ([899b383](https://github.com/alexwine36/Portfolio/commit/899b383c97af823174067d99f07a7a21a658fec7))
+* **netlify:** added netlify lfs to site ([3e850f5](https://github.com/alexwine36/Portfolio/commit/3e850f5afa95d3b760f0c9feb9f761a7c55b8817))
+
 ## [2.1.0](https://github.com/alexwine36/Portfolio/compare/v2.0.0...v2.1.0) (2022-06-29)
 
 
