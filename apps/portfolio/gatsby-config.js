@@ -126,7 +126,7 @@ module.exports = {
          * Alternative directory for the video cache
          * Default: '.cache-video'
          */
-        cacheDirectory: resolve('.cache', '.cache-video'),
+        // cacheDirectory: resolve('.cache', '.cache-video'),
 
         /**
          * Alternative directory for the ffmpeg binaries
