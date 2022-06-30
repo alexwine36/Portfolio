@@ -67,7 +67,7 @@ const config = {
   title: 'Portfolio Documentation',
   tagline: 'Displaying my resume and portfolio with ease',
   url: 'https://alexwine36.github.io',
-  baseUrl: '/Portfolio/docs/',
+  baseUrl: '/Portfolio/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
