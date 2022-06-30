@@ -5,6 +5,7 @@ tags:
   - Fusion 360
   - 3D Printing
 hero: 1s.jpg
+published: true
 ---
 import {VideoDisplay} from '../../../src/components/video-display'
 
