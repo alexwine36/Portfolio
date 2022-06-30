@@ -12,14 +12,14 @@ startDate: 2018-08-01
 
 - Used CI/CD tools to automate the process of delivering new services to users.
 
-- Created automated pipeline for sending customer surveys using Pulumi and Node under a Yarn monorepo.
+- Created automated service for sending customer surveys using Pulumi and Node under a Yarn monorepo [link](/projects/customer-surveys/).
 
-- Increased house closings by at least 10% every year through automation and reporting.
+<!-- - Increased house closings by at least 10% every year through automation and reporting. -->
 
 - Planned and executed the transition from local server to google drive cloud server, achieving increased speed for employee file access and increased bandwidth onsite.
 
 - Managed department spending per annum through strategic procurement of equipment and services.
 
-- Created Tableau Extensions to facilitate custom data analysis.
+- Created Tableau Extensions to facilitate custom data analysis [link](/projects/start-pack-generator/).
 
 - Built GraphQL endpoints for combining data sources in web apps.
