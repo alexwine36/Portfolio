@@ -40,8 +40,6 @@ export function NavigationLayout(props: NavigationLayoutProps) {
   // const { pathname } = useLocation();
   const theme = useTheme();
   const handleChange = (val: number) => {
-    console.log(val);
-
     setValue(val);
   };
 

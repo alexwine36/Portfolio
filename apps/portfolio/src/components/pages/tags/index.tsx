@@ -31,7 +31,6 @@ margin-left: ${theme.spacing(2)};
 );
 
 export function TagPage(props: TagPageProps) {
-  console.log(props);
   const { skill, projects } = props.data;
   const { nodes } = projects;
   const page = usePage('projects');

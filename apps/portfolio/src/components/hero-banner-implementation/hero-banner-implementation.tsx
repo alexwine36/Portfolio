@@ -10,17 +10,6 @@ const StyledHeroBannerImplementation = styled.div`
   // color: pink;
 `;
 
-const formatSrcSet = (d: string) => {
-  const data = d.split('\n');
-  return data
-    .map((s) => {
-      const [url, size] = s.split(' ');
-
-      return `url(${url}) ${size.replace(',', '')}`;
-    })
-    .join(',\n');
-  // console.log(data)
-};
 // Duotone
 // duotone: { highlight: "#49afe2", shadow: "#b11733" }
 export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
@@ -61,8 +50,6 @@ export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
       }
     }
   `);
-
-  console.log(bkg);
 
   return (
     <StyledHeroBannerImplementation>

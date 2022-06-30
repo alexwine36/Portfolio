@@ -36,8 +36,6 @@ export function Skills(props: SkillsProps) {
     .sort((a, b) => b.sum - a.sum);
   const tags = props.data.tags.group.map((d) => d.fieldValue);
 
-  console.log(categories, tags);
-
   return (
     <StyledSkills>
       <ParallaxSectionDisplay page={page}>

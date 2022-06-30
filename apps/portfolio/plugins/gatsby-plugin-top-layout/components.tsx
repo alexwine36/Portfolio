@@ -145,7 +145,6 @@ const components = {
   })(),
   a: (() => {
     const LinkDisplay = (props) => {
-      console.log(props);
       if (`${props.href}`.startsWith('/')) {
         const { href, ...p } = props;
         return <Link component={GLink} to={href} {...p} />;

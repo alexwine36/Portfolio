@@ -193,9 +193,6 @@ export const GeneratePlanetBackgroundRaw = (
 export const GeneratePlanetBackground = React.memo(
   GeneratePlanetBackgroundRaw,
   (prev, next) => {
-    console.log('prev', prev);
-    console.log('next', next);
-
     return (
       prev.dimensions?.height === next.dimensions?.height &&
       prev.dimensions?.width === next.dimensions?.width

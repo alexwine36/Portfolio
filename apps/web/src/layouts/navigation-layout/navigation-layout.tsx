@@ -45,10 +45,9 @@ export function NavigationLayout(props: NavigationLayoutProps) {
   };
   React.useEffect(() => {
     const path = pathname.replace('/Portfolio/', '');
-    console.log(path);
 
     const val = actions.findIndex((action) => `/${action.href}` === path);
-    console.log(val);
+
     if (val === -1) {
       setValue(0);
     } else {
