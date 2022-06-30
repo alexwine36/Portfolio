@@ -12,32 +12,32 @@ tags:
 ---
 
 
-## The Problem
+# The Problem
 Construction is a long process and making sure a customer is happy throughout a build is challenging and the highest priority.
 
 ---
 
-## The Solution
+# The Solution
 
 - Infrastructure
-  - [Pulumi](/skills) to create the backend
-  - GitLab as the CI/CD environment
-  - NodeJS as the backend
+  - [Pulumi](/tags/pulumi) to create the backend
+  - [GitLab](/tags/git-lab-ci) as the CI/CD environment
+  - [NodeJS](/tags/node-js) as the backend
 - Frontend
-  - React for the Dashboard
+  - [React](/tags/react) for the Dashboard
   - Yarn and Turborepo for managing the Monorepo
   - Mjml for creating email templates
 
 ---
 
-## The Process
+# The Process
 
 This has been the longest running project. It was initially started in June 2019. Originally created with Serverless and using Razzle and React for a backend. 
 
 When COVID hit, the project was paused and we needed to focus on other aspects of the business.
 
 
-### Restart
+## Restart
 
 With some time away from the project I realized there were many opportunities for improvement.
 
@@ -63,7 +63,7 @@ graph LR
 Using a monorepo for this project was ideal to share types between projects. The Pulumi package uses Step Functions and a simple Rest API to expose endpoints to the dashboard.
 
 
-#### State Machine
+### State Machine
 
 
 ```mermaid

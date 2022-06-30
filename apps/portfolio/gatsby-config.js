@@ -35,11 +35,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `portfolio`,
-        short_name: `starter`,
+        name: `Alex Wine | Portfolio`,
+        short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000F08`,
+        theme_color: `#1c9bdb`,
         display: `minimal-ui`,
         icon: `src/images/logo.svg`,
       },

@@ -6,8 +6,8 @@ tags:
   - Serverless
 hero: jon-tyson-vVSleEYPSGY-unsplash.jpg
 ---
-- The problem
+# The problem
   - The reviews we receive need to be viewable to managers 
-- the solution
+# The Solution
   - scrape Avid Reports website for information on reviews
   - save to PostgreSQL database for reporting 

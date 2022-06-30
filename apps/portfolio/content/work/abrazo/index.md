@@ -12,7 +12,7 @@ startDate: 2018-08-01
 
 - Used CI/CD tools to automate the process of delivering new services to users.
 
-- Created automated service for sending customer surveys using Pulumi and Node under a Yarn monorepo [link](/projects/customer-surveys/).
+- Created automated service for sending customer surveys using Pulumi and Node under a Yarn monorepo - [link](/projects/customer-surveys/).
 
 <!-- - Increased house closings by at least 10% every year through automation and reporting. -->
 
@@ -20,6 +20,6 @@ startDate: 2018-08-01
 
 - Managed department spending per annum through strategic procurement of equipment and services.
 
-- Created Tableau Extensions to facilitate custom data analysis [link](/projects/start-pack-generator/).
+- Created Tableau Extensions to facilitate custom data analysis [link](/projects/tableau-extensions/).
 
 - Built GraphQL endpoints for combining data sources in web apps.

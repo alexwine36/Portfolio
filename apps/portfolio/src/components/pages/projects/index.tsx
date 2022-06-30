@@ -32,7 +32,7 @@ const StyledProjectPage = styled('div')`
 const HeroImage = styled('div')(
   ({ theme }) => `
 
-height: 320px;
+height: 50vh;
 display: flex;
 align-items: end;
 padding: ${theme.spacing(3)};
