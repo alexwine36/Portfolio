@@ -16,6 +16,7 @@ import { graphql, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
+import { Helmet } from 'react-helmet';
 import Sticky from 'react-stickynode';
 import { ProjectPageQuery } from '../../../../graphql-types';
 import { usePage } from '../../../hooks/use-pages/use-pages';
@@ -65,6 +66,9 @@ export function ProjectPage(props: ProjectPageProps) {
   const shadowColor = '255';
   return (
     <StyledProjectPage>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <HeroImage>
         <BackgroundImage
           alt="Hero Image"

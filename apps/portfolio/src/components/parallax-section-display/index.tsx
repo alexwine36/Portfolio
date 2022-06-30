@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import { ParallaxBackground, SectionContainer } from '@portfolio/ui';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 import { UsePage } from '../../hooks/use-pages/use-pages';
 
 import { HeroDisplay } from '../hero-display/hero-display';
@@ -18,7 +20,14 @@ export function ParallaxSectionDisplay(props: ParallaxSectionDisplayProps) {
   const { page, children, hideHeader } = props;
   return (
     <StyledParallaxSectionDisplay>
-      {!hideHeader && <HeroDisplay title={page.name}></HeroDisplay>}
+      {!hideHeader && (
+        <React.Fragment>
+          <Helmet>
+            <title>{page.name}</title>
+          </Helmet>
+          <HeroDisplay title={page.name}></HeroDisplay>
+        </React.Fragment>
+      )}
       <ParallaxBackground predefined={page.background}>
         <SectionContainer>{children}</SectionContainer>
       </ParallaxBackground>
