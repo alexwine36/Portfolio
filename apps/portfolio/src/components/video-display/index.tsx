@@ -4,7 +4,7 @@ import { ArcadeVideoQuery } from '../../../graphql-types';
 export const VideoDisplay = () => {
   const { file } = useStaticQuery<ArcadeVideoQuery>(graphql`
     query ArcadeVideo {
-      file(relativePath: { eq: "arcade/build-it-arcade-edit.mp4" }) {
+      file(relativePath: { eq: "arcade/build-it-arcade.mp4" }) {
         id
         videoH264 {
           path
