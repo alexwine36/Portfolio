@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import { ChipListDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
 import Sticky from 'react-stickynode';
@@ -28,16 +29,27 @@ const StyledProjectPage = styled('div')`
   // color: pink;
 `;
 
-const HeroImage = styled('div')<{ image: string }>(
-  ({ theme, image }) => `
-background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(${image});
-background-position: center;
-background-size: cover;
+const HeroImage = styled('div')(
+  ({ theme }) => `
+
 height: 320px;
 display: flex;
 align-items: end;
 padding: ${theme.spacing(3)};
 margin-bottom: ${theme.spacing(3)};
+position: relative;
+`
+);
+
+const BackgroundImage = styled(GatsbyImage)(
+  ({ theme }) => `
+  position: absolute !important;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  left: 0;
+
+
 `
 );
 
@@ -53,7 +65,11 @@ export function ProjectPage(props: ProjectPageProps) {
   const shadowColor = '255';
   return (
     <StyledProjectPage>
-      <HeroImage image={hero && hero.childImageSharp.fixed.src}>
+      <HeroImage>
+        <BackgroundImage
+          alt="Hero Image"
+          image={hero.childImageSharp.gatsbyImageData}
+        ></BackgroundImage>
         <Box>
           <Typography variant="h1">{title}</Typography>
           <Typography
@@ -161,10 +177,11 @@ export const pageQuery = graphql`
         title
         hero {
           childImageSharp {
-            fixed(jpegProgressive: true, width: 1500) {
-              srcSet
-              src
-            }
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP]
+            )
           }
         }
       }

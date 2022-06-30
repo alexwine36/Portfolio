@@ -1,162 +1,179 @@
 # Web Development
 - skill: React
   category:
-    - "Web Development"
+    - 'Web Development'
   rating: 5
   date: 2013-01-01
-- skill: "Javascript"
+- skill: 'Javascript'
   category:
-    - "Web Development"
+    - 'Web Development'
   rating: 5
   date: 2012-01-01
 - skill: Typescript
   category:
-    - "Web Development"
-    - "Backend Development"
+    - 'Web Development'
+    - 'Backend Development'
   rating: 5
   date: 2015-01-01
 - skill: Frontend Design
   category:
-    - "Web Development"
+    - 'Web Development'
   rating: 4
   date: 2013-01-01
 - skill: Rust
   category:
-    - "Web Development"
+    - 'Web Development'
   rating: 3
   date: 2021-01-01
 
 # Backend Development
-- skill: "Node JS"
+- skill: 'Node JS'
   category:
-    - "Backend Development"
+    - 'Backend Development'
   rating: 5
   date: 2013-01-01
-- skill: "Python"
+- skill: 'Python'
   category:
-    - "Backend Development"
-    - "Data Analysis"
+    - 'Backend Development'
+    - 'Data Analysis'
   rating: 4
   date: 2014-01-01
-- skill: "Prisma"
+- skill: 'Prisma'
   category:
-    - "Backend Development"
+    - 'Backend Development'
   rating: 5
   date: 2017-01-01
-- skill: "GraphQL"
+- skill: 'GraphQL'
   category:
-    - "Backend Development"
+    - 'Backend Development'
   rating: 5
   date: 2017-01-01
-- skill: "API"
+- skill: 'API'
   category:
-    - "Backend Development"
+    - 'Backend Development'
   rating: 5
   date: 2014-01-01
 - skill: Pulumi
   category:
-    - "Backend Development"
-    - "CI/CD"
+    - 'Backend Development'
+    - 'CI/CD'
   rating: 4
   date: 2021-01-01
 - skill: Serverless
   category:
-    - "Backend Development"
+    - 'Backend Development'
   rating: 4
   date: 2020-01-01
 - skill: AWS
   category:
-    - "Backend Development"
+    - 'Backend Development'
   rating: 4
   date: 2019-01-01
 - skill: GCP
   category:
-    - "Backend Development"
+    - 'Backend Development'
   rating: 4
   date: 2017-01-01
-- skill: "Step Functions"
+- skill: 'Step Functions'
   category:
-    - "Backend Development"
+    - 'Backend Development'
   rating: 4
   date: 2020-01-01
 
 # Database Development
 - skill: MySQL
   category:
-    - "Database"
+    - 'Database'
   rating: 4
   date: 2012-01-01
 - skill: PostgreSQL
   category:
-    - "Database"
+    - 'Database'
   rating: 4
   date: 2012-01-01
 - skill: MongoDB
   category:
-    - "Database"
+    - 'Database'
   rating: 3
   date: 2012-01-01
 - skill: Redis
   category:
-    - "Database"
+    - 'Database'
   rating: 3
   date: 2012-01-01
 
 # Data Analysis
 - skill: Tableau
   category:
-    - "Data Analysis"
+    - 'Data Analysis'
   rating: 5
   date: 2018-01-01
 - skill: Jupyter
   category:
-    - "Data Analysis"
+    - 'Data Analysis'
   date: 2017-01-01
   rating: 4
 
 # CI/CD
-- skill: "GitLab CI"
+- skill: 'GitLab CI'
   category:
-    - "CI/CD"
+    - 'CI/CD'
   date: 2016-01-01
   rating: 5
 - skill: Docker
   category:
-    - "CI/CD"
+    - 'CI/CD'
   date: 2014-01-01
   rating: 4
 - skill: Jest
   category:
-    - "Web Development"
-    - "CI/CD"
+    - 'Web Development'
+    - 'CI/CD'
   date: 2015-01-01
   rating: 4
 - skill: Kubernetes
   category:
-    - "CI/CD"
-    - "Backend Development"
+    - 'CI/CD'
+    - 'Backend Development'
   date: 2016-01-01
   rating: 4
 - skill: Containerization
   category:
-    - "CI/CD"
-    - "Backend Development"
+    - 'CI/CD'
+    - 'Backend Development'
   date: 2016-01-01
   rating: 4
-- skill: "Github Actions"
+- skill: 'Github Actions'
   category:
-    - "CI/CD"
+    - 'CI/CD'
   date: 2022-01-01
   rating: 3
 
 # General
-- skill: "Project Management"
+- skill: 'Project Management'
   category:
-    - "General"
+    - 'General'
   date: 2013-01-01
   rating: 5
-- skill: "Account Management"
+- skill: 'Account Management'
   category:
-    - "General"
+    - 'General'
   date: 2018-01-01
   rating: 4
+
+# CAD/CAM
+- skill: 'Blender'
+  category:
+    - 'CAD/CAM'
+  date: 2019-01-01
+  rating: 3
+- skill: 'Fusion 360'
+  category:
+    - 'CAD/CAM'
+  date: 2017-01-01
+  rating: 4
+- skill: '3D Printing'
+  category:
+    - 'CAD/CAM'
+  date: 2017-01-01
+  rating: 3

@@ -8,6 +8,7 @@ tags:
   - Step Functions
   - React
   - Node JS
+  - GitLab CI
 ---
 
 
@@ -43,6 +44,8 @@ With some time away from the project I realized there were many opportunities fo
 <!-- First - the survey was included with the application which wasn't a necessary feature.
  -->
 Initially the project had surveys built in because we wanted custom functionality in the surveys. Later I found out that Typeform has methods for embedding data into forms that would take care of our use case and ease the programming load.
+
+The rewrite of this project required data being shared between the dashboard [GitLab Pages](/tags/git-lab-ci) package and *Pulumi*
 
 Basic app structure
 

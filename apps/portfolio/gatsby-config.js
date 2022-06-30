@@ -1,3 +1,4 @@
+const { resolve } = require(`path`);
 module.exports = {
   pathPrefix: '/Portfolio',
   siteMetadata: {
@@ -46,6 +47,7 @@ module.exports = {
     'gatsby-plugin-mui-emotion',
     // `gatsby-transformer-remark`,
     'gatsby-plugin-mdx-source-name',
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -81,6 +83,7 @@ module.exports = {
         path: `${__dirname}/content/skills`,
       },
     },
+
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -115,6 +118,62 @@ module.exports = {
         ],
       },
     },
+
+    {
+      resolve: `gatsby-transformer-video`,
+      options: {
+        /**
+         * Alternative directory for the video cache
+         * Default: '.cache-video'
+         */
+        cacheDirectory: resolve('.cache', '.cache-video'),
+
+        /**
+         * Alternative directory for the ffmpeg binaries
+         * Default: resolve(`.bin`, `gatsby-transformer-video`)
+         */
+        cacheDirectoryBin: resolve('.cache', '.cache-video-bin'),
+
+        /**
+         * Set if FFMPEG & FFPROBE should be downloaded if they are not found locally
+         *
+         * Downloaded binaries are stored in `.bin/gatsby-transformer-video/`
+         *
+         * Default: true
+         */
+        // downloadBinaries: false,
+
+        /**
+         * Pass your own FFMPEG && FFPROBE binaries
+         *
+         * Assumes you store your binaries in the following pattern:
+         * ./bin/darwin/ffmpeg
+         * ./bin/darwin/ffprobe
+         * ./bin/linux/ffmpeg
+         * ./bin/linux/ffprobe
+         * ...
+         *
+         * Default: null
+         */
+        // ffmpegPath: resolve(__dirname, 'bin', platform(), 'ffmpeg'),
+        // ffprobePath: resolve(__dirname, 'bin', platform(), 'ffprobe'),
+
+        /**
+         * Define custom profiles to convert videos with full fluent-ffmpeg access
+         *
+         * Learn more: https://github.com/fluent-ffmpeg/node-fluent-ffmpeg
+         */
+        // profiles: {
+        //   sepia: {
+        //     extension: `mp4`,
+        //     converter: function({ ffmpegSession, videoStreamMetadata }) {
+        //       // Example:
+        //       // https://github.com/hashbite/gatsby-transformer-video/blob/main/packages/example/gatsby-config.js#L24-L55
+        //     },
+        //   },
+        // },
+      },
+    },
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
@@ -123,6 +182,7 @@ module.exports = {
     },
     `gatsby-transformer-yaml`,
     `gatsby-plugin-netlify-cms`,
+    'gatsby-plugin-netlify',
     'gatsby-plugin-transition-link',
   ],
 };
