@@ -120,6 +120,7 @@ jobs:
           name: coverage-summary
           # path: build
       - run: ls -aFG
+      - run: git config lfs.locksverify false
       - uses: cycjimmy/semantic-release-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
