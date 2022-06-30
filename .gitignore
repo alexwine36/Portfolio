@@ -44,3 +44,6 @@ Thumbs.db
 /apps/portfolio/node_modules
 /apps/portfolio/public
 /apps/portfolio/.cache
+
+# Local Netlify folder
+.netlify
