@@ -4,7 +4,7 @@ date: 2020-11-23
 tags:
   - Fusion 360
   - 3D Printing
-hero: 1s.jpg
+hero: zhan-zhang-6gS4AwmKKDg-unsplash.jpg
 published: true
 ---
 import {VideoDisplay} from '../../../src/components/video-display'

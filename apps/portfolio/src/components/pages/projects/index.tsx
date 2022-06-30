@@ -178,8 +178,13 @@ export const pageQuery = graphql`
         hero {
           childImageSharp {
             gatsbyImageData(
+              transformOptions: {
+                duotone: { highlight: "#49afe2", shadow: "#000000" }
+                fit: COVER
+              }
               placeholder: BLURRED
-              layout: CONSTRAINED
+              # layout: CONSTRAINED
+
               formats: [AUTO, WEBP]
             )
           }

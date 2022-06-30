@@ -28,16 +28,16 @@ export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
     query HeroBanner {
       mtns: file(name: { eq: "mountains" }) {
         childImageSharp {
-          ...FluidSharpFragment
+          ...HeaderImageFragment
         }
       }
       bkg: file(name: { eq: "background-purp" }) {
         childImageSharp {
-          ...FluidSharpFragment
+          ...HeaderImageFragment
         }
       }
     }
-    fragment FluidSharpFragment on ImageSharp {
+    fragment HeaderImageFragment on ImageSharp {
       # fluid(quality: 90, maxWidth: 1920) {
       #   ...GatsbyImageSharpFluid_withWebp
       # }

@@ -73,13 +73,6 @@ jobs:
       - uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
-      - name: Video Cache
-        uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ./apps/portfolio/.cache
-          key: yarn-videos
-
       - name: Build project
         run: yarn build
 
@@ -106,6 +99,8 @@ jobs:
           path: build/docs
       - name: Display structure of downloaded files
         run: ls -R
+      - name: LFS push
+        run: git lfs push origin gh-pages
         working-directory: build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
