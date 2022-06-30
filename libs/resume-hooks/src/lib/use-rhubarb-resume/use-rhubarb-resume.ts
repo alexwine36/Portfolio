@@ -1,5 +1,5 @@
+import { Bullets } from '@portfolio/ui';
 import dayjs from 'dayjs';
-import { Bullets } from '../../../../ui/src';
 import data from '../data/rhubarb';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 // export interface UseRhubarbResume {
