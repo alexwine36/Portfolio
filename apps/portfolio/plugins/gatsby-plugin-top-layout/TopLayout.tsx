@@ -25,6 +25,13 @@ export default function TopLayout(props) {
           rel="stylesheet"
         ></link>
 
+        <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"
+        />
+
         {/* <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" /> */}
       </Helmet>
       <ThemeProvider theme={theme}>
