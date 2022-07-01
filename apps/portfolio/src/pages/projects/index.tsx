@@ -59,8 +59,7 @@ export const pageQuery = graphql`
     ) {
       ...ProjectExcerptFragment
     }
-    tags: allMdx # (filter: { frontmatter: { published: { eq: true } } })
-    {
+    tags: allMdx { # (filter: { frontmatter: { published: { eq: true } } })
       group(field: frontmatter___tags) {
         field
         fieldValue
@@ -79,6 +78,17 @@ export const pageQuery = graphql`
               placeholder: BLURRED
               layout: CONSTRAINED
               formats: [AUTO, WEBP]
+            )
+          }
+          duo: childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              formats: [AUTO, WEBP]
+              transformOptions: {
+                duotone: { highlight: "#49afe2", shadow: "#000000" }
+                fit: COVER
+              }
             )
           }
         }

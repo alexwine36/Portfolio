@@ -6,7 +6,7 @@ hero: sunder-muthukumaran-n7eJHQwefeI-unsplash.jpg
 tags:
   - MySQL
 ---
-
+import {NextPostComponent} from '../../../src/components/next-post-component/next-post-component.tsx'
 
 # The Problem
 I was **Strongly** advised to find a new method to access the database and, we were already using the API for reports and applications.
@@ -19,4 +19,8 @@ The application was initially written using @prisma/photon - 2.0.0-preview019. I
 The trouble now was that prisma2 was not terribly reliable yet. Nexus, the plugin to generate a GraphQL schema from a Prisma model, was also not too reliable. The solution I found was to write several scripts to bridge the gaps between the two and, find a new method of hosting. 
 
 
-I love Kubernetes but, one of the biggest issues I was running into was the memory required to connect to multiple tables on the database. This was my first introduction to the world of serverless. 
+I love Kubernetes but, I had read about Serverless which seemed like a better choice for this particular program using Next.js. The ability to have automated review environments through Vercel, at the time ZEIT, was also appealing.
+The speed boost this gave previous applications was incredible and continued to get better through development iterations. However this was only one of the prisma endpoints we had and needed a better method to connect.
+
+
+<NextPostComponent slug="federated-graphql-api/" />
