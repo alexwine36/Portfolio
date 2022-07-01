@@ -1,8 +1,9 @@
-![Code Coverage](https://img.shields.io/badge/Code%20Coverage-24%25-critical?style=flat)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-26%25-critical?style=flat)
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
 apps.portfolio.src.components.hero-display | 100% | 100% | 0 | ✔
+apps.portfolio.src.components.mdx.vr-viewer | 75% | 50% | 0 | ✔
 apps.portfolio.src.components.parallax-section-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.hooks.use-pages | 67% | 0% | 0 | ➖
 libs.hex-rgb.src | 100% | 100% | 0 | ✔
@@ -40,4 +41,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generateBase64 | 29% | 100% | 0 | ❌
 libs.ui.src.lib.utilities.hex-to-rgba | 25% | 100% | 0 | ❌
-**Summary** | **24%** (81 / 332) | **9%** (12 / 137) | **0** | ❌
+**Summary** | **26%** (87 / 340) | **9%** (13 / 139) | **0** | ❌

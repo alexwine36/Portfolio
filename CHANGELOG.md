@@ -1,3 +1,24 @@
+## [2.3.0](https://github.com/alexwine36/Portfolio/compare/v2.2.0...v2.3.0) (2022-07-01)
+
+
+### Features
+
+* **gatsby:** added 360 lot view demo ([7b95a99](https://github.com/alexwine36/Portfolio/commit/7b95a9981e07713bd63be60b26d095da7416ff99))
+
+
+### Docs
+
+* **gatsby:** updated doc dates ([acba840](https://github.com/alexwine36/Portfolio/commit/acba8407713ad90b54fd1e866967448162a8cb44))
+
+
+### Code Refactoring
+
+* **imgs:** [skip ci] ([362c2d7](https://github.com/alexwine36/Portfolio/commit/362c2d7273dc845234fb9df9bd30970c6fae22a2))
+* **imgs:** [skip ci] ([976ad08](https://github.com/alexwine36/Portfolio/commit/976ad08cead48e03cf57243be771ea6a567369a8))
+* **imgs:** [skip ci] ([0288a01](https://github.com/alexwine36/Portfolio/commit/0288a01f9eb8239b8e1cf80db0a5fd1608ef7387))
+* **imgs:** [skip ci] ([c6741a3](https://github.com/alexwine36/Portfolio/commit/c6741a3b3538ce5659bd7d9ecaa3e0f7e5357b21))
+* **imgs:** finished uploading images from gatsby post ([9003605](https://github.com/alexwine36/Portfolio/commit/9003605454f13f3be9549ade277da502ab5e6e2a))
+
 ## [2.2.0](https://github.com/alexwine36/Portfolio/compare/v2.1.0...v2.2.0) (2022-06-30)
 
 
