@@ -52,11 +52,15 @@ export const pageQuery = graphql`
   query ProjectsPage {
     allMdx(
       sort: { fields: frontmatter___date, order: DESC }
-      filter: { fields: { source: { eq: "projects" } } }
+      filter: {
+        fields: { source: { eq: "projects" } }
+        # frontmatter: { published: { eq: true } }
+      }
     ) {
       ...ProjectExcerptFragment
     }
-    tags: allMdx {
+    tags: allMdx # (filter: { frontmatter: { published: { eq: true } } })
+    {
       group(field: frontmatter___tags) {
         field
         fieldValue
