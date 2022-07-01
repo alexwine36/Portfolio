@@ -50,7 +50,10 @@ export function ProjectsPage(props: ProjectsPageProps) {
 
 export const pageQuery = graphql`
   query ProjectsPage {
-    allMdx(filter: { fields: { source: { eq: "projects" } } }) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { fields: { source: { eq: "projects" } } }
+    ) {
       ...ProjectExcerptFragment
     }
     tags: allMdx {

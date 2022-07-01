@@ -131,7 +131,9 @@ module.exports = {
               theme: 'dark',
             },
           },
-
+          {
+            resolve: 'gatsby-remark-static-images',
+          },
           {
             resolve: 'gatsby-remark-prismjs',
             options: {

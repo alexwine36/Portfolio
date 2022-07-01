@@ -1,6 +1,6 @@
 ---
 title: Federated GraphQL API
-date: 2022-06-29
+date: 2020-03-16
 hero: israel-palacio-imcukz72ous-unsplash.jpg
 tags:
   - Typescript

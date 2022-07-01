@@ -1,6 +1,6 @@
 ---
 title: Tableau Extensions
-date: ""
+date: 2021-09-04
 tags:
   - React
   - Typescript

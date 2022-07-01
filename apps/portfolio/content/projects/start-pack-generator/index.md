@@ -1,6 +1,6 @@
 ---
 title: Start Pack Generator
-date: ""
+date: 2020-01-28
 tags:
   - React
   - Typescript

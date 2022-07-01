@@ -11615,6 +11615,15 @@ gatsby-remark-prismjs@^6.17.0:
     parse-numeric-range "^1.2.0"
     unist-util-visit "^2.0.3"
 
+gatsby-remark-static-images@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-static-images/-/gatsby-remark-static-images-1.2.1.tgz#3bdbf6ac0e5c9fee0cdb24d6109f941448fc5e3b"
+  integrity sha512-v8zXFRmVFXm0w6c3NWkXT0CISvFMBteVtPzzbH4C/k+fJiWdewAyhl/VZuZkqGz9YRoq2mAiUIJmStMp+cgZHQ==
+  dependencies:
+    himalaya "^1.1.0"
+    is-relative-url "^2.0.0"
+    slash "^2.0.0"
+
 gatsby-sharp@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.10.0.tgz#f3c3beb5a2a64eb259a6139abf88cd58760fd6fe"
@@ -12692,6 +12701,11 @@ header-case@^2.0.4:
     capital-case "^1.0.4"
     tslib "^2.0.3"
 
+himalaya@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/himalaya/-/himalaya-1.1.0.tgz#31724ae9d35714cd7c6f4be94888953f3604606a"
+  integrity sha512-LLase1dHCRMel68/HZTFft0N0wti0epHr3nNY7ynpLbyZpmrKMQ8YIpiOV77TM97cNpC8Wb2n6f66IRggwdWPw==
+
 history@^4.7.2, history@^4.9.0:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/history/-/history-4.10.1.tgz#33371a65e3a83b267434e2b3f3b1b4c58aad4cf3"
@@ -13266,6 +13280,11 @@ ipaddr.js@^2.0.1:
   resolved "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-2.0.1.tgz"
   integrity sha512-1qTgH9NG+IIJ4yfKs2e6Pp1bZg8wbDbKHT21HrLIeYBTRLgMYKnMTPAuI3Lcs61nfx5h1xlXnbJtH1kX5/d/ng==
 
+is-absolute-url@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/is-absolute-url/-/is-absolute-url-2.1.0.tgz#50530dfb84fcc9aa7dbe7852e83a37b93b9f2aa6"
+  integrity sha512-vOx7VprsKyllwjSkLV79NIhpyLfr3jAp7VaTCMXOJHu4m0Ew1CZ2fcjASwmV1jI3BWuWHB013M48eyeldk9gYg==
+
 is-absolute-url@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/is-absolute-url/-/is-absolute-url-3.0.3.tgz#96c6a22b6a23929b11ea0afb1836c36ad4a5d698"
@@ -13669,6 +13688,13 @@ is-regexp@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-regexp/-/is-regexp-1.0.0.tgz#fd2d883545c46bac5a633e7b9a09e87fa2cb5069"
   integrity sha512-7zjFAPO4/gwyQAAgRRmqeEeyIICSdmCqa3tsVHMdBzaXXRiqopZL4Cyghg/XulGWrtABTpbnYYzzIRffLkP4oA==
+
+is-relative-url@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-relative-url/-/is-relative-url-2.0.0.tgz#72902d7fe04b3d4792e7db15f9db84b7204c9cef"
+  integrity sha512-UMyEi3F+Rvjpc29IAQQ5OuMoKylt8npO0eQdXPQ2M3A5iFvh1qG+MtiLQR2tyHcVVsqwWrQiztjPAe9hnSHYeQ==
+  dependencies:
+    is-absolute-url "^2.0.0"
 
 is-relative-url@^3.0.0:
   version "3.0.0"
@@ -20349,6 +20375,11 @@ slash@3.0.0, slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
+
+slash@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
+  integrity sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==
 
 slate-base64-serializer@^0.2.107, slate-base64-serializer@^0.2.112:
   version "0.2.115"

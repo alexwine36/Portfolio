@@ -1,6 +1,6 @@
 ---
 title: Avid Data Extractor
-date: 2022-06-29
+date: 2021-06-26
 tags:
   - PostgreSQL
   - Serverless

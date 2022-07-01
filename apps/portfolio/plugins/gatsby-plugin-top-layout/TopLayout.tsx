@@ -44,6 +44,10 @@ export default function TopLayout(props) {
               '>': {
                 'h1, h2, h3, h4, h6, hr, p': {
                   margin: theme.spacing(3),
+                  'img[alt="plat"]': {
+                    background: theme.palette.text.secondary,
+                    padding: theme.spacing(3),
+                  },
                 },
               },
             },

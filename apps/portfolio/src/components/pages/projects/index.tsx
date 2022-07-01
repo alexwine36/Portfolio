@@ -202,6 +202,7 @@ export const pageQuery = graphql`
     }
     related: allMdx(
       filter: { frontmatter: { tags: { in: $tags } }, slug: { ne: $slug } }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       ...ProjectExcerptFragment
     }
