@@ -13,7 +13,7 @@ import {VRViewer} from '../../../src/components/mdx/vr-viewer/index.tsx'
 How can you sell people on a location they have never been to? The idea was to take 360 degree pano shots. Now the question is how do you display them?
 
 # The Solution
-1. Create a web app with a plat map as the base display.
+1. Create a web app with a plat map and lots.
 
 ![plat](Plat.svg)
 
@@ -31,6 +31,6 @@ How can you sell people on a location they have never been to? The idea was to t
 
 # Next Steps
 
-This project was the jumping off point for the other programming projects at Abrazo Homes. After the initial project was done. The question became how do we have lot availability update automatically.
+This project kicked off many programming projects at Abrazo Homes. After the initial project was done. The question became how do we have lot availability update automatically.
 
 That is when attention turned to setting up an API for the data we had available.
