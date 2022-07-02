@@ -2,6 +2,7 @@
 title: MarkSystems GraphQL v2
 date: 2020-01-17
 published: false
+series: graphql/index
 hero: sunder-muthukumaran-n7eJHQwefeI-unsplash.jpg
 tags:
   - MySQL

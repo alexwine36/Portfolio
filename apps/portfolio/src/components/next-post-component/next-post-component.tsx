@@ -4,6 +4,7 @@ import {
   Card,
   CardActions,
   CardContent,
+  Grid,
   styled,
   Typography,
 } from '@mui/material';
@@ -51,45 +52,42 @@ export function NextPostComponent(props: NextPostComponentProps) {
   const { frontmatter, excerpt, timeToRead } = post;
   const { title, hero } = frontmatter;
   return (
-    <StyledNextPostComponent>
-      <StyledNextMedia
-        style={
-          {
-            // width: '50%',
-          }
-        }
-        alt={`${title} hero image`}
-        image={hero.childImageSharp.gatsbyImageData}
-      ></StyledNextMedia>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography component="div" variant="h5">
-            {title}
-          </Typography>
-          <Typography variant="overline">
-            {pluralize('minute', timeToRead, true)}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="text.secondary"
-            component="div"
-          >
-            {excerpt}
-            {/* <MDXRenderer>{excerpt}</MDXRenderer> */}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button component={Link} to={`/projects/${slug}`}>
-            Keep reading
-          </Button>
-        </CardActions>
-      </Box>
-    </StyledNextPostComponent>
+    <Grid item xs>
+      <StyledNextPostComponent>
+        <StyledNextMedia
+          alt={`${title} hero image`}
+          image={hero.childImageSharp.gatsbyImageData}
+        ></StyledNextMedia>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <CardContent sx={{ flex: '1 0 auto' }}>
+            <Typography component="div" variant="h5">
+              {title}
+            </Typography>
+            <Typography variant="overline">
+              {pluralize('minute', timeToRead, true)}
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              color="text.secondary"
+              component="div"
+            >
+              {excerpt}
+              {/* <MDXRenderer>{excerpt}</MDXRenderer> */}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button component={Link} to={`/projects/${slug}`}>
+              Keep reading
+            </Button>
+          </CardActions>
+        </Box>
+      </StyledNextPostComponent>
+    </Grid>
   );
 }
 

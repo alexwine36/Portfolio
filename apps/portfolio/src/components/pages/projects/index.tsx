@@ -16,11 +16,16 @@ import { graphql, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Sticky from 'react-stickynode';
-import { ProjectPageQuery } from '../../../../graphql-types';
+import {
+  ProjectExcerptFragmentFragment,
+  ProjectPageQuery,
+} from '../../../../graphql-types';
 import { usePage } from '../../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../../utilities/generate-tag-link';
+import NextPostComponent from '../../next-post-component/next-post-component';
 import ParallaxSectionDisplay from '../../parallax-section-display';
 import ProjectCard from '../../project-card';
 /* eslint-disable-next-line */
@@ -57,13 +62,41 @@ const BackgroundImage = styled(GatsbyImage)(
 export function ProjectPage(props: ProjectPageProps) {
   // console.log(props.data.mdx);
   // console.log(props.data.related);
+  const [next, setNext] = useState<
+    ProjectExcerptFragmentFragment['nodes'][0] | undefined
+  >();
+  const [previous, setPrevious] = useState<
+    ProjectExcerptFragmentFragment['nodes'][0] | undefined
+  >();
   const page = usePage('projects');
-  const { mdx, related } = props.data;
+  const { mdx, related, series } = props.data;
   const { frontmatter, body, timeToRead, tableOfContents } = mdx;
-  const { title, tags, hero } = frontmatter;
+  const { title, tags, hero, date } = frontmatter;
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
   const shadowColor = '255';
+  console.log(series);
+
+  useEffect(() => {
+    if (series) {
+      series.nodes.forEach((e) => {
+        console.log(date, e.frontmatter.date);
+
+        if (date < e.frontmatter.date) {
+          console.log(date, e);
+
+          setNext(e);
+        }
+        if (date > e.frontmatter.date) {
+          console.log(date, e);
+
+          setPrevious(e);
+        }
+      });
+    }
+  }, [mdx, series, date]);
+  console.log('NEXT', next);
+  console.log('PREV', previous);
   return (
     <StyledProjectPage>
       <Helmet>
@@ -114,8 +147,10 @@ export function ProjectPage(props: ProjectPageProps) {
                 >
                   <MDXRenderer>{body}</MDXRenderer>
                 </CardContent>
+                <CardContent></CardContent>
               </Card>
             </Grid>
+
             <Grid item sm={2} zeroMinWidth>
               <Sticky enabled={true} top={matches ? 25 : 50}>
                 <ButtonGroup
@@ -149,6 +184,14 @@ export function ProjectPage(props: ProjectPageProps) {
                 </ButtonGroup>
               </Sticky>
             </Grid>
+            <Grid item xs={12} container spacing={3}>
+              {previous && (
+                <NextPostComponent slug={previous?.slug}></NextPostComponent>
+              )}
+              {next && (
+                <NextPostComponent slug={next?.slug}></NextPostComponent>
+              )}
+            </Grid>
           </Grid>
 
           {/* <Typography variant="h1" component="h1">
@@ -176,11 +219,12 @@ export function ProjectPage(props: ProjectPageProps) {
 }
 
 export const pageQuery = graphql`
-  query ProjectPage($slug: String, $tags: [String]) {
+  query ProjectPage($slug: String, $tags: [String], $series: String) {
     mdx(slug: { eq: $slug }) {
       frontmatter {
         tags
         title
+        date
         hero {
           childImageSharp {
             gatsbyImageData(
@@ -199,6 +243,12 @@ export const pageQuery = graphql`
       tableOfContents
       timeToRead
       body
+    }
+    series: allMdx(
+      filter: { frontmatter: { series: { eq: $series } }, slug: { ne: $slug } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      ...ProjectExcerptFragment
     }
     related: allMdx(
       filter: { frontmatter: { tags: { in: $tags } }, slug: { ne: $slug } }
