@@ -8,6 +8,9 @@ backend:
 
 site_url: https://alex-wine-portfolio.netlify.app/
 
+# local_backend: true
+# npx netlify-cms-proxy-server
+
 media_folder: apps/portfolio/src/images
 public_folder: apps/portfolio/src/images
 
@@ -45,7 +48,19 @@ collections:
   #           format: "YYYY-MM-DD",
   #           time_format: false,
   #           date_format: "YYYY-MM-DD",
-
+  - name: 'series'
+    label: 'Series'
+    folder: 'apps/portfolio/content/series'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'projects'
     label: 'Projects'
     folder: 'apps/portfolio/content/projects'
@@ -72,11 +87,22 @@ collections:
           name: 'published',
           widget: 'boolean',
           default: false,
+          required: false,
         }
       - {
           label: 'Description',
           name: 'description',
           widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Series',
+          name: 'series',
+          widget: 'relation',
+          collection: 'series',
+          search_fields: ['title', 'slug'],
+          value_field: '{{slug}}',
+          display_fields: ['title'],
           required: false,
         }
       - { label: 'Hero Image', name: 'hero', widget: 'image', required: false }
