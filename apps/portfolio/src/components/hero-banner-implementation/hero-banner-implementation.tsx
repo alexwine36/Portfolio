@@ -8,6 +8,7 @@ export interface HeroBannerImplementationProps {}
 
 const StyledHeroBannerImplementation = styled.div`
   // color: pink;
+  margin-top: -10px;
 `;
 
 // Duotone

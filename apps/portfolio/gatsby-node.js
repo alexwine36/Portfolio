@@ -62,3 +62,29 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 };
+
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === 'Mdx') {
+    const date = new Date(node.frontmatter.date);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const year_month = `${year}-${month}`;
+    const day = date.getDate();
+
+    // let summary = node.excerpt;
+    // const toc = node.tableOfContents;
+    // toc?.items.forEach((item) => {
+    //   summary = summary.replace(item.title, '');
+    //   summary = summary.trim();
+    //   summary = summary.replace('  ', ' ');
+    // });
+    // console.log('EXCERPT', summary);
+    // console.log(JSON.stringify(node, undefined, 2));
+    createNodeField({ node, name: 'year', value: year });
+    createNodeField({ node, name: 'month', value: month });
+    createNodeField({ node, name: 'year-month', value: year_month });
+    createNodeField({ node, name: 'day', value: day });
+    // createNodeField({ node, name: 'summary', value: summary });
+  }
+};

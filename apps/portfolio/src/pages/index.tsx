@@ -10,7 +10,7 @@ interface HomePageProps {
 }
 
 const StyledApp = styled('div')`
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +32,7 @@ export function Index(props: HomePageProps) {
   return (
     <PageBackground>
       <HeroBannerImplementation />
+      {/* TODO: Add indicator for next section */}
       <StyledApp>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </StyledApp>

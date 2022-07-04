@@ -38,7 +38,7 @@ module.exports = {
         short_name: `portfolio`,
         start_url: `/`,
         background_color: `#000F08`,
-        theme_color: `#1c9bdb`,
+        theme_color: `#000F08`,
         display: `minimal-ui`,
         icon: `src/images/logo.svg`,
       },
@@ -143,6 +143,9 @@ module.exports = {
                 global: false,
               },
             },
+          },
+          {
+            resolve: 'gatsby-remark-smartypants',
           },
         ],
       },

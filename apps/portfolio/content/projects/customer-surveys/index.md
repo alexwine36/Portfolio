@@ -17,6 +17,9 @@ Construction is a long process and making sure a customer is happy throughout a 
 
 ---
 
+
+<!-- TODO: Add team leader/manager information ie. talking to multiple departements -->
+<!-- TODO: Add same info to description in work experience -->
 # The Solution
 
 - Infrastructure
