@@ -6,6 +6,7 @@ tags:
   - 3D Printing
 hero: zhan-zhang-6gS4AwmKKDg-unsplash.jpg
 published: true
+description: Who doesn't miss playing NFL Blitz and what better way than to to do that than a bartop arcade?
 ---
 import {VideoDisplay} from '../../../src/components/video-display'
 

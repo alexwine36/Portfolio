@@ -59,7 +59,8 @@ export const pageQuery = graphql`
     ) {
       ...ProjectExcerptFragment
     }
-    tags: allMdx { # (filter: { frontmatter: { published: { eq: true } } })
+    tags: allMdx {
+      # (filter: { frontmatter: { published: { eq: true } } })
       group(field: frontmatter___tags) {
         field
         fieldValue
@@ -72,6 +73,7 @@ export const pageQuery = graphql`
       frontmatter {
         tags
         title
+        description
         hero {
           childImageSharp {
             gatsbyImageData(
@@ -94,6 +96,7 @@ export const pageQuery = graphql`
         }
       }
       excerpt
+      tableOfContents
       slug
       timeToRead
     }

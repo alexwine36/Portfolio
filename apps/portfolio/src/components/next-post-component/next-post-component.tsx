@@ -11,6 +11,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import pluralize from 'pluralize';
 import { NextPostsQuery } from '../../../graphql-types';
+import { getDescription } from '../../utilities/get-description';
 
 /* eslint-disable-next-line */
 export interface NextPostComponentProps {
@@ -48,8 +49,9 @@ export function NextPostComponent(props: NextPostComponentProps) {
   `);
 
   const post = projects.nodes.find((proj) => proj.slug === slug);
-  const { frontmatter, excerpt, timeToRead } = post;
+  const { frontmatter, timeToRead } = post;
   const { title, hero } = frontmatter;
+  const excerpt = getDescription(post);
   return (
     <StyledNextPostComponent>
       <StyledNextMedia

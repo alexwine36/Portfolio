@@ -13,6 +13,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import pluralize from 'pluralize';
 import { ProjectsPageQuery } from '../../../graphql-types';
+import { getDescription } from '../../utilities/get-description';
 
 type ProjectPreview = ProjectsPageQuery['allMdx']['nodes'][0];
 
@@ -28,8 +29,11 @@ export interface ProjectCardProps {
 
 export function ProjectCard(props: ProjectCardProps) {
   const { node, small } = props;
-  const { slug, timeToRead, frontmatter, excerpt } = node;
+  const { slug, timeToRead, frontmatter } = node;
   const { title, tags, hero } = frontmatter;
+
+  // console.log(excerpt);
+  const excerpt = getDescription(node);
 
   const theme = useTheme();
   const link = `/projects/${slug}`;
