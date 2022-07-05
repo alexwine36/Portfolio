@@ -3,6 +3,7 @@ import { GlobalStyles } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '@portfolio/theme';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
@@ -13,8 +14,7 @@ import components from './components';
 export default function TopLayout(props) {
   return (
     <React.Fragment>
-      <Helmet titleTemplate="Alex Wine | %s">
-        <title>Porfolio</title>
+      <Helmet>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link
           rel="stylesheet"
@@ -34,6 +34,7 @@ export default function TopLayout(props) {
 
         {/* <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" /> */}
       </Helmet>
+      <GatsbySeo titleTemplate="Alex Wine | %s" title="Portfolio" />
       <ThemeProvider theme={theme}>
         <GlobalStyles
           styles={{

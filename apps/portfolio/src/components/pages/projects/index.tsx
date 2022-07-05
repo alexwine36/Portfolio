@@ -16,13 +16,14 @@ import { graphql, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
-import { Helmet } from 'react-helmet';
 import Sticky from 'react-stickynode';
 import { ProjectPageQuery } from '../../../../graphql-types';
 import { usePage } from '../../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../../utilities/generate-tag-link';
 import ParallaxSectionDisplay from '../../parallax-section-display';
 import ProjectCard from '../../project-card';
+import SeoFormatter from '../../seo-formatter/seo-formatter';
+
 /* eslint-disable-next-line */
 export interface ProjectPageProps extends PageProps<ProjectPageQuery> {}
 
@@ -59,16 +60,14 @@ export function ProjectPage(props: ProjectPageProps) {
   // console.log(props.data.related);
   const page = usePage('projects');
   const { mdx, related } = props.data;
-  const { frontmatter, body, timeToRead, tableOfContents } = mdx;
-  const { title, tags, hero } = frontmatter;
+  const { frontmatter, body, timeToRead, tableOfContents, excerpt } = mdx;
+  const { title, tags, hero, date, description } = frontmatter;
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
   const shadowColor = '255';
   return (
     <StyledProjectPage>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
+      <SeoFormatter mdx={mdx} />
       <HeroImage>
         <BackgroundImage
           alt="Hero Image"
@@ -178,9 +177,12 @@ export function ProjectPage(props: ProjectPageProps) {
 export const pageQuery = graphql`
   query ProjectPage($slug: String, $tags: [String]) {
     mdx(slug: { eq: $slug }) {
+      excerpt
       frontmatter {
         tags
         title
+        date
+        description
         hero {
           childImageSharp {
             gatsbyImageData(
@@ -192,6 +194,22 @@ export const pageQuery = graphql`
               # layout: CONSTRAINED
 
               formats: [AUTO, WEBP]
+            )
+            ogA: gatsbyImageData(
+              height: 600
+              width: 800
+              transformOptions: {
+                duotone: { highlight: "#49afe2", shadow: "#000000" }
+                fit: COVER
+              }
+            )
+            ogB: gatsbyImageData(
+              height: 800
+              width: 900
+              transformOptions: {
+                duotone: { highlight: "#49afe2", shadow: "#000000" }
+                fit: COVER
+              }
             )
           }
         }

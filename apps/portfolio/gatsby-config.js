@@ -147,10 +147,27 @@ module.exports = {
           {
             resolve: 'gatsby-remark-smartypants',
           },
+          {
+            resolve: 'gatsby-remark-external-links',
+          },
+          {
+            resolve: 'gatsby-remark-numbered-footnotes',
+          },
         ],
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-next-seo',
+      options: {
+        language: 'en',
+        openGraph: {
+          type: 'website',
+          locale: 'en_IE',
+          url: 'https://alex-wine-portfolio.netlify.app/',
+          site_name: 'Alex Wine | Portfolio',
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {

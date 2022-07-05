@@ -2,10 +2,9 @@ import { Rating, styled, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { MasonryGridComponent, PageBackground } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import { TagPageQuery } from '../../../../graphql-types';
 import { usePage } from '../../../hooks/use-pages/use-pages';
-
 import ParallaxSectionDisplay from '../../parallax-section-display';
 import ProjectCard from '../../project-card';
 /* eslint-disable-next-line */
@@ -36,9 +35,7 @@ export function TagPage(props: TagPageProps) {
   const page = usePage('projects');
   return (
     <StyledTagPage>
-      <Helmet>
-        <title>{skill.skill}</title>
-      </Helmet>
+      <GatsbySeo title={skill.skill} />
       <PageBackground>
         <StyledSkillDisplay>
           <Box
