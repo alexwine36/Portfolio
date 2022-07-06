@@ -73,7 +73,9 @@ export function TagPage(props: TagPageProps) {
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {
-    projects: allMdx(filter: { frontmatter: { tags: { eq: $tag } } }) {
+    projects: allMdx(
+      filter: { frontmatter: { tags: { eq: $tag }, published: { eq: true } } }
+    ) {
       ...ProjectExcerptFragment
     }
     skill: skillsYaml(skill: { eq: $tag }) {

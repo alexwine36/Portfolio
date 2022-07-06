@@ -52,8 +52,8 @@ const config = {
     [
       'docusaurus-plugin-typedoc',
       {
-        entryPoints: ['libs/resume-hooks/src/index.ts'],
-        tsconfig: 'libs/resume-hooks/tsconfig.json',
+        entryPoints: ['libs/theme/src/index.ts'],
+        tsconfig: 'libs/theme/tsconfig.json',
         out: 'theme',
         id: 'theme',
         sidebar: {
@@ -155,7 +155,7 @@ const config = {
             items: [
               {
                 label: 'Portfolio',
-                to: 'https://alexwine36.github.io/Portfolio/',
+                to: 'https://alex-wine-portfolio.netlify.app/',
               },
               {
                 label: 'Blog',

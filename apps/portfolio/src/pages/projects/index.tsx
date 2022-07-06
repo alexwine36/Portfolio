@@ -54,12 +54,12 @@ export const pageQuery = graphql`
       sort: { fields: frontmatter___date, order: DESC }
       filter: {
         fields: { source: { eq: "projects" } }
-        # frontmatter: { published: { eq: true } }
+        frontmatter: { published: { eq: true } }
       }
     ) {
       ...ProjectExcerptFragment
     }
-    tags: allMdx {
+    tags: allMdx(filter: { frontmatter: { published: { eq: true } } }) {
       # (filter: { frontmatter: { published: { eq: true } } })
       group(field: frontmatter___tags) {
         field

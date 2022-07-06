@@ -115,7 +115,7 @@ export const pageQuery = graphql`
       #   skill
       # }
     }
-    tags: allMdx {
+    tags: allMdx(filter: { frontmatter: { published: { eq: true } } }) {
       group(field: frontmatter___tags) {
         field
         fieldValue

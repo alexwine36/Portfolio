@@ -1,7 +1,7 @@
 ---
 title: MarkSystems GraphQL v2
 date: 2020-01-17
-published: false
+published: true
 hero: sunder-muthukumaran-n7eJHQwefeI-unsplash.jpg
 tags:
   - MySQL
