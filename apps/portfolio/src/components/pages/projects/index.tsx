@@ -60,8 +60,8 @@ export function ProjectPage(props: ProjectPageProps) {
   // console.log(props.data.related);
   const page = usePage('projects');
   const { mdx, related } = props.data;
-  const { frontmatter, body, timeToRead, tableOfContents, excerpt } = mdx;
-  const { title, tags, hero, date, description } = frontmatter;
+  const { frontmatter, body, timeToRead, tableOfContents } = mdx;
+  const { title, tags, hero } = frontmatter;
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
   const shadowColor = '255';

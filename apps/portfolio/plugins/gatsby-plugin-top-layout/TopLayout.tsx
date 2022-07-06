@@ -48,6 +48,12 @@ export default function TopLayout(props) {
               display: 'flex',
               justifyContent: 'center',
             },
+            '.attributeBoxEven': {
+              fill: '#1f2020 !important',
+            },
+            '.attributeBoxOdd': {
+              fill: '#434545 !important',
+            },
             '.markdown-body': {
               '>': {
                 'h1, h2, h3, h4, h6, hr, p': {
