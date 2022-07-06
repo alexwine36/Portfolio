@@ -1,3 +1,27 @@
+## [2.4.0](https://github.com/alexwine36/Portfolio/compare/v2.3.0...v2.4.0) (2022-07-06)
+
+
+### Features
+
+* **gatsby:** added a next post component ([b923849](https://github.com/alexwine36/Portfolio/commit/b923849d8ec2bcdcf6222e0ae4d90eeb9e81393c))
+* **gatsby:** added better SEO functionality ([f4e49e5](https://github.com/alexwine36/Portfolio/commit/f4e49e50f14ecd33c3f03359e09551ec489c8bc9))
+* **netlify:** [skip-ci] updated config to include series ([14e8069](https://github.com/alexwine36/Portfolio/commit/14e8069f7ef08374433a08fc00b22670fb36d7ab))
+
+
+### Bug Fixes
+
+* **gatsby:** fixed plat display on project page ([960ec6e](https://github.com/alexwine36/Portfolio/commit/960ec6e0107d8e87f41214fbb6b3dfdbc1ddd89e))
+* **gatsby:** updated description for cards and utility to format ([02c9a37](https://github.com/alexwine36/Portfolio/commit/02c9a37dd9763ef858dee3d0d7808a7ab88e013f))
+* **gatsby:** updated display of items that are published only ([6973a38](https://github.com/alexwine36/Portfolio/commit/6973a388d0d66fc7395467074209090c202901e1))
+
+
+### Docs
+
+* **360 panos:** [skip ci] ([8f163ed](https://github.com/alexwine36/Portfolio/commit/8f163ed7656994774f7625511b9d6d31e543705f))
+* **create Projects:** marksystems-graphql-v1/index ([739740b](https://github.com/alexwine36/Portfolio/commit/739740ba39a61d19a3f829bc5b298815593e595c))
+* **gatsby:** updated portfolio content ([188f743](https://github.com/alexwine36/Portfolio/commit/188f743ef3dbafb6c676e1faaee9d773947547b8))
+* **graphql:** [skip ci] Updated graphql pages ([c182fa4](https://github.com/alexwine36/Portfolio/commit/c182fa48d4bd0b03013158e4217e9a987e3eb9a1))
+
 ## [2.3.0](https://github.com/alexwine36/Portfolio/compare/v2.2.0...v2.3.0) (2022-07-01)
 
 
