@@ -178,6 +178,7 @@ export const pageQuery = graphql`
   query ProjectPage($slug: String, $tags: [String]) {
     mdx(slug: { eq: $slug }) {
       excerpt
+      slug
       frontmatter {
         tags
         title

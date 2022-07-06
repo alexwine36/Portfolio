@@ -11,10 +11,12 @@ export interface SeoFormatterProps {
 //   color: pink;
 // `;
 
+const isBrowser = typeof window !== 'undefined';
+
 export function SeoFormatter(props: SeoFormatterProps) {
   const { mdx } = props;
 
-  const { frontmatter } = mdx;
+  const { frontmatter, slug } = mdx;
   const { title, hero, date } = frontmatter;
   const { ogA, ogB, gatsbyImageData } = hero.childImageSharp;
 
@@ -22,7 +24,11 @@ export function SeoFormatter(props: SeoFormatterProps) {
   // console.log(window.location.href);
 
   const generateImageLink = (src: string) => {
-    const base = window.location.origin;
+    let base = 'https://alex-wine-portfolio.netlify.app';
+
+    if (isBrowser) {
+      base = window.location.origin;
+    }
 
     return `${base}${src}`;
   };
@@ -45,7 +51,7 @@ export function SeoFormatter(props: SeoFormatterProps) {
       />
       <BlogPostJsonLd
         title={title}
-        url={window.location.href}
+        url={generateImageLink(`/projects/${slug}`)}
         images={og_images.map((og) =>
           generateImageLink(og.images.fallback.src)
         )}
