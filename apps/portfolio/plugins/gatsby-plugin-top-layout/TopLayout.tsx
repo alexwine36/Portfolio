@@ -54,6 +54,12 @@ export default function TopLayout(props) {
             '.attributeBoxOdd': {
               fill: '#434545 !important',
             },
+            '.footnotes': {
+              marginTop: theme.spacing(3),
+              ol: {
+                marginTop: theme.spacing(2),
+              },
+            },
             '.markdown-body': {
               '>': {
                 'h1, h2, h3, h4, h6, hr, p': {

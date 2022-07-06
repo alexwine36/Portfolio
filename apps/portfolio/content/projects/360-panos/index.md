@@ -10,7 +10,7 @@ published: true
 import {VRViewer} from '../../../src/components/mdx/vr-viewer/index.tsx'
 
 # The Problem
-How can you sell people on a location they have never been to? The idea was to take 360 degree pano shots. Now the question is how do you display them?
+How can you sell people on a location they have never been to? The idea was to take 360 degree panographic shots. Now the question is how do you display them?
 
 # The Solution
 1. Create a web app with a plat map and lots.
