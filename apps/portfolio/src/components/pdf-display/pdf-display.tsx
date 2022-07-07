@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
+import {
+  generatePdfResume,
+  parseResume,
+  renderPDF,
+} from '@portfolio/markdown-to-pdf';
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect } from 'react';
 import { ResumeQueryQuery } from '../../../graphql-types';
-import {
-  generatePdfResume,
-  renderPDF,
-} from '../../utilities/generate-pdf-resume';
-import { parseResume } from '../../utilities/parse-resume';
 
 /* eslint-disable-next-line */
 export interface PDFDisplayProps {}
@@ -24,7 +24,7 @@ const StyledPDF = styled.object`
 `;
 
 export function PDFDisplay(props: PDFDisplayProps) {
-  const { work } = useStaticQuery<ResumeQueryQuery>(graphql`
+  const { work, education, skills } = useStaticQuery<ResumeQueryQuery>(graphql`
     query ResumeQuery {
       work: allMdx(
         filter: { fields: { source: { eq: "work" } } }
@@ -38,6 +38,31 @@ export function PDFDisplay(props: PDFDisplayProps) {
             endDate(formatString: "MMM YYYY")
           }
           mdxAST
+        }
+      }
+      education: allMdx(
+        filter: { fields: { source: { eq: "education" } } }
+        sort: { order: DESC, fields: frontmatter___endDate }
+      ) {
+        nodes {
+          frontmatter {
+            startDate(formatString: "MMM YYYY")
+            school
+            study
+            endDate(formatString: "MMM YYYY")
+          }
+          mdxAST
+        }
+      }
+      skills: allSkillsYaml(sort: { fields: rating, order: DESC }) {
+        group(field: category) {
+          edges {
+            node {
+              skill
+              rating
+            }
+          }
+          fieldValue
         }
       }
     }
@@ -55,9 +80,29 @@ export function PDFDisplay(props: PDFDisplayProps) {
         title: frontmatter.position,
         pretitle: displayDate,
         content: parseResume(mdxAST),
+        rawContent: mdxAST,
         // subtitle: displayDate,
       };
     }),
+    education: education.nodes.map((d) => {
+      const { frontmatter, mdxAST } = d;
+
+      const displayDate = `${frontmatter.startDate} - ${
+        frontmatter.endDate || 'Present'
+      }`;
+      return {
+        title: frontmatter.school,
+        subtitle: frontmatter.study,
+        pretitle: displayDate,
+        content: parseResume(mdxAST),
+        rawContent: mdxAST,
+        // subtitle: displayDate,
+      };
+    }),
+    skills: skills.group.map((category) => ({
+      category: category.fieldValue,
+      skills: category.edges.map((sk) => sk.node.skill),
+    })),
   };
   console.log(parsedData);
 

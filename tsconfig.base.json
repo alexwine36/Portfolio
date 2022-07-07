@@ -17,6 +17,7 @@
     "resolveJsonModule": true,
     "paths": {
       "@portfolio/hex-rgb": ["libs/hex-rgb/src/index.ts"],
+      "@portfolio/markdown-to-pdf": ["libs/markdown-to-pdf/src/index.ts"],
       "@portfolio/resume-hooks": ["libs/resume-hooks/src/index.ts"],
       "@portfolio/theme": ["libs/theme/src/index.ts"],
       "@portfolio/ui": ["libs/ui/src/index.ts"]
