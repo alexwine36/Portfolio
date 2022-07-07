@@ -4,6 +4,7 @@ import { graphql, PageProps } from 'gatsby';
 import { ChipListDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { ProjectsPageQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
+import PDFDisplay from '../../components/pdf-display/pdf-display';
 import ProjectCard from '../../components/project-card';
 import { usePage } from '../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../utilities/generate-tag-link';
@@ -32,6 +33,7 @@ export function ProjectsPage(props: ProjectsPageProps) {
             link: generateTagLink(tag.fieldValue),
           }))}
         ></ChipListDisplay>
+        <PDFDisplay />
         <MasonryGridComponent>
           {nodes.map((node) => {
             return (

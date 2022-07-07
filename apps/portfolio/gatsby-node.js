@@ -8,6 +8,7 @@
 
 const path = require('path');
 const _ = require('lodash');
+const webpack = require('webpack');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -87,4 +88,23 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({ node, name: 'day', value: day });
     // createNodeField({ node, name: 'summary', value: summary });
   }
+};
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  getConfig,
+  rules,
+  loaders,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+      }),
+      new webpack.ProvidePlugin({
+        Buffer: ['buffer', 'Buffer'],
+      }),
+    ],
+  });
 };
