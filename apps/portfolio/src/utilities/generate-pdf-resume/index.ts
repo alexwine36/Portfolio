@@ -110,8 +110,8 @@ export const generatePdfResume = (data?: {
 
     const article = tr.cell().text({ fontSize: 10 });
     article
-      .add(name, { font: fonts.HelveticaBold })
-      .br()
+      // .add(name, { font: fonts.HelveticaBold })
+      // .br()
       .add(desc.join('\n'), { fontSize: 10, textAlign: 'justify' });
 
     // tr.cell(price, { textAlign: 'right' });
