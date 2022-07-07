@@ -1,12 +1,9 @@
 import styled from '@emotion/styled';
-import {
-  generatePdfResume,
-  parseResume,
-  renderPDF,
-} from '@portfolio/markdown-to-pdf';
+import { renderPDF } from '@portfolio/markdown-to-pdf';
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect } from 'react';
 import { ResumeQueryQuery } from '../../../graphql-types';
+import { parseResumeData } from '../../utilities/pdf-constants';
 
 /* eslint-disable-next-line */
 export interface PDFDisplayProps {}
@@ -24,7 +21,7 @@ const StyledPDF = styled.object`
 `;
 
 export function PDFDisplay(props: PDFDisplayProps) {
-  const { work, education, skills } = useStaticQuery<ResumeQueryQuery>(graphql`
+  const data = useStaticQuery<ResumeQueryQuery>(graphql`
     query ResumeQuery {
       work: allMdx(
         filter: { fields: { source: { eq: "work" } } }
@@ -68,50 +65,7 @@ export function PDFDisplay(props: PDFDisplayProps) {
     }
   `);
 
-  const parsedData = {
-    work: work.nodes.map((d) => {
-      const { frontmatter, mdxAST } = d;
-
-      const displayDate = `${frontmatter.startDate} - ${
-        frontmatter.endDate || 'Present'
-      }`;
-      return {
-        subtitle: frontmatter.company,
-        title: frontmatter.position,
-        pretitle: displayDate,
-        content: parseResume(mdxAST),
-        rawContent: mdxAST,
-        // subtitle: displayDate,
-      };
-    }),
-    education: education.nodes.map((d) => {
-      const { frontmatter, mdxAST } = d;
-
-      const displayDate = `${frontmatter.startDate} - ${
-        frontmatter.endDate || 'Present'
-      }`;
-      return {
-        title: frontmatter.school,
-        subtitle: frontmatter.study,
-        pretitle: displayDate,
-        content: parseResume(mdxAST),
-        rawContent: mdxAST,
-        // subtitle: displayDate,
-      };
-    }),
-    skills: skills.group.map((category) => ({
-      category: category.fieldValue,
-      skills: category.edges.map((sk) => sk.node.skill),
-    })),
-  };
-  console.log(parsedData);
-
-  // work.nodes.map((node) => {
-  //   console.log(parseResume(node.mdxAST));
-  // });
-  const doc = generatePdfResume({
-    ...parsedData,
-  });
+  const { doc } = parseResumeData(data);
   // const previewEl = document.getElementById('preview');
   const preview = React.createRef<HTMLObjectElement>();
   useEffect(() => {
