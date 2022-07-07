@@ -43,12 +43,14 @@ const parseChildren = (data: Root['children']): (string | undefined)[] => {
               if ('value' in c) {
                 return c.value;
               }
+              return '';
             })
             .filter((c) => !!c)
             .join(' ');
         }
         return parseChildren(d.children);
       }
+      return '';
     })
     .flat()
     .filter((d) => !!d);
