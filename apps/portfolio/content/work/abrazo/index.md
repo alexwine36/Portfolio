@@ -6,7 +6,7 @@ startDate: 2018-08-01
 
 - Created an end-to-end analytics solution using Python and business intelligence tools, improving the efficiency and productivity of the team.
 
-- Created pipelines for merging data from data resources i.e. sales tools (CRM/SFA), spreadsheets, and ERP software, resulting in increased business insights and better-informed decisions.
+- Developed pipelines for merging data from data resources i.e. sales tools (CRM/SFA), spreadsheets, and ERP software, resulting in increased business insights and better-informed decisions.
 
 - Developed applications to automate repetitive tasks and streamline processes increasing productivity and reducing errors.
 

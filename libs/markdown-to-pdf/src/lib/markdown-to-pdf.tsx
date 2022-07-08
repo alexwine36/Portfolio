@@ -121,7 +121,7 @@ export const generatePdfResume = (data?: {
   }
 
   if (data?.education) {
-    createTable(doc, { name: 'Eduction', rows: data.education });
+    createTable(doc, { name: 'Education', rows: data.education });
   }
 
   const table = doc.table({
