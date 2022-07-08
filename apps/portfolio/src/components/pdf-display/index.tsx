@@ -10,13 +10,13 @@ export interface PDFDisplayProps {}
 
 const StyledPDFDisplay = styled.div`
   // color: pink;
-  width: 100%;
-  height: 100vh;
+  // width: 100%;
+  // height: 100vh;
 `;
 
 const StyledPDF = styled.object`
   // color: pink;
-  width: 100%;
+  width: 60vw;
   height: 100vh;
 `;
 
@@ -43,10 +43,10 @@ export function PDFDisplay(props: PDFDisplayProps) {
       ) {
         nodes {
           frontmatter {
-            startDate(formatString: "MMM YYYY")
+            startDate(formatString: "YYYY")
             school
             study
-            endDate(formatString: "MMM YYYY")
+            endDate(formatString: "YYYY")
           }
           mdxAST
         }
