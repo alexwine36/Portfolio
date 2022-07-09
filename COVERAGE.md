@@ -6,7 +6,7 @@ apps.portfolio.src.components.hero-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.mdx.vr-viewer | 75% | 50% | 0 | ✔
 apps.portfolio.src.components.next-post-component | 20% | 100% | 0 | ❌
 apps.portfolio.src.components.parallax-section-display | 33% | 0% | 0 | ❌
-apps.portfolio.src.components.seo-formatter | 0% | 100% | 0 | ❌
+apps.portfolio.src.components.seo-formatter | 7% | 0% | 0 | ❌
 apps.portfolio.src.hooks.use-pages | 67% | 0% | 0 | ➖
 apps.portfolio.src.utilities.get-description | 9% | 0% | 0 | ❌
 libs.hex-rgb.src | 100% | 100% | 0 | ✔
@@ -44,4 +44,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generateBase64 | 29% | 100% | 0 | ❌
 libs.ui.src.lib.utilities.hex-to-rgba | 25% | 100% | 0 | ❌
-**Summary** | **23%** (84 / 373) | **3%** (4 / 141) | **0** | ❌
+**Summary** | **23%** (85 / 376) | **3%** (4 / 143) | **0** | ❌
