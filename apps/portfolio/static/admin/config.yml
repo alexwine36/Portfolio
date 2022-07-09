@@ -178,6 +178,37 @@ collections:
         }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'education'
+    label: 'Education'
+    folder: 'apps/portfolio/content/education'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'School', name: 'school', widget: 'string' }
+      - { label: 'Study', name: 'study', widget: 'string' }
+      - {
+          label: 'Start Date',
+          name: 'startDate',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD',
+          time_format: false,
+          date_format: 'YYYY-MM-DD',
+        }
+      - {
+          label: 'End Date',
+          name: 'endDate',
+          widget: 'datetime',
+          required: false,
+          format: 'YYYY-MM-DD',
+          time_format: false,
+          date_format: 'YYYY-MM-DD',
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'pages'
     label: 'Pages'
