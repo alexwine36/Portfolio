@@ -1,10 +1,16 @@
 import fs from 'fs';
-import { parseResumeData } from '.';
-import { ResumeQueryQuery } from '../../../graphql-types';
-export const generateResume = async (graphql: any) => {
-  console.log('GENERATE RESUME');
-
-  const result: { data: ResumeQueryQuery } = await graphql(`
+import { GatsbyNode } from 'gatsby';
+import path from 'path';
+import { ResumeQueryQuery } from '../../graphql-types';
+import { parseResumeData } from '../../src/utilities/pdf-constants';
+export const createPages: GatsbyNode['createPages'] = async ({
+  // actions,
+  graphql,
+  reporter,
+}) => {
+  reporter.info('Running Generate PDF');
+  // actions.
+  const result = await graphql<ResumeQueryQuery>(`
     query ResumeQuery {
       work: allMdx(
         filter: { fields: { source: { eq: "work" } } }
@@ -47,10 +53,10 @@ export const generateResume = async (graphql: any) => {
       }
     }
   `);
-  console.log('RESULT', result);
+  reporter.info(JSON.stringify(result, undefined, 2));
 
   const { doc } = parseResumeData(result.data);
-
-  doc.pipe(fs.createWriteStream('output.pdf'));
+  const outputPath = path.join(process.cwd(), `public`, `static`, 'resume.pdf');
+  doc.pipe(fs.createWriteStream(outputPath));
   await doc.end();
 };

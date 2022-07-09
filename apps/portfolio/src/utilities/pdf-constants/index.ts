@@ -1,4 +1,7 @@
-import { generatePdfResume, parseResume } from '@portfolio/markdown-to-pdf';
+import {
+  generatePdfResume,
+  parseResume,
+} from '../../../../../libs/markdown-to-pdf/src';
 import { ResumeQueryQuery } from '../../../graphql-types';
 
 export const parseResumeData = (data: ResumeQueryQuery) => {

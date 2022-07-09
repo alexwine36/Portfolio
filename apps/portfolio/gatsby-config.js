@@ -178,5 +178,6 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-netlify',
     'gatsby-plugin-transition-link',
+    'gatsby-plugin-pdf-gen',
   ],
 };

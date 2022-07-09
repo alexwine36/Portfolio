@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from '@mui/material';
 import { renderPDF } from '@portfolio/markdown-to-pdf';
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect } from 'react';
@@ -79,10 +80,7 @@ export function PDFDisplay(props: PDFDisplayProps) {
     <StyledPDFDisplay>
       {/* <h1>Welcome to PDFDisplay!</h1> */}
       <StyledPDF ref={preview} id="preview" type="application/pdf">
-        <p>
-          This browser does not support PDFs. Sorry. Find out more about pdfjs
-          at <a href="https://github.com/rkusa/pdfjs">Github</a>.
-        </p>
+        <Link href="/static/resume.pdf">View PDF</Link>
       </StyledPDF>
     </StyledPDFDisplay>
   );
