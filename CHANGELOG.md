@@ -1,3 +1,33 @@
+## [2.5.0](https://github.com/alexwine36/Portfolio/compare/v2.4.0...v2.5.0) (2022-07-09)
+
+
+### Features
+
+* **gatsby:** added portfolio project with PDF ([4d2ea76](https://github.com/alexwine36/Portfolio/commit/4d2ea76e4edd9266ee22a8247ab2bbed1210c589))
+* **gatsby:** generate pdf ([44b9503](https://github.com/alexwine36/Portfolio/commit/44b9503b2da3fe40ae7c384e544da0cc0495f76b))
+* **gatsby:** scaffolding pdf generation ([e53942b](https://github.com/alexwine36/Portfolio/commit/e53942bff2b57f7c9162698db2be88bab31c3f96))
+* **gatsby:** updated pdf to use function ([354cab5](https://github.com/alexwine36/Portfolio/commit/354cab54b7c3b1a0b89ff24d41a41a35ba5a93fe))
+* **pdf gen:** got PDF Generation working in separate package ([0257d1c](https://github.com/alexwine36/Portfolio/commit/0257d1ceffca6b930c5ef5a45e1b395b08f16191))
+
+
+### Bug Fixes
+
+* **gatsby:** removed failing test ([3efdd92](https://github.com/alexwine36/Portfolio/commit/3efdd92bcf151828a9e2fcf33528184dcc498d59))
+* **pdf generation:** updated detail table ([7db6394](https://github.com/alexwine36/Portfolio/commit/7db63947e5e59d849ae9e7d535480f8c0fa18a49))
+
+
+### Build System
+
+* **netlify:** fix for failing build ([af74965](https://github.com/alexwine36/Portfolio/commit/af749657f0f3f2a9cedc976e82288fbf6e651318))
+
+
+### Docs
+
+* **portfolio:** updated portfolio content and pdf display ([b32904a](https://github.com/alexwine36/Portfolio/commit/b32904a98dd33a00ed7afb6737d4d489c3fded22))
+* **temp-check:** updated temp-check project ([12490af](https://github.com/alexwine36/Portfolio/commit/12490af19ccc09550e2c4fe2d20376f4d8180741))
+* updated docs and footnotes style ([d1339dd](https://github.com/alexwine36/Portfolio/commit/d1339dd95ddd5a9bae23871cbf024a05639955cb))
+* updated styling and grammae ([4a966e6](https://github.com/alexwine36/Portfolio/commit/4a966e6ba8c7c6801d6d24a4253c1b696a875276))
+
 ## [2.4.0](https://github.com/alexwine36/Portfolio/compare/v2.3.0...v2.4.0) (2022-07-06)
 
 
