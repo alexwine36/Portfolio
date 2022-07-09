@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/alexwine36/Portfolio/compare/v2.5.0...v2.5.1) (2022-07-09)
+
+
+### Bug Fixes
+
+* **docs:** updated Netlify objects ([e1e68bb](https://github.com/alexwine36/Portfolio/commit/e1e68bb3c051c2b112d6bf6b5138c6bff75f162d))
+
 ## [2.5.0](https://github.com/alexwine36/Portfolio/compare/v2.4.0...v2.5.0) (2022-07-09)
 
 
