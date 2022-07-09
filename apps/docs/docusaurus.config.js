@@ -63,6 +63,21 @@ const config = {
         },
       },
     ],
+
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        entryPoints: ['libs/markdown-to-pdf/src/index.ts'],
+        tsconfig: 'libs/markdown-to-pdf/tsconfig.json',
+        out: 'markdown-to-pdf',
+        id: 'markdown-to-pdf',
+        sidebar: {
+          categoryLabel: '@portfolio/markdown-to-pdf',
+          position: 0,
+          fullNames: true,
+        },
+      },
+    ],
   ],
   title: 'Portfolio Documentation',
   tagline: 'Displaying my resume and portfolio with ease',

@@ -32,6 +32,7 @@ export function ProjectsPage(props: ProjectsPageProps) {
             link: generateTagLink(tag.fieldValue),
           }))}
         ></ChipListDisplay>
+
         <MasonryGridComponent>
           {nodes.map((node) => {
             return (
