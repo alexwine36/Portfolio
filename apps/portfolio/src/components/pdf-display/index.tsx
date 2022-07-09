@@ -70,12 +70,14 @@ export function PDFDisplay(props: PDFDisplayProps) {
   // const previewEl = document.getElementById('preview');
   const preview = React.createRef<HTMLObjectElement>();
   useEffect(() => {
-    renderPDF(doc).then((url) => {
-      if (preview) {
-        preview.current.data = url;
-      }
-    });
-  });
+    if (doc && preview) {
+      renderPDF(doc).then((url) => {
+        if (preview) {
+          preview.current.data = url;
+        }
+      });
+    }
+  }, [preview, doc]);
   return (
     <StyledPDFDisplay>
       {/* <h1>Welcome to PDFDisplay!</h1> */}

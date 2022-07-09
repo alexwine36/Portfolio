@@ -14,4 +14,10 @@ import {PDFDisplay} from '../../../src/components/pdf-display';
 
 
 
+# Features
+
+## Automatic Resume Generation
+
+Using Markdown data resume content is automatically parsed and saved for display.
+
 <PDFDisplay />
