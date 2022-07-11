@@ -103,8 +103,36 @@ const parseListItem = (data: ListItem, line: pdf.Text) => {
   });
 };
 
-export const parseToDoc = (data: Root['children'], doc: pdf.Text) => {
-  return data.forEach((d) => {
+export const parseToDoc = (data: Root, doc: pdf.Text) => {
+  // visit(data, 'list', (node) => {
+  //   // console.log('TREE', node);
+  //   visit(node, 'listItem', (n, idx) => {
+  //     // console.log(idx);
+  //     // if (idx === 0) {
+  //     doc.br().add('-');
+  //     // }
+  //     visit(n, ['text', 'link'], (d, i) => {
+  //       // if (i === 0) {
+  //       //   doc.br().add('-');
+  //       // }
+  //       if (d.type === 'text') {
+  //         doc.append(d.value);
+  //       }
+  //       if (d.type === 'link') {
+  //         const linkVal = d.children[0];
+  //         if (linkVal.type === 'text') {
+  //           doc.add(linkVal.value, {
+  //             link: formatURL(d.url),
+  //             underline: true,
+  //             color: 0x569cd6,
+  //           });
+  //         }
+  //       }
+  //     });
+  //   });
+  // });
+
+  return data['children'].forEach((d) => {
     if (d.type === 'list') {
       return d.children.forEach((listItem, idx) => {
         parseListItem(listItem, doc);

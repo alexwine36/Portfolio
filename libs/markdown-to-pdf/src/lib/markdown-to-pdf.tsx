@@ -31,7 +31,14 @@ export const generatePdfResume = (data?: {
   education: SectionData[];
   skills: { category: string; skills: string[] }[];
 }) => {
-  const doc = new pdf.Document({ font: require('pdfjs/font/Helvetica') });
+  const doc = new pdf.Document({
+    font: require('pdfjs/font/Helvetica'),
+    properties: {
+      title: 'Alex Wine | Portfolio',
+      author: 'Alex Wine',
+      creationDate: new Date(),
+    },
+  });
 
   // const header = doc
   //   .header()
@@ -52,7 +59,7 @@ export const generatePdfResume = (data?: {
 
   doc.footer().pageNumber(
     function (curr, total) {
-      return curr + ' / ' + total;
+      return `${curr} / ${total}`;
     },
     { textAlign: 'center' }
   );
@@ -118,6 +125,8 @@ export const generatePdfResume = (data?: {
 
   if (data?.work) {
     createTable(doc, { name: 'Experience', rows: data.work });
+
+    doc.pageBreak();
   }
 
   if (data?.education) {
@@ -205,7 +214,7 @@ function createTable(
 
     const article = tr.cell().text({ fontSize: 10 });
 
-    parseToDoc(rawContent.children, article);
+    parseToDoc(rawContent, article);
     // article
     //   // .add(title, { font: fonts.HelveticaBold })
     //   // .br()
