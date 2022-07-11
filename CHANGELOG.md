@@ -1,3 +1,21 @@
+## [2.6.0](https://github.com/alexwine36/Portfolio/compare/v2.5.1...v2.6.0) (2022-07-11)
+
+
+### Features
+
+* **gatsby:** updated home page with indicator arrow ([7e60903](https://github.com/alexwine36/Portfolio/commit/7e6090323749fdfbeff52640d72e6dd51e148b55))
+
+
+### Bug Fixes
+
+* **pdf:** updated formatting of PDF ([49e0391](https://github.com/alexwine36/Portfolio/commit/49e0391ddfa2784eb003e7fa56547b2b2c40688c))
+
+
+### Docs
+
+* **manzano:** updated Manzano Mesa Work experience ([a421cab](https://github.com/alexwine36/Portfolio/commit/a421cabd3c78e8a9b5ddada70fdc3032dc7ab872))
+* **update Work Experience:** manzano/index ([92eb3f5](https://github.com/alexwine36/Portfolio/commit/92eb3f58fe765015b7176c4c818ff41a03b4b35e))
+
 ## [2.5.1](https://github.com/alexwine36/Portfolio/compare/v2.5.0...v2.5.1) (2022-07-09)
 
 

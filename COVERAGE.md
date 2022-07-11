@@ -28,7 +28,7 @@ libs.ui.src.components.detail-card-display | 40% | 100% | 0 | ❌
 libs.ui.src.components.detail-list-display | 30% | 0% | 0 | ❌
 libs.ui.src.components.footer-display | 29% | 100% | 0 | ❌
 libs.ui.src.components.gradient-text | 12% | 0% | 0 | ❌
-libs.ui.src.components.hero-banner | 18% | 0% | 0 | ❌
+libs.ui.src.components.hero-banner | 27% | 0% | 0 | ❌
 libs.ui.src.components.hero-display | 62% | 75% | 0 | ➖
 libs.ui.src.components.info-text-display | 25% | 100% | 0 | ❌
 libs.ui.src.components.masonry-grid-component | 14% | 0% | 0 | ❌
@@ -44,4 +44,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 50% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.functions.generateBase64 | 29% | 100% | 0 | ❌
 libs.ui.src.lib.utilities.hex-to-rgba | 25% | 100% | 0 | ❌
-**Summary** | **23%** (85 / 376) | **3%** (4 / 143) | **0** | ❌
+**Summary** | **23%** (87 / 380) | **3%** (4 / 143) | **0** | ❌
