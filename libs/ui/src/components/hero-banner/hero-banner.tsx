@@ -1,3 +1,5 @@
+import { css, keyframes } from '@emotion/react';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { styled, Typography, useTheme } from '@mui/material';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types';
@@ -63,6 +65,25 @@ export const StyledHeroBanner = styled('div')(
 `
 );
 
+const animBounce = keyframes`
+0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+`;
+
+const StyledArrowDownContainer = styled('div')(
+  ({ theme }) => `
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: ${theme.spacing(6)};
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+`
+);
+
 const StyledImage = styled('div')<{ data?: ImageProps }>(
   ({ theme, data }) => `
 height: 100%;
@@ -125,13 +146,39 @@ export function HeroBanner(props: HeroBannerProps) {
     children: <div className="gradient inset" />,
   };
 
+  const arrowDownLayer: BannerLayer = {
+    children: (
+      <StyledArrowDownContainer
+        css={css`
+          animation-name: ${animBounce};
+        `}
+      >
+        <KeyboardArrowDownIcon
+          sx={{
+            fontSize: '5rem',
+          }}
+          // fontSize="large"
+        />
+      </StyledArrowDownContainer>
+    ),
+    translateY: [0, 15],
+    scale: [1, 1.1, 'easeOutCubic'],
+    shouldAlwaysCompleteAnimation: true,
+  };
+
   return (
     <StyledHeroBanner>
       {/* <h1>Welcome to HeroBanner!</h1>
        */}
 
       <ParallaxBanner
-        layers={[background, foreground, headline, gradientOverlay]}
+        layers={[
+          background,
+          foreground,
+          headline,
+          arrowDownLayer,
+          gradientOverlay,
+        ]}
         className="full"
       />
     </StyledHeroBanner>
