@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { GatsbyNode } from 'gatsby';
 import path from 'path';
-import { ResumeQueryQuery } from '../../graphql-types';
 import { parseResumeData } from '../../src/utilities/pdf-constants';
 export const createPages: GatsbyNode['createPages'] = async ({
   // actions,
@@ -10,8 +9,8 @@ export const createPages: GatsbyNode['createPages'] = async ({
 }) => {
   reporter.info('Running Generate PDF');
   // actions.
-  const result = await graphql<ResumeQueryQuery>(`
-    query ResumeQuery {
+  const result = await graphql<Queries.ResumeDataQuery>(`
+    query ResumeData {
       work: allMdx(
         filter: { fields: { source: { eq: "work" } } }
         sort: { order: DESC, fields: frontmatter___endDate }

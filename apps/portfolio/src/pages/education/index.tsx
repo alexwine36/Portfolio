@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { graphql, PageProps } from 'gatsby';
-import { EducationQueryQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import SectionDataDisplay, {
   SectionDataDisplayProps,
@@ -8,7 +7,8 @@ import SectionDataDisplay, {
 import { usePage } from '../../hooks/use-pages/use-pages';
 
 /* eslint-disable-next-line */
-export interface EducationPageProps extends PageProps<EducationQueryQuery> {}
+export interface EducationPageProps
+  extends PageProps<Queries.EducationPageQuery> {}
 
 const StyledEducationPage = styled.div``;
 
@@ -41,7 +41,7 @@ export function EducationPage(props: EducationPageProps) {
 }
 
 export const pageQuery = graphql`
-  query EducationQuery {
+  query EducationPage {
     allMdx(
       filter: { fields: { source: { eq: "education" } } }
       sort: { fields: frontmatter___endDate, order: DESC }

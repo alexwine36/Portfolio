@@ -4,6 +4,7 @@ module.exports = {
     title: `portfolio`,
     description: `This is a gatsby application created by Nx.`,
   },
+  graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-top-layout',
@@ -168,12 +169,7 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-graphql-codegen`,
-      options: {
-        // fileName: `./gatsby-graphql.ts`,
-      },
-    },
+
     `gatsby-transformer-yaml`,
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-netlify',

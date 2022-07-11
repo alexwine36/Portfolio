@@ -1,6 +1,6 @@
 import { css, keyframes } from '@emotion/react';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { styled, Typography, useTheme } from '@mui/material';
+import { styled, Typography } from '@mui/material';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types';
 import { hexToRgba } from '../../lib/utilities/hex-to-rgba';
@@ -97,7 +97,7 @@ height: 100%;
 
 export function HeroBanner(props: HeroBannerProps) {
   const { title, fg, bg, fgChild, bgChild } = props;
-  const theme = useTheme();
+  // const theme = useTheme();
   const background: BannerLayer = {
     // image:
     //   'https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
