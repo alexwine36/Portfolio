@@ -9,8 +9,6 @@
     "portfolio-e2e": "apps/portfolio-e2e",
     "resume-hooks": "libs/resume-hooks",
     "theme": "libs/theme",
-    "ui": "libs/ui",
-    "web": "apps/web",
-    "web-e2e": "apps/web-e2e"
+    "ui": "libs/ui"
   }
 }

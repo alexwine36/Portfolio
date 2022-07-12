@@ -1,8 +1,7 @@
 import { styled } from '@mui/material';
 import React from 'react';
-import GenerateGalaxyBackground from '../../assets/generate-galaxy-background/generate-galaxy-background';
 import StarBackground from '../../assets/star-background/star-background';
-import { generateBase64 } from '../../lib/utilities/functions/generateBase64';
+// import { generateBase64 } from '../../lib/utilities/functions/generateBase64';
 
 /* eslint-disable-next-line */
 export interface PageBackgroundProps {
@@ -11,7 +10,7 @@ export interface PageBackgroundProps {
 
 const StyledPageBackground = styled('div')(({ theme }) => {
   // const { dark, main } = theme.palette.secondary;
-  const galaxyRes = generateBase64(<GenerateGalaxyBackground />);
+  // const galaxyRes = generateBase64(<GenerateGalaxyBackground />);
   // const polygonRes = generateBase64(
   //   <PolygonBackground
   //     mainColor={dark}
@@ -33,7 +32,7 @@ background-color: transparent;
 
 // padding: ${theme.spacing(3)};
 // background-image: url(backgrounds/galaxy.svg);
-// background-image: url(${galaxyRes});
+
 // background-size: cover;
 // background-position: center;
 `;
