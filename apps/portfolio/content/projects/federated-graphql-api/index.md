@@ -7,10 +7,8 @@ tags:
   - Node JS
 published: true
 ---
-* The Problem
-
-  * Avoid rework for services and applications created
-  * Reliable typed method for connecting to data
-* The Solution
-
-  * Prisma for connection engine
+# The Problem
+  * Avoid rework for services and applications created.
+  * Reliable typed method for efficient querying.
+# The Solution
+  * Prisma for connection engine.

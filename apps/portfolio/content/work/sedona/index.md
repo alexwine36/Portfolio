@@ -5,8 +5,8 @@ startDate: 2018-02-01
 endDate: 2018-06-01
 ---
 
-- Contracted with State Farm and IBM as in person technician and trouble-shooter.
+- Contracted with State Farm and IBM as in-person technician and trouble-shooter.
 
-- Upgraded systems at all stations to ensure 100% compliance with company policy and process.
+- Upgraded systems at all stations to ensure 100% security compliance with company policy and processes.
 
-- Created web-app to automate paperwork needed for front office.
+- Developed web app to automate required paperwork.

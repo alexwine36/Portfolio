@@ -7,7 +7,7 @@ tags:
 hero: jon-tyson-vVSleEYPSGY-unsplash.jpg
 ---
 # The problem
-  - The reviews we receive need to be viewable to managers 
+  - Managers needed to be able to access received customer reviews regarding the sales team, design selection, warranty and construction process. 
 # The Solution
-  - scrape Avid Reports website for information on reviews
-  - save to PostgreSQL database for reporting 
+  - Developed scraping algorithm to collect aggregated results from Avid Reports.
+  - Saved collected results to PostgreSQL database to pull into Tableau. Once in Tableau, these results were used for performance dashboards.  

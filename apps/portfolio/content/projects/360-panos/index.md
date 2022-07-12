@@ -1,5 +1,5 @@
 ---
-title: 360 Panos
+title: 360 Panographic Display
 date: 2019-05-03
 tags:
   - React
@@ -10,27 +10,24 @@ published: true
 import {VRViewer} from '../../../src/components/mdx/vr-viewer/index.tsx'
 
 # The Problem
-How can you sell people on a location they have never been to? The idea was to take 360 degree panographic shots. Now the question is how do you display them?
+How to interest clients in purchasing a lot they have never seen: photograph and display 360 degree panographic shots. 
 
 # The Solution
-1. Create a web app with a plat map and lots.
+1. Developed a web app containg a plat map and numbered lots.
 
 ![plat](Plat.svg)
 
-2. Make our lots with 360s clickable.
-3. Display the lot with a 360 panorama
+2. Allowed client to select the lots containing 360 panoramic shots.
+3. Displayed the lot with a 360 panorama.
 
 <VRViewer />
 
-4. Watch for the **digital** lot to turn to this...
-
-
+4. The program allowed the client to better visualize their future home on a lot, resulting in informed decisions and a place to create new memories (pictured below). 
 
 ![model home](721e7d424f61ff2845c9d48ec02956d7-uncropped_scaled_within_1344_1008.jpeg)
 
 
-# Next Steps
+# Future Work 
 
-This project kicked off many programming projects at Abrazo Homes. After the initial project was done. The question became how do we have lot availability update automatically.
+This project was just the beginning of many for Abrazo Homes. Once the initial project was completed, the next task was to develop a method for automatically updating [lot availability](/projects/marksystems-graphql-v1).
 
-That is when attention turned to setting up an API for the data we had available.

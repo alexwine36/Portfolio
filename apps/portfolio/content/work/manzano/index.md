@@ -4,17 +4,18 @@ position: Student Seasonal Supervisor
 startDate: 2012-08-01
 endDate: 2018-02-01
 ---
-- Trained and managed a staff of twelve on shift planning and delegating responsibilities, ensuring a balanced, well-educated team.
-- Repaired various mechanical,electrical, and computer problems around the center.
+- Trained and managed a staff of twelve by shift planning and appropriately delegating responsibilities.
 
-- Designed a program to schedule all activities for the center.
+- Developed a web-based program for staff schedules and client sign out sheets, allowing for automation of repetitive tasks. 
 
-- Created a web based scheduling program for customers and staff, with automation of repetitive time consuming tasks.
+- In charge of repairing all mechanical, electrical, and computer issues.
+
+- Developed a program using Ruby on Rails to schedule all center activities.
+
+- Communicated with staff, parents and children while remaining an empathetic listener. 
+  
 <!-- - Plan activities for children in the before and after school program; including field trips, arts and crafts, and games. -->
 
-- Operate computer programs facilitating productivity.
-
-- Problem solved discipline problems with children, parents, and staff.
 
 
 

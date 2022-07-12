@@ -9,7 +9,7 @@ tags:
   - Kubernetes
 ---
 # The Problem
-At Abrazo the ERP system being used is called MarkSystems. It is an incredibly helpful software that helps with scheduling, accounting and sales. The issue we ran into was that the database that is used, Basis, is not well supported. As a result this meant the first crack at writing a GraphQL endpoint was not an easy task. I had experience using [Prisma](https://www.prisma.io/) and was hoping there was something similar I could do for this project. 
+The ERP system used at Abrazo Homes is called MarkSystems. This system effectively supports scheduling, accounting and sales. However, the relational database used by Marksystems, Basis, was not well supported. Due to this, writing a GraphQL endpoint was unnecessarily difficult. With experience using [Prisma](https://www.prisma.io/) there was hope to develop something similar. 
 
 # The Solution
 
@@ -24,6 +24,6 @@ I used pandas to hold the information for all <!-- TODO: Insert table count --> 
 Incredibly enough the application worked! It served as the first API into the system that was able to provide reliable access to the database and be accessed using a type-safe graphql client.
 
 
-Unfortunately, the project worked too well. Basis, has a licensing agreement that is per-user. When one user started running multiple queries simultaneously accross different IP addresses. Some questions were raised and, I needed to move to [version 2](/projects/marksystems-graphql-v2/).
+Unfortunately, the project worked too well. Basis, has a licensing agreement that is per-user. When one user started running multiple queries simultaneously accross different IP addresses. Some questions were raised and I needed to move to [version 2](/projects/marksystems-graphql-v2/).
 
 <!-- The ERP the company used utilizes a database that is not well-supported. -->

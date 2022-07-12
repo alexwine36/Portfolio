@@ -5,8 +5,16 @@ startDate: 2011-01-01
 endDate: 2012-01-01
 ---
 
-- Activities and societies: Audio Recording TechnicianActivities and societies: Audio Recording Technician
 
-- Involved in multiple plays and in the Improv club. Also active in researching reasoning behind stalking behavior, in an attempt to keep college students safe from these behaviors.
+<!-- - Activities and societies: Audio Recording TechnicianActivities and societies: Audio Recording Technician -->
 
-- There was no Audio Recording program at the school. When I first arrived at the school I spoke to the head of the Video Technology Department and, I told him that I wanted to create an Audio Recording Program for the use of the students at the college. Within six months the program was up and running and, there was a recording program for every student to use. Then the project grew to the community involving the chance to record the Newton Mid-Kansas Symphony Orchestra. The second concert they had I was requested by the Director, Thomas W. Douglas. The recording program also gave me the chance to record genres I had never had exposure to and, to meet people I wouldn’t have otherwise been exposed to.
+
+- Portrayed Charley in Charley's Aunt (2011) 
+- Ran the sound for SIC (2012)
+- Participated in an improv club 
+- Researched reasoning behind stalking behavior in an effort to keep college students safe
+- Created an Audio Recording Program for the use of the students at the college. 
+  - Got the program up and running within six months 
+  - There recording program available for every student to use
+  - The project grew to involve the community allowing the chance to record the Newton Mid-Kansas Symphony Orchestra 
+  - Requested by the Director of the Newton Mid-Kansas Symphony Orchestra, Thomas W. Douglas, for the second concert  
