@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { HeroBanner } from '@portfolio/ui';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { HeroBannerQuery } from '../../../graphql-types';
 /* eslint-disable-next-line */
 export interface HeroBannerImplementationProps {}
 
@@ -14,7 +13,7 @@ const StyledHeroBannerImplementation = styled.div`
 // Duotone
 // duotone: { highlight: "#49afe2", shadow: "#b11733" }
 export function HeroBannerImplementation(props: HeroBannerImplementationProps) {
-  const { mtns, bkg } = useStaticQuery<HeroBannerQuery>(graphql`
+  const { mtns, bkg } = useStaticQuery<Queries.HeroBannerQuery>(graphql`
     query HeroBanner {
       mtns: file(name: { eq: "mountains" }) {
         childImageSharp {

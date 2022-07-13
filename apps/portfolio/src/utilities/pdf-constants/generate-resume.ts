@@ -1,10 +1,9 @@
 import fs from 'fs';
 import { parseResumeData } from '.';
-import { ResumeQueryQuery } from '../../../graphql-types';
 export const generateResume = async (graphql: any) => {
   console.log('GENERATE RESUME');
 
-  const result: { data: ResumeQueryQuery } = await graphql(`
+  const result: { data: Queries.ResumeDataQuery } = await graphql(`
     query ResumeQuery {
       work: allMdx(
         filter: { fields: { source: { eq: "work" } } }

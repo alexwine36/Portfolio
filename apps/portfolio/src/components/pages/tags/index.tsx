@@ -3,12 +3,11 @@ import { Box } from '@mui/system';
 import { MasonryGridComponent, PageBackground } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
-import { TagPageQuery } from '../../../../graphql-types';
 import { usePage } from '../../../hooks/use-pages/use-pages';
 import ParallaxSectionDisplay from '../../parallax-section-display';
 import ProjectCard from '../../project-card';
 /* eslint-disable-next-line */
-export interface TagPageProps extends PageProps<TagPageQuery> {}
+export interface TagPageProps extends PageProps<Queries.TagPageQuery> {}
 
 const StyledTagPage = styled('div')`
   // color: pink;

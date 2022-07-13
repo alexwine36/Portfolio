@@ -2,13 +2,12 @@ import styled from '@emotion/styled';
 import { Box, Rating, Typography, useTheme } from '@mui/material';
 import { DetailCardDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { graphql, Link, PageProps } from 'gatsby';
-import { SkillsPageQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import { usePage } from '../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../utilities/generate-tag-link';
 
 /* eslint-disable-next-line */
-export interface SkillsProps extends PageProps<SkillsPageQuery> {}
+export interface SkillsProps extends PageProps<Queries.SkillsPageQuery> {}
 
 const StyledSkills = styled.div`
   // color: pink;
@@ -29,7 +28,7 @@ export function Skills(props: SkillsProps) {
 
       return {
         ...cat,
-        nodes: nodes.sort((a, b) => b.rating - a.rating),
+        nodes: [...nodes].sort((a, b) => b.rating - a.rating),
         avg,
       };
     })

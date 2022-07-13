@@ -12,10 +12,9 @@ import { ChipListDisplay } from '@portfolio/ui';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import pluralize from 'pluralize';
-import { ProjectsPageQuery } from '../../../graphql-types';
 import { getDescription } from '../../utilities/get-description';
 
-type ProjectPreview = ProjectsPageQuery['allMdx']['nodes'][0];
+type ProjectPreview = Queries.ProjectsPageQuery['allMdx']['nodes'][0];
 
 /* eslint-disable-next-line */
 export interface ProjectCardProps {

@@ -1,10 +1,9 @@
 import { BlogPostJsonLd, GatsbySeo } from 'gatsby-plugin-next-seo';
 import React from 'react';
-import { ProjectPageQuery } from '../../../graphql-types';
 import { getDescription } from '../../utilities/get-description';
 /* eslint-disable-next-line */
 export interface SeoFormatterProps {
-  mdx: ProjectPageQuery['mdx'];
+  mdx: Queries.ProjectPageQuery['mdx'];
 }
 
 // const StyledSeoFormatter = styled.div`

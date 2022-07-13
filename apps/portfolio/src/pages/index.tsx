@@ -1,12 +1,12 @@
 import { styled } from '@mui/material';
 import { PageBackground } from '@portfolio/ui';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { HomePageQuery } from '../../graphql-types';
 import HeroBannerImplementation from '../components/hero-banner-implementation/hero-banner-implementation';
 
-interface HomePageProps {
-  data: HomePageQuery;
+/* eslint-disable-next-line */
+interface HomePageProps extends PageProps<Queries.HomePageQuery> {
+  // data: HomePageQuery;
 }
 
 const StyledApp = styled('div')`

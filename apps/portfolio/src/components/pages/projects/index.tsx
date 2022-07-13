@@ -17,7 +17,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
 import Sticky from 'react-stickynode';
-import { ProjectPageQuery } from '../../../../graphql-types';
 import { usePage } from '../../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../../utilities/generate-tag-link';
 import ParallaxSectionDisplay from '../../parallax-section-display';
@@ -25,7 +24,7 @@ import ProjectCard from '../../project-card';
 import SeoFormatter from '../../seo-formatter/seo-formatter';
 
 /* eslint-disable-next-line */
-export interface ProjectPageProps extends PageProps<ProjectPageQuery> {}
+export interface ProjectPageProps extends PageProps<Queries.ProjectPageQuery> {}
 
 const StyledProjectPage = styled('div')`
   // color: pink;
@@ -140,7 +139,7 @@ export function ProjectPage(props: ProjectPageProps) {
                   variant="text"
                   color="info"
                 >
-                  {tableOfContents.items?.map((item) => (
+                  {(tableOfContents as any).items?.map((item) => (
                     <Button key={item.url} href={item.url}>
                       {item.title}
                     </Button>

@@ -2,9 +2,8 @@ import {
   generatePdfResume,
   parseResume,
 } from '../../../../../libs/markdown-to-pdf/src';
-import { ResumeQueryQuery } from '../../../graphql-types';
 
-export const parseResumeData = (data: ResumeQueryQuery) => {
+export const parseResumeData = (data: Queries.ResumeGenerateQuery) => {
   const { work, education, skills } = data;
   const parsedData = {
     work: work.nodes.map((d) => {
@@ -17,7 +16,7 @@ export const parseResumeData = (data: ResumeQueryQuery) => {
         subtitle: frontmatter.company,
         title: frontmatter.position,
         pretitle: displayDate,
-        content: parseResume(mdxAST),
+        content: parseResume(mdxAST as any),
         rawContent: mdxAST,
         // subtitle: displayDate,
       };
@@ -32,7 +31,7 @@ export const parseResumeData = (data: ResumeQueryQuery) => {
         title: frontmatter.school,
         subtitle: frontmatter.study,
         pretitle: displayDate,
-        content: parseResume(mdxAST),
+        content: parseResume(mdxAST as any),
         rawContent: mdxAST,
         // subtitle: displayDate,
       };
@@ -42,5 +41,5 @@ export const parseResumeData = (data: ResumeQueryQuery) => {
       skills: category.edges.map((sk) => sk.node.skill),
     })),
   };
-  return { parsedData, doc: generatePdfResume(parsedData) };
+  return { parsedData, doc: generatePdfResume(parsedData as any) };
 };

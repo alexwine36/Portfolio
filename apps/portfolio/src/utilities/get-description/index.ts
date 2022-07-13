@@ -1,11 +1,9 @@
-import { ProjectExcerptFragmentFragment } from '../../../graphql-types';
-
 type Data = Pick<
-  ProjectExcerptFragmentFragment['nodes'][0],
+  Queries.ProjectExcerptFragmentFragment['nodes'][0],
   'excerpt' | 'tableOfContents'
 > & {
   frontmatter?: Pick<
-    ProjectExcerptFragmentFragment['nodes'][0]['frontmatter'],
+    Queries.ProjectExcerptFragmentFragment['nodes'][0]['frontmatter'],
     'description'
   >;
 };
@@ -14,7 +12,7 @@ export const getDescription = (data: Data) => {
   const { frontmatter, tableOfContents } = data;
   const { description } = frontmatter;
 
-  tableOfContents?.items?.forEach((item) => {
+  (tableOfContents as any)?.items?.forEach((item) => {
     excerpt = excerpt.replace(item.title, '');
     excerpt = excerpt.trim();
     excerpt = excerpt.replace('  ', ' ');

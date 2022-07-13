@@ -1,4 +1,5 @@
 module.exports = {
+  graphqlTypegen: true,
   pathPrefix: '/Portfolio',
   siteMetadata: {
     title: `portfolio`,
@@ -166,12 +167,6 @@ module.exports = {
           url: 'https://alex-wine-portfolio.netlify.app/',
           site_name: 'Alex Wine | Portfolio',
         },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-graphql-codegen`,
-      options: {
-        // fileName: `./gatsby-graphql.ts`,
       },
     },
     `gatsby-transformer-yaml`,

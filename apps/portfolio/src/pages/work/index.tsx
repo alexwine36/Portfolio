@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { graphql, PageProps } from 'gatsby';
 
-import { WorkQueryQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import SectionDataDisplay, {
   SectionDataDisplayProps,
@@ -9,7 +8,7 @@ import SectionDataDisplay, {
 import { usePage } from '../../hooks/use-pages/use-pages';
 
 /* eslint-disable-next-line */
-export interface WorkPageProps extends PageProps<WorkQueryQuery> {}
+export interface WorkPageProps extends PageProps<Queries.WorkPageQuery> {}
 
 const StyledWorkPage = styled.div`
   // color: pink;
@@ -43,7 +42,7 @@ export const WorkPage = (props: WorkPageProps) => {
 };
 
 export const pageQuery = graphql`
-  query WorkQuery {
+  query WorkPage {
     allMdx(
       filter: { fields: { source: { eq: "work" } } }
       sort: { fields: frontmatter___endDate, order: DESC }
