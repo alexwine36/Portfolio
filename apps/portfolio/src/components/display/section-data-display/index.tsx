@@ -31,7 +31,7 @@ export function SectionDataDisplay(props: SectionDataDisplayProps) {
                 title={title || ''}
                 subtitle={subtitle}
               >
-                <MDXRenderer>{content}</MDXRenderer>
+                <MDXRenderer data-testid="mdx">{content}</MDXRenderer>
               </DetailCardDisplay>
             </Grid>
           );

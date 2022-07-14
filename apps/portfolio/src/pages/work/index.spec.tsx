@@ -2,13 +2,6 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { WorkPage } from '.';
-jest.mock('gatsby-plugin-mdx', () => {
-  return {
-    MDXRenderer: ({ children }) => {
-      return <div>{children}</div>;
-    },
-  };
-});
 
 const props: any = {};
 describe('WorkPage', () => {

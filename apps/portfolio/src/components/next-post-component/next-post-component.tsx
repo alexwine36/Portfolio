@@ -48,6 +48,9 @@ export function NextPostComponent(props: NextPostComponentProps) {
   `);
 
   const post = projects.nodes.find((proj) => proj.slug === slug);
+  if (!post) {
+    return undefined;
+  }
   const { frontmatter, timeToRead } = post;
   const { title, hero } = frontmatter;
   const excerpt = getDescription(post);

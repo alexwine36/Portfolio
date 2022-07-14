@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { graphql, PageProps } from 'gatsby';
-import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import SectionDataDisplay, {
   SectionDataDisplayProps,
-} from '../../display/section-data-display';
+} from '../../components/display/section-data-display';
+import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import { usePage } from '../../hooks/use-pages/use-pages';
 
 /* eslint-disable-next-line */
