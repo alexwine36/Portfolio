@@ -40,10 +40,17 @@ jobs:
           # indicators: true
           output: both
           # thresholds: '60 80'
+      - name: Generate Badges
+        run: yarn generate:badge coverage/all/coverage-summary.json -o coverage/all/assets
       - name: Check output
         run: ls -aFG
       - name: Copy Coverage Summary
         run: cp code-coverage-results.md COVERAGE.md
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage/all
       - name: Upload coverage-summary files
         uses: actions/upload-artifact@v2
         with:
@@ -85,7 +92,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    needs: [docs]
+    needs: [docs, test]
     steps:
       # - name: Download Artifact
       #   uses: actions/download-artifact@v3
@@ -97,6 +104,11 @@ jobs:
         with:
           name: doc-files
           path: build
+      - name: Download Coverage Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage
+          path: build/coverage
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: build

@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "docs": "apps/docs",
+    "generate-badges": "libs/generate-badges",
     "hex-rgb": "libs/hex-rgb",
     "markdown-to-pdf": "libs/markdown-to-pdf",
     "portfolio": "apps/portfolio",

@@ -17,7 +17,8 @@
     "doc:build": "nx build docs",
     "doc:start": "nx serve docs",
     "site:start": "nx run portfolio:serve --verbose",
-    "doc:version": "docusaurus --config apps/docs/docusaurus.config.js docs:version 1.0"
+    "doc:version": "docusaurus --config apps/docs/docusaurus.config.js docs:version 1.0",
+    "generate:badge": "ts-node ./libs/generate-badges/src"
   },
   "private": true,
   "dependencies": {
@@ -126,6 +127,8 @@
     "babel-jest": "28.1.2",
     "babel-plugin-module-resolver": "4.1.0",
     "babel-preset-gatsby": "2.18.0",
+    "badge-maker": "^3.3.1",
+    "commander": "^9.3.0",
     "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
     "cypress": "^9.1.0",
@@ -138,6 +141,7 @@
     "eslint-plugin-react": "7.30.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-tsdoc": "^0.2.16",
+    "fs-extra": "^10.1.0",
     "gatsby-plugin-emotion": "7.18.0",
     "gatsby-plugin-netlify": "^5.0.0",
     "gatsby-remark-autolink-headers": "^5.18.1",
