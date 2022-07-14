@@ -25,9 +25,9 @@ jobs:
         with:
           node-version: 16
       - name: Run tests
-        run: yarn test:ci
-      # - name: Copy Coverage
-      #   run: cp cobertura-coverage.xml coverage.cobertura.xml
+        run: yarn test:all
+      - name: Copy Coverage
+        run: cp coverage/all/cobertura-coverage.xml cobertura-coverage.xml
       - name: Code Coverage Summary Report
         uses: irongut/CodeCoverageSummary@v1.2.0
         with:
