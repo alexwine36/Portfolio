@@ -118,7 +118,9 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
 
         gatsbyRemarkPlugins: [
-          'gatsby-remark-heading-slug',
+          {
+            resolve: "gatsby-remark-autolink-headers"
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {

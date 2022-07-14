@@ -17,6 +17,7 @@ const StyledPDFDisplay = styled.div`
 const StyledPDF = styled.object`
   // color: pink;
   width: 60vw;
+  max-width: 100%;
   height: 100vh;
 `;
 

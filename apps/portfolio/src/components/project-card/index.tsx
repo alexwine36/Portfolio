@@ -46,6 +46,7 @@ export function ProjectCard(props: ProjectCardProps) {
     >
       <Card>
         <CardHeader
+          data-testid="card-header"
           subheaderTypographyProps={{
             variant: 'overline',
           }}
@@ -69,7 +70,7 @@ export function ProjectCard(props: ProjectCardProps) {
         />
 
         <CardContent>
-          <Typography>{excerpt}</Typography>
+          <Typography data-testid="card-excerpt">{excerpt}</Typography>
         </CardContent>
         <CardActions>
           <Button

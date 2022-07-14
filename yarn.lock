@@ -12252,6 +12252,17 @@ gatsby-react-router-scroll@^5.18.0:
     "@babel/runtime" "^7.15.4"
     prop-types "^15.8.1"
 
+gatsby-remark-autolink-headers@^5.18.1:
+  version "5.18.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-5.18.1.tgz#ca8511ebb7550307093dcedcf91f1dc5bfb38830"
+  integrity sha512-H0r6dWOCRMsWQLMACNkkBO62aVpm6aoZtKr3t/wZXcndDDcbsUSvb3MeH5NmG7h1/4WZqysdC7aRFUIkgGOTOQ==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    github-slugger "^1.3.0"
+    lodash "^4.17.21"
+    mdast-util-to-string "^2.0.0"
+    unist-util-visit "^2.0.3"
+
 gatsby-remark-external-links@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-remark-external-links/-/gatsby-remark-external-links-0.0.4.tgz#85b98c1e9dacfaa58085319648c904ff3cab42f0"
@@ -12268,16 +12279,6 @@ gatsby-remark-graph@^0.2.6:
   integrity sha512-F/VKhwGLFMZQYKVUKIiJYzGYSYWrKrzZjWaYpjuaktTh7t7d8bzbgQJ5ZAbAnSet0dSllSyj0DTgU1IvAWC5NA==
   dependencies:
     unist-util-visit "^1.1.3"
-
-gatsby-remark-heading-slug@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-heading-slug/-/gatsby-remark-heading-slug-0.2.0.tgz#7526b239c9ce54f6913431d24d3afe995146f5f5"
-  integrity sha512-wTXaS38+8Qn52NB1RU/N66+iRBKFobVEszCnAvu2TO6Z1Ulq7yvBLAe5AQHhX2Zm9yiYVS2yt4+sjAHHDOiSsQ==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    github-slugger "^1.2.1"
-    mdast-util-to-string "^1.0.5"
-    unist-util-visit "^1.3.0"
 
 gatsby-remark-images@^6.18.0:
   version "6.18.0"
@@ -12779,7 +12780,7 @@ github-from-package@0.0.0:
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
   integrity sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==
 
-github-slugger@^1.2.1, github-slugger@^1.4.0:
+github-slugger@^1.2.1, github-slugger@^1.3.0, github-slugger@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.4.0.tgz#206eb96cdb22ee56fdc53a28d5a302338463444e"
   integrity sha512-w0dzqw/nt51xMVmlaV1+JRzN+oCa1KfcgGEWhxUG16wbdA+Xnt/yoFO8Z8x/V82ZcZ0wy6ln9QDup5avbhiDhQ==
@@ -23554,7 +23555,7 @@ unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.1, unist-
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.3, unist-util-visit@^1.3.0, unist-util-visit@^1.3.1, unist-util-visit@^1.4.1:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.3, unist-util-visit@^1.3.1, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
