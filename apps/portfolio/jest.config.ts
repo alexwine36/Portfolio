@@ -38,6 +38,9 @@ export default {
   globals: {
     __PATH_PREFIX__: ``,
   },
+  snapshotSerializers: [
+    '@emotion/jest/serializer' /* if needed other snapshotSerializers should go here */,
+  ],
   // testURL: `http://localhost`,
   // setupFiles: [`<rootDir>/loadershim.js`],
   coverageDirectory: '../../coverage/apps/portfolio',

@@ -94,6 +94,7 @@
     "@commitlint/config-conventional": "^17.0.2",
     "@docusaurus/module-type-aliases": "2.0.0-beta.13",
     "@emotion/babel-plugin": "11.9.2",
+    "@emotion/jest": "^11.9.4",
     "@graphql-eslint/eslint-plugin": "^3.10.6",
     "@nrwl/cli": "14.4.2",
     "@nrwl/cypress": "14.4.2",

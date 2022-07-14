@@ -49,8 +49,9 @@ background-color: transparent;
  * @category Styles
  */
 export const PageBackground = (props: PageBackgroundProps) => {
+  const { children, ...rest } = props;
   return (
-    <StyledPageBackground>
+    <StyledPageBackground {...rest}>
       <StarBackground>{props.children}</StarBackground>
     </StyledPageBackground>
   );

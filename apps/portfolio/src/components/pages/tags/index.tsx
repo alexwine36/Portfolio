@@ -1,9 +1,9 @@
-import { Rating, styled, Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import { styled } from '@mui/material';
 import { MasonryGridComponent, PageBackground } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import { usePage } from '../../../hooks/use-pages/use-pages';
+import SkillHeaderDisplay from '../../display/skill-header-display';
 import ParallaxSectionDisplay from '../../parallax-section-display';
 import ProjectCard from '../../project-card';
 /* eslint-disable-next-line */
@@ -13,53 +13,22 @@ const StyledTagPage = styled('div')`
   // color: pink;
 `;
 
-const StyledSkillDisplay = styled('div')(
-  ({ theme }) => `
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-height: 50vh;
-> span, p {
-  font-size: 1.2em;
-margin-right: ${theme.spacing(2)};
-margin-left: ${theme.spacing(2)};
-}
-`
-);
-
 export function TagPage(props: TagPageProps) {
   const { skill, projects } = props.data;
   const { nodes } = projects;
   const page = usePage('projects');
   return (
-    <StyledTagPage>
+    <StyledTagPage data-testid="tag-page">
       <GatsbySeo title={skill.skill} />
-      <PageBackground>
-        <StyledSkillDisplay>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Rating readOnly value={skill.rating}></Rating>
-            <Typography>{skill.skill}</Typography>
-          </Box>
-
-          <Typography variant="overline">{`~${skill.date.replace(
-            ' ago',
-            ''
-          )}`}</Typography>
-        </StyledSkillDisplay>
+      <PageBackground data-testid="page-background">
+        <SkillHeaderDisplay skill={skill} />
 
         <ParallaxSectionDisplay hideHeader page={page}>
           <MasonryGridComponent>
             {nodes.map((node) => {
               return (
                 // <Grid key={node.slug} item xs>
-                <ProjectCard node={node}></ProjectCard>
+                <ProjectCard key={node.slug} node={node}></ProjectCard>
                 // </Grid>
               );
             })}
