@@ -9,7 +9,7 @@
     "build": "PREFIX_PATHS=true nx build portfolio",
     "build:netlify": "nx build-net portfolio",
     "test": "nx run-many --target=test --all",
-    "test:ci": "nx run-many --target=test --all --parallel=3 --ci --code-coverage --coverageReporters=cobertura --coverageReporters=html --coverageReporters=text",
+    "test:ci": "nx run-many --target=test --all --parallel=3 --ci --code-coverage --coverageReporters=cobertura --coverageReporters=html --coverageReporters=text && ./merge_cobertura",
     "lint": "nx affected --target=lint --parallel=3",
     "lint:all": "nx run-many --target=lint --all",
     "format:check": "nx format:check",

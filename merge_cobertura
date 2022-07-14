@@ -1,0 +1,8 @@
+#!/bin/bash
+# while read FILENAME; do
+#     LCOV_INPUT_FILES="$LCOV_INPUT_FILES -a \"$FILENAME\""
+# done < <( find $1 -name lcov.info )
+
+# eval lcov "${LCOV_INPUT_FILES}" -o $1/$2
+
+npx --yes cobertura-merge -o cobertura-coverage.xml apps.portfolio=coverage/apps/portfolio/cobertura-coverage.xml libs.ui=coverage/libs/ui/cobertura-coverage.xml libs.theme=coverage/libs/theme/cobertura-coverage.xml libs.markdown-to-pdf=coverage/libs/markdown-to-pdf/cobertura-coverage.xml libs.hex-rgb=coverage/libs/hex-rgb/cobertura-coverage.xml

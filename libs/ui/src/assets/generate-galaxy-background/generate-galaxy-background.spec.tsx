@@ -7,4 +7,15 @@ describe('GenerateGalaxyBackground', () => {
     const { baseElement } = render(<GenerateGalaxyBackground />);
     expect(baseElement).toBeTruthy();
   });
+
+  it('should render successfully with props', () => {
+    const { baseElement } = render(
+      <GenerateGalaxyBackground
+        background="blue"
+        density={0.2}
+        starColor="yellow"
+      />
+    );
+    expect(baseElement).toBeTruthy();
+  });
 });

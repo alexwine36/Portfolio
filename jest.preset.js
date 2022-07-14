@@ -7,4 +7,5 @@ module.exports = {
   //   `<rootDir>/../../node_modules/(?!(${esModules})/)`
   // ],
   // testEnvironment: `jsdom`,
+  collectCoverageFrom: ['<rootDir>/src/**'],
 };
