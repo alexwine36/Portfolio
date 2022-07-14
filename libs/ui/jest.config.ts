@@ -21,4 +21,5 @@ export default {
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/ui',
+  testEnvironment: './custom-test-env.js',
 };
