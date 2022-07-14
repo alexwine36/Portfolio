@@ -11,7 +11,7 @@ describe('Generate Base 64', () => {
         // height="600"
         viewBox="0 0 150 150"
       >
-        <g stroke-width="1" stroke-linejoin="bevel">
+        <g strokeWidth="1" strokeLinejoin="bevel">
           <path
             d="M409 310.3L272 263.3L381 361.7Z"
             fill={'white'}
