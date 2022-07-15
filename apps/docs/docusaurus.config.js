@@ -78,6 +78,35 @@ const config = {
         },
       },
     ],
+    // [
+    //   'docusaurus-plugin-typedoc',
+    //   {
+    //     entryPoints: ['libs/generate-badges/src/index.ts'],
+    //     tsconfig: 'libs/generate-badges/tsconfig.json',
+    //     out: 'generate-badges',
+    //     id: 'generate-badges',
+    //     sidebar: {
+    //       categoryLabel: '@portfolio/generate-badges',
+    //       position: 0,
+    //       fullNames: true,
+    //     },
+    //   },
+    // ],
+    // [
+    //   'docusaurus-plugin-typedoc',
+    //   {
+    //     entryPoints: ['apps/portfolio/src'],
+    //     entryPointStrategy: 'expand',
+    //     tsconfig: 'apps/portfolio/tsconfig.json',
+    //     out: 'portfolio',
+    //     id: 'portfolio',
+    //     sidebar: {
+    //       categoryLabel: 'portfolio',
+    //       position: 0,
+    //       fullNames: true,
+    //     },
+    //   },
+    // ],
   ],
   title: 'Portfolio Documentation',
   tagline: 'Displaying my resume and portfolio with ease',
