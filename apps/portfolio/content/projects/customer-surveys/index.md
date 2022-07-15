@@ -13,7 +13,7 @@ tags:
 
 
 # The Problem
-Construction is a long process and making sure a customer is happy throughout a build is challenging and the highest priority.
+Constructing a dream home is a long process. Ensuring a customer is happy throughout their build is the highest priority.
 
 ---
 
@@ -21,13 +21,13 @@ Construction is a long process and making sure a customer is happy throughout a 
 <!-- TODO: Add team leader/manager information ie. talking to multiple departements -->
 <!-- TODO: Add same info to description in work experience -->
 # The Solution
-
+Developed an algorithm and dashboard to monitor the progression and customer satisfaction of the clients' homes. The algorithm sends surveys to clients and the dashboard updates survey statuses. 
 - Infrastructure
   - [Pulumi](/tags/pulumi) to create the backend
   - [GitLab](/tags/git-lab-ci) as the CI/CD environment
   - [NodeJS](/tags/node-js) as the backend
 - Frontend
-  - [React](/tags/react) for the Dashboard
+  - [React](/tags/react) for the dashboard
   - Yarn and Turborepo for managing the Monorepo
   - Mjml for creating email templates
 
@@ -35,22 +35,22 @@ Construction is a long process and making sure a customer is happy throughout a 
 
 # The Process
 
-This has been the longest running project. It was initially started in June 2019. Originally created with Serverless and using Razzle and React for a backend. 
-
-When COVID hit, the project was paused and we needed to focus on other aspects of the business.
+Started in June 2019, this has been the longest running project for Abrazo Homes. Originally developed with Serverless, using Razzle and React for the backend. 
+<!-- TODO: Alex look at this -->
+Once the pandemic began, high priority issues came to light pausing the project until January 2022. 
 
 
 ## Restart
 
-With some time away from the project I realized there were many opportunities for improvement.
+Having taken a step back, obvious opportunities for improvement were realized.
 
 <!-- First - the survey was included with the application which wasn't a necessary feature.
  -->
-Initially the project had surveys built in because we wanted custom functionality in the surveys. Later I found out that Typeform has methods for embedding data into forms that would take care of our use case and ease the programming load.
+Initially the project had built-in surveys to provide custom functionality. Later discovering that Typeform contains methods for embedding data into forms that would manage the use case and ease the programming load.
 
-The rewrite of this project required data being shared between the dashboard [GitLab Pages](/tags/git-lab-ci) package and *Pulumi*
+The rewrite of this project required data access between both the dashboard [GitLab Pages](/tags/git-lab-ci) package and *Pulumi*
 
-Basic app structure
+Basic app structure:
 
 ```mermaid
 %%{init: {'theme': 'dark'} }%%
@@ -63,11 +63,11 @@ graph LR
   packages --> |Formats Emails|email
 ```
 
-Using a monorepo for this project was ideal to share types between projects. The Pulumi package uses Step Functions and a simple Rest API to expose endpoints to the dashboard.
+Using a monorepo for this project efficiently allowed type sharing between projects. The Pulumi package uses Step Functions and a Rest API to expose endpoints to the dashboard.
 
 
 ### State Machine
-
+The state machine links processes 
 
 ```mermaid
 %%{init: {'theme': 'dark'} }%%

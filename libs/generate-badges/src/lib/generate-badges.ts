@@ -62,7 +62,7 @@ const generateBadge = (value: number, name: string, outputDir: string) => {
     label: name,
     message: `${value}%`,
     color: colorFormat(value),
-    style: 'flat-square',
+    style: 'flat',
   });
 
   fs.writeFileSync(getPath(`${outputDir}/${name}.svg`), svg);

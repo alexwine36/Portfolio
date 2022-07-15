@@ -1,5 +1,10 @@
-import styled from '@emotion/styled';
-import { Link } from '@mui/material';
+import {
+  Link,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import { renderPDF } from '@portfolio/markdown-to-pdf';
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect } from 'react';
@@ -8,20 +13,28 @@ import { parseResumeData } from '../../utilities/pdf-constants';
 /* eslint-disable-next-line */
 export interface PDFDisplayProps {}
 
-const StyledPDFDisplay = styled.div`
+const StyledPDFDisplay = styled('div')`
   // color: pink;
   // width: 100%;
   // height: 100vh;
 `;
 
-const StyledPDF = styled.object`
+const StyledPDF = styled('object')`
   // color: pink;
   width: 60vw;
   max-width: 100%;
   height: 100vh;
 `;
 
+const PdfLink = () => (
+  <Typography>
+    <Link href="/static/resume.pdf">View PDF</Link>
+  </Typography>
+);
+
 export function PDFDisplay(props: PDFDisplayProps) {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
   const data = useStaticQuery<Queries.ResumeDataQuery>(graphql`
     query ResumeData {
       work: allMdx(
@@ -78,14 +91,21 @@ export function PDFDisplay(props: PDFDisplayProps) {
       });
     }
   }, [preview, doc]);
-  return (
-    <StyledPDFDisplay>
-      {/* <h1>Welcome to PDFDisplay!</h1> */}
-      <StyledPDF ref={preview} id="preview" type="application/pdf">
-        <Link href="/static/resume.pdf">View PDF</Link>
-      </StyledPDF>
-    </StyledPDFDisplay>
-  );
+  if (matches) {
+    return <PdfLink />;
+  } else {
+    return (
+      <StyledPDFDisplay
+      // sx={{
+      //   visibility: matches ? 'hidden' : 'visible',
+      // }}
+      >
+        <StyledPDF ref={preview} id="preview" type="application/pdf">
+          <PdfLink />
+        </StyledPDF>
+      </StyledPDFDisplay>
+    );
+  }
 }
 
 export default PDFDisplay;
