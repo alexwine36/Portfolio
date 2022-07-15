@@ -1,3 +1,41 @@
+## [3.0.0](https://github.com/alexwine36/Portfolio/compare/v2.6.0...v3.0.0) (2022-07-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **project:** Removed web project and updated jest requiring new deps
+
+### Features
+
+* **badges:** added method to generate coverage badges ([4d2674b](https://github.com/alexwine36/Portfolio/commit/4d2674b0d091f1971d1dc4760ddee8009b39bfd4))
+* **gatsby:** updated to use gatsby graphql codegen ([4a63bea](https://github.com/alexwine36/Portfolio/commit/4a63bea0c5ed0d8caea5d23071b5a2f81aa00c5a))
+* **project:** updated project to latest gatsby version ([c4e53b7](https://github.com/alexwine36/Portfolio/commit/c4e53b7e3bc3925accb13b75a4ac9aa8ffd290a9))
+
+
+### Performance Improvements
+
+* **package:** removed unnecessary dependencies ([47dd43a](https://github.com/alexwine36/Portfolio/commit/47dd43ab5ca2846fae456e3ae07fe65a64395253))
+
+
+### Docs
+
+* **content:** updated markdown content ([b77e9ea](https://github.com/alexwine36/Portfolio/commit/b77e9ea0a52f79da606adb10f4b0fca5021811e6))
+
+
+### Tests
+
+* **gatsby:** added missing tests and updated failing ones ([9dc05cc](https://github.com/alexwine36/Portfolio/commit/9dc05cc2cd1b46b67e9a4c2b2501c261cf00ca92))
+* **gatsby:** added more tests for Gatsby Components ([018d3a9](https://github.com/alexwine36/Portfolio/commit/018d3a982b34e0d846944b29798247fab6f2d4c3))
+* **gatsby:** skills page test updated ([21df7a3](https://github.com/alexwine36/Portfolio/commit/21df7a3c853ec4ed5f32c525590f8be2bb306439))
+* **gatsby:** updated testing config for coverage reporting ([578bf3d](https://github.com/alexwine36/Portfolio/commit/578bf3d6f3dafc6ee6a56e9ac7b1a46467d0894f))
+* **ui:** updated jest config for ui ([289612f](https://github.com/alexwine36/Portfolio/commit/289612ffa7bc622807ccbf2500146c838f7cf967))
+* updating to full test ([ef9bcec](https://github.com/alexwine36/Portfolio/commit/ef9bcec7d4202431c1eb19e6aff0fbfdb119e3ec))
+
+
+### CI
+
+* updated cobertura source ([86b4f64](https://github.com/alexwine36/Portfolio/commit/86b4f64db58c06abd2a59b1fd3db301871db0457))
+
 ## [2.6.0](https://github.com/alexwine36/Portfolio/compare/v2.5.1...v2.6.0) (2022-07-11)
 
 
