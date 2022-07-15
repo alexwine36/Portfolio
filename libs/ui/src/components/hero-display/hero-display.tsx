@@ -1,11 +1,9 @@
-// import styled from '@emotion/styled';
+/* eslint-disable-next-line */
+import React from 'react';
 import { Container, Grid, styled, Typography } from '@mui/material';
 import { SizeMe } from 'react-sizeme';
 // import hexRgb from 'hex-rgb';
-import PolygonBackground, {
-  StyledPolygonBackground,
-} from '../../assets/polygon-background/polygon-background';
-import { generateBackgroundUri } from '../../lib/utilities/functions/generateBase64';
+import { StyledPolygonBackground } from '../../assets/polygon-background/polygon-background';
 import GradientText from '../gradient-text/gradient-text';
 
 /* eslint-disable-next-line */
@@ -16,7 +14,7 @@ export interface HeroDisplayProps {
 
 const StyledHeroDisplay = styled('div')(({ theme }) => {
   // const { dark, main } = theme.palette.secondary;
-  const polygonRes = generateBackgroundUri(<PolygonBackground />);
+  // const polygonRes = generateBackgroundUri(<PolygonBackground />);
   // const polygonRes = generateBase64(
   //   <PolygonBackground
   //     mainColor={dark}
@@ -28,7 +26,7 @@ const StyledHeroDisplay = styled('div')(({ theme }) => {
 
   return `
 //   background-color: transparent;
-// background-image: ${polygonRes};
+
 // background-size: cover;
 // background-position: center;
 height: 50vh;

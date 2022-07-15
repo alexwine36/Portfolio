@@ -36,7 +36,7 @@ export function GenerateLowPolyBackground(
       xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
     >
-      <g stroke-width="1" stroke-linejoin="bevel">
+      <g strokeWidth="1" strokeLinejoin="bevel">
         <path
           d="M409 310.3L272 263.3L381 361.7Z"
           fill={dark1}

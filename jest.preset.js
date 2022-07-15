@@ -1,3 +1,11 @@
 const nxPreset = require('@nrwl/jest/preset').default;
-
-module.exports = { ...nxPreset };
+// const esModules = ['gatsby', 'gatsby-link', 'gatsby-script'].join('|');
+module.exports = {
+  ...nxPreset,
+  // transformIgnorePatterns: [
+  //   `<rootDir>/../../libs/(?!hex-rgb/)`,
+  //   `<rootDir>/../../node_modules/(?!(${esModules})/)`
+  // ],
+  // testEnvironment: `jsdom`,
+  collectCoverageFrom: ['<rootDir>/src/**'],
+};

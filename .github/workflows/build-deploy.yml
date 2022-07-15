@@ -25,13 +25,13 @@ jobs:
         with:
           node-version: 16
       - name: Run tests
-        run: yarn test:ci
+        run: yarn test:all
       - name: Copy Coverage
-        run: cp coverage/apps/portfolio/cobertura-coverage.xml coverage.cobertura.xml
+        run: cp coverage/all/cobertura-coverage.xml cobertura-coverage.xml
       - name: Code Coverage Summary Report
         uses: irongut/CodeCoverageSummary@v1.2.0
         with:
-          filename: coverage.cobertura.xml
+          filename: cobertura-coverage.xml
           badge: true
           # fail_below_min: true
           format: markdown
@@ -40,10 +40,17 @@ jobs:
           # indicators: true
           output: both
           # thresholds: '60 80'
+      - name: Generate Badges
+        run: yarn generate:badge coverage/all/coverage-summary.json -o coverage/all/assets
       - name: Check output
         run: ls -aFG
       - name: Copy Coverage Summary
         run: cp code-coverage-results.md COVERAGE.md
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage/all
       - name: Upload coverage-summary files
         uses: actions/upload-artifact@v2
         with:
@@ -85,7 +92,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    needs: [docs]
+    needs: [docs, test]
     steps:
       # - name: Download Artifact
       #   uses: actions/download-artifact@v3
@@ -97,6 +104,11 @@ jobs:
         with:
           name: doc-files
           path: build
+      - name: Download Coverage Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage
+          path: build/coverage
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: build

@@ -60,14 +60,36 @@ export default function TopLayout(props) {
                 marginTop: theme.spacing(2),
               },
             },
+            '.anchor': {
+              fill: theme.palette.text.primary,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              svg: {
+                transition: 'opacity .5s',
+                opacity: 0,
+              },
+            },
+            '.anchor.before': {
+              top: '35%',
+              paddingRight: theme.spacing(2),
+            },
+
             '.markdown-body': {
               '>': {
-                'h1, h2, h3, h4, h6, hr, p': {
+                'h1, h2, h3, h4, h5, h6, hr, p': {
                   margin: theme.spacing(3),
                   'img[alt="plat"]': {
                     width: '100%',
                     background: theme.palette.text.secondary,
                     padding: theme.spacing(3),
+                  },
+                },
+                'h1, h2, h3, h4, h5, h6': {
+                  '&:hover, &:focus': {
+                    '.anchor svg': {
+                      opacity: 1,
+                    },
                   },
                 },
               },

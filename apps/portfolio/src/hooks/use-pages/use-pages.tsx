@@ -4,6 +4,7 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import { PredefinedBackgrounds } from '@portfolio/ui';
+import React from 'react';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface UsePage {
   name: string;

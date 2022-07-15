@@ -7,4 +7,11 @@ describe('GenerateCircuitBoardBackground', () => {
     const { baseElement } = render(<GenerateCircuitBoardBackground />);
     expect(baseElement).toBeTruthy();
   });
+
+  it('should render successfully with width and height', () => {
+    const { baseElement } = render(
+      <GenerateCircuitBoardBackground width={500} height={600} />
+    );
+    expect(baseElement).toBeTruthy();
+  });
 });

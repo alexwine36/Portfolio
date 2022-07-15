@@ -27,7 +27,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/markdown-to-pdf.tsx:29](https://github.com/alexwine36/Portfolio/blob/0257d1c/libs/markdown-to-pdf/src/lib/markdown-to-pdf.tsx#L29)
+[lib/markdown-to-pdf.tsx:29](https://github.com/alexwine36/Portfolio/blob/4d2674b/libs/markdown-to-pdf/src/lib/markdown-to-pdf.tsx#L29)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[utilities/parse-mdast/index.tsx:13](https://github.com/alexwine36/Portfolio/blob/0257d1c/libs/markdown-to-pdf/src/utilities/parse-mdast/index.tsx#L13)
+[utilities/parse-mdast/index.tsx:13](https://github.com/alexwine36/Portfolio/blob/4d2674b/libs/markdown-to-pdf/src/utilities/parse-mdast/index.tsx#L13)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `Content`[] |
+| `data` | `Root` |
 | `doc` | `Text` |
 
 #### Returns
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[utilities/parse-mdast/index.tsx:106](https://github.com/alexwine36/Portfolio/blob/0257d1c/libs/markdown-to-pdf/src/utilities/parse-mdast/index.tsx#L106)
+[utilities/parse-mdast/index.tsx:106](https://github.com/alexwine36/Portfolio/blob/4d2674b/libs/markdown-to-pdf/src/utilities/parse-mdast/index.tsx#L106)
 
 ___
 
@@ -88,4 +88,4 @@ ___
 
 #### Defined in
 
-[lib/markdown-to-pdf.tsx:156](https://github.com/alexwine36/Portfolio/blob/0257d1c/libs/markdown-to-pdf/src/lib/markdown-to-pdf.tsx#L156)
+[lib/markdown-to-pdf.tsx:165](https://github.com/alexwine36/Portfolio/blob/4d2674b/libs/markdown-to-pdf/src/lib/markdown-to-pdf.tsx#L165)

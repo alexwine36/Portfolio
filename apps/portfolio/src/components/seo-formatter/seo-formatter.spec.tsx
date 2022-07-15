@@ -1,10 +1,12 @@
 import { render } from '@testing-library/react';
 import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import SeoFormatter from './seo-formatter';
 
-const data = {
+const data: Queries.ProjectPageQuery['mdx'] = {
   excerpt:
     'The Problem I was  Strongly  advised to find a new method to access the database and, we were already using the API for reports and…',
+  slug: 'sample',
   frontmatter: {
     tags: ['MySQL'],
     title: 'MarkSystems GraphQL v2',
@@ -84,6 +86,7 @@ const data = {
       },
     },
   },
+
   tableOfContents: {
     items: [
       {
@@ -100,9 +103,13 @@ const data = {
   body: 'var _excluded = ["components"];\n\nfunction _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n/* @jsxRuntime classic */\n\n/* @jsx mdx */\nvar _frontmatter = {\n  "title": "MarkSystems GraphQL v2",\n  "date": "2020-01-17T00:00:00.000Z",\n  "published": false,\n  "hero": "sunder-muthukumaran-n7eJHQwefeI-unsplash.jpg",\n  "tags": ["MySQL"]\n};\nvar layoutProps = {\n  _frontmatter: _frontmatter\n};\nvar MDXLayout = "wrapper";\nreturn function MDXContent(_ref) {\n  var components = _ref.components,\n      props = _objectWithoutProperties(_ref, _excluded);\n\n  return mdx(MDXLayout, _extends({}, layoutProps, props, {\n    components: components,\n    mdxType: "MDXLayout"\n  }), mdx("h1", {\n    "id": "the-problem"\n  }, "The Problem"), mdx("p", null, "I was ", mdx("strong", {\n    parentName: "p"\n  }, "Strongly"), " advised to find a new method to access the database and, we were already using the API for reports and applications."), mdx("h1", {\n    "id": "the-solution"\n  }, "The Solution"), mdx("p", null, "The application was initially written using @prisma/photon - 2.0.0-preview019. I had finally gotten access to a replicated MySQL database thanks to the incredibly helpful people at ECI, the company that owns MarkSystems. "), mdx("p", null, "The trouble now was that prisma2 was not terribly reliable yet. Nexus, the plugin to generate a GraphQL schema from a Prisma model, was also not too reliable. The solution I found was to write several scripts to bridge the gaps between the two and, find a new method of hosting. "), mdx("p", null, "I love Kubernetes but, I had read about Serverless which seemed like a better choice for this particular program using Next.js. The ability to have automated review environments through Vercel, at the time ZEIT, was also appealing.\\nThe speed boost this gave previous applications was incredible and continued to get better through development iterations. However this was only one of the prisma endpoints we had and needed a better method to connect."), mdx(NextPostComponent, {\n    slug: "federated-graphql-api/",\n    mdxType: "NextPostComponent"\n  }));\n}\n;\nMDXContent.isMDXComponent = true;',
 };
 
-describe.skip('SeoFormatter', () => {
+describe('SeoFormatter', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<SeoFormatter mdx={data} />);
+    const { baseElement } = render(
+      <HelmetProvider>
+        <SeoFormatter mdx={data} />
+      </HelmetProvider>
+    );
     expect(baseElement).toBeTruthy();
   });
 });

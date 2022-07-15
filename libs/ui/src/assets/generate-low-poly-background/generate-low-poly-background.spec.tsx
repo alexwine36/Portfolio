@@ -7,4 +7,11 @@ describe('GenerateLowPolyBackground', () => {
     const { baseElement } = render(<GenerateLowPolyBackground />);
     expect(baseElement).toBeTruthy();
   });
+
+  it('should render successfully with props', () => {
+    const { baseElement } = render(
+      <GenerateLowPolyBackground width={400} height={700} />
+    );
+    expect(baseElement).toBeTruthy();
+  });
 });

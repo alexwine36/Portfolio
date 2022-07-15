@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from '@emotion/styled';
 import { HeroDisplay as BaseHeroDisplay } from '@portfolio/ui';
 /* eslint-disable-next-line */

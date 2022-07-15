@@ -2,13 +2,13 @@ import { styled } from '@mui/material';
 import { graphql, PageProps } from 'gatsby';
 
 import { ChipListDisplay, MasonryGridComponent } from '@portfolio/ui';
-import { ProjectsPageQuery } from '../../../graphql-types';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import ProjectCard from '../../components/project-card';
 import { usePage } from '../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../utilities/generate-tag-link';
 /* eslint-disable-next-line */
-export interface ProjectsPageProps extends PageProps<ProjectsPageQuery> {}
+export interface ProjectsPageProps
+  extends PageProps<Queries.ProjectsPageQuery> {}
 
 const StyledProjectsPage = styled('div')`
   // color: pink;

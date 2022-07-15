@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "resolveJsonModule": true,
     "paths": {
+      "@portfolio/generate-badges": ["libs/generate-badges/src/index.ts"],
       "@portfolio/hex-rgb": ["libs/hex-rgb/src/index.ts"],
       "@portfolio/markdown-to-pdf": ["libs/markdown-to-pdf/src/index.ts"],
       "@portfolio/resume-hooks": ["libs/resume-hooks/src/index.ts"],

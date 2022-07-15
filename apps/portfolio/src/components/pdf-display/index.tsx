@@ -3,7 +3,6 @@ import { Link } from '@mui/material';
 import { renderPDF } from '@portfolio/markdown-to-pdf';
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect } from 'react';
-import { ResumeQueryQuery } from '../../../graphql-types';
 import { parseResumeData } from '../../utilities/pdf-constants';
 
 /* eslint-disable-next-line */
@@ -18,12 +17,13 @@ const StyledPDFDisplay = styled.div`
 const StyledPDF = styled.object`
   // color: pink;
   width: 60vw;
+  max-width: 100%;
   height: 100vh;
 `;
 
 export function PDFDisplay(props: PDFDisplayProps) {
-  const data = useStaticQuery<ResumeQueryQuery>(graphql`
-    query ResumeQuery {
+  const data = useStaticQuery<Queries.ResumeDataQuery>(graphql`
+    query ResumeData {
       work: allMdx(
         filter: { fields: { source: { eq: "work" } } }
         sort: { order: DESC, fields: frontmatter___endDate }
