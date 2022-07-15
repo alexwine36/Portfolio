@@ -2,6 +2,7 @@
 company: Abrazo Homes
 position: Business Intelligence Analyst
 startDate: 2018-08-01
+endDate: 2022-07-14
 ---
 
 - Developed an end-to-end analytics solution using Python and business intelligence tools, quantifiably improving the efficiency and productivity of the team.
@@ -12,7 +13,7 @@ startDate: 2018-08-01
 
 - Automated the process of delivering new services to users using CI/CD tools.
 
-- Developed automated service for sending customer surveys using Pulumi and Node under a Yarn monorepo - [link](/projects/customer-surveys/).
+- Developed automated service for sending [customer surveys](/projects/customer-surveys/) using Pulumi and Node under a Yarn monorepo.
 
 <!-- - Increased house closings by at least 10% every year through automation and reporting. -->
 
