@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="535" lines-covered="443" line-rate="0.828" branches-valid="186" branches-covered="121" branch-rate="0.6505" timestamp="1657852590130" complexity="0" version="0.1">
+<coverage lines-valid="535" lines-covered="448" line-rate="0.8373" branches-valid="186" branches-covered="127" branch-rate="0.6827" timestamp="1657992075486" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/Portfolio/Portfolio</source>
   </sources>
@@ -886,14 +886,14 @@
                 <line number="16" hits="0"/>
               </lines>
             </method>
-            <method name="(anonymous_1)" hits="28" signature="()V">
+            <method name="(anonymous_1)" hits="25" signature="()V">
               <lines>
-                <line number="21" hits="28"/>
+                <line number="21" hits="25"/>
               </lines>
             </method>
-            <method name="(anonymous_2)" hits="11" signature="()V">
+            <method name="(anonymous_2)" hits="10" signature="()V">
               <lines>
-                <line number="35" hits="11"/>
+                <line number="35" hits="10"/>
               </lines>
             </method>
             <method name="(anonymous_3)" hits="1" signature="()V">
@@ -916,14 +916,14 @@
                 <line number="84" hits="6"/>
               </lines>
             </method>
-            <method name="(anonymous_7)" hits="10" signature="()V">
+            <method name="(anonymous_7)" hits="8" signature="()V">
               <lines>
-                <line number="132" hits="10"/>
+                <line number="132" hits="8"/>
               </lines>
             </method>
-            <method name="(anonymous_8)" hits="5" signature="()V">
+            <method name="(anonymous_8)" hits="4" signature="()V">
               <lines>
-                <line number="151" hits="5"/>
+                <line number="151" hits="4"/>
               </lines>
             </method>
             <method name="(anonymous_9)" hits="6" signature="()V">
@@ -946,18 +946,18 @@
             <line number="15" hits="11" branch="false"/>
             <line number="16" hits="0" branch="false"/>
             <line number="21" hits="11" branch="false"/>
-            <line number="26" hits="28" branch="true" condition-coverage="100% (2/2)"/>
-            <line number="27" hits="22" branch="false"/>
-            <line number="29" hits="28" branch="false"/>
-            <line number="30" hits="28" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="26" hits="25" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="27" hits="20" branch="false"/>
+            <line number="29" hits="25" branch="false"/>
+            <line number="30" hits="25" branch="true" condition-coverage="100% (2/2)"/>
             <line number="31" hits="12" branch="false"/>
-            <line number="33" hits="16" branch="false"/>
+            <line number="33" hits="13" branch="false"/>
             <line number="35" hits="11" branch="false"/>
-            <line number="36" hits="11" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="36" hits="10" branch="true" condition-coverage="100% (2/2)"/>
             <line number="37" hits="6" branch="false"/>
-            <line number="39" hits="11" branch="false"/>
-            <line number="40" hits="11" branch="false"/>
-            <line number="41" hits="11" branch="false"/>
+            <line number="39" hits="10" branch="false"/>
+            <line number="40" hits="10" branch="false"/>
+            <line number="41" hits="10" branch="false"/>
             <line number="44" hits="11" branch="false"/>
             <line number="47" hits="1" branch="false"/>
             <line number="48" hits="1" branch="false"/>
@@ -982,10 +982,10 @@
             <line number="103" hits="6" branch="false"/>
             <line number="105" hits="6" branch="false"/>
             <line number="132" hits="1" branch="false"/>
-            <line number="133" hits="10" branch="false"/>
+            <line number="133" hits="8" branch="false"/>
             <line number="138" hits="1" branch="false"/>
-            <line number="152" hits="5" branch="false"/>
-            <line number="156" hits="5" branch="false"/>
+            <line number="152" hits="4" branch="false"/>
+            <line number="156" hits="4" branch="false"/>
             <line number="172" hits="6" branch="false"/>
             <line number="173" hits="6" branch="false"/>
             <line number="174" hits="6" branch="false"/>
@@ -1201,23 +1201,23 @@
         </class>
       </classes>
     </package>
-    <package name="libs.ui.src.components.detail-list-display" line-rate="0.5" branch-rate="0.1666">
+    <package name="libs.ui.src.components.detail-list-display" line-rate="1" branch-rate="1">
       <classes>
-        <class name="detail-list-display.tsx" filename="libs/ui/src/components/detail-list-display/detail-list-display.tsx" line-rate="0.5" branch-rate="0.1666">
+        <class name="detail-list-display.tsx" filename="libs/ui/src/components/detail-list-display/detail-list-display.tsx" line-rate="1" branch-rate="1">
           <methods>
-            <method name="(anonymous_0)" hits="0" signature="()V">
+            <method name="(anonymous_0)" hits="2" signature="()V">
               <lines>
-                <line number="17" hits="0"/>
+                <line number="17" hits="2"/>
               </lines>
             </method>
-            <method name="DetailListDisplay" hits="1" signature="()V">
+            <method name="DetailListDisplay" hits="4" signature="()V">
               <lines>
-                <line number="32" hits="1"/>
+                <line number="32" hits="4"/>
               </lines>
             </method>
-            <method name="(anonymous_2)" hits="0" signature="()V">
+            <method name="(anonymous_2)" hits="5" signature="()V">
               <lines>
-                <line number="51" hits="0"/>
+                <line number="51" hits="5"/>
               </lines>
             </method>
           </methods>
@@ -1225,13 +1225,13 @@
             <line number="11" hits="10" branch="false"/>
             <line number="17" hits="10" branch="false"/>
             <line number="21" hits="10" branch="false"/>
-            <line number="33" hits="1" branch="false"/>
-            <line number="34" hits="1" branch="false"/>
-            <line number="52" hits="0" branch="true" condition-coverage="0% (0/2)"/>
-            <line number="53" hits="0" branch="true" condition-coverage="0% (0/2)"/>
-            <line number="54" hits="0" branch="false"/>
-            <line number="60" hits="0" branch="false"/>
-            <line number="66" hits="0" branch="false"/>
+            <line number="33" hits="4" branch="false"/>
+            <line number="34" hits="4" branch="false"/>
+            <line number="52" hits="5" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="53" hits="4" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="54" hits="2" branch="false"/>
+            <line number="60" hits="2" branch="false"/>
+            <line number="66" hits="1" branch="false"/>
           </lines>
         </class>
       </classes>
@@ -1490,13 +1490,13 @@
         </class>
       </classes>
     </package>
-    <package name="libs.ui.src.components.parallax-background" line-rate="0.44439999999999996" branch-rate="0.36840000000000006">
+    <package name="libs.ui.src.components.parallax-background" line-rate="0.44439999999999996" branch-rate="0.42100000000000004">
       <classes>
-        <class name="parallax-background.tsx" filename="libs/ui/src/components/parallax-background/parallax-background.tsx" line-rate="0.44439999999999996" branch-rate="0.36840000000000006">
+        <class name="parallax-background.tsx" filename="libs/ui/src/components/parallax-background/parallax-background.tsx" line-rate="0.44439999999999996" branch-rate="0.42100000000000004">
           <methods>
-            <method name="(anonymous_0)" hits="5" signature="()V">
+            <method name="(anonymous_0)" hits="12" signature="()V">
               <lines>
-                <line number="31" hits="5"/>
+                <line number="31" hits="12"/>
               </lines>
             </method>
             <method name="(anonymous_1)" hits="0" signature="()V">
@@ -1509,21 +1509,21 @@
                 <line number="57" hits="0"/>
               </lines>
             </method>
-            <method name="ParallaxBackground" hits="5" signature="()V">
+            <method name="ParallaxBackground" hits="12" signature="()V">
               <lines>
-                <line number="94" hits="5"/>
+                <line number="94" hits="12"/>
               </lines>
             </method>
-            <method name="(anonymous_4)" hits="5" signature="()V">
+            <method name="(anonymous_4)" hits="12" signature="()V">
               <lines>
-                <line number="100" hits="5"/>
+                <line number="100" hits="12"/>
               </lines>
             </method>
           </methods>
           <lines>
             <line number="28" hits="10" branch="false"/>
             <line number="30" hits="10" branch="false"/>
-            <line number="31" hits="5" branch="false"/>
+            <line number="31" hits="12" branch="false"/>
             <line number="45" hits="10" branch="false"/>
             <line number="46" hits="0" branch="false"/>
             <line number="57" hits="10" branch="false"/>
@@ -1536,9 +1536,9 @@
             <line number="81" hits="0" branch="false"/>
             <line number="83" hits="0" branch="false"/>
             <line number="85" hits="0" branch="false"/>
-            <line number="95" hits="5" branch="false"/>
-            <line number="97" hits="5" branch="false"/>
-            <line number="103" hits="5" branch="false"/>
+            <line number="95" hits="12" branch="false"/>
+            <line number="97" hits="12" branch="false"/>
+            <line number="103" hits="12" branch="false"/>
           </lines>
         </class>
       </classes>
