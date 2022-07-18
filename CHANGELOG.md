@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/alexwine36/Portfolio/compare/v3.0.1...v3.0.2) (2022-07-18)
+
+
+### Bug Fixes
+
+* **mermaid:** updated mermaid sequence diagram styling ([8b45eda](https://github.com/alexwine36/Portfolio/commit/8b45eda2935dc4ff9bb4dccad22472f5ebad0651))
+
 ## [3.0.1](https://github.com/alexwine36/Portfolio/compare/v3.0.0...v3.0.1) (2022-07-18)
 
 
