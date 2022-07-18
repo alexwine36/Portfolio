@@ -82,9 +82,6 @@ const parseListItem = (data: ListItem, line: pdf.Text, indent = 0) => {
     if (children.type === 'paragraph') {
       children.children.forEach((child, idx) => {
         if (idx === 0) {
-          if (indent) {
-            console.log('Indent', indent);
-          }
           line.br().add(`${[...Array(indent)].map(() => '  ').join()}-`);
         }
         if (child.type === 'text') {

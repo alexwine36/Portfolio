@@ -44,20 +44,20 @@ If bills are stored digitally multiple issues can be addressed:
 sequenceDiagram
 autonumber
 
-  participant Utilities
+  participant Utility Providers
   actor Accounting
   participant App
 
   Accounting ->> App : Scans Bills
   App ->> Accounting : Processes and returns aggregates
-  Accounting ->> Utilities : Pays balances
+  Accounting ->> Utility Providers : Pays balances
   Accounting ->> App : Marks as paid
   App ->> Accounting : Returns bill data for Accounting software upload
 
 ```
 
 
-## Processing Flow
+## Backend Flow
 
 ```mermaid
 %%{init: {'theme': 'dark'} }%%
@@ -85,6 +85,35 @@ Textract -->|Notify Complete| End
 
 
 ```
+
+## Frontend Flow
+
+```mermaid
+%%{init: {'theme': 'dark'} }%%
+sequenceDiagram
+autonumber
+  
+  actor Accounting
+  participant App
+  participant Cloud Data
+  participant House Data
+
+  Accounting ->> App : Views Bills
+  Cloud Data ->> App : Returns New Bills
+  App ->> House Data : Gets Houses
+  House Data ->> App : Returns House Info
+
+  Accounting ->> App : Approves
+  App ->> Cloud Data : Maps data to records
+  Accounting ->> App : Marks as paid
+  App ->> Cloud Data : Saves bill state
+
+  App ->> Accounting : Returns record for upload
+
+```
+
+
+
 
   - Scanned and emailed to account on AWS
   - Stored in AWS Bucket

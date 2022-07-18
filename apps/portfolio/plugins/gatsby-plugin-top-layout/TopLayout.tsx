@@ -47,6 +47,13 @@ export default function TopLayout(props) {
             '.mermaid': {
               display: 'flex',
               justifyContent: 'center',
+              'text.actor': {
+                tspan: {
+                  fontFamily: theme.typography.body1.fontFamily,
+                  fontWeight: theme.typography.body1.fontWeight,
+                  fontSize: theme.typography.body1.fontSize,
+                },
+              },
             },
             '.attributeBoxEven': {
               fill: '#1f2020 !important',
@@ -60,6 +67,10 @@ export default function TopLayout(props) {
                 marginTop: theme.spacing(2),
               },
             },
+            // #root-4 > text > tspan
+            // '.mermaid > text.actor > tspan': {
+            //   fontFamily: theme.typography.body1,
+            // },
             '.anchor': {
               fill: theme.palette.text.primary,
               display: 'flex',

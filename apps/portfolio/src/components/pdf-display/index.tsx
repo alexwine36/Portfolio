@@ -85,7 +85,7 @@ export function PDFDisplay(props: PDFDisplayProps) {
   useEffect(() => {
     if (doc && preview) {
       renderPDF(doc).then((url) => {
-        if (preview) {
+        if (preview && preview.current) {
           preview.current.data = url;
         }
       });
