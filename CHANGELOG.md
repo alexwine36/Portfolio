@@ -1,3 +1,25 @@
+## [3.0.1](https://github.com/alexwine36/Portfolio/compare/v3.0.0...v3.0.1) (2022-07-18)
+
+
+### Bug Fixes
+
+* **markdown-to-pdf:** nested list issue fixed ([6aa1051](https://github.com/alexwine36/Portfolio/commit/6aa1051983d031bf431bdee96449d820cf36808f))
+
+
+### Tests
+
+* **gatsby:** updated testing for project page ([ccf0fd5](https://github.com/alexwine36/Portfolio/commit/ccf0fd5d57dd34cd9a1e7aeb1e807303478dc41a))
+* **ui:** updated tests for components ([633f8a6](https://github.com/alexwine36/Portfolio/commit/633f8a6f733e59250c0a7e36e9448e497a1b8156))
+
+
+### Docs
+
+* **receipt manager:** updated information ([6978d7d](https://github.com/alexwine36/Portfolio/commit/6978d7d97f556a4bb4608e036f85b64c15582f5d))
+* **update Pages:** about/index ([34fb3fb](https://github.com/alexwine36/Portfolio/commit/34fb3fbd510f90e37894cff4aa8bf76f5e43d12b))
+* **update Work Experience:** abrazo/index ([65567a7](https://github.com/alexwine36/Portfolio/commit/65567a7dffd7fd2b8ae3ecb0da7419da0325af08))
+* **update Work Experience:** abrazo/index ([481f02f](https://github.com/alexwine36/Portfolio/commit/481f02fcee418fa8c45d9a8e41e11408e2eb2b95))
+* **update:** updated formatting and information for content ([c48200b](https://github.com/alexwine36/Portfolio/commit/c48200bd9b5b219b78d84b40127c3334cddb535d))
+
 ## [3.0.0](https://github.com/alexwine36/Portfolio/compare/v2.6.0...v3.0.0) (2022-07-15)
 
 
