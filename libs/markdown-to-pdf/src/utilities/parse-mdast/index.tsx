@@ -71,13 +71,21 @@ const formatURL = (url: string) => {
   return url;
 };
 
-const parseListItem = (data: ListItem, line: pdf.Text) => {
+const parseListItem = (data: ListItem, line: pdf.Text, indent = 0) => {
   return data.children.map((children, idx) => {
     // const line = doc.text();
+    if (children.type === 'list') {
+      children.children.forEach((listItem) => {
+        parseListItem(listItem, line, indent + 1);
+      });
+    }
     if (children.type === 'paragraph') {
       children.children.forEach((child, idx) => {
         if (idx === 0) {
-          line.br().add('-');
+          if (indent) {
+            console.log('Indent', indent);
+          }
+          line.br().add(`${[...Array(indent)].map(() => '  ').join()}-`);
         }
         if (child.type === 'text') {
           if (child.value === '.') {
