@@ -21,6 +21,6 @@ endDate: 2022-07-14
 
 - Managed department spending per annum through strategic procurement of equipment and services.
 
-- Created [Tableau Extensions](/projects/tableau-extensions/)) to facilitate custom data analysis.
+- Created [Tableau Extensions](/projects/tableau-extensions/) to facilitate custom data analysis.
 
 - Built GraphQL endpoints for combining data sources in web apps, this allowed for type safe API access with more efficient querying.

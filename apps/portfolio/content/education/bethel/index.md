@@ -12,7 +12,7 @@ endDate: 2012-01-01
 - Portrayed Charley in Charley's Aunt (2011) 
 - Ran the sound for SIC (2012)
 - Participated in an improv club 
-- Researched reasoning behind stalking behavior in an effort to keep college students safe
+<!-- - Researched reasoning behind stalking behavior in an effort to keep college students safe -->
 - Created an Audio Recording Program for the use of the students at the college. 
   - Got the program up and running within six months 
   - There recording program available for every student to use
