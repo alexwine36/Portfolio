@@ -1,5 +1,6 @@
 import { styled } from '@mui/material';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 /* eslint-disable-next-line */
 export interface VRViewerProps {}
@@ -45,6 +46,14 @@ export function VRViewer(props: VRViewerProps) {
   });
   return (
     <StyledVRContainer>
+      <Helmet>
+        <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"
+        />
+      </Helmet>
       <StyledVRViewer id="panorama"></StyledVRViewer>
     </StyledVRContainer>
   );
