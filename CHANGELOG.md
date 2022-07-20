@@ -1,3 +1,10 @@
+## [3.0.6](https://github.com/alexwine36/Portfolio/compare/v3.0.5...v3.0.6) (2022-07-20)
+
+
+### Performance Improvements
+
+* **gatsby:** added pages for precache ([3790904](https://github.com/alexwine36/Portfolio/commit/37909042cd463021b18e9b408e652e52c23c92ae))
+
 ## [3.0.5](https://github.com/alexwine36/Portfolio/compare/v3.0.4...v3.0.5) (2022-07-20)
 
 
