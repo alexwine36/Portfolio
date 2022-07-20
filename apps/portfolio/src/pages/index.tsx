@@ -32,7 +32,6 @@ export function Index(props: HomePageProps) {
   return (
     <PageBackground>
       <HeroBannerImplementation />
-      {/* TODO: Add indicator for next section */}
       <StyledApp>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </StyledApp>
