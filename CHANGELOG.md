@@ -1,3 +1,10 @@
+## [3.0.5](https://github.com/alexwine36/Portfolio/compare/v3.0.4...v3.0.5) (2022-07-20)
+
+
+### Performance Improvements
+
+* **gatsby:** removed blocking font load ([de8e66c](https://github.com/alexwine36/Portfolio/commit/de8e66c3d790bb3399ed346f5132b212c4d50fca))
+
 ## [3.0.4](https://github.com/alexwine36/Portfolio/compare/v3.0.3...v3.0.4) (2022-07-20)
 
 
