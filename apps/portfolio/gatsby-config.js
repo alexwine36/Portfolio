@@ -2,8 +2,8 @@ module.exports = {
   graphqlTypegen: true,
   pathPrefix: '/Portfolio',
   siteMetadata: {
-    title: `portfolio`,
-    description: `This is a gatsby application created by Nx.`,
+    title: `Portfolio`,
+    description: `Portfolio for developer and nerd, Alex Wine. `,
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -119,7 +119,7 @@ module.exports = {
 
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-autolink-headers"
+            resolve: 'gatsby-remark-autolink-headers',
           },
           {
             resolve: `gatsby-remark-images`,
@@ -128,7 +128,8 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-graph',
+            resolve: require.resolve('./plugins/gatsby-remark-grapher'),
+            // 'gatsby-remark-grapher',
             options: {
               language: 'mermaid',
               theme: 'dark',

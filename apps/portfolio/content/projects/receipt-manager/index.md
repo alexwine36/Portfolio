@@ -40,7 +40,7 @@ If bills are stored digitally multiple issues can be addressed:
 
 
 ```mermaid
-%%{init: {'theme': 'dark'} }%%
+
 sequenceDiagram
 autonumber
 
@@ -60,7 +60,7 @@ autonumber
 ## Backend Flow
 
 ```mermaid
-%%{init: {'theme': 'dark'} }%%
+
 flowchart
 
 database[(Postgres)]
@@ -89,7 +89,7 @@ Textract -->|Notify Complete| End
 ## Frontend Flow
 
 ```mermaid
-%%{init: {'theme': 'dark'} }%%
+
 sequenceDiagram
 autonumber
   
