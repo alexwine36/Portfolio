@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
 
-import loadable from '@loadable/component';
+import React, { Suspense } from 'react';
 import NavigationLayout from '../navigation-layout/navigation-layout';
-const FooterComponent = loadable(
+
+const FooterComponent = React.lazy(
   () => import('../../components/footer-component')
 );
 
@@ -21,7 +22,9 @@ export function PageLayout(props: PageLayoutProps) {
     <StyledPageLayout>
       <NavigationLayout />
       {children}
-      <FooterComponent />
+      <Suspense>
+        <FooterComponent />
+      </Suspense>
     </StyledPageLayout>
   );
 }

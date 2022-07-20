@@ -1,4 +1,3 @@
-import loadable from '@loadable/component';
 import {
   Button,
   Card,
@@ -13,8 +12,7 @@ import { ChipListDisplay } from '@portfolio/ui';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import pluralize from 'pluralize';
 import { getDescription } from '../../utilities/get-description';
-
-const AniLink = loadable(() => import('gatsby-plugin-transition-link/AniLink'));
+import AnimationLink from '../animation-link';
 
 type ProjectPreview = Queries.ProjectsPageQuery['allMdx']['nodes'][0];
 
@@ -40,9 +38,10 @@ export function ProjectCard(props: ProjectCardProps) {
   const link = `/projects/${slug}`;
   return (
     <CardActionArea
-      component={AniLink}
-      cover
-      direction="up"
+      component={AnimationLink}
+      // swipe
+      // direction="up"
+      fade
       bg={theme.palette.background.default}
       to={link}
     >
@@ -76,9 +75,9 @@ export function ProjectCard(props: ProjectCardProps) {
         </CardContent>
         <CardActions>
           <Button
-            component={AniLink}
-            cover
-            direction="up"
+            component={AnimationLink}
+            swipe
+            top="exit"
             bg={theme.palette.background.default}
             to={link}
           >

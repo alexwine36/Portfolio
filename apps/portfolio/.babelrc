@@ -8,7 +8,7 @@
       }
     ]
   ],
-  "plugins": []
+  "plugins": ["@babel/plugin-syntax-dynamic-import"]
 }
 
 // // .babelrc.js >> babel.config.js
