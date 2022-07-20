@@ -1,4 +1,4 @@
-![Code Coverage](https://img.shields.io/badge/Code%20Coverage-84%25-success?style=flat)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-83%25-success?style=flat)
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
@@ -6,7 +6,7 @@ apps.portfolio.src.components.display.section-data-display | 100% | 100% | 0 | �
 apps.portfolio.src.components.display.skill-header-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.hero-banner-implementation | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.hero-display | 100% | 100% | 0 | ✔
-apps.portfolio.src.components.mdx.vr-viewer | 75% | 50% | 0 | ✔
+apps.portfolio.src.components.mdx.vr-viewer | 58% | 50% | 0 | ➖
 apps.portfolio.src.components.next-post-component | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.pages.tags | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.parallax-section-display | 100% | 100% | 0 | ✔
@@ -59,4 +59,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **84%** (448 / 535) | **68%** (127 / 186) | **0** | ✔
+**Summary** | **83%** (449 / 539) | **68%** (127 / 186) | **0** | ✔
