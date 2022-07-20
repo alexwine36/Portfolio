@@ -1,3 +1,11 @@
+## [3.0.4](https://github.com/alexwine36/Portfolio/compare/v3.0.3...v3.0.4) (2022-07-20)
+
+
+### Performance Improvements
+
+* **gatsby:** added offline support ([419bc02](https://github.com/alexwine36/Portfolio/commit/419bc0255065708788ed39d9ee2b98082b0c464f))
+* **gatsby:** updated script loading for panellum and mermaid ([b1d04a1](https://github.com/alexwine36/Portfolio/commit/b1d04a184822baaf28a31eb75f74aa8738caf9bc))
+
 ## [3.0.3](https://github.com/alexwine36/Portfolio/compare/v3.0.2...v3.0.3) (2022-07-20)
 
 
