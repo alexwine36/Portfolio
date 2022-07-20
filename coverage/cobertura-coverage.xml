@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="535" lines-covered="448" line-rate="0.8373" branches-valid="186" branches-covered="127" branch-rate="0.6827" timestamp="1658329448271" complexity="0" version="0.1">
+<coverage lines-valid="539" lines-covered="449" line-rate="0.833" branches-valid="186" branches-covered="127" branch-rate="0.6827" timestamp="1658336647849" complexity="0" version="0.1">
   <sources>
     <source>/home/runner/work/Portfolio/Portfolio</source>
   </sources>
@@ -90,35 +90,49 @@
         </class>
       </classes>
     </package>
-    <package name="apps.portfolio.src.components.mdx.vr-viewer" line-rate="0.75" branch-rate="0.5">
+    <package name="apps.portfolio.src.components.mdx.vr-viewer" line-rate="0.5832999999999999" branch-rate="0.5">
       <classes>
-        <class name="index.tsx" filename="apps/portfolio/src/components/mdx/vr-viewer/index.tsx" line-rate="0.75" branch-rate="0.5">
+        <class name="index.tsx" filename="apps/portfolio/src/components/mdx/vr-viewer/index.tsx" line-rate="0.5832999999999999" branch-rate="0.5">
           <methods>
             <method name="(anonymous_0)" hits="1" signature="()V">
               <lines>
-                <line number="16" hits="1"/>
+                <line number="17" hits="1"/>
               </lines>
             </method>
             <method name="VRViewer" hits="1" signature="()V">
               <lines>
-                <line number="22" hits="1"/>
+                <line number="23" hits="1"/>
               </lines>
             </method>
             <method name="(anonymous_2)" hits="1" signature="()V">
               <lines>
-                <line number="23" hits="1"/>
+                <line number="24" hits="1"/>
+              </lines>
+            </method>
+            <method name="(anonymous_3)" hits="0" signature="()V">
+              <lines>
+                <line number="30" hits="0"/>
+              </lines>
+            </method>
+            <method name="(anonymous_4)" hits="0" signature="()V">
+              <lines>
+                <line number="56" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="8" hits="1" branch="false"/>
-            <line number="15" hits="1" branch="false"/>
+            <line number="9" hits="1" branch="false"/>
             <line number="16" hits="1" branch="false"/>
-            <line number="23" hits="1" branch="false"/>
-            <line number="24" hits="1" branch="true" condition-coverage="50% (1/2)"/>
-            <line number="25" hits="0" branch="false"/>
+            <line number="17" hits="1" branch="false"/>
+            <line number="24" hits="1" branch="false"/>
+            <line number="25" hits="1" branch="true" condition-coverage="50% (1/2)"/>
             <line number="26" hits="0" branch="false"/>
-            <line number="47" hits="1" branch="false"/>
+            <line number="30" hits="1" branch="false"/>
+            <line number="31" hits="0" branch="false"/>
+            <line number="32" hits="0" branch="false"/>
+            <line number="52" hits="1" branch="false"/>
+            <line number="57" hits="0" branch="false"/>
+            <line number="58" hits="0" branch="false"/>
           </lines>
         </class>
       </classes>
