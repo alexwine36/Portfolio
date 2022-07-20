@@ -6,8 +6,9 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+// import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import React from 'react';
+import AnimationLink from '../../components/animation-link';
 import { usePages } from '../../hooks/use-pages/use-pages';
 
 /* eslint-disable-next-line */
@@ -57,13 +58,19 @@ export function NavigationLayout(props: NavigationLayoutProps) {
         }}
       >
         {pageArray.map((action, idx) => {
+          const formatLink = (l: string) => {
+            if (!l.endsWith('/')) {
+              return `${l}/`;
+            }
+            return l;
+          };
           return (
             <BottomNavigationAction
-              component={AniLink}
+              component={AnimationLink}
               cover
               direction={idx < value ? 'right' : 'left'}
               bg={theme.palette.background.default}
-              to={action.href}
+              to={formatLink(action.href)}
               activeClassName={'Mui-selected'}
               key={action.href}
               label={action.name}

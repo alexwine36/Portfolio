@@ -1,3 +1,4 @@
+import loadable from '@loadable/component';
 import {
   Box,
   Button,
@@ -20,9 +21,13 @@ import Sticky from 'react-stickynode';
 import { usePage } from '../../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../../utilities/generate-tag-link';
 import ParallaxSectionDisplay from '../../parallax-section-display';
-import ProjectCard from '../../project-card';
+
 import SeoFormatter from '../../seo-formatter/seo-formatter';
 
+const ProjectCard = loadable(() => import('../../project-card'));
+// const { ChipListDisplay, MasonryGridComponent } = loadable.lib(
+//   () => import('@portfolio/ui')
+// );
 /* eslint-disable-next-line */
 export interface ProjectPageProps extends PageProps<Queries.ProjectPageQuery> {}
 

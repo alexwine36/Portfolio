@@ -5,9 +5,12 @@ import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import { usePage } from '../../../hooks/use-pages/use-pages';
 import SkillHeaderDisplay from '../../display/skill-header-display';
 import ParallaxSectionDisplay from '../../parallax-section-display';
-import ProjectCard from '../../project-card';
+// import ProjectCard from '../../project-card';
+import loadable from '@loadable/component';
 /* eslint-disable-next-line */
 export interface TagPageProps extends PageProps<Queries.TagPageQuery> {}
+
+const ProjectCard = loadable(() => import('../../project-card'));
 
 const StyledTagPage = styled('div')`
   // color: pink;

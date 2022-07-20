@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { Box, Rating, Typography, useTheme } from '@mui/material';
 import { DetailCardDisplay, MasonryGridComponent } from '@portfolio/ui';
-import { graphql, Link, PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
+import AnimationLink from '../../components/animation-link';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
 import { usePage } from '../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../utilities/generate-tag-link';
@@ -81,7 +82,10 @@ export function Skills(props: SkillsProps) {
                             color: theme.palette.text.primary,
                           }}
                           {...(tags.includes(skill.skill) && {
-                            component: Link,
+                            component: AnimationLink,
+                            cover: true,
+                            bg: theme.palette.background.default,
+                            direction: 'down',
                             to: generateTagLink(skill.skill),
                           })}
                         >
