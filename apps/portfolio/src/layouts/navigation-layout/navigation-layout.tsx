@@ -6,9 +6,12 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+// import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import loadable from '@loadable/component';
 import React from 'react';
 import { usePages } from '../../hooks/use-pages/use-pages';
+
+const AniLink = loadable(() => import('gatsby-plugin-transition-link/AniLink'));
 
 /* eslint-disable-next-line */
 export interface NavigationLayoutProps {}

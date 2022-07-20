@@ -1,3 +1,4 @@
+import loadable from '@loadable/component';
 import {
   Button,
   Card,
@@ -10,9 +11,10 @@ import {
 } from '@mui/material';
 import { ChipListDisplay } from '@portfolio/ui';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import pluralize from 'pluralize';
 import { getDescription } from '../../utilities/get-description';
+
+const AniLink = loadable(() => import('gatsby-plugin-transition-link/AniLink'));
 
 type ProjectPreview = Queries.ProjectsPageQuery['allMdx']['nodes'][0];
 

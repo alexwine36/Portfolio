@@ -1,6 +1,10 @@
 import styled from '@emotion/styled';
-import { FooterDisplay } from '@portfolio/ui';
+
+import loadable from '@loadable/component';
 import NavigationLayout from '../navigation-layout/navigation-layout';
+const FooterComponent = loadable(
+  () => import('../../components/footer-component')
+);
 
 /* eslint-disable-next-line */
 export interface PageLayoutProps {
@@ -17,40 +21,7 @@ export function PageLayout(props: PageLayoutProps) {
     <StyledPageLayout>
       <NavigationLayout />
       {children}
-      <FooterDisplay
-        links={[
-          {
-            display: 'Resume',
-            link: '/static/resume.pdf',
-          },
-          {
-            display: 'Admin',
-            link: '/admin',
-          },
-          {
-            display: 'Documentation',
-            link: 'https://alexwine36.github.io/Portfolio/docs',
-          },
-        ]}
-        social={[
-          {
-            link: 'https://github.com/alexwine36',
-            provider: 'github',
-          },
-          {
-            link: 'https://gitlab.com/alexwine',
-            provider: 'gitlab',
-          },
-          {
-            link: 'https://www.linkedin.com/in/alexwine/',
-            provider: 'linkedin',
-          },
-          {
-            link: 'https://stackoverflow.com/users/5237963/alex-wine',
-            provider: 'stackoverflow',
-          },
-        ]}
-      ></FooterDisplay>
+      <FooterComponent />
     </StyledPageLayout>
   );
 }
