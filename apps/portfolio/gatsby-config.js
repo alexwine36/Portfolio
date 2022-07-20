@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-top-layout',
+
     {
       resolve: 'gatsby-plugin-svgr',
       options: {
@@ -36,14 +37,15 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Alex Wine | Portfolio`,
-        short_name: `portfolio`,
+        short_name: `Portfolio`,
         start_url: `/`,
         background_color: `#000F08`,
         theme_color: `#000F08`,
         display: `minimal-ui`,
-        icon: `src/images/logo.svg`,
+        icon: `src/images/AW-Portfolio.svg`,
       },
     },
+    { resolve: 'gatsby-plugin-offline' },
     'gatsby-plugin-mui-emotion',
     // `gatsby-transformer-remark`,
     'gatsby-plugin-mdx-source-name',
