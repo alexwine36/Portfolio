@@ -24,6 +24,31 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-omni-font-loader',
+      options: {
+        mode: 'async',
+        preconnect: ['https://fonts.gstatic.com'],
+        web: [
+          {
+            name: 'Material Icons',
+            file: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+          },
+          {
+            name: 'Amiri',
+            file: 'https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700',
+          },
+          {
+            name: 'Libre Franklin',
+            file: 'https://fonts.googleapis.com/css2?family=Libre+Franklin',
+          },
+          {
+            name: 'Open Sans',
+            file: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800',
+          },
+        ],
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     {
@@ -39,7 +64,7 @@ module.exports = {
         name: `Alex Wine | Portfolio`,
         short_name: `Portfolio`,
         start_url: `/`,
-        background_color: `#000F08`,
+        background_color: `#fff`,
         theme_color: `#000F08`,
         display: `minimal-ui`,
         icon: `src/images/AW-Portfolio.svg`,

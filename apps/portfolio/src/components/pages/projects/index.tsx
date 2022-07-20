@@ -83,6 +83,10 @@ export function ProjectPage(props: ProjectPageProps) {
           init();
         }}
       ></Script>
+      <Script
+        strategy="idle"
+        src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js.map"
+      ></Script>
       <SeoFormatter mdx={mdx} />
       <HeroImage>
         <BackgroundImage

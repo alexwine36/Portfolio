@@ -16,16 +16,6 @@ export default function TopLayout(props) {
     <React.Fragment>
       <Helmet>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Franklin&family=Open+Sans:wght@300;400;500;700;800&display=swap"
-          rel="stylesheet"
-        ></link>
-
-        {/* <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" /> */}
       </Helmet>
       <GatsbySeo titleTemplate="Alex Wine | %s" title="Portfolio" />
       <ThemeProvider theme={theme}>
