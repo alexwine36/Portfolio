@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/alexwine36/Portfolio/compare/v3.0.2...v3.0.3) (2022-07-20)
+
+
+### Performance Improvements
+
+* **gatsby:** moved Panellum Head script to VR Display ([3aa36b1](https://github.com/alexwine36/Portfolio/commit/3aa36b1d8bf43ce012c9c1c45e103b49278f5c1c))
+
 ## [3.0.2](https://github.com/alexwine36/Portfolio/compare/v3.0.1...v3.0.2) (2022-07-18)
 
 
