@@ -70,7 +70,19 @@ module.exports = {
         icon: `src/images/AW-Portfolio.svg`,
       },
     },
-    { resolve: 'gatsby-plugin-offline' },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: [
+          '/',
+          '/skills/',
+          '/tags/*',
+          '/projects/*',
+          '/work',
+          '/projects',
+        ],
+      },
+    },
     'gatsby-plugin-mui-emotion',
     // `gatsby-transformer-remark`,
     'gatsby-plugin-mdx-source-name',
