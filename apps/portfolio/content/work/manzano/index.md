@@ -8,7 +8,7 @@ endDate: 2018-02-01
 
 - Developed a web-based program for staff schedules and client sign out sheets, allowing for automation of repetitive tasks. 
 
-- In charge of repairing all mechanical, electrical, and computer issues.
+- Repaired mechanical, electrical, and computer issues.
 
 - Developed a program using Ruby on Rails to schedule all center activities.
 

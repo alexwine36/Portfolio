@@ -23,4 +23,4 @@ endDate: 2022-07-14
 
 - Created [Tableau Extensions](/projects/tableau-extensions/) to facilitate custom data analysis.
 
-- Built GraphQL endpoints for combining data sources in web apps, this allowed for type safe API access with more efficient querying.
+- Built GraphQL endpoints for combining data sources in web apps, allowing for type safe API access with more efficient querying.
