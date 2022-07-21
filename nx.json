@@ -28,7 +28,8 @@
         "babel": true
       },
       "component": {
-        "style": "@emotion/styled"
+        "style": "@emotion/styled",
+        "fileName": "index"
       },
       "library": {
         "style": "@emotion/styled",
