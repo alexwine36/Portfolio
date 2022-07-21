@@ -74,7 +74,50 @@ stateDiagram-v2
 By laying out the deployment process this way I could achieve quick build times and address errors sooner. If a test failed, the path was immediately displayed and could be navigated to quickly. If a build failed Netlify's build log would share detailed logs with where the error arose. 
 
 
+
+
 # Features
+
+```mermaid
+erDiagram
+  CONTENT ||--|{ WORK : MDX
+  CONTENT ||--|{ EDUCATION : MDX
+  CONTENT ||--|{ PROJECTS : MDX
+  CONTENT ||--|{ SKILLS : YAML
+
+  PROJECTS }|--|{ SKILLS : TAGS
+
+  WORK {
+    string company
+    string position
+    date startDate
+    date endDate
+    markdown content
+  }
+  EDUCATION {
+    string school
+    string study
+    date startDate
+    date endDate
+    markdown content
+  }  
+  PROJECTS {
+    string title
+    date date
+    string-array tags
+    image hero
+    bool published
+    markdown content
+  }
+  SKILLS {
+    string skill
+    string-array categories
+    date date
+    int rating
+  }
+
+```
+
 
 ## Automatic Resume Generation
 
