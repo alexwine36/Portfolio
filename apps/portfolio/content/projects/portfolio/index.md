@@ -78,6 +78,14 @@ By laying out the deployment process this way I could achieve quick build times 
 
 # Features
 
+
+## Gatsby Source Nodes
+
+Thanks to Gatsby sourcing content is a breeze. I chose to use MDX so that I can augment markdown with React components for projects such as [360 Panos](/projects/360-panos). This also allowed me to add images and graphs alongside text content.
+
+For skills I used a simple YAML file to read in skills with categories, ratings, and estimated start date.
+
+
 ```mermaid
 erDiagram
   CONTENT ||--|{ WORK : MDX
