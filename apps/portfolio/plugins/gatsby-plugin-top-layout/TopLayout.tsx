@@ -30,6 +30,11 @@ export default function TopLayout(props) {
             '.mermaid': {
               display: 'flex',
               justifyContent: 'center',
+              svg: {
+                height: '100%',
+                paddingTop: theme.spacing(1),
+                paddingBottom: theme.spacing(1),
+              },
               'text.actor': {
                 tspan: {
                   fontFamily: theme.typography.body1.fontFamily,

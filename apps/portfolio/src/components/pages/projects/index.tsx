@@ -235,6 +235,11 @@ export const pageQuery = graphql`
           }
         }
       }
+      parent {
+        ... on File {
+          modifiedTime
+        }
+      }
       tableOfContents
       timeToRead
       body

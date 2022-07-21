@@ -15,8 +15,15 @@ const isBrowser = typeof window !== 'undefined';
 export function SeoFormatter(props: SeoFormatterProps) {
   const { mdx } = props;
 
-  const { frontmatter, slug } = mdx;
+  const { frontmatter, slug, parent } = mdx;
+
   const { title, hero, date } = frontmatter;
+
+  let modifiedTime = date;
+
+  if ('modifiedTime' in parent) {
+    modifiedTime = parent.modifiedTime;
+  }
   const { ogA, ogB, gatsbyImageData } = hero.childImageSharp;
 
   const og_images = [ogA, ogB, gatsbyImageData];
@@ -55,6 +62,7 @@ export function SeoFormatter(props: SeoFormatterProps) {
           generateImageLink(og.images.fallback.src)
         )}
         datePublished={date}
+        dateModified={modifiedTime}
         authorName="Alex Wine"
         description={getDescription(mdx)}
       />
