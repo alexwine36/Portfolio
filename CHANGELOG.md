@@ -1,3 +1,40 @@
+## [3.1.0](https://github.com/alexwine36/Portfolio/compare/v3.0.6...v3.1.0) (2022-07-22)
+
+
+### Features
+
+* **gatsby:** added modified time to Blog Post LD ([52e1b72](https://github.com/alexwine36/Portfolio/commit/52e1b7225598139bac8ea2174ff7c3b925ba4888))
+
+
+### Bug Fixes
+
+* **gatsby:** added missing hero image ([374fa2a](https://github.com/alexwine36/Portfolio/commit/374fa2a96e50b895b21e97e957867378c7059403))
+* **nx:** updated nx dependency ([05e3bfa](https://github.com/alexwine36/Portfolio/commit/05e3bfa87d54288ed19f390ec12ca58641a1274d))
+
+
+### Code Refactoring
+
+* **cleanup:** removed completed todo item ([e4f0c8f](https://github.com/alexwine36/Portfolio/commit/e4f0c8f16d12219b65f760d2fd69cf9f30a26557))
+
+
+### Docs
+
+* **portfolio:** updated portfolio content ([ad42f48](https://github.com/alexwine36/Portfolio/commit/ad42f484803254b2e1df31a4ae6a3ae34e47172a))
+* **tableau extensions:** updated tableau extensions information ([c6316ad](https://github.com/alexwine36/Portfolio/commit/c6316ad4db2c3ed43e96614104f95661c4ebee6c))
+* **update:** portfolio content updated ([1929c84](https://github.com/alexwine36/Portfolio/commit/1929c8415bfdccc317cbfdd28aa35f6e723ae37c))
+* **update:** updated education and work content ([653e9c1](https://github.com/alexwine36/Portfolio/commit/653e9c1fd8ee2eff1cbb8c4f42901319f5b7e732))
+* **update:** updated portfolio docs ([310c704](https://github.com/alexwine36/Portfolio/commit/310c7045f1a349210f2c41cca7e5790a79d7faf1))
+
+
+### Tests
+
+* **gatsby:** fixed failing SEO test ([97a9810](https://github.com/alexwine36/Portfolio/commit/97a98107d3ed79439bb30934ef055f902e7492ae))
+
+
+### Styling
+
+* **eslint:** added unicorn template literal parsing ([0f41ce1](https://github.com/alexwine36/Portfolio/commit/0f41ce12c39ae2eb8c0c8b4737d5f42872ed4806))
+
 ## [3.0.6](https://github.com/alexwine36/Portfolio/compare/v3.0.5...v3.0.6) (2022-07-20)
 
 
