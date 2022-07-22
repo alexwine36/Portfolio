@@ -21,21 +21,21 @@ const StyledPageBackground = styled('div')(({ theme }) => {
   // console.log(polygonRes);
 
   return `
-// color: pink;
-// background-image: linear-gradient(
-//   rgba(255, 255, 255, 0),
-//   rgb(247, 250, 255, 0.2) 100%
-// );
-// height: 90vh;
-background-color: transparent;
-// background-image: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    // color: pink;
+    // background-image: linear-gradient(
+    //   rgba(255, 255, 255, 0),
+    //   rgb(247, 250, 255, 0.2) 100%
+    // );
+    // height: 90vh;
+    background-color: transparent;
+    // background-image: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 
-// padding: ${theme.spacing(3)};
-// background-image: url(backgrounds/galaxy.svg);
+    // padding: ${theme.spacing(3)};
+    // background-image: url(backgrounds/galaxy.svg);
 
-// background-size: cover;
-// background-position: center;
-`;
+    // background-size: cover;
+    // background-position: center;
+  `;
 });
 
 // export function PageBackground(props: PageBackgroundProps) {

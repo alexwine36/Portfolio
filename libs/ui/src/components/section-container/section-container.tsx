@@ -7,11 +7,11 @@ const defaultSpacing = 5;
 
 export const SectionContainer = styled(Container)(
   ({ theme }) => `
-// color: pink;
+    // color: pink;
 
-margin-top: ${theme.spacing(defaultSpacing)};
-margin-bottom: ${theme.spacing(defaultSpacing)};
-`
+    margin-top: ${theme.spacing(defaultSpacing)};
+    margin-bottom: ${theme.spacing(defaultSpacing)};
+  `
 );
 
 // export function SectionContainer(props: SectionContainerProps) {

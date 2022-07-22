@@ -7,17 +7,17 @@ export interface SkillHeaderDisplayProps {
 
 const StyledSkillDisplay = styled('div')(
   ({ theme }) => `
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-height: 50vh;
-> span, p {
-  font-size: 1.2em;
-margin-right: ${theme.spacing(2)};
-margin-left: ${theme.spacing(2)};
-}
-`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    > span, p {
+      font-size: 1.2em;
+    margin-right: ${theme.spacing(2)};
+    margin-left: ${theme.spacing(2)};
+    }
+  `
 );
 
 export function SkillHeaderDisplay(props: SkillHeaderDisplayProps) {

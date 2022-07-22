@@ -15,9 +15,9 @@ const StyledVRViewer = styled('div')`
 
 const StyledVRContainer = styled('div')(
   ({ theme }) => `
-height: 70vh;
-margin: ${theme.spacing(3)};
-`
+    height: 70vh;
+    margin: ${theme.spacing(3)};
+  `
 );
 
 export function VRViewer(props: VRViewerProps) {

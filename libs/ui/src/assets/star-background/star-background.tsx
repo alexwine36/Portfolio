@@ -4,12 +4,12 @@ import { SizeMe } from 'react-sizeme';
 import { Stars } from './generate-shadows';
 
 const animStar = keyframes`
-from {
-  transform: translateY(0px)
-}
-to {
-  transform: translateY(-2000px)
-}
+  from {
+    transform: translateY(0px)
+  }
+  to {
+    transform: translateY(-2000px)
+  }
 `;
 /* eslint-disable-next-line */
 export interface StarBackgroundProps {

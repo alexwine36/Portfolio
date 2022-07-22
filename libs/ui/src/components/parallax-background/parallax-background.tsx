@@ -29,29 +29,29 @@ const Bg: any = Background;
 
 const StyledParallaxBackground = styled('div')(
   (props) => `
-// color: pink;
+    // color: pink;
 
-div > div.react-parallax-background-children {
-  height: fill-available !important;
-  width: 100%;
-}
-// div > div.react-parallax-background-children {
-//   height: fill-available !important;
-//   width: auto;
-// }
-`
+    div > div.react-parallax-background-children {
+      height: fill-available !important;
+      width: 100%;
+    }
+    // div > div.react-parallax-background-children {
+    //   height: fill-available !important;
+    //   width: auto;
+    // }
+  `
 );
 
 const StyledBackground = styled('div')<{ height?: number | null }>(
   (props) => `
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-> svg {
-  height: ${props.height}px;
-  overflow: unset;
-}
-`
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    > svg {
+      height: ${props.height}px;
+      overflow: unset;
+    }
+  `
 );
 
 const GeneratePredefined = (props: {

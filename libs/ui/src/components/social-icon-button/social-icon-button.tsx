@@ -16,8 +16,8 @@ export interface SocialIconButtonProps {
 
 const StyledSocialIconButton = styled(IconButton)(
   ({ theme }) => `
-// color: pink;
-`
+    // color: pink;
+  `
 );
 
 const SelectIcon = (provider: SocialProviders) => {

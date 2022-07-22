@@ -13,6 +13,7 @@
     "test:all": "jest --collect-coverage --coverage-reporters=html --coverage-reporters=cobertura --coverage-reporters=json-summary --coverage-directory=coverage/all",
     "lint": "nx affected --target=lint --parallel=3",
     "lint:all": "nx run-many --target=lint --all",
+    "lint:fix": "nx run-many --target=lint --all --fix",
     "format:check": "nx format:check",
     "doc:build": "nx build docs",
     "doc:start": "nx serve docs",
@@ -138,6 +139,7 @@
     "eslint-plugin-react": "7.30.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-tsdoc": "^0.2.16",
+    "eslint-plugin-unicorn": "^43.0.2",
     "fs-extra": "^10.1.0",
     "gatsby-plugin-emotion": "7.18.0",
     "gatsby-plugin-netlify": "^5.0.0",
@@ -174,4 +176,3 @@
     }
   }
 }
-

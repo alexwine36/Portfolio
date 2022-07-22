@@ -13,8 +13,8 @@ export interface DetailCardDisplayProps {
 const shadowColor = '255';
 const StyledDetailCardDisplay = styled(Card)(
   ({ theme }) => `
-// height: 100%;
-`
+    // height: 100%;
+  `
 );
 
 /**

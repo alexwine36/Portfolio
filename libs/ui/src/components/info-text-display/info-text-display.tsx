@@ -8,11 +8,11 @@ export interface InfoTextDisplayProps {
 
 const StyledInfoTextDisplay = styled('div')(
   ({ theme }) => `
-// color: pink;
-display: flex;
-flex-direction: column;
-padding-bottom: ${theme.spacing(2)};
-`
+    // color: pink;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: ${theme.spacing(2)};
+  `
 );
 /**
  * @category Display

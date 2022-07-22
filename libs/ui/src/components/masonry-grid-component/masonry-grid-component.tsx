@@ -20,26 +20,24 @@ const defaultSpacing = 3;
 
 const StyledMasonryGridComponent = styled(Masonry)<StyledMasonryProps>(
   ({ theme, spacing }) => `
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
-  display: flex;
-  margin-left: -30px; /* gutter size offset */
-  width: auto;
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    margin-left: -30px; 
+    width: auto;
 
 
-.my-masonry-grid_column {
-  // padding-left: 30px; /* gutter size */
-  padding-left: ${theme.spacing(spacing || defaultSpacing)};
-  background-clip: padding-box;
-}
+    .my-masonry-grid_column {
+      // padding-left: 30px; 
+      padding-left: ${theme.spacing(spacing || defaultSpacing)};
+      background-clip: padding-box;
+    }
 
 
-.my-masonry-grid_column > * {
-  margin-bottom: ${theme.spacing(
-    spacing || defaultSpacing
-  )}; /* space between items */
-}
-`
+    .my-masonry-grid_column > * {
+      margin-bottom: ${theme.spacing(spacing || defaultSpacing)};
+    }
+  `
 );
 
 export function MasonryGridComponent(props: MasonryGridComponentProps) {

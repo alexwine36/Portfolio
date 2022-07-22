@@ -32,26 +32,23 @@ const StyledProjectPage = styled('div')`
 
 const HeroImage = styled('div')(
   ({ theme }) => `
-
-height: 50vh;
-display: flex;
-align-items: end;
-padding: ${theme.spacing(3)};
-margin-bottom: ${theme.spacing(3)};
-position: relative;
-`
+    height: 50vh;
+    display: flex;
+    align-items: end;
+    padding: ${theme.spacing(3)};
+    margin-bottom: ${theme.spacing(3)};
+    position: relative;
+  `
 );
 
 const BackgroundImage = styled(GatsbyImage)(
   ({ theme }) => `
-  position: absolute !important;
-  z-index: -10;
-  width: 100%;
-  height: 100%;
-  left: 0;
-
-
-`
+    position: absolute !important;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  `
 );
 
 export function ProjectPage(props: ProjectPageProps) {
@@ -142,11 +139,13 @@ export function ProjectPage(props: ProjectPageProps) {
                     overflow: 'unset',
                     position: 'sticky',
                     top: 0,
-                    backgroundImage: `radial-gradient(
+                    backgroundImage: `
+                      radial-gradient(
 
-                      rgba(255, 255, 255, 0.15),
-                      rgba(255, 255, 255, 0)
-                    )`,
+                                            rgba(255, 255, 255, 0.15),
+                                            rgba(255, 255, 255, 0)
+                                          )
+                    `,
                     backdropFilter: 'blur(20px)',
                     boxShadow: `${theme.shadows[1].replace(
                       /rgba\(0,0,0/gm,

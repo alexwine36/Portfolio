@@ -10,31 +10,31 @@ export interface SectionDisplayProps {
 
 const StyledSectionDisplay = styled('section')(
   ({ theme }) => `
-// padding-top: ${theme.spacing(2)};
-// margin-bottom: ${theme.spacing(2)};
-// min-height: 50vh;
-padding-top: ${theme.spacing(3)};
-min-height: 100vh;
-display: flex;
-align-items: center;
-`
+    // padding-top: ${theme.spacing(2)};
+    // margin-bottom: ${theme.spacing(2)};
+    // min-height: 50vh;
+    padding-top: ${theme.spacing(3)};
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  `
 );
 
 const StyledSectionChildrenDisplay = styled('div')(
   ({ theme }) => `
-// color: pink;
-// background-image: linear-gradient(
-//   to bottom right,
-//   rgba(255, 255, 255, 0.2),
-//   rgba(255, 255, 255, 0)
-// );
-// backdrop-filter: 'blur(10px)';
-// box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
-// border: 1px solid ${theme.palette.divider};
+    // color: pink;
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   rgba(255, 255, 255, 0.2),
+    //   rgba(255, 255, 255, 0)
+    // );
+    // backdrop-filter: 'blur(10px)';
+    // box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
+    // border: 1px solid ${theme.palette.divider};
 
-// padding-top: ${theme.spacing(2)};
-// padding-bottom: ${theme.spacing(2)};
-`
+    // padding-top: ${theme.spacing(2)};
+    // padding-bottom: ${theme.spacing(2)};
+  `
 );
 /**
  * @category Display

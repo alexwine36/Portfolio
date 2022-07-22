@@ -25,13 +25,13 @@ const StyledHeroDisplay = styled('div')(({ theme }) => {
   // console.log(polygonRes);
 
   return `
-//   background-color: transparent;
+    //   background-color: transparent;
 
-// background-size: cover;
-// background-position: center;
-height: 50vh;
-max-height: 500px;
-`;
+    // background-size: cover;
+    // background-position: center;
+    height: 50vh;
+    max-height: 500px;
+  `;
 });
 
 const formatRgba = (values: (number | string)[]) => {

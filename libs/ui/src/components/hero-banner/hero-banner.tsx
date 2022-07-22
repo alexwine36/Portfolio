@@ -22,77 +22,77 @@ export interface HeroBannerProps {
 
 export const StyledHeroBanner = styled('div')(
   ({ theme }) => `
-// color: pink;
-.headline {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 10vw;
-}
+    // color: pink;
+    .headline {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 100;
+      font-size: 10vw;
+    }
 
-.inset {
-  position: absolute;
-  inset: 0;
-}
-.white {
-  color: white;
-}
-.gray {
-  color: #446;
-}
+    .inset {
+      position: absolute;
+      inset: 0;
+    }
+    .white {
+      color: white;
+    }
+    .gray {
+      color: #446;
+    }
 
-.full {
-  height: 100vh;
-}
+    .full {
+      height: 100vh;
+    }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.gradient {
-  background: linear-gradient(${hexToRgba(
+    .gradient {
+      background: linear-gradient(${hexToRgba(
     theme.palette.primary.dark,
     0.5
   )} 50%, ${theme.palette.background.default});
-}
-.image {
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-}
-`
+    }
+    .image {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  `
 );
 
 const animBounce = keyframes`
-0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-30px);}
-            60% {transform: translateY(-15px);}
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+              40% {transform: translateY(-30px);}
+              60% {transform: translateY(-15px);}
 `;
 
 const StyledArrowDownContainer = styled('div')(
   ({ theme }) => `
-  height: 100%;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  padding-bottom: ${theme.spacing(6)};
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-`
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: ${theme.spacing(6)};
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  `
 );
 
 const StyledImage = styled('div')<{ data?: ImageProps }>(
   ({ theme, data }) => `
-height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url(${data?.src});
-    background-image: image-set(${data?.srcSet});
-`
+    height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(${data?.src});
+        background-image: image-set(${data?.srcSet});
+  `
 );
 
 export function HeroBanner(props: HeroBannerProps) {

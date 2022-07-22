@@ -14,7 +14,7 @@ export interface GeneratePlanetBackgroundProps extends SVGProps<SVGSVGElement> {
 
 export const StyledBackgroundContainer = styled('div')(
   ({ theme }) => `
-  position: absolute;
+    position: absolute;
   `
 );
 
@@ -202,7 +202,7 @@ export const GeneratePlanetBackground = React.memo(
 export const StyledGeneratePlanetBackground = styled(GeneratePlanetBackground)(
   ({ theme }) => `
 
-`
+  `
 );
 
 export default GeneratePlanetBackground;

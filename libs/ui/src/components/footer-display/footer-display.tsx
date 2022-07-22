@@ -18,11 +18,11 @@ export interface FooterDisplayProps {
 
 const StyledFooterDisplay = styled('footer')(
   ({ theme }) => `
-padding: ${theme.spacing(4)};
-  display: flex;
-margin-bottom: ${theme.spacing(4)};
-  justify-content: center;
-`
+    padding: ${theme.spacing(4)};
+    display: flex;
+    margin-bottom: ${theme.spacing(4)};
+    justify-content: center;
+  `
 );
 
 const StyledBox = styled(Box)(({ theme }) => ({

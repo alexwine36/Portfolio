@@ -29,22 +29,20 @@ export const Stars = styled('div')<{
   const shadows = generateShadows(value, s, dim);
 
   return `
+    width: ${s}px;
+    height: ${s}px;
+    background: transparent;
+    box-shadow: ${shadows};
 
 
-width: ${s}px;
-height: ${s}px;
-background: transparent;
-box-shadow: ${shadows};
-
-
-&:after {
-  content: " ";
-  position: absolute;
-  top: 2000px;
-  width: ${s}px;
-  height: ${s}px;
-  background: transparent;
-  box-shadow: ${shadows};
-}
-`;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: ${s}px;
+      height: ${s}px;
+      background: transparent;
+      box-shadow: ${shadows};
+    }
+  `;
 });

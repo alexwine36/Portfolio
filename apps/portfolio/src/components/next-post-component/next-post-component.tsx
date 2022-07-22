@@ -24,11 +24,11 @@ const StyledNextPostComponent = styled(Card)`
 
 const StyledNextMedia = styled(GatsbyImage)(
   ({ theme }) => `
-  // color: pink;
-  // display: flex;
-  // flex-shrink: 3;
-  width: 50%;
-`
+    // color: pink;
+    // display: flex;
+    // flex-shrink: 3;
+    width: 50%;
+  `
 );
 
 export function NextPostComponent(props: NextPostComponentProps) {
