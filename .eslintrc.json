@@ -33,6 +33,13 @@
     }
   ],
   "rules": {
-    "unicorn/template-indent": ["error", { "selectors": ["TemplateLiteral"] }]
+    "unicorn/template-indent": [
+      "error",
+      {
+        "tags": ["outdent", "dedent", "gql", "sql", "html", "styled"],
+        "functions": ["dedent", "stripIndent"],
+        "selectors": ["TemplateLiteral"]
+      }
+    ]
   }
 }

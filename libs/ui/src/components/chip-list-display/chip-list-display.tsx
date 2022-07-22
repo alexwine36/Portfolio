@@ -10,37 +10,69 @@ export interface ChipListDisplayProps {
 }
 const shadowColor = '255';
 const StyledChipListDisplay = styled('ul')(
-  ({ theme }) => `
-    // color: pink;
-    display: flex;
-    list-style: none;
-    padding: ${theme.spacing(0.5)};
-    margin: ${theme.spacing(0)};
-    overflow-x: scroll;
-    &::-webkit-scrollbar {
-      width: 8px
-    }
-    &::-webkit-scrollbar-track {
-      box-shadow: nset 0 0 6px grey;
-      border-radius: 5px;
-    }
-    &::-webkit-scrollbar-thumb {
-
-      background-image: radial-gradient(
-
-        rgba(255, 255, 255, 0.15),
-        rgba(255, 255, 255, 0)
-      );
-      backdrop-filter: blur(20px);
-      boxShadow: ${theme.shadows[1].replace(
+  ({ theme }) => ({
+    display: 'flex',
+    listStyle: 'none',
+    padding: theme.spacing(0.5),
+    margin: theme.spacing(0),
+    overflowX: 'scroll',
+    '&::-webkit-scrollbar': {
+      width: 8,
+    },
+    '&::-webkit-scrollbar-track': {
+      boxShadow: 'nset 0 0 6px grey',
+      borderRadius: 5,
+    },
+    '&::-webkit-scrollbar-thumb': {
+      background: 'transparent',
+      backgroundImage: `
+        radial-gradient(
+                          rgba(255, 255, 255, 0.15),
+                          rgba(255, 255, 255, 0)
+                        )
+      `,
+      backdropFilter: 'blur(20px)',
+      boxShadow: `${theme.shadows[1].replace(
         /rgba\(0,0,0/gm,
         `rgba(${shadowColor},${shadowColor},${shadowColor}`
-      )};
-      // border: 1px solid ${theme.palette.divider};
-      border-radius: 15px;
-      height: 2px;
-    }
-  `
+      )}`,
+      borderRadius: 15,
+      height: 2,
+      // border: `1px solid ${theme.palette.divider}`,
+    },
+  })
+
+  // `
+  //   // color: pink;
+  //   display: flex;
+  //   list-style: none;
+  //   padding: ${theme.spacing(0.5)};
+  //   margin: ${theme.spacing(0)};
+  //   overflow-x: scroll;
+  //   &::-webkit-scrollbar {
+  //     width: 8px
+  //   }
+  //   &::-webkit-scrollbar-track {
+  //     box-shadow: nset 0 0 6px grey;
+  //     border-radius: 5px;
+  //   }
+  //   &::-webkit-scrollbar-thumb {
+
+  //     background-image: radial-gradient(
+
+  //       rgba(255, 255, 255, 0.15),
+  //       rgba(255, 255, 255, 0)
+  //     );
+  //     backdrop-filter: blur(20px);
+  //     boxShadow: ${theme.shadows[1].replace(
+  //       /rgba\(0,0,0/gm,
+  //       `rgba(${shadowColor},${shadowColor},${shadowColor}`
+  //     )};
+  //     // border: 1px solid ${theme.palette.divider};
+  //     border-radius: 15px;
+  //     height: 2px;
+  //   }
+  // `
 );
 
 const ListItem = styled('li')(({ theme }) => ({
