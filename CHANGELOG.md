@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/alexwine36/Portfolio/compare/v3.1.0...v3.1.1) (2022-07-22)
+
+
+### Bug Fixes
+
+* **chip list:** updated chip list scrollbar display ([e70671b](https://github.com/alexwine36/Portfolio/commit/e70671b0def786dfa64a90c259adceaa1d166f13))
+
 ## [3.1.0](https://github.com/alexwine36/Portfolio/compare/v3.0.6...v3.1.0) (2022-07-22)
 
 
