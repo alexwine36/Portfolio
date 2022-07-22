@@ -9,6 +9,9 @@ published: true
 hero: stephen-dawson-qwtCeJ5cLYs-unsplash.jpg
 ---
 
+
+import {GanttChartExample} from '../../../src/components/gantt-chart-example'
+
 <!-- - The Problem
   - Tableau doesn't always have the necessary flexibilty to display data -->
 
@@ -49,6 +52,8 @@ You have the following tasks:
 
 
 With tableau providing the data and averages for tasks and time between them, the extension can then play with the data. 
+
+<GanttChartExample />
 
 ```mermaid
 gantt
