@@ -7,6 +7,9 @@ const data: Queries.ProjectPageQuery['mdx'] = {
   excerpt:
     'The Problem I was  Strongly  advised to find a new method to access the database and, we were already using the API for reports and…',
   slug: 'sample',
+  parent: {
+    modifiedTime: new Date().toString(),
+  },
   frontmatter: {
     tags: ['MySQL'],
     title: 'MarkSystems GraphQL v2',
