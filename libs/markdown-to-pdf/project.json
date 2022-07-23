@@ -38,6 +38,9 @@
         "jestConfig": "libs/markdown-to-pdf/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release"
     }
   }
 }

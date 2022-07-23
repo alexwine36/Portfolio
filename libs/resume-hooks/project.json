@@ -38,6 +38,9 @@
         "jestConfig": "libs/resume-hooks/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release"
     }
   }
 }
