@@ -52,14 +52,14 @@ jobs:
         run: |
           npx nx run-many --target=build --maxParallel=1 --all
       - name: Prerelease
-        run: npx nx run-many --target=version --all --maxParallel=1 --configuration=prerelease
+        run: npx nx run-many --target=semantic-release --all --maxParallel=1 --configuration=prerelease
         if: github.ref == 'refs/heads/alpha'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Release
-        run: npx nx run-many --target=version --all --maxParallel=1
+        run: npx nx run-many --target=semantic-release --all --maxParallel=1
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
