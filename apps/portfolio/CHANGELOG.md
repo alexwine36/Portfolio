@@ -1,3 +1,11 @@
+# [1.0.0-alpha.2](https://github.com/alexwine36/Portfolio/compare/portfolio-v1.0.0-alpha.1...portfolio-v1.0.0-alpha.2) (2022-07-24)
+
+
+### Bug Fixes
+
+* **github:** updated actions to use yarn cache ([1080ad3](https://github.com/alexwine36/Portfolio/commit/1080ad3e2f8256433a0053846891e6f96bef2f97))
+* **tags:** updated tags page ([acbc227](https://github.com/alexwine36/Portfolio/commit/acbc227335e043c1b6bb0810725ecd6cbfe5351e))
+
 # 1.0.0-alpha.1 (2022-07-24)
 
 
