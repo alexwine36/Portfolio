@@ -19,7 +19,7 @@ export function TagPage(props: TagPageProps) {
   const page = usePage('projects');
   return (
     <StyledTagPage data-testid="tag-page">
-      <GatsbySeo title={skill.skill} />
+      <GatsbySeo title={skill?.skill} />
       <PageBackground data-testid="page-background">
         <SkillHeaderDisplay skill={skill} />
 

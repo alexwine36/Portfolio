@@ -10,7 +10,7 @@
         "uglify": true,
         "color": true,
         "profile": false,
-        "prefixPaths": true
+        "prefixPaths": false
       },
       "configurations": {
         "production": {}
@@ -53,6 +53,9 @@
         "jestConfig": "apps/portfolio/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release"
     }
   },
   "tags": []

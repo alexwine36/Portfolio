@@ -20,7 +20,9 @@
     "site:start": "nx run portfolio:serve --verbose",
     "doc:version": "docusaurus --config apps/docs/docusaurus.config.js docs:version 1.0",
     "generate:badge": "ts-node ./libs/generate-badges/src",
-    "clean": "yarn gatsby clean && rimraf apps/portfolio/.cache apps/portfolio/public"
+    "clean": "yarn gatsby clean && rimraf apps/portfolio/.cache apps/portfolio/public",
+    "prepare": "husky install",
+    "release": "nx run-many --verbose=true --target=semantic-release --all --maxParallel=1"
   },
   "private": true,
   "dependencies": {
@@ -112,6 +114,7 @@
     "@swc/core": "^1.2.173",
     "@swc/jest": "0.2.20",
     "@testing-library/react": "13.3.0",
+    "@theunderscorer/nx-semantic-release": "^1.14.0",
     "@trumbitta/nx-plugin-unused-deps": "^1.11.0",
     "@types/jest": "28.1.4",
     "@types/mdast": "^3.0.10",
