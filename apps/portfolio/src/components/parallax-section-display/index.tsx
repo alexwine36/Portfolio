@@ -3,7 +3,7 @@ import { ParallaxBackground, SectionContainer } from '@portfolio/ui';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import React from 'react';
 import { UsePage } from '../../hooks/use-pages/use-pages';
-import { HeroDisplay } from '../hero-display/hero-display';
+import { HeroDisplay } from '../display/hero-display/hero-display';
 /* eslint-disable-next-line */
 export interface ParallaxSectionDisplayProps {
   page: UsePage;
