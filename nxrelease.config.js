@@ -2,6 +2,7 @@ module.exports = {
   changelog: true,
   // npm: true,
   github: true,
+  ci: false,
   repositoryUrl: 'https://github.com/alexwine36/Portfolio',
   branches: [
     'main',
