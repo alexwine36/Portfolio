@@ -19,16 +19,16 @@ jobs:
           error: 'Skipping for release commit.'
 
       - uses: actions/checkout@v2
-        # with:
-        #   persist-credentials: false
+        with:
+          persist-credentials: false
 
-      # - name: Configure CI Git User
-      #   run: |
-      #     git config --global user.name 'TheUnderScorer'
-      #     git config --global user.email 'przemyslawzydek@gmail.com'
-      #     git remote set-url origin https://TheUnderScorer:$GITHUB_TOKEN@github.com/TheUnderScorer/time-neko
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name 'alexwine36'
+          git config --global user.email 'alexwine36@gmail.com'
+          git remote set-url origin https://alexwine36:$GITHUB_TOKEN@github.com/alexwine36/Portfolio
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
 
       - name: Install Node.js
         uses: actions/setup-node@v1
@@ -56,12 +56,12 @@ jobs:
         run: yarn release --configuration=prerelease
         if: github.ref == 'refs/heads/alpha'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
 
       - name: Release
         run: yarn release
         if: github.ref == 'refs/heads/main'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
