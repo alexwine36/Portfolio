@@ -3,10 +3,10 @@ name: Build & Deploy
 on:
   push:
     branches:
-      - mainer
+      - main
   pull_request:
     branches:
-      - mainer
+      - main
 
 jobs:
   prepare:

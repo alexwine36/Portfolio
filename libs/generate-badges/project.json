@@ -30,21 +30,6 @@
     },
     "semantic-release": {
       "executor": "@theunderscorer/nx-semantic-release:semantic-release"
-    },
-    "version": {
-      "executor": "@jscutlery/semver:version",
-      "options": {
-        "preset": "conventional",
-        "commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
-        "postTargets": ["generate-badges:github"]
-      }
-    },
-    "github": {
-      "executor": "@jscutlery/semver:github",
-      "options": {
-        "tag": "${tag}",
-        "notes": "${notes}"
-      }
     }
   },
   "tags": []
