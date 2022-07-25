@@ -123,6 +123,9 @@ jobs:
     needs: [test, deploy]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
@@ -135,5 +138,8 @@ jobs:
       - run: git config lfs.locksverify false
       - uses: cycjimmy/semantic-release-action@v3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+        # env:
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
