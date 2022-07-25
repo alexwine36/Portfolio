@@ -22,7 +22,7 @@
     "generate:badge": "ts-node ./libs/generate-badges/src",
     "clean": "yarn gatsby clean && rimraf apps/portfolio/.cache apps/portfolio/public",
     "prepare": "husky install",
-    "release": "nx affected --verbose=true --target=version"
+    "release": "nx affected --target=version --all --verbose=true"
   },
   "private": true,
   "dependencies": {
