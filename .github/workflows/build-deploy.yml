@@ -129,6 +129,13 @@ jobs:
       - uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name 'alexwine36'
+          git config --global user.email 'alexwine36@gmail.com'
+          git remote set-url origin https://alexwine36:$GITHUB_TOKEN@github.com/alexwine36/Portfolio
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
       - name: Download Artifact
         uses: actions/download-artifact@v3
         with:
