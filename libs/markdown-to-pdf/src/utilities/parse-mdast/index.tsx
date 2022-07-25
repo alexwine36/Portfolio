@@ -87,6 +87,8 @@ const parseListItem = (data: ListItem, line: pdf.Text, indent = 0) => {
         if (child.type === 'text') {
           if (child.value === '.') {
             line.append(child.value);
+          } else if (child.value.startsWith(' ')) {
+            line.append(child.value);
           } else {
             line.add(child.value);
           }
