@@ -6,17 +6,19 @@ on:
       - alpha
 
 jobs:
-  prepare:
-    name: Prepare
-    runs-on: ubuntu-latest
-    steps:
-      - uses: DerYeger/yarn-setup-action@master
-        with:
-          node-version: 16
+  # prepare:
+  #   name: Prepare
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: ./.github/actions/setup
+  #       name: Setup
+  #       with:
+  #         token: ${{ secrets.GH_ADMIN_TOKEN }}
+  #         node_version: '16'
   release:
     name: Build & Release
     runs-on: ubuntu-latest
-    needs: prepare
+    # needs: prepare
     steps:
       - name: Check Commit Type
         uses: gsactions/commit-message-checker@v1
