@@ -118,71 +118,71 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
 
-  release-packages:
-    name: Build & Release
-    runs-on: ubuntu-latest
-    # needs: prepare
-    if: |
-      github.ref == 'refs/heads/alpha' || github.ref == 'refs/heads/main'
-    steps:
-      - name: Check Commit Type
-        uses: gsactions/commit-message-checker@v1
-        with:
-          pattern: '^((?!skip ci).)*$'
-          flags: 's'
-          error: 'Skipping for release commit.'
+  # release-packages:
+  #   name: Build & Release
+  #   runs-on: ubuntu-latest
+  #   # needs: prepare
+  #   if: |
+  #     github.ref == 'refs/heads/alpha' || github.ref == 'refs/heads/main'
+  #   steps:
+  #     - name: Check Commit Type
+  #       uses: gsactions/commit-message-checker@v1
+  #       with:
+  #         pattern: '^((?!skip ci).)*$'
+  #         flags: 's'
+  #         error: 'Skipping for release commit.'
 
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GH_ADMIN_TOKEN }}
-      # - uses: DerYeger/yarn-setup-action@master
-      #   with:
-      #     node-version: 16
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         token: ${{ secrets.GH_ADMIN_TOKEN }}
+  #     # - uses: DerYeger/yarn-setup-action@master
+  #     #   with:
+  #     #     node-version: 16
 
-      - name: Configure CI Git User
-        run: |
-          git config --global user.name 'alexwine36'
-          git config --global user.email 'alexwine36@gmail.com'
-          git remote set-url origin https://alexwine36:$GH_ADMIN_TOKEN@github.com/alexwine36/Portfolio
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+  #     - name: Configure CI Git User
+  #       run: |
+  #         git config --global user.name 'alexwine36'
+  #         git config --global user.email 'alexwine36@gmail.com'
+  #         git remote set-url origin https://alexwine36:$GH_ADMIN_TOKEN@github.com/alexwine36/Portfolio
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
 
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16
+  #     - name: Install Node.js
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 16
 
-      - name: Cache
-        uses: actions/cache@v2
-        id: npm-cache
-        with:
-          path: node_modules
-          key: nodemodules-${{ hashFiles('yarn.lock') }}
-          restore-keys: nodemodules-
+  #     - name: Cache
+  #       uses: actions/cache@v2
+  #       id: npm-cache
+  #       with:
+  #         path: node_modules
+  #         key: nodemodules-${{ hashFiles('yarn.lock') }}
+  #         restore-keys: nodemodules-
 
-      - name: Install npm dependencies
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: |
-          yarn install
+  #     - name: Install npm dependencies
+  #       if: steps.npm-cache.outputs.cache-hit != 'true'
+  #       run: |
+  #         yarn install
 
-      - name: Prerelease
-        run: yarn release --configuration=prerelease
-        if: github.ref == 'refs/heads/alpha'
-        env:
-          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+  #     - name: Prerelease
+  #       run: yarn release --configuration=prerelease
+  #       if: github.ref == 'refs/heads/alpha'
+  #       env:
+  #         GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+  #         GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
 
-      - name: Release
-        run: yarn release
-        if: github.ref == 'refs/heads/main'
-        env:
-          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+  #     - name: Release
+  #       run: yarn release
+  #       if: github.ref == 'refs/heads/main'
+  #       env:
+  #         GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+  #         GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
 
   release:
     name: release
     if: github.ref == 'refs/heads/main'
-    needs: [test, deploy, release-packages]
+    needs: [test, deploy]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

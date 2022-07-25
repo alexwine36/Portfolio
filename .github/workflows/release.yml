@@ -24,12 +24,11 @@ jobs:
           flags: 's'
           error: 'Skipping for release commit.'
 
-      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+        name: Setup
         with:
-          persist-credentials: false
-      - uses: DerYeger/yarn-setup-action@master
-        with:
-          node-version: 16
+          token: ${{ secrets.GH_ADMIN_TOKEN }}
+          node_version: '16'
 
       - name: Configure CI Git User
         run: |
@@ -62,15 +61,14 @@ jobs:
       #     npx nx run-many --target=build --maxParallel=1 --all
 
       - name: Prerelease
-        run: yarn release --configuration=prerelease
+        uses: ./.github/actions/release
         if: github.ref == 'refs/heads/alpha'
-        env:
-          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+        with:
+          github_token: ${{ secrets.GH_ADMIN_TOKEN }}
+          prerelease: 'alpha'
 
       - name: Release
-        run: yarn release
+        uses: ./.github/actions/release
         if: github.ref == 'refs/heads/main'
-        env:
-          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+        with:
+          github_token: ${{ secrets.GH_ADMIN_TOKEN }}
