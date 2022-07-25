@@ -22,7 +22,7 @@
     "generate:badge": "ts-node ./libs/generate-badges/src",
     "clean": "yarn gatsby clean && rimraf apps/portfolio/.cache apps/portfolio/public",
     "prepare": "husky install",
-    "release": "nx affected --verbose=true --target=semantic-release --all --maxParallel=1"
+    "release": "nx affected --verbose=true --target=version"
   },
   "private": true,
   "dependencies": {
@@ -99,6 +99,7 @@
     "@emotion/babel-plugin": "11.9.2",
     "@emotion/jest": "^11.9.4",
     "@graphql-eslint/eslint-plugin": "^3.10.6",
+    "@jscutlery/semver": "^2.25.2",
     "@nrwl/cli": "14.4.3",
     "@nrwl/cypress": "14.4.3",
     "@nrwl/eslint-plugin-nx": "14.4.3",
