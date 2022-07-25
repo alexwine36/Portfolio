@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/alexwine36/Portfolio/compare/markdown-to-pdf-v1.0.0...markdown-to-pdf-v1.0.1) (2022-07-25)
+
+
+### Bug Fixes
+
+* **markdown-to-pdf:** changed to append if text starts with a space ([fc4cfcb](https://github.com/alexwine36/Portfolio/commit/fc4cfcbccb560df5eadcae9ebd13bf4c92a8d1f0))
+
 # 1.0.0 (2022-07-24)
 
 
