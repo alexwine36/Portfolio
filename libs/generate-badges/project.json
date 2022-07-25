@@ -34,6 +34,8 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
+        "push": true,
+        "noVerify": true,
         "preset": "conventional",
         "commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
         "postTargets": ["generate-badges:github"]
