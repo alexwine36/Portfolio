@@ -17,8 +17,10 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: ls
+      run: ls -aFG
     - name: Version
-      if: ${{ inputs.prerelease }} == 'none'
+      if: inputs.prerelease == 'none'
       env:
         # NODE_AUTH_TOKEN: ${{ inputs.npm_token }}
         GITHUB_TOKEN: ${{ inputs.github_token }}
@@ -28,7 +30,7 @@ runs:
       shell: bash
       run: yarn release
     - name: PreRelease Version
-      if: ${{ inputs.prerelease }} != 'none'
+      if: inputs.prerelease != 'none'
       env:
         # NODE_AUTH_TOKEN: ${{ inputs.npm_token }}
         GITHUB_TOKEN: ${{ inputs.github_token }}
