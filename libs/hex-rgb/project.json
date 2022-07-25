@@ -46,7 +46,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "push": true,
+        "push": false,
         "noVerify": true,
         "preset": "conventional",
         "commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
