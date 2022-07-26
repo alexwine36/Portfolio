@@ -128,7 +128,7 @@
     "@typescript-eslint/parser": "5.30.6",
     "babel-jest": "28.1.2",
     "babel-plugin-module-resolver": "4.1.0",
-    "babel-preset-gatsby": "2.18.0",
+    "babel-preset-gatsby": "2.19.0",
     "badge-maker": "^3.3.1",
     "commander": "^9.3.0",
     "commitizen": "^4.2.4",
