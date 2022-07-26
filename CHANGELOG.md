@@ -1,3 +1,19 @@
+### [3.3.1](https://github.com/alexwine36/Portfolio/compare/v3.3.0...v3.3.1) (2022-07-26)
+
+
+### Bug Fixes
+
+* **github:** updated CI run for more agents and using nx-cloud with npx ([93fc24e](https://github.com/alexwine36/Portfolio/commit/93fc24ec4cee37db9ce941086ebcbd88d74b22c5))
+* **portfolio:** dependencies updated to build before lint ([0dfae79](https://github.com/alexwine36/Portfolio/commit/0dfae799b458e81ed7bc7f8cf2dbdc3ddab43b4a))
+* **portfolio:** updated portfolio lint depends in ([c40fda7](https://github.com/alexwine36/Portfolio/commit/c40fda75d61b4d7349a9a5899aa12c884e5fb35a))
+
+
+### CI
+
+* **actions:** updated lint dependencies ([ec1949f](https://github.com/alexwine36/Portfolio/commit/ec1949f2e735a93ec8d429ec0a8d9ec0490445a9))
+* **github:** added nx-check for testing all of repo ([9bcad99](https://github.com/alexwine36/Portfolio/commit/9bcad99dd8d756543ce05c26610d70cb2eb69f50))
+* removed format:check ([a3bebdb](https://github.com/alexwine36/Portfolio/commit/a3bebdbb5f4004dc385cf26ed946fd692193c015))
+
 ## [3.3.0](https://github.com/alexwine36/Portfolio/compare/v3.2.0...v3.3.0) (2022-07-26)
 
 
