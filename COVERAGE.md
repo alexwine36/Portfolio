@@ -2,10 +2,10 @@
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
+apps.portfolio.src.components.display.hero-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.display.section-data-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.display.skill-header-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.hero-banner-implementation | 100% | 100% | 0 | ✔
-apps.portfolio.src.components.hero-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.mdx.vr-viewer | 58% | 50% | 0 | ➖
 apps.portfolio.src.components.next-post-component | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.pages.tags | 100% | 100% | 0 | ✔

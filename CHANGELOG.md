@@ -1,3 +1,72 @@
+## [3.2.0](https://github.com/alexwine36/Portfolio/compare/v3.1.1...v3.2.0) (2022-07-26)
+
+
+### Features
+
+* **release:** updated to new release package ([d02d209](https://github.com/alexwine36/Portfolio/commit/d02d209dcfad5eb55dc4c24ef082ae5ee454fd98))
+
+
+### Bug Fixes
+
+* **actions:** changed release command to use all ([17b1b2f](https://github.com/alexwine36/Portfolio/commit/17b1b2fb603dc5ac480e2794889d9b1cd376ed27))
+* **actions:** deploy permissions updated ([ffe6320](https://github.com/alexwine36/Portfolio/commit/ffe63204f2af069b73fec48d100693df348c37c2))
+* **actions:** fixed broken release process ([6a2a70b](https://github.com/alexwine36/Portfolio/commit/6a2a70b6f974e003446f4e7dd813110e82095122))
+* **actions:** updated release action and temp build-deploy ([d5705af](https://github.com/alexwine36/Portfolio/commit/d5705afa8970efc8e1943a1c000a17284f26cdb8))
+* **actions:** updated release branches ([d421b13](https://github.com/alexwine36/Portfolio/commit/d421b13fe6493ebc28c2602f69ca7ff71c4075dd))
+* **actions:** updated release command ([32f551d](https://github.com/alexwine36/Portfolio/commit/32f551d0a655799320d51d0a233beea8d20439a8))
+* **ci:** updated github action release process ([1536108](https://github.com/alexwine36/Portfolio/commit/15361089390626ff464e81917e034fd604c2fa6d))
+* **ci:** updated release command ([0b9ff5b](https://github.com/alexwine36/Portfolio/commit/0b9ff5b1a9786f46c81f70f63e0130747fff5874))
+* **gatsby:** updated start pack generator project ([6c7974c](https://github.com/alexwine36/Portfolio/commit/6c7974cd7e1b493b8fa1224444840e8c95ceebbf))
+* **github:** fixed release target ([cd2dc2e](https://github.com/alexwine36/Portfolio/commit/cd2dc2e1f6fc6ae927f10c3866d039a5fb7bf4fd))
+* **github:** removed build from release action ([31740ff](https://github.com/alexwine36/Portfolio/commit/31740ff288c3bafcf2c71d34f286044b26fb736e))
+* **github:** updated actions to use yarn cache ([1080ad3](https://github.com/alexwine36/Portfolio/commit/1080ad3e2f8256433a0053846891e6f96bef2f97))
+* **husky:** removed husky folder and updated release command ([42adb4f](https://github.com/alexwine36/Portfolio/commit/42adb4fb622398f18951a46a16612d8ec4de16fc))
+* **husky:** updated husky scripts ([084b1cf](https://github.com/alexwine36/Portfolio/commit/084b1cf8cb4656c299c8abfd965d1253be0317ef))
+* **markdown-to-pdf:** changed to append if text starts with a space ([fc4cfcb](https://github.com/alexwine36/Portfolio/commit/fc4cfcbccb560df5eadcae9ebd13bf4c92a8d1f0))
+* **nx:** added new release generation ([5e5a90b](https://github.com/alexwine36/Portfolio/commit/5e5a90bdb32129821d174b2f66464c28f9bcaafa))
+* **refactor:** moved hero display to display folder ([136bb75](https://github.com/alexwine36/Portfolio/commit/136bb75a8b04e8c98c2fcb5bd6e5443eab76b930))
+* **release:** removed husky hooks ([6c00dff](https://github.com/alexwine36/Portfolio/commit/6c00dff515f94e3527b3cd16ecfdf1b0d657697b))
+* **release:** setup required checkout ([8283dda](https://github.com/alexwine36/Portfolio/commit/8283ddaf31a65d5d562b6357106bd2c03c8fc332))
+* **release:** updated release config ([35644c9](https://github.com/alexwine36/Portfolio/commit/35644c98d72492dab167fdf7529141628a61b3b0))
+* **tags:** updated tags page ([acbc227](https://github.com/alexwine36/Portfolio/commit/acbc227335e043c1b6bb0810725ecd6cbfe5351e))
+* **workflow:** potential fix for needed reviewers ([91a817a](https://github.com/alexwine36/Portfolio/commit/91a817a98c5abefd89445322791a5967e643bda1))
+* **workflow:** testing new release method ([f2ce28c](https://github.com/alexwine36/Portfolio/commit/f2ce28c07fddd141e2bb5a2e7f60ec51615e1dcd))
+* **workflow:** updated to protected branch and testing main release ([17c6b39](https://github.com/alexwine36/Portfolio/commit/17c6b39c45b61155b2d0b0a042ebf26c29a87d17))
+
+
+### Others
+
+* **release:** 1.0.0 [skip ci] ([260409a](https://github.com/alexwine36/Portfolio/commit/260409a65ef4c34bc1d6fb782f9cb3b7838729d4))
+* **release:** 1.0.0 [skip ci] ([2de2143](https://github.com/alexwine36/Portfolio/commit/2de2143fecbb778a2cc62e6e7900706a63a957eb))
+* **release:** 1.0.0 [skip ci] ([de8edef](https://github.com/alexwine36/Portfolio/commit/de8edefd40d0f598e4057c2362489741c0885e41))
+* **release:** 1.0.0 [skip ci] ([59b6f5f](https://github.com/alexwine36/Portfolio/commit/59b6f5f135d2fe41b7a76d71dd03185a1b0d9577))
+* **release:** 1.0.0 [skip ci] ([50920c9](https://github.com/alexwine36/Portfolio/commit/50920c98fe728556a2388545402258222fd5a90a))
+* **release:** 1.0.0 [skip ci] ([cabbb18](https://github.com/alexwine36/Portfolio/commit/cabbb1866ba253c9279524bd14dc0d32a1d0d727))
+* **release:** 1.0.0 [skip ci] ([d8c032f](https://github.com/alexwine36/Portfolio/commit/d8c032f10ec609f42cf893c52a871411b22aa10b))
+* **release:** 1.0.0-alpha.1 [skip ci] ([24d0114](https://github.com/alexwine36/Portfolio/commit/24d0114d4416fcb088c1711b2d2d73293f94fec1))
+* **release:** 1.0.0-alpha.1 [skip ci] ([60debf9](https://github.com/alexwine36/Portfolio/commit/60debf959a35143008594d7cb958948fafd4135d))
+* **release:** 1.0.0-alpha.1 [skip ci] ([22048c8](https://github.com/alexwine36/Portfolio/commit/22048c8426b7032ae9a83c1dcabc8ff9adcc7a23))
+* **release:** 1.0.0-alpha.1 [skip ci] ([faa02c1](https://github.com/alexwine36/Portfolio/commit/faa02c198338ec2cab299410201ecea45f4ef855))
+* **release:** 1.0.0-alpha.1 [skip ci] ([f00d5f6](https://github.com/alexwine36/Portfolio/commit/f00d5f615b9e0a92cfe11abcfe019b30f3aee8fe))
+* **release:** 1.0.0-alpha.1 [skip ci] ([828e8a7](https://github.com/alexwine36/Portfolio/commit/828e8a79aa6b3cc240a305d6840379857326fc51))
+* **release:** 1.0.0-alpha.1 [skip ci] ([d0c069b](https://github.com/alexwine36/Portfolio/commit/d0c069b4758b7380cbe0804b0f883a8b5856c9c5))
+* **release:** 1.0.0-alpha.2 [skip ci] ([f9696bb](https://github.com/alexwine36/Portfolio/commit/f9696bbfff150790808a5a14d090c434099ea308))
+* **release:** 1.0.1 [skip ci] ([3dd5506](https://github.com/alexwine36/Portfolio/commit/3dd5506a26893a7868e916e0b2792b9475f3a083))
+
+
+### Tests
+
+* **actions:** changed setup for package release ([c8dba3f](https://github.com/alexwine36/Portfolio/commit/c8dba3f3188b73ad2cf656b92489240f5380e306))
+* **github:** testing using nx affected ([f6d616c](https://github.com/alexwine36/Portfolio/commit/f6d616c0ae53b45b15cf57bc5339a70af9311136))
+* **release:** new release test ([55e7a74](https://github.com/alexwine36/Portfolio/commit/55e7a74f3644d3e8fb59f524f685614d839cb503))
+
+
+### CI
+
+* **actions:** require github token for checkout ([1a31b29](https://github.com/alexwine36/Portfolio/commit/1a31b2903444bada5d2531cca1fce1eeff83842c))
+* **release:** updated release action shell ([ac2c4fb](https://github.com/alexwine36/Portfolio/commit/ac2c4fb30cf25d81a564cece520611c4c0d18c0e))
+* **release:** updated release removed prepare ([1338449](https://github.com/alexwine36/Portfolio/commit/13384492bee3afc2daec93b50838bac6336e41e4))
+
 ## [3.1.1](https://github.com/alexwine36/Portfolio/compare/v3.1.0...v3.1.1) (2022-07-22)
 
 
