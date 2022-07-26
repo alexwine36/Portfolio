@@ -1,3 +1,4 @@
+import isPropValid from '@emotion/is-prop-valid';
 import { styled, Theme, Typography } from '@mui/material';
 import { analogue } from 'simpler-color';
 /* eslint-disable-next-line */
@@ -37,7 +38,13 @@ interface GradientProps {
 /**
  * @category Styles
  */
-const GradientText = styled(Typography)<GradientProps>(
+const GradientText = styled(Typography, {
+  shouldForwardProp: (prop) =>
+    isPropValid(prop as string) &&
+    prop !== 'color' &&
+    prop !== 'primary' &&
+    prop !== 'secondary',
+})<GradientProps>(
   ({ theme, ...rest }) => `
     background-image: ${generateGradient(theme, rest)};
     background-clip: text;
