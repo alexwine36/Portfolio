@@ -1,3 +1,10 @@
+## [3.3.0](https://github.com/alexwine36/Portfolio/compare/v3.2.0...v3.3.0) (2022-07-26)
+
+
+### Features
+
+* **dependabot:** added dependabot to repo for auto updating packages ([56a64b8](https://github.com/alexwine36/Portfolio/commit/56a64b816f3923eefabb809d9b69de96dadba47f))
+
 ## [3.2.0](https://github.com/alexwine36/Portfolio/compare/v3.1.1...v3.2.0) (2022-07-26)
 
 
