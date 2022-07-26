@@ -23,7 +23,6 @@ jobs:
       number-of-agents: 5
       parallel-commands: |
         npx nx-cloud record -- yarn nx workspace-lint
-        npx nx-cloud record -- yarn nx format:check
       parallel-commands-on-agents: |
         yarn nx affected --target=lint --parallel=3
         yarn nx affected --target=test --parallel=3 --ci --code-coverage
