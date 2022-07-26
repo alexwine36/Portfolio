@@ -28,6 +28,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
+      "dependsOn": ["build"],
       "options": {
         "lintFilePatterns": ["libs/hex-rgb/**/*.ts"]
       }
