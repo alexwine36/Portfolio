@@ -29,7 +29,7 @@ runs:
       # like NPM_CONFIG_REGISTRY so npm publish ends up ignoring the .npmrc file
       # which is set up by `setup-node` action.
       shell: bash
-      run: yarn release --base=last-release-${GITHUB_REF##*/}
+      run: yarn release --base=last-release
     - name: PreRelease Version
       if: inputs.prerelease != 'none'
       env:
@@ -39,11 +39,11 @@ runs:
       # like NPM_CONFIG_REGISTRY so npm publish ends up ignoring the .npmrc file
       # which is set up by `setup-node` action.
       shell: bash
-      run: yarn release --base=last-release-${GITHUB_REF##*/} --releaseAs=prerelease --preid=${{ inputs.prerelease }}
+      run: yarn release --base=last-release --releaseAs=prerelease --preid=${{ inputs.prerelease }}
 
     - name: Tag last-release
       shell: bash
-      run: git tag -f last-release-${GITHUB_REF##*/}
+      run: git tag -f last-release
 
     - name: Push changes
       uses: ad-m/github-push-action@master
