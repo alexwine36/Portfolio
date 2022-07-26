@@ -1,3 +1,16 @@
+### [3.3.2](https://github.com/alexwine36/Portfolio/compare/v3.3.1...v3.3.2) (2022-07-26)
+
+
+### Bug Fixes
+
+* **nx-check:** updated nx check to run lint on libs only ([473e1c0](https://github.com/alexwine36/Portfolio/commit/473e1c001131a24e46b232b2ed0876db5360aed3))
+* **ui:** updated should forward prop for Gradient Text ([ffa9351](https://github.com/alexwine36/Portfolio/commit/ffa93518016e07c2d2b6b4e61d95d1e84c8b7d65))
+
+
+### Others
+
+* **deps-dev:** bump babel-preset-gatsby from 2.18.0 to 2.19.0 ([0ed20f4](https://github.com/alexwine36/Portfolio/commit/0ed20f454a6b1a0ab7ef549ec84f74f68b4ee979))
+
 ### [3.3.1](https://github.com/alexwine36/Portfolio/compare/v3.3.0...v3.3.1) (2022-07-26)
 
 
