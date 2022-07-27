@@ -30,3 +30,4 @@ startpack
 Starpacks
 Sankey
 quantifiably
+infographics

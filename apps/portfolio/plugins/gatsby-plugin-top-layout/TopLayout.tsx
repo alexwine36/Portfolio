@@ -42,6 +42,11 @@ export default function TopLayout(props) {
                   fontSize: theme.typography.body1.fontSize,
                 },
               },
+              '.statediagram-state': {
+                '& rect.basic[width="15"]': {
+                  visibility: 'hidden',
+                },
+              },
             },
             '.attributeBoxEven': {
               fill: '#1f2020 !important',
