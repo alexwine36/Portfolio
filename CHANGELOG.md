@@ -1,3 +1,20 @@
+### [3.4.1](https://github.com/alexwine36/Portfolio/compare/v3.4.0...v3.4.1) (2022-07-27)
+
+
+### Bug Fixes
+
+* **gatsby:** acronyms fixed and testing new vale review settings ([0bea1ff](https://github.com/alexwine36/Portfolio/commit/0bea1ffc0e45ff4393f1849d12919f1ea95a7cd5))
+
+
+### Docs
+
+* **added b2b app:** added content for B2B Project ([eed6c5b](https://github.com/alexwine36/Portfolio/commit/eed6c5b8f6797dd9071713d8acea12f1e7144246))
+
+
+### CI
+
+* **vale:** action if updated ([b6bb632](https://github.com/alexwine36/Portfolio/commit/b6bb632dcc2234dcd6c3ab12824bc7b4c7be2099))
+
 ## [3.4.0](https://github.com/alexwine36/Portfolio/compare/v3.3.2...v3.4.0) (2022-07-27)
 
 
