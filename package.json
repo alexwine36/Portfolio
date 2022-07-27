@@ -146,6 +146,7 @@
     "fs-extra": "^10.1.0",
     "gatsby-plugin-emotion": "7.18.0",
     "gatsby-plugin-netlify": "^5.0.0",
+    "gatsby-remark-acronyms": "^1.1.4",
     "gatsby-remark-autolink-headers": "^5.18.1",
     "graphql": "^15.8.0",
     "husky": "^8.0.1",

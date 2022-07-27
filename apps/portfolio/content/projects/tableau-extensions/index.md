@@ -27,7 +27,7 @@ This setup has been used for a number of dashboards. Two of the most beneficial 
 
 Increasing business is always important but, scaling intelligently can make or break a business faster. 
 
-As we communicated with vendors it was very clear that some understand this better than others. 
+As we communicated with vendors it was clear that some understand this better than others. 
 
 As an example we will pretend you own a painting company. 
 
@@ -41,7 +41,7 @@ You have the following tasks:
    2. Paint accents and fascia
    3. Paint garage door
 3. Final Paint
-   1. Doors and trim touchup
+   1. Doors and trim touch-up
    2. Caulk openings and trim
    3. Touch up walls and ceilings
 4. Paint punch

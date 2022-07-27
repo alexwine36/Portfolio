@@ -158,6 +158,19 @@ module.exports = {
 
         gatsbyRemarkPlugins: [
           {
+            resolve: 'gatsby-remark-acronyms',
+            options: {
+              acronyms: {
+                CRM: 'Customer Relationship Management',
+                ERP: 'Enterprise Resource Planning',
+                'CI/CD': 'Continuous Integration and Continuous Deployment',
+                CAD: 'Computer Aided Design',
+                ORM: 'Object Relational Mapping',
+                AWS: 'Amazon Web Services',
+              },
+            },
+          },
+          {
             resolve: 'gatsby-remark-autolink-headers',
           },
           {
