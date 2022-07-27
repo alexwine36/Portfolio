@@ -165,6 +165,7 @@ module.exports = {
                 ERP: 'Enterprise Resource Planning',
                 'CI/CD': 'Continuous Integration and Continuous Deployment',
                 CAD: 'Computer Aided Design',
+                ORM: 'Object Relational Mapping',
               },
             },
           },

@@ -13,7 +13,7 @@ The ERP system used at Abrazo Homes is called MarkSystems. This system effective
 
 # The Solution
 
-Unfortunately, Prisma was not an option. After multiple failed attempts I finally found a semi-automated method to create this. A JDBC connection was the only reliable method that I could connect to the database outside of the system and, as it was an older version JDBC newer tools didn't yield results. So I decided on a more custom approach.
+Unfortunately, Prisma was not an option. After multiple failed attempts I finally found a semi-automated method to create this. A JDBC connection was the only reliable method that I could connect to the database outside of the system and, as it was an older version JDBC newer tools didn't yield results. It was time for a more custom approach.
 
 I was able to export a data dictionary from MarkSystems and, from there I was sure I could use Python to process the file into something more helpful.
 

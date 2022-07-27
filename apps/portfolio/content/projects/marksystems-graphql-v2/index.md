@@ -14,7 +14,7 @@ I was **Strongly**[^jk] advised to find a new method to access the database and,
 
 # The Solution
 
-The application was initially written using @prisma/photon -- 2.0.0-preview. I had finally gotten access to a replicated MySQL database thanks to the incredibly helpful people at ECI, the company that owns MarkSystems. 
+The application was initially written using beta version of Prisma. I had finally gotten access to a replicated MySQL database thanks to the incredibly helpful people at ECI, the company that owns MarkSystems. 
 
 The trouble now was that prisma2 was not terribly reliable yet. Nexus, the plugin to generate a GraphQL schema from a Prisma model, was also not too reliable. The solution I found was to write several scripts to bridge the gaps between the two and, find a new method of hosting. 
 
