@@ -13,7 +13,7 @@ endDate: 2022-07-14
 
 - Automated the process of delivering new services to users using CI/CD tools.
 
-- Developed automated service for sending [customer surveys](/projects/customer-surveys/) using Pulumi and Node under a Yarn monorepo.
+- Developed automated service for sending [customer surveys](/projects/customer-surveys/) using Pulumi and Node under a Yarn Monorepo.
 
 <!-- - Increased house closings by at least 10% every year through automation and reporting. -->
 

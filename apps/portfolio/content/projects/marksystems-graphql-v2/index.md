@@ -20,7 +20,7 @@ The trouble now was that prisma2 was not terribly reliable yet. Nexus, the plugi
 
 
 I love Kubernetes but, I had read about Serverless which seemed like a better choice for this particular program using Next.js. The ability to have automated review environments through Vercel, at the time ZEIT, was also appealing.
-The speed boost this gave previous applications was incredible and continued to get better through development iterations. However this was only one of the prisma endpoints we had and needed a better method to connect.
+The speed boost this gave previous applications was incredible and continued to get better through development iterations. However this was only one of the Prisma endpoints we had and needed a better method to connect.
 
 [^jk]: They were actually incredibly helpful and polite.
 

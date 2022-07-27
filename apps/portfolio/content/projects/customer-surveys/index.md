@@ -46,7 +46,7 @@ Having taken a step back, obvious opportunities for improvement were realized.
 
 <!-- First - the survey was included with the application which wasn't a necessary feature.
  -->
-Initially the project had built-in surveys to provide custom functionality. Later discovering that Typeform contains methods for embedding data into forms that would manage the use case and ease the programming load.
+Initially the project had built-in surveys to provide custom capabilities. Later discovering that Typeform contains methods for embedding data into forms that would manage the use case and ease the programming load.
 
 The rewrite of this project required data access between both the dashboard [GitLab Pages](/tags/git-lab-ci) package and *Pulumi*
 
