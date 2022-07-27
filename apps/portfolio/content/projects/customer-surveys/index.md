@@ -63,7 +63,7 @@ graph LR
   packages --> |Formats Emails|email
 ```
 
-Using a monorepo for this project efficiently allowed type sharing between projects. The Pulumi package uses Step Functions and a Rest API to expose endpoints to the dashboard.
+Using a Monorepo for this project efficiently allowed type sharing between projects. The Pulumi package uses Step Functions and a Rest API to expose endpoints to the dashboard.
 
 
 ### State Machine

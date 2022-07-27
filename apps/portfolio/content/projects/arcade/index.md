@@ -13,7 +13,7 @@ import {VideoDisplay} from '../../../src/components/video-display'
 
 
 ## The Problem
-There was not a bartop arcade.
+There wasn't a bartop arcade.
 
 ## The Solution
 Build a bartop arcade.
