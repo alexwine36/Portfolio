@@ -42,7 +42,7 @@ Once the pandemic began, high priority issues came to light pausing the project 
 
 ## Restart
 
-Having taken a step back, obvious opportunities for improvement were realized.
+Having taken a step back, opportunities for improvement were realized.
 
 <!-- First - the survey was included with the application which wasn't a necessary feature.
  -->

@@ -39,7 +39,7 @@ autonumber
 Using this flow complicated the backend design but, would make checking in faster for families of all sizes. Instead of searching for students individually, a grouped record would help get parents moving quicker through the drop off line. 
 
 
-The data that the school sent contained students grouped by the family members that could pick them up. This appeared to be a simple mapping, however, not all children under those family groups had the same family members dropping off.
+The data that the school sent contained students grouped by the family members that could pick them up. This appeared to be a straight-forward mapping, however, not all children under those family groups had the same family members dropping off.
 
 Since this was a weekend project done free of charge I wanted to make sure the school had the ability to update their own information. Which meant setting up users and a database to effectively manage the needed information.
 
