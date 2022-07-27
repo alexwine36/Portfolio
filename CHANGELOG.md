@@ -1,3 +1,32 @@
+## [3.4.0](https://github.com/alexwine36/Portfolio/compare/v3.3.2...v3.4.0) (2022-07-27)
+
+
+### Features
+
+* **vale:** added vale for grammar and spelling help ([af1869f](https://github.com/alexwine36/Portfolio/commit/af1869f8a89a770e2a5d8f99f1d07ba8a4a2d198))
+
+
+### Bug Fixes
+
+* **gatsby:** added important abbreviations ([0694d54](https://github.com/alexwine36/Portfolio/commit/0694d5480df02019ceac6bd2bed14ec6495e8e41))
+* **vale:** added alex and Joblint ensuring best writing practices are used ([06d8e41](https://github.com/alexwine36/Portfolio/commit/06d8e415ea5c519697eebd1def520d7ef6140746))
+* **vale:** updated failing vale tests ([10fe3b8](https://github.com/alexwine36/Portfolio/commit/10fe3b885782dadc486a61e331bc73d15394d53d))
+
+
+### CI
+
+* **vale:** added content lint github action ([a9df69d](https://github.com/alexwine36/Portfolio/commit/a9df69d3263007dd7bcd520c06e97b0db4c2da80))
+
+
+### Tests
+
+* **ci:** testing github-pr-check reporter ([b98a5eb](https://github.com/alexwine36/Portfolio/commit/b98a5eb3d85ddac2e0f7764868505274dd0e66ac))
+
+
+### Docs
+
+* **grammar:** fixed multiple grammar issues with content in portfolio ([c65cbbe](https://github.com/alexwine36/Portfolio/commit/c65cbbe56e057e4c0945d3be9e2889000843ef78))
+
 ### [3.3.2](https://github.com/alexwine36/Portfolio/compare/v3.3.1...v3.3.2) (2022-07-26)
 
 
