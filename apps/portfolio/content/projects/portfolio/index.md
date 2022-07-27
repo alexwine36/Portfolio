@@ -13,7 +13,7 @@ import {PDFDisplay} from '../../../src/components/pdf-display';
 
 # The Problem
 
-It was time to write a resume and I wanted to have fun making it. Since I do enjoy a good problem I figured I would find a way to build a resume and portfolio all in one. Ideally this would involve learning some new technologies along the way.
+It was time to write a résumé and I wanted to have fun making it. Since I do enjoy a good problem I figured I would find a way to build a résumé and portfolio all in one. Ideally this would involve learning some new technologies along the way.
 
 
 

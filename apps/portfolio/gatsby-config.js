@@ -158,6 +158,17 @@ module.exports = {
 
         gatsbyRemarkPlugins: [
           {
+            resolve: 'gatsby-remark-acronyms',
+            options: {
+              acronyms: {
+                CRM: 'Customer Relationship Management',
+                ERP: 'Enterprise Resource Planning',
+                'CI/CD': 'Continuous Integration and Continuous Deployment',
+                CAD: 'Computer Aided Design',
+              },
+            },
+          },
+          {
             resolve: 'gatsby-remark-autolink-headers',
           },
           {

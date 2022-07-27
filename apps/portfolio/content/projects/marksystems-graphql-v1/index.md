@@ -17,7 +17,7 @@ Unfortunately, Prisma was not an option. After multiple failed attempts I finall
 
 I was able to export a data dictionary from MarkSystems and, from there I was sure I could use Python to process the file into something more helpful.
 
-What I ended writing was a Jupyter notebook that could process the csv into tables and their respective fields. After I had this information I needed to create different flags for types. Basis doesn't use the standard types I was accustomed to in SQL. Next up was the writing process. 
+What I ended writing was a Jupyter notebook that could process the CSV into tables and their respective fields. After I had this information I needed to create different flags for types. Basis doesn't use the standard types I was accustomed to in SQL. Next up was the writing process. 
 
 I used pandas to hold the information for all <!-- TODO: Insert table count --> tables. With this information present I used a little Python know how to parse into a format that GraphQL SPQR would like. I then wrote these files to the system in a javax.servlet-api that I could deploy to Kubernetes using procfiles and GitLab's CI. 
 
