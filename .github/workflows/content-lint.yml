@@ -14,8 +14,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: errata-ai/vale-action@reviewdog
+        if: github.event_name == "pull_request"
         with:
-          reporter: github-pr-check
+          reporter: github-pr-review
+          files: apps/portfolio/content
+          filter_mode: nofilter
+        env:
+          # Required, set by GitHub actions automatically:
+          # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - uses: errata-ai/vale-action@reviewdog
+        if: github.event_name != "pull_request"
+        with:
+          reporter: github-check
           files: apps/portfolio/content
           filter_mode: nofilter
         env:
