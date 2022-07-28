@@ -158,13 +158,24 @@ module.exports = {
 
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-mermaid',
+            resolve: require.resolve('./plugins/gatsby-remark-mermaider'),
             options: {
               theme: 'dark',
               language: 'mermaid',
               viewport: {
                 width: 1000,
                 height: 1000,
+              },
+              mermaidOptions: {
+                themeVariables: {
+                  fontFamily: `Libre Franklin, sans-serif`,
+                  fontSize: '16px',
+                  themeCSS: `
+                    :root{--mermaid-font-family:"Libre Franklin",sans-serif;}
+                    .nodeLabel .label {font-size: 14px;}
+                  `,
+                  // darkMode: true,
+                },
               },
               // themeCSS: `.nodeLabel {line-height: 1}`,
             },

@@ -10,9 +10,12 @@ import {
   TableRow,
   Tooltip,
   Typography,
+  useTheme,
 } from '@mui/material';
 import { Link as GLink } from 'gatsby';
 import { memo } from 'react';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 const space = 3;
 
 const AbbrText = styled(Typography)(({ theme }) => ({
@@ -20,8 +23,27 @@ const AbbrText = styled(Typography)(({ theme }) => ({
 }));
 
 const components = {
+  svg: (() => {
+    const Svg = (props) => {
+      // console.log(props);
+      const theme = useTheme();
+      const { children, ...rest } = props;
+      return (
+        <Zoom
+          overlayBgColorEnd={theme.palette.background.default}
+          // sx={{ marginY: space }}
+          // {...props}
+          // component="h2"
+          // variant="h3"
+        >
+          <svg {...rest}>{props.children}</svg>
+        </Zoom>
+      );
+    };
+    return memo(Svg);
+  })(),
   abbr: (props) => {
-    console.log(props);
+    // console.log(props);
     return (
       <Tooltip title={props.title}>
         <AbbrText
@@ -168,11 +190,16 @@ const components = {
   })(),
   a: (() => {
     const LinkDisplay = (props) => {
-      if (`${props.href}`.startsWith('/')) {
+      if (
+        `${props.href}`.startsWith('/') &&
+        !`${props.href}`.startsWith('/static/')
+      ) {
         const { href, ...p } = props;
         return <Link component={GLink} to={href} {...p} />;
       }
-      return <Link {...props} />;
+      return (
+        <Link rel="nofollow noopener noreferrer" target="_blank" {...props} />
+      );
     };
     return memo(LinkDisplay);
   })(),

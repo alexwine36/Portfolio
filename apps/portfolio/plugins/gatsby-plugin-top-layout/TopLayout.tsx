@@ -31,7 +31,8 @@ export default function TopLayout(props) {
               display: 'flex',
               justifyContent: 'center',
               lineHeight: 1,
-              fontSize: '1rem',
+              textAlign: 'center',
+              // fontSize: '14px',
               svg: {
                 height: '100%',
                 paddingTop: theme.spacing(1),
@@ -40,14 +41,17 @@ export default function TopLayout(props) {
               // '.cluster-label > foreignObject > div': {
               //   lineHeight: 1,
               // },
-              // '.nodeLabel': {
-              //   lineHeight: 1,
-              // },
+              '.nodeLabel': {
+                fontSize: 14,
+              },
+              '.label': {
+                fontSize: 14,
+              },
               'text.actor': {
                 tspan: {
-                  fontFamily: theme.typography.body1.fontFamily,
-                  fontWeight: theme.typography.body1.fontWeight,
-                  fontSize: theme.typography.body1.fontSize,
+                  // fontFamily: theme.typography.body1.fontFamily,
+                  // fontWeight: theme.typography.body1.fontWeight,
+                  // fontSize: theme.typography.body1.fontSize,
                 },
               },
               '.statediagram-state': {

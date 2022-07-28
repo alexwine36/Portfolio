@@ -103,7 +103,7 @@ export function ProjectPage(props: ProjectPageProps) {
         </Box>
       </HeroImage>
       <ParallaxSectionDisplay page={page} hideHeader>
-        <Container>
+        <Container disableGutters>
           <ChipListDisplay
             tags={tags.map((t) => ({
               name: t,

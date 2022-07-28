@@ -52,8 +52,6 @@ With tableau providing the data and averages for tasks and time between them, th
 
 <!-- Because first paint, final paint and, paint punch are blocking this is where issues tend to pop up. -->
 
-
-
 ```mermaid
 gantt
 
