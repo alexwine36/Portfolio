@@ -191,7 +191,7 @@ const components = {
   a: (() => {
     const LinkDisplay = (props) => {
       if (
-        `${props.href}`.startsWith('/') &&
+        (`${props.href}`.startsWith('/') || `${props.href}`.startsWith('#')) &&
         !`${props.href}`.startsWith('/static/')
       ) {
         const { href, ...p } = props;

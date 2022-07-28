@@ -66,7 +66,7 @@ gantt
     Paint Punch :crit, 2d
 
 ```
-Starting a house is the quickest part. It requires little time and has a large gap before the next stage of the house. Once the house gets to later stages issue arise, there is less time between tasks and most tasks block other steps.
+Starting a house is the quickest part. It requires little time and has a large gap before the next stage of the house. Once the house gets to later stages is when issues arise, there is less time between tasks and most tasks block other steps.
 By displaying this information to vendors it helped them plan the number of houses they could feasibly manage and the number of crews they would need to achieve their business goals.
 
 

@@ -155,8 +155,12 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: [`.mdx`, `.md`],
-
+        plugins: [
+          `gatsby-remark-images`,
+          `gatsby-remark-images-medium-zoom`, // Important!
+        ],
         gatsbyRemarkPlugins: [
+          'gatsby-remark-unwrap-images',
           {
             resolve: require.resolve('./plugins/gatsby-remark-mermaider'),
             options: {
@@ -186,9 +190,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
+              linkImagesToOriginal: false,
               maxWidth: 800,
+              // wrapperStyle: `
+              //   max-width: unset;
+              // `,
             },
           },
+
           // {
           //   resolve: require.resolve('./plugins/gatsby-remark-grapher'),
           //   // 'gatsby-remark-grapher',
@@ -211,13 +220,16 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-images-medium-zoom',
+            options: {
+              background: '#000F08',
+            },
+          },
+          {
             resolve: 'gatsby-remark-smartypants',
           },
           {
             resolve: 'gatsby-remark-external-links',
-          },
-          {
-            resolve: 'gatsby-remark-numbered-footnotes',
           },
           {
             resolve: 'gatsby-remark-acronyms',
@@ -231,6 +243,9 @@ module.exports = {
                 AWS: 'Amazon Web Services',
               },
             },
+          },
+          {
+            resolve: 'gatsby-remark-numbered-footnotes',
           },
         ],
       },

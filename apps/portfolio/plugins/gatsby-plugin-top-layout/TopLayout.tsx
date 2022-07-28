@@ -27,7 +27,7 @@ export default function TopLayout(props) {
             '.MuiBottomNavigationAction-label': {
               fontWeight: 800,
             },
-            '.mermaid': {
+            '.mermaid, [data-rmiz-modal-content] > svg': {
               display: 'flex',
               justifyContent: 'center',
               lineHeight: 1,
@@ -95,12 +95,42 @@ export default function TopLayout(props) {
               '>': {
                 'h1, h2, h3, h4, h5, h6, hr, p': {
                   margin: theme.spacing(3),
-                  'img[alt="plat"]': {
-                    width: '100%',
-                    background: theme.palette.text.secondary,
-                    padding: theme.spacing(3),
-                  },
+
+                  // '.gatsby-resp-image-wrapper': {
+                  //   // background: 'blue',
+                  //   display: 'flex',
+                  //   justifyContent: 'center',
+                  // },
+                  // '&:has(.gatsby-resp-image-wrapper)': {
+                  //   background: 'red',
+
+                  //   // ':has(.gatsby-resp-image-wrapper)': {
+                  //   //   background: 'red',
+                  //   // },
+                  // },
                 },
+                'img[alt="plat"]': {
+                  display: 'block',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                  marginTop: theme.spacing(3),
+                  marginBottom: theme.spacing(3),
+                  width: '75%',
+                  // margin: 'auto',
+                  background: theme.palette.text.secondary,
+                  padding: theme.spacing(3),
+                },
+
+                // p: {
+                //   // maxWidth: 'unset',
+                //   // '&:has(span)': {
+                //   //   maxWidth: 'unset',
+                //   // },
+                //   // '.gatsby-resp-image-wrapper': {
+                //   //   margin: 'auto',
+                //   //   maxWidth: 'unset',
+                //   // },
+                // },
                 'h1, h2, h3, h4, h5, h6': {
                   '&:hover, &:focus': {
                     '.anchor svg': {
