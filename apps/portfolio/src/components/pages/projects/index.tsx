@@ -12,7 +12,7 @@ import {
   useTheme,
 } from '@mui/material';
 import { ChipListDisplay, MasonryGridComponent } from '@portfolio/ui';
-import { graphql, PageProps, Script } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import pluralize from 'pluralize';
@@ -72,7 +72,7 @@ export function ProjectPage(props: ProjectPageProps) {
 
   return (
     <StyledProjectPage>
-      <Script
+      {/* <Script
         strategy="idle"
         src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"
         onLoad={() => {
@@ -83,7 +83,7 @@ export function ProjectPage(props: ProjectPageProps) {
       <Script
         strategy="idle"
         src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js.map"
-      ></Script>
+      ></Script> */}
       <SeoFormatter mdx={mdx} />
       <HeroImage>
         <BackgroundImage

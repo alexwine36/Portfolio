@@ -158,6 +158,18 @@ module.exports = {
 
         gatsbyRemarkPlugins: [
           {
+            resolve: 'gatsby-remark-mermaid',
+            options: {
+              theme: 'dark',
+              language: 'mermaid',
+              viewport: {
+                width: 1000,
+                height: 1000,
+              },
+              // themeCSS: `.nodeLabel {line-height: 1}`,
+            },
+          },
+          {
             resolve: 'gatsby-remark-autolink-headers',
           },
           {
@@ -166,14 +178,14 @@ module.exports = {
               maxWidth: 800,
             },
           },
-          {
-            resolve: require.resolve('./plugins/gatsby-remark-grapher'),
-            // 'gatsby-remark-grapher',
-            options: {
-              language: 'mermaid',
-              theme: 'dark',
-            },
-          },
+          // {
+          //   resolve: require.resolve('./plugins/gatsby-remark-grapher'),
+          //   // 'gatsby-remark-grapher',
+          //   options: {
+          //     language: 'mermaid',
+          //     theme: 'dark',
+          //   },
+          // },
           {
             resolve: 'gatsby-remark-static-images',
           },
