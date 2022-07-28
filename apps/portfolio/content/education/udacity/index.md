@@ -6,3 +6,4 @@ endDate: 2017-01-01
 ---
 
 - Building enterprise ready applications
+- Learned Java through building and designing Android apps.

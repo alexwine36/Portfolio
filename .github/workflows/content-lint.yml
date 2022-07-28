@@ -16,7 +16,7 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         if: github.event_name == 'pull_request'
         with:
-          reporter: github-pr-review
+          reporter: github-pr-check
           files: apps/portfolio/content
           filter_mode: nofilter
         env:
