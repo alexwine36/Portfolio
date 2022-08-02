@@ -44,7 +44,7 @@ export function SocialIconButton(props: SocialIconButtonProps) {
   const Icon = SelectIcon(provider);
 
   return (
-    <IconButton LinkComponent={Link} href={link || ''}>
+    <IconButton LinkComponent={Link} href={link || ''} aria-label={provider}>
       <Icon />
     </IconButton>
   );
