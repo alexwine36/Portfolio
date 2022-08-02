@@ -1,3 +1,10 @@
+### [3.4.2](https://github.com/alexwine36/Portfolio/compare/v3.4.1...v3.4.2) (2022-08-02)
+
+
+### Bug Fixes
+
+* **ui:** updated social icon button to use aria label for accessibility ([40200d2](https://github.com/alexwine36/Portfolio/commit/40200d2f16a50c457617effa5a39e0e00b541f70))
+
 ### [3.4.1](https://github.com/alexwine36/Portfolio/compare/v3.4.0...v3.4.1) (2022-07-27)
 
 
