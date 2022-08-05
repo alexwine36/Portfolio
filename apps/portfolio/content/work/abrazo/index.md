@@ -17,7 +17,7 @@ endDate: 2022-07-14
 
 <!-- - Increased house closings by at least 10% every year through automation and reporting. -->
 
-- Planned and executed the transition from local server to a cloud server, increasing both employee file access speed and internet bandwidth onsite.
+- Planned and executed the transition from local to cloud server, increasing both employee file access speed and internet bandwidth onsite.
 
 - Managed department spending per annum through strategic procurement of equipment and services.
 
