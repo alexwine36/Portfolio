@@ -149,7 +149,6 @@
     "gatsby-plugin-netlify": "^5.0.0",
     "gatsby-remark-acronyms": "^1.1.4",
     "gatsby-remark-autolink-headers": "^5.18.1",
-    "gatsby-remark-images-medium-zoom": "^1.7.0",
     "gatsby-remark-unwrap-images": "^1.0.2",
     "graphql": "^15.8.0",
     "husky": "^8.0.1",

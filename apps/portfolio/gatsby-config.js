@@ -155,10 +155,10 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: [`.mdx`, `.md`],
-        plugins: [
-          `gatsby-remark-images`,
-          `gatsby-remark-images-medium-zoom`, // Important!
-        ],
+        // plugins: [
+        //   `gatsby-remark-images`,
+        //   `gatsby-remark-images-medium-zoom`, // Important!
+        // ],
         gatsbyRemarkPlugins: [
           'gatsby-remark-unwrap-images',
           {
@@ -219,12 +219,12 @@ module.exports = {
               },
             },
           },
-          {
-            resolve: 'gatsby-remark-images-medium-zoom',
-            options: {
-              background: '#000F08',
-            },
-          },
+          // {
+          //   resolve: 'gatsby-remark-images-medium-zoom',
+          //   options: {
+          //     background: '#000F08',
+          //   },
+          // },
           {
             resolve: 'gatsby-remark-smartypants',
           },
