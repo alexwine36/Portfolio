@@ -15,17 +15,17 @@ hero: stephen-dawson-qwtCeJ5cLYs-unsplash.jpg
 
 # The Problem
 
-Tableau is an incredibly powerful software but, sometimes you need a bit more flexibility than it can provide. 
+Tableau is an incredibly powerful software; however, sometimes you need a bit more flexibility than it can provide. 
 
 # The Solution
 
-Tableau Extensions to the rescue! Using Tableau's Extensions API data can be pulled into a dashboard for modification or display.
+Tableau Extensions to the rescue! Using Tableau's Extensions API, data can be pulled into a dashboard for modification or display.
 
 ## Uses
 
-This setup has been used for a number of dashboards. Two of the most beneficial were for vendor load and sales pipeline display.
+This setup has been used for a number of Abrazo's dashboards. Two of the most beneficial were the vendor load and sales pipeline display.
 
-Increasing business is always important but, scaling intelligently can make or break a business faster. 
+Increasing business is always important but scaling intelligently is vital to a company's success. As we communicated with vendors it was clear that some vendors understood the importance of scaling better than others. 
 
 As we communicated with vendors it was clear that some understand this better than others. 
 
@@ -45,8 +45,9 @@ You have the following tasks:
    2. Caulk openings and trim
    3. Touch up walls and ceilings
 4. Paint punch
-   1. Come back to touch up missed items
+   1. Come back to touch-up missed items
 
+With Tableau providing data to the extension, it is possible to aggregate and manipulate the data. The extension allows you to calculate a house completion timeline by averaging task durations and the estimated frequency of house visits. This timeline provides a template to better inform the number of houses you are able to get under contract without overloading the business and delaying current projects. 
 
 With tableau providing the data and averages for tasks and time between them, the extension can then play with the data. 
 
@@ -74,3 +75,4 @@ By displaying this information to vendors it helped them plan the number of hous
 
 
 ![Sales Sankey](newplot.png)
+-->
