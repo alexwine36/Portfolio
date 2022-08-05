@@ -13,37 +13,10 @@ import {
   useTheme,
 } from '@mui/material';
 import { Link as GLink } from 'gatsby';
-import React, { memo } from 'react';
+import { memo } from 'react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 const space = 3;
-
-interface WithZoomProps {
-  sample?: string;
-}
-
-const withZoom = <T extends WithZoomProps = WithZoomProps>(
-  WrappedComponent: React.ComponentType<T>
-) => {
-  const displayName =
-    WrappedComponent.displayName || WrappedComponent.name || 'Component';
-  // Creating the inner component. The calculated Props type here is the where the magic happens.
-  const ComponentWithZoom = (props: Omit<T, keyof WithZoomProps>) => {
-    // Fetch the props you want to inject. This could be done with context instead.
-    const theme = useTheme();
-
-    // props comes afterwards so the can override the default ones.
-    return (
-      <Zoom overlayBgColorEnd={theme.palette.background.default}>
-        <WrappedComponent {...(props as T)} />
-      </Zoom>
-    );
-  };
-
-  ComponentWithZoom.displayName = `withTheme(${displayName})`;
-
-  return ComponentWithZoom;
-};
 
 const AbbrText = styled(Typography)(({ theme }) => ({
   textDecoration: `underline wavy ${theme.palette.text.disabled}`,
