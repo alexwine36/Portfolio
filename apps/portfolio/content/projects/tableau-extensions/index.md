@@ -49,20 +49,30 @@ You have the following tasks:
 
 With Tableau providing data to the extension, it is possible to aggregate and manipulate the data. The extension allows you to calculate a house completion timeline by averaging task durations and the estimated frequency of house visits. This timeline provides a template to better inform the number of houses you are able to get under contract without overloading the business and delaying current projects. 
 
-<!--
+With tableau providing the data and averages for tasks and time between them, the extension can then play with the data. 
+
+<!-- Because first paint, final paint and, paint punch are blocking this is where issues tend to pop up. -->
+
 ```mermaid
 gantt
 
     dateFormat  YYYY-MM-DD
-    section Crew 1
-    First Paint           :a1, 2014-01-01, 6d
-    Another task     :after a1  , 20d
-    section Crew 2
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
-           
+    axisFormat %j
+    section House Schedule
+    First Paint           :crit, a1, 2014-01-01, 5d
+    Other         :done, oth1, after a1, 20d
+    Final Paint     :crit, a2, after oth1, 6d
+    Exterior Paint :2d
+    Other :done, oth2, after a2, 7d
+    Paint Punch :crit, 2d
 
 ```
+Starting a house is the quickest part. It requires little time and has a large gap before the next stage of the house. Once the house gets to later stages is when issues arise, there is less time between tasks and most tasks block other steps.
+By displaying this information to vendors it helped them plan the number of houses they could feasibly manage and the number of crews they would need to achieve their business goals.
+
+
+
+
 
 ![Sales Sankey](newplot.png)
 -->

@@ -155,25 +155,57 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: [`.mdx`, `.md`],
-
+        // plugins: [
+        //   `gatsby-remark-images`,
+        //   `gatsby-remark-images-medium-zoom`, // Important!
+        // ],
         gatsbyRemarkPlugins: [
+          'gatsby-remark-unwrap-images',
+          {
+            resolve: require.resolve('./plugins/gatsby-remark-mermaider'),
+            options: {
+              theme: 'dark',
+              language: 'mermaid',
+              viewport: {
+                width: 1000,
+                height: 1000,
+              },
+              mermaidOptions: {
+                themeVariables: {
+                  fontFamily: `Libre Franklin, sans-serif`,
+                  fontSize: '16px',
+                  themeCSS: `
+                    :root{--mermaid-font-family:"Libre Franklin",sans-serif;}
+                    .nodeLabel .label {font-size: 14px;}
+                  `,
+                  // darkMode: true,
+                },
+              },
+              // themeCSS: `.nodeLabel {line-height: 1}`,
+            },
+          },
           {
             resolve: 'gatsby-remark-autolink-headers',
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
+              linkImagesToOriginal: false,
               maxWidth: 800,
+              // wrapperStyle: `
+              //   max-width: unset;
+              // `,
             },
           },
-          {
-            resolve: require.resolve('./plugins/gatsby-remark-grapher'),
-            // 'gatsby-remark-grapher',
-            options: {
-              language: 'mermaid',
-              theme: 'dark',
-            },
-          },
+
+          // {
+          //   resolve: require.resolve('./plugins/gatsby-remark-grapher'),
+          //   // 'gatsby-remark-grapher',
+          //   options: {
+          //     language: 'mermaid',
+          //     theme: 'dark',
+          //   },
+          // },
           {
             resolve: 'gatsby-remark-static-images',
           },
@@ -187,14 +219,17 @@ module.exports = {
               },
             },
           },
+          // {
+          //   resolve: 'gatsby-remark-images-medium-zoom',
+          //   options: {
+          //     background: '#000F08',
+          //   },
+          // },
           {
             resolve: 'gatsby-remark-smartypants',
           },
           {
             resolve: 'gatsby-remark-external-links',
-          },
-          {
-            resolve: 'gatsby-remark-numbered-footnotes',
           },
           {
             resolve: 'gatsby-remark-acronyms',
@@ -208,6 +243,9 @@ module.exports = {
                 AWS: 'Amazon Web Services',
               },
             },
+          },
+          {
+            resolve: 'gatsby-remark-numbered-footnotes',
           },
         ],
       },
