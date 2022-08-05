@@ -27,7 +27,11 @@ This setup has been used for a number of Abrazo's dashboards. Two of the most be
 
 Increasing business is always important but scaling intelligently is vital to a company's success. As we communicated with vendors it was clear that some vendors understood the importance of scaling better than others. 
 
-For example, let's pretend you own a painting company. You have the following tasks:
+As we communicated with vendors it was very clear that some understand this better than others. 
+
+As an example we will pretend you own a painting company. 
+
+You have the following tasks:
 1. First Paint
    1. Prime walls
    2. Rough paint for walls
@@ -37,7 +41,7 @@ For example, let's pretend you own a painting company. You have the following ta
    2. Paint accents and fascia
    3. Paint garage door
 3. Final Paint
-   1. Doors and trim touchup
+   1. Doors and trim touch-up
    2. Caulk openings and trim
    3. Touch up walls and ceilings
 4. Paint punch

@@ -19,6 +19,6 @@ endDate: 2012-01-01
   - The project grew to involve the community allowing the chance to record the Newton Mid-Kansas Symphony Orchestra 
   - Requested by the Director of the Newton Mid-Kansas Symphony Orchestra, Thomas W. Douglas, for the second concert   -->
 - Envisioned, created, and built an Audio Recording Program for students at the college
-  - Designed and began for free student use within six months
+  - Designed and began with free student use within six months
   - Developed the project to include recording the Newton Mid-Kansas Symphony Orchestra
-  -  Requested by the Director of the Symphony for a second recording
+  - Requested by the Director of the Symphony for a second recording

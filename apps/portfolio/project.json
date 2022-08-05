@@ -42,6 +42,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
+      "dependsOn": ["portfolio:build"],
       "options": {
         "lintFilePatterns": ["apps/portfolio/**/*.{ts,tsx,js,jsx}"]
       }

@@ -16,7 +16,7 @@ Handoffs are extremely important for long running and tasks and construction is 
 The last step is the drafting department which compiles all of this information into a packet for superintendents use. This packet contains a slew of documents which contain all the information about the house. The first step in the construction process is to meet with the customers and ensure the information is correct, however, you can't expect a customer to be able to riffle through change options, construction plans and house files and understand it immediately. 
 
   - Starpacks used for job starts
-  - Used for preconstruction meeting
+  - Used for pre-construction meeting
 
 # The Solution
 

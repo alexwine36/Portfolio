@@ -16,6 +16,24 @@ jobs:
       - uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
+  nx-check:
+    name: Nx Cloud - Main Job
+    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.6
+    with:
+      number-of-agents: 5
+      parallel-commands: |
+        npx nx-cloud record -- yarn nx workspace-lint
+      parallel-commands-on-agents: |
+        yarn nx affected:libs --target=lint --parallel=3
+        yarn nx affected --target=test --parallel=3 --ci --code-coverage
+        yarn nx affected --target=build --parallel=3
+
+  agents:
+    name: Nx Cloud - Agents
+    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.6
+    with:
+      number-of-agents: 5
+
   test:
     name: Test
     runs-on: ubuntu-latest
@@ -182,7 +200,7 @@ jobs:
   release:
     name: release
     if: github.ref == 'refs/heads/main'
-    needs: [test, deploy]
+    needs: [test, deploy, nx-check]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

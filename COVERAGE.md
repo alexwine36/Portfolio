@@ -2,10 +2,10 @@
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
+apps.portfolio.src.components.display.hero-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.display.section-data-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.display.skill-header-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.hero-banner-implementation | 100% | 100% | 0 | ✔
-apps.portfolio.src.components.hero-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.mdx.vr-viewer | 58% | 50% | 0 | ➖
 apps.portfolio.src.components.next-post-component | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.pages.tags | 100% | 100% | 0 | ✔
@@ -42,7 +42,7 @@ libs.ui.src.components.chip-list-display | 100% | 50% | 0 | ✔
 libs.ui.src.components.detail-card-display | 100% | 100% | 0 | ✔
 libs.ui.src.components.detail-list-display | 100% | 100% | 0 | ✔
 libs.ui.src.components.footer-display | 71% | 100% | 0 | ➖
-libs.ui.src.components.gradient-text | 82% | 83% | 0 | ✔
+libs.ui.src.components.gradient-text | 83% | 90% | 0 | ✔
 libs.ui.src.components.hero-banner | 100% | 100% | 0 | ✔
 libs.ui.src.components.hero-display | 71% | 100% | 0 | ➖
 libs.ui.src.components.info-text-display | 100% | 100% | 0 | ✔
@@ -59,4 +59,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **83%** (453 / 543) | **68%** (128 / 188) | **0** | ✔
+**Summary** | **83%** (454 / 544) | **69%** (132 / 192) | **0** | ✔

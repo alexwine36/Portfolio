@@ -3,17 +3,40 @@ import {
   Divider,
   Link,
   Paper,
+  styled,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
+  Tooltip,
   Typography,
 } from '@mui/material';
 import { Link as GLink } from 'gatsby';
 import { memo } from 'react';
 const space = 3;
 
+const AbbrText = styled(Typography)(({ theme }) => ({
+  textDecoration: `underline wavy ${theme.palette.text.disabled}`,
+}));
+
 const components = {
+  abbr: (props) => {
+    console.log(props);
+    return (
+      <Tooltip title={props.title}>
+        <AbbrText
+          as="span"
+          // sx={{
+          //   textDecoration: `underline wavy $`,
+          // }}
+        >
+          {props.children}
+        </AbbrText>
+      </Tooltip>
+    );
+
+    // <abbr style={{ color: 'green' }} {...props} />;
+  },
   p: Typography,
   h1: (() => {
     const H1 = (props) => (
