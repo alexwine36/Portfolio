@@ -1,3 +1,37 @@
+## [3.5.0](https://github.com/alexwine36/Portfolio/compare/v3.4.2...v3.5.0) (2022-08-05)
+
+
+### Features
+
+* **mermaid:** testing new mermaid config ([cf85ec1](https://github.com/alexwine36/Portfolio/commit/cf85ec159e2adb439c158a0c92b776c4b01bbed8))
+
+
+### Bug Fixes
+
+* **medium zoom:** removed old image wrapper for gatsby specific image wrapper ([3a4f8ea](https://github.com/alexwine36/Portfolio/commit/3a4f8eacad2969d7a2922dd7eaad703a5283daa7))
+* **mermaid:** added local mermaid plugin for development ([5acb92b](https://github.com/alexwine36/Portfolio/commit/5acb92b872fecff93b45dbadc5fdb2598764f511))
+
+
+### Performance Improvements
+
+* **gatsby:** updated display of images links and content ([7ea6f6f](https://github.com/alexwine36/Portfolio/commit/7ea6f6f2b63b5b3ec53dff2c4eedd447c80fe3b8))
+
+
+### CI
+
+* **vale:** changed to github-pr-check ([8948bf5](https://github.com/alexwine36/Portfolio/commit/8948bf51db90cdf9001c9bbf8722e27b76cd7705))
+
+
+### Docs
+
+* **content:** updated docs content ([5f97c3e](https://github.com/alexwine36/Portfolio/commit/5f97c3e2c359c2fc84b16e82c7df48b1d96c5280))
+* **projects:** updated project contents ([fd07ac9](https://github.com/alexwine36/Portfolio/commit/fd07ac944d97029fbf92f77b76628df4042e31d0))
+
+
+### Code Refactoring
+
+* removed unnecessary code block from MDX components ([ef818e0](https://github.com/alexwine36/Portfolio/commit/ef818e0fc6aa446427d295d4238fa725fe252d71))
+
 ### [3.4.2](https://github.com/alexwine36/Portfolio/compare/v3.4.1...v3.4.2) (2022-08-02)
 
 
