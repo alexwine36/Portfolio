@@ -27,7 +27,7 @@ This setup has been used for a number of Abrazo's dashboards. Two of the most be
 
 Increasing business is always important but scaling intelligently is vital to a company's success. As we communicated with vendors it was clear that some vendors understood the importance of scaling better than others. 
 
-As we communicated with vendors it was very clear that some understand this better than others. 
+As we communicated with vendors it was clear that some understand this better than others. 
 
 As an example we will pretend you own a painting company. 
 
@@ -45,10 +45,9 @@ You have the following tasks:
    2. Caulk openings and trim
    3. Touch up walls and ceilings
 4. Paint punch
-   1. Come back to touch up missed items
+   1. Come back to touch-up missed items
 
-
-With Tableau providing data to the extension, it is then possible to manipulate the data. 
+With Tableau providing data to the extension, it is possible to aggregate and manipulate the data. The extension allows you to calculate a house completion timeline by averaging task durations and the estimated frequency of house visits. This timeline provides a template to better inform the number of houses you are able to get under contract without overloading the business and delaying current projects. 
 
 <!--
 ```mermaid

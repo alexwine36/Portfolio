@@ -13,7 +13,7 @@ tags:
 
 
 # The Problem
-Constructing a dream home is a long process. Ensuring a customer is happy throughout their build is the highest priority.
+Constructing a dream home is a long process, ensuring a customer is happy throughout their build is the highest priority.
 
 ---
 
@@ -21,7 +21,7 @@ Constructing a dream home is a long process. Ensuring a customer is happy throug
 <!-- TODO: Add team leader/manager information ie. talking to multiple departements -->
 <!-- TODO: Add same info to description in work experience -->
 # The Solution
-Developed an algorithm and dashboard to monitor the progression and customer satisfaction of the clients' homes. The algorithm sends surveys to clients and the dashboard updates survey statuses. 
+Developed an algorithm and dashboard to monitor the progression and customer satisfaction of the clients' homes. The algorithm sends surveys to the clients and the dashboard updates survey statuses. 
 - Infrastructure
   - [Pulumi](/tags/pulumi) to create the backend
   - [GitLab](/tags/git-lab-ci) as the CI/CD environment
@@ -35,9 +35,9 @@ Developed an algorithm and dashboard to monitor the progression and customer sat
 
 # The Process
 
-Started in June 2019, this has been the longest running project for Abrazo Homes. Originally developed with Serverless, using Razzle and React for the backend. 
+Beginning in June 2019, this has been the longest running project for Abrazo Homes. Originally developed with Serverless, using Razzle and React for the backend. 
 <!-- TODO: Alex look at this -->
-Once the pandemic began, high priority issues came to light pausing the project until January 2022. 
+Once the pandemic began, higher priority issues came to light pausing the project until January 2022. 
 
 
 ## Restart
@@ -46,7 +46,7 @@ Having taken a step back, opportunities for improvement were realized.
 
 <!-- First - the survey was included with the application which wasn't a necessary feature.
  -->
-Initially the project had built-in surveys to provide custom capabilities. Later discovering that Typeform contains methods for embedding data into forms that would manage the use case and ease the programming load.
+Initially the project had built-in surveys to provide custom functionality. Later discovering that Typeform contains methods for embedding data into forms that would manage the use case and ease the programming load.
 
 The rewrite of this project required data access between both the dashboard [GitLab Pages](/tags/git-lab-ci) package and *Pulumi*
 
@@ -67,7 +67,7 @@ Using a Monorepo for this project efficiently allowed type sharing between proje
 
 
 ### State Machine
-The state machine links processes 
+The state machine links the steps necessary for generating and sending surveys. After many iterations a design was created that allowed the greatest flexibility and speed to the process. 
 
 ```mermaid
 %%{init: {'theme': 'dark'} }%%
@@ -98,7 +98,16 @@ InsertSurvey --> [*]
 }
 
 ```
+<!-- NOTE: May be delete this -->
+The previous iteration of this project had required all information present at each step of the flow. This slowed down processing and created more room for errors. 
 
+By starting with a single source of truth, the survey trigger, multiple issues were avoided. 
+
+<!-- Needs work but essentially -->
+- No false positives
+  - Customers that had cancelled but still had root (house) information tied to them
+  - Padding and precursors 
+    - Using completion tasks outside of customers means
 
 
 
