@@ -45,6 +45,7 @@
   "cli": {
     "defaultCollection": "@nrwl/gatsby"
   },
+  "defaultProject": "portfolio",
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"]

@@ -1,5 +1,5 @@
 ---
-title: Porfolio
+title: Portfolio
 date: 2022-06-09
 tags:
   - React
@@ -15,6 +15,16 @@ import {PDFDisplay} from '../../../src/components/pdf-display';
 
 It was time to write a résumé and I wanted to have fun making it. Since I do enjoy a good problem I figured I would find a way to build a résumé and portfolio all in one. Ideally this would involve learning some new technologies along the way.
 
+
+# The Solution
+
+## Structure
+
+I chose to use [NX](https://nx.dev/) for the project. The ease of generating components, apps, and libraries fast while having them linked quickly allowed fast iterations.
+
+## Design
+
+I really liked the look of Glassmorphism and I wanted to try and implement some of that style into the design. For the frontend library I choose MUI because I have used it in the past and the ability to customize quickly would help during the design process.
 
 
 ## CI Process

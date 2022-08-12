@@ -1,4 +1,4 @@
-import { styled, useTheme } from '@mui/material';
+import { Box, styled, useTheme } from '@mui/material';
 import _ from 'lodash';
 import Masonry from 'react-masonry-css';
 
@@ -20,17 +20,18 @@ const defaultSpacing = 3;
 
 const StyledMasonryGridComponent = styled(Masonry)<StyledMasonryProps>(
   ({ theme, spacing }) => `
-    display: -webkit-box; 
-    display: -ms-flexbox; 
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    margin-left: -30px; 
+    margin-left: -30px;
     width: auto;
 
 
     .my-masonry-grid_column {
-      // padding-left: 30px; 
+      // padding-left: 30px;
       padding-left: ${theme.spacing(spacing || defaultSpacing)};
       background-clip: padding-box;
+      // max-width: 750px;
     }
 
 
@@ -63,6 +64,23 @@ export function MasonryGridComponent(props: MasonryGridComponentProps) {
     [xs]: 1,
     ...newGrid,
   };
+
+  if (children.length === 1) {
+    return (
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          'div, a': {
+            maxWidth: 750,
+          },
+        }}
+      >
+        {children}
+      </Box>
+    );
+  }
 
   return (
     <StyledMasonryGridComponent

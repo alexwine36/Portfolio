@@ -241,6 +241,7 @@ module.exports = {
                 CAD: 'Computer Aided Design',
                 ORM: 'Object Relational Mapping',
                 AWS: 'Amazon Web Services',
+                MUI: 'Material UI',
               },
             },
           },

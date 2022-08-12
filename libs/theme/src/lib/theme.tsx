@@ -3,6 +3,7 @@ import { deepmerge } from '@mui/utils';
 
 const baseTheme = createTheme({
   typography: {
+    fontSize: 16,
     fontFamily: `Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`,
     h1: {
       fontWeight: '800',
@@ -89,6 +90,12 @@ const componentTheme = createTheme({
     mode: 'dark',
   },
   components: {
+    MuiLink: {
+      defaultProps: {
+        underline: 'hover',
+        color: baseTheme.palette.primary.light,
+      },
+    },
     // MuiBackdrop: {
     //   styleOverrides: {
     //     root: {

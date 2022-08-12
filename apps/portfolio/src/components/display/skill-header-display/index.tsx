@@ -29,17 +29,18 @@ export function SkillHeaderDisplay(props: SkillHeaderDisplayProps) {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          flexDirection: 'row-reverse',
         }}
         data-testid="container"
       >
-        <Rating data-testid="rating" readOnly value={skill.rating}></Rating>
-        <Typography data-testid="skill">{skill.skill}</Typography>
+        <Rating data-testid="rating" readOnly value={skill?.rating}></Rating>
+        <Typography data-testid="skill">{skill?.skill}</Typography>
       </Box>
 
       <Typography
         data-testid="skill-time"
         variant="overline"
-      >{`~${skill.date.replace(' ago', '')}`}</Typography>
+      >{`~${skill?.date.replace(' ago', '')}`}</Typography>
     </StyledSkillDisplay>
   );
 }
