@@ -11,6 +11,7 @@ apps.portfolio.src.components.next-post-component | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.pages.tags | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.parallax-section-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.project-card | 100% | 50% | 0 | ✔
+apps.portfolio.src.components.remark-link | 70% | 56% | 0 | ➖
 apps.portfolio.src.components.seo-formatter | 100% | 50% | 0 | ✔
 apps.portfolio.src.hooks.use-pages | 67% | 0% | 0 | ➖
 apps.portfolio.src.pages.projects | 75% | 100% | 0 | ✔
@@ -18,6 +19,7 @@ apps.portfolio.src.pages.skills | 100% | 100% | 0 | ✔
 apps.portfolio.src.pages.work | 70% | 0% | 0 | ➖
 apps.portfolio.src.utilities.generate-tag-link | 100% | 100% | 0 | ✔
 apps.portfolio.src.utilities.get-description | 91% | 50% | 0 | ✔
+apps.portfolio.src.utilities.remove-trailing-slash | 100% | 100% | 0 | ✔
 apps.portfolio.src.utilities.test.constants.project-card | 100% | 100% | 0 | ✔
 libs.generate-badges.src.lib | 18% | 0% | 0 | ❌
 libs.hex-rgb.src | 100% | 100% | 0 | ✔
@@ -46,7 +48,7 @@ libs.ui.src.components.gradient-text | 83% | 90% | 0 | ✔
 libs.ui.src.components.hero-banner | 100% | 100% | 0 | ✔
 libs.ui.src.components.hero-display | 71% | 100% | 0 | ➖
 libs.ui.src.components.info-text-display | 100% | 100% | 0 | ✔
-libs.ui.src.components.masonry-grid-component | 71% | 60% | 0 | ➖
+libs.ui.src.components.masonry-grid-component | 69% | 58% | 0 | ➖
 libs.ui.src.components.page-background | 100% | 100% | 0 | ✔
 libs.ui.src.components.parallax-background | 44% | 42% | 0 | ❌
 libs.ui.src.components.section-container | 100% | 100% | 0 | ✔
@@ -59,4 +61,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **83%** (454 / 544) | **69%** (132 / 192) | **0** | ✔
+**Summary** | **83%** (463 / 557) | **68%** (138 / 203) | **0** | ✔
