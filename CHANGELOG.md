@@ -1,3 +1,11 @@
+### [3.6.1](https://github.com/alexwine36/Portfolio/compare/v3.6.0...v3.6.1) (2022-08-12)
+
+
+### Bug Fixes
+
+* **docs:** unpublished docs that are not ready ([d8e7fb2](https://github.com/alexwine36/Portfolio/commit/d8e7fb2f2e1ee66270d960b0a2f1b10787ba9d40))
+* **gatsby:** updated nav layout background to make reading easier ([2f1f169](https://github.com/alexwine36/Portfolio/commit/2f1f169bd9a63b4c604cb875af555a55f5efdd5b))
+
 ## [3.6.0](https://github.com/alexwine36/Portfolio/compare/v3.5.0...v3.6.0) (2022-08-12)
 
 
