@@ -1,7 +1,6 @@
 import {
   Checkbox,
   Divider,
-  Link,
   Paper,
   styled,
   TableBody,
@@ -12,10 +11,10 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import { Link as GLink } from 'gatsby';
 import { memo } from 'react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import RemarkLink from '../../src/components/remark-link';
 const space = 3;
 
 const AbbrText = styled(Typography)(({ theme }) => ({
@@ -173,7 +172,7 @@ const components = {
     return memo(THead);
   })(),
   span: ((obj) => {
-    console.log('Object', obj);
+    // console.log('Object', obj);
 
     const Image = (props) => {
       console.log(props);
@@ -213,19 +212,19 @@ const components = {
     return memo(Wrapper);
   })(),
   a: (() => {
-    const LinkDisplay = (props) => {
-      if (
-        (`${props.href}`.startsWith('/') || `${props.href}`.startsWith('#')) &&
-        !`${props.href}`.startsWith('/static/')
-      ) {
-        const { href, ...p } = props;
-        return <Link component={GLink} to={href} {...p} />;
-      }
-      return (
-        <Link rel="nofollow noopener noreferrer" target="_blank" {...props} />
-      );
-    };
-    return memo(LinkDisplay);
+    // const LinkDisplay = (props) => {
+    //   if (
+    //     (`${props.href}`.startsWith('/') || `${props.href}`.startsWith('#')) &&
+    //     !`${props.href}`.startsWith('/static/')
+    //   ) {
+    //     const { href, ...p } = props;
+    //     return <Link component={GLink} to={href} {...p} />;
+    //   }
+    //   return (
+    //     <Link rel="nofollow noopener noreferrer" target="_blank" {...props} />
+    //   );
+    // };
+    return memo(RemarkLink);
   })(),
 };
 

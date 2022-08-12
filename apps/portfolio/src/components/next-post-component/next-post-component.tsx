@@ -39,7 +39,7 @@ export function NextPostComponent(props: NextPostComponentProps) {
         sort: { fields: frontmatter___date, order: DESC }
         filter: {
           fields: { source: { eq: "projects" } }
-          # frontmatter: { published: { eq: true } }
+          frontmatter: { published: { eq: true } }
         }
       ) {
         ...ProjectExcerptFragment

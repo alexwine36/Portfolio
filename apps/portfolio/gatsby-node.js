@@ -20,7 +20,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           fieldValue
         }
       }
-      projects: allMdx(filter: { fields: { source: { eq: "projects" } } }) {
+      projects: allMdx(
+        filter: {
+          fields: { source: { eq: "projects" } }
+          frontmatter: { published: { eq: true } }
+        }
+      ) {
         nodes {
           slug
           frontmatter {
