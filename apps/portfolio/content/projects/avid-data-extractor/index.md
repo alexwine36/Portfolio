@@ -5,6 +5,7 @@ tags:
   - PostgreSQL
   - Serverless
 hero: jon-tyson-vVSleEYPSGY-unsplash.jpg
+published: false
 ---
 # The problem
   - Managers needed to be able to access received customer reviews regarding the sales team, design selection, warranty and construction process. 

@@ -66,3 +66,16 @@ stateDiagram-v2
   Reject --> [*]
   Record --> [*]
 ```
+
+This setup recorded unique votes but, also recorded vote rejections. This proved crucial when one year a participant was sure the app was broken, when in reality they weren't able to cheat.
+
+At the end of the voting period a redirect rule would send users to the results page, which displayed a fun graphic of the winners and their vote count.
+
+## Attendee Management
+
+For successful attendee management there were necessary requirements.
+
+- Upload attendees
+- Form for attendee registration
+- Badge printing with Attendee QR Code
+- Ability for sponsors to scan attendees

@@ -5,6 +5,7 @@ published: true
 hero: sunder-muthukumaran-n7eJHQwefeI-unsplash.jpg
 tags:
   - MySQL
+  - Prisma
 ---
 import {NextPostComponent} from '../../../src/components/next-post-component/next-post-component.tsx'
 

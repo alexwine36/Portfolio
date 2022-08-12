@@ -1,12 +1,12 @@
 ---
 title: Tableau Extensions
 date: 2020-12-03
+published: false
+hero: stephen-dawson-qwtCeJ5cLYs-unsplash.jpg
 tags:
   - React
   - Typescript
   - Tableau
-published: true
-hero: stephen-dawson-qwtCeJ5cLYs-unsplash.jpg
 ---
 
 <!-- - The Problem
@@ -68,11 +68,13 @@ gantt
 
 ```
 Starting a house is the quickest part. It requires little time and has a large gap before the next stage of the house. Once the house gets to later stages is when issues arise, there is less time between tasks and most tasks block other steps.
-By displaying this information to vendors it helped them plan the number of houses they could feasibly manage and the number of crews they would need to achieve their business goals.
+By simplifying the display of this information to vendors it helped for planning the number of houses they could feasibly manage and the number of crews they would need to achieve their business goals.
 
 
 
 
 
 ![Sales Sankey](newplot.png)
--->
+
+
+

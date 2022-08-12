@@ -2,6 +2,7 @@
 title: Customer Surveys
 date: 2022-06-22
 hero: lukas-blazek-mcsdtbwxuzu-unsplash.jpg
+published: false
 tags:
   - Pulumi
   - AWS

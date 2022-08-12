@@ -50,6 +50,7 @@ collections:
   #           date_format: "YYYY-MM-DD",
   - name: 'series'
     label: 'Series'
+    hide: true
     folder: 'apps/portfolio/content/series'
     create: true
     slug: 'index'
@@ -63,6 +64,17 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'projects'
     label: 'Projects'
+    view_filters:
+      - label: Published
+        field: published
+        pattern: true
+      - label: Unpublished
+        field: published
+        pattern: false
+    view_groups:
+      - label: Published
+        field: published
+    # filter: { field: 'published', value: true }
     folder: 'apps/portfolio/content/projects'
     create: true
     slug: 'index'
@@ -98,7 +110,9 @@ collections:
       - {
           label: 'Series',
           name: 'series',
-          widget: 'relation',
+          hide: true,
+          # widget: 'relation',
+          widget: hidden,
           collection: 'series',
           search_fields: ['title', 'slug'],
           value_field: '{{slug}}',
@@ -140,12 +154,16 @@ collections:
               'Jest',
               'Kubernetes',
               'Containerization',
-              'Github Actions',
+              'GitHub Actions',
               'Project Management',
               'Account Management',
+              'Blender',
+              'Fusion 360',
+              '3D Printing',
             ],
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
   - name: 'work'
     label: 'Work Experience'
     folder: 'apps/portfolio/content/work'
