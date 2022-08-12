@@ -14,6 +14,9 @@ exports[`SkillHeaderDisplay should format include correct data 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .emotion-1 {
