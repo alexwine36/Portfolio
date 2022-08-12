@@ -1,3 +1,20 @@
+## [3.6.0](https://github.com/alexwine36/Portfolio/compare/v3.5.0...v3.6.0) (2022-08-12)
+
+
+### Features
+
+* **documentation:** updated content to better reflect project ([d968ba7](https://github.com/alexwine36/Portfolio/commit/d968ba7b03929b90ee5b96c0fcddb02f19aa7843))
+* **gatsby:** stopped creating pages for unpublished projects ([9f36516](https://github.com/alexwine36/Portfolio/commit/9f365168199e0ac381eff39feecdd6cbb9ed67bc))
+* **resume:** removed markdown links ([75eccb3](https://github.com/alexwine36/Portfolio/commit/75eccb340d30477edcf181b68a0273939fe18abf))
+
+
+### Bug Fixes
+
+* **docs:** removed placeholder docs ([7fd2ff4](https://github.com/alexwine36/Portfolio/commit/7fd2ff4b90ef638109231e2bc54eaa5b51201587))
+* **docs:** updated documentation link and site ([8da2540](https://github.com/alexwine36/Portfolio/commit/8da2540e46b744757b703a71d1ae403126293486))
+* **styling:** updated styling of links for better display ([d342da1](https://github.com/alexwine36/Portfolio/commit/d342da19cea595751af3845dc57ea9570ba068f9))
+* **test:** updated failing tests ([95aa879](https://github.com/alexwine36/Portfolio/commit/95aa87961d6af6ff33e2c5b53ad4da59fd6a3e24))
+
 ## [3.5.0](https://github.com/alexwine36/Portfolio/compare/v3.4.2...v3.5.0) (2022-08-05)
 
 
