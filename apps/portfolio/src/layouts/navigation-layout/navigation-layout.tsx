@@ -6,8 +6,10 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import { hexRgb } from '@portfolio/hex-rgb';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import React from 'react';
+// import { hexToRgba } from '../../../../../libs/ui/src/lib/utilities/hex-to-rgba';
 import { usePages } from '../../hooks/use-pages/use-pages';
 
 /* eslint-disable-next-line */
@@ -27,10 +29,24 @@ const StyledNavigationLayout = styled(Box)(
     background-image: radial-gradient(rgba(${backgroundColor}, ${backgroundColor}, ${backgroundColor}, 0.25), rgba(${backgroundColor}, ${backgroundColor}, ${backgroundColor}, 0.05));
     backdrop-filter: blur(25px);
     box-shadow: ${theme.shadows[1].replace(
-    /rgba\(0,0,0/gm,
-    `rgba(${shadowColor},${shadowColor},${shadowColor}`
-  )};
+      /rgba\(0,0,0/gm,
+      `rgba(${shadowColor},${shadowColor},${shadowColor}`
+    )};
     border: 1px solid ${theme.palette.divider};
+    .Mui-selected {
+      // background: yellow;
+      color: ${theme.palette.primary.light} !important;
+      background-image: radial-gradient(circle, ${hexRgb(
+        theme.palette.background.default,
+        { format: 'css', alpha: 0.75 }
+      )},${hexRgb(theme.palette.background.default, {
+    format: 'css',
+    alpha: 0.375,
+  })},  ${hexRgb(theme.palette.background.default, {
+    format: 'css',
+    alpha: 0,
+  })});
+    }
   `
 );
 
