@@ -44,7 +44,7 @@ const config = {
         id: 'resume-hooks',
         sidebar: {
           categoryLabel: '@portfolio/resume-hooks',
-          position: 0,
+          position: 20,
           fullNames: true,
         },
       },
@@ -126,14 +126,17 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/alexwine36/Portfolio/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/alexwine36/Portfolio/edit/main/apps/docs/blog/',
+            'https://github.com/alexwine36/Portfolio/tree/main/apps/docs',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/alexwine36/Portfolio/edit/main/apps/docs/blog/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -157,7 +160,7 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/alexwine36/Portfolio/',
             label: 'GitHub',
@@ -201,10 +204,10 @@ const config = {
                 label: 'Portfolio',
                 to: 'https://alex-wine-portfolio.netlify.app/',
               },
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/alexwine36/Portfolio/',

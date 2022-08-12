@@ -11,39 +11,42 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
-    image: '/Portfolio/docs/img/undraw_docusaurus_mountain.svg',
+    image: '/Portfolio/img/undraw_cloud_docs.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Portfolio designed for simple edits and updates.
+        {/* Docusaurus was designed from the ground up to be easily installed and
+        used to get your website up and running quickly. */}
       </>
     ),
   },
   {
     title: 'Focus on What Matters',
-    image: '/Portfolio/docs/img/undraw_docusaurus_tree.svg',
+    image: '/Portfolio/img/undraw_resume.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Automatically generated checked and deployed through monorepo and CI/CD
+        actions.
+        {/* Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+        ahead and move your docs into the <code>docs</code> directory. */}
       </>
     ),
   },
-  {
-    title: 'Powered by React',
-    image: '/Portfolio/docs/img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
+  // {
+  //   title: 'Powered by React',
+  //   image: '/Portfolio/img/undraw_docusaurus_react.svg',
+  //   description: (
+  //     <>
+  //       Extend or customize your website layout by reusing React. Docusaurus can
+  //       be extended while reusing the same header and footer.
+  //     </>
+  //   ),
+  // },
 ];
 
 function Feature({ title, image, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col')}>
       <div className="text--center">
         <img className={styles.featureSvg} alt={title} src={image} />
       </div>

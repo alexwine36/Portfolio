@@ -1,26 +1,24 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 ---
 
-# Tutorial Intro
+# Portfolio Packages Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+The packages below help create the [Portfolio](https://alex-wine-portfolio.netlify.app/) website.
 
-## Getting Started
+## Project Generation
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
+This project was generated using a helpful package from the NX community. Using just one command.
 
 ```shell
 nx generate @nx-plus/docusaurus:app my-app
 ```
 
-## Start your site
+## Documentation Generation
+
+Documentation is automatically generated from TypeDoc and a Docusaurus plugin to source and compile it from the library packages.
+
+<!-- ## Start your site
 
 Run the development server:
 
@@ -30,4 +28,4 @@ nx serve my-app
 
 Your site starts at `http://localhost:3000`.
 
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes. -->

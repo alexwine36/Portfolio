@@ -1,4 +1,6 @@
-# resume-hooks
+[**DEPRECATED**] This library is no longer used for sourcing resume information.
+
+# resume-hooks 
 
 
 ## Resume Source

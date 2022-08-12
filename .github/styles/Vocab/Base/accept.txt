@@ -31,3 +31,5 @@ Starpacks
 Sankey
 quantifiably
 infographics
+Docusaurus
+TypeDoc
