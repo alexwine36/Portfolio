@@ -97,9 +97,9 @@ const parseListItem = (data: ListItem, line: pdf.Text, indent = 0) => {
           const linkVal = child.children[0];
           if (linkVal.type === 'text') {
             line.add(linkVal.value, {
-              link: formatURL(child.url),
-              underline: true,
-              color: 0x569cd6,
+              // link: formatURL(child.url),
+              // underline: true,
+              // color: 0x569cd6,
             });
           }
         }

@@ -1,5 +1,6 @@
 import { Link, Typography } from '@mui/material';
 import { graphql, Link as GLink, useStaticQuery } from 'gatsby';
+import { removeTrailingSlash } from '../../utilities/remove-trailing-slash';
 /* eslint-disable-next-line */
 export interface RemarkLinkProps {
   href: string;
@@ -15,9 +16,7 @@ export function RemarkLink(props: RemarkLinkProps) {
   //     <h1>Welcome to RemarkLink!</h1>
   //   </StyledRemarkLink>
   // );
-  function removeTrailingSlash(str: string) {
-    return str.replace(/\/+$/, '');
-  }
+
   const { pages } = useStaticQuery<Queries.PagesDataQuery>(graphql`
     query PagesData {
       pages: allSitePage {

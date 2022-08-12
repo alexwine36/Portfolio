@@ -103,7 +103,19 @@ export const generatePdfResume = (data?: {
     .text({ lineHeight: 1 })
     .add('Alex Wine', { font: fonts.TimesRoman, fontSize: 24 })
     .br()
-    .add('Developer'.toUpperCase(), { fontSize: 12 });
+    .add('Developer'.toUpperCase(), { fontSize: 12, lineHeight: 2 })
+    .br()
+    .add('Portfolio', {
+      link: 'https://alex-wine-portfolio.netlify.app/',
+      // underline: true,
+      color: 0x569cd6,
+    })
+    .add(' | ')
+    .add('LinkedIn', {
+      link: 'https://www.linkedin.com/in/alexwine/',
+      // underline: true,
+      color: 0x569cd6,
+    });
 
   info
     .cell({ font: fonts.HelveticaBold, fontSize: 10 })
@@ -117,7 +129,9 @@ export const generatePdfResume = (data?: {
   info
     .cell({ font: fonts.TimesRoman, fontSize: 10 })
     .text()
-    .add('505.629.7298')
+    .add('505.629.7298', {
+      link: 'tel:505-629-7298',
+    })
     .br()
     .add('alexwine36@gmail.com')
     .br()
