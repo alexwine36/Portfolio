@@ -29,7 +29,7 @@ export function PageLayout(props: PageLayoutProps) {
           },
           {
             display: 'Documentation',
-            link: 'https://alexwine36.github.io/Portfolio/docs',
+            link: 'https://alexwine36.github.io/Portfolio/',
           },
         ]}
         social={[
