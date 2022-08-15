@@ -26,7 +26,18 @@ export function SeoFormatter(props: SeoFormatterProps) {
   }
   const { ogA, ogB, gatsbyImageData } = hero.childImageSharp;
 
-  const og_images = [ogA, ogB, gatsbyImageData];
+  const og_images = [
+    {
+      height: 630,
+      width: 1200,
+      src: `/${slug}twitter-card.jpg`,
+    },
+    {
+      height: 110,
+      width: 180,
+      src: `/${slug}linkedin.jpg`,
+    },
+  ];
   // console.log(window.location.href);
 
   const generateImageLink = (src: string) => {
@@ -45,22 +56,23 @@ export function SeoFormatter(props: SeoFormatterProps) {
         openGraph={{
           title: title,
           images: og_images.map((og) => {
-            const { height, width } = og;
+            const { height, width, src } = og;
 
             return {
               width,
               height,
-              url: generateImageLink(og.images.fallback.src),
+              url: generateImageLink(src),
             };
           }),
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
         }}
       />
       <BlogPostJsonLd
         title={title}
         url={generateImageLink(`/projects/${slug}`)}
-        images={og_images.map((og) =>
-          generateImageLink(og.images.fallback.src)
-        )}
+        images={og_images.map((og) => generateImageLink(og.src))}
         datePublished={date}
         dateModified={modifiedTime}
         authorName="Alex Wine"

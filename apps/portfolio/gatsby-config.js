@@ -269,5 +269,6 @@ module.exports = {
     'gatsby-plugin-netlify',
     'gatsby-plugin-transition-link',
     'gatsby-plugin-pdf-gen',
+    'gatsby-generate-og',
   ],
 };
