@@ -102,6 +102,7 @@
     "@emotion/jest": "^11.9.4",
     "@graphql-eslint/eslint-plugin": "^3.10.6",
     "@jscutlery/semver": "^2.25.2",
+    "@netlify/plugin-lighthouse": "^3.2.1",
     "@nrwl/cli": "14.4.3",
     "@nrwl/cypress": "14.4.3",
     "@nrwl/eslint-plugin-nx": "14.4.3",
