@@ -12,13 +12,13 @@ import {VideoDisplay} from '../../../src/components/video-display'
 
 
 
-## The Problem
+# The Problem
 There wasn't a bartop arcade.
 
-## The Solution
+# The Solution
 Build a bartop arcade.
 
-## The Process
+# The Process
 
 <VideoDisplay />
 

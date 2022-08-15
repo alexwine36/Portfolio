@@ -58,6 +58,13 @@ export function SeoFormatter(props: SeoFormatterProps) {
         description={getDescription(mdx)}
         openGraph={{
           title: title,
+          site_name: 'Alex Wine | Portfolio',
+          type: 'article',
+          article: {
+            authors: ['Alex Wine'],
+            modifiedTime: modifiedTime,
+            publishedTime: date,
+          },
           description: getDescription(mdx),
           images: og_images.map((og) => {
             const { height, width, src } = og;
