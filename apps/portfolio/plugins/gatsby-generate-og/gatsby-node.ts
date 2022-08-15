@@ -91,6 +91,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     const getFileName = (type: string) => {
       return path.join(
         './public',
+        'static',
         slug,
 
         `${type}.${fb.absolutePath.split('/').pop().split('.').pop()}`
@@ -125,7 +126,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
 
     // console.log(image);
     const generateOutputName = (name: string) => {
-      return path.join('./public', slug, `${name}.jpg`);
+      return path.join('./public', 'static', slug, `${name}.jpg`);
     };
     const output = generateOutputName('twitter-card');
 

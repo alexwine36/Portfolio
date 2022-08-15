@@ -30,12 +30,12 @@ export function SeoFormatter(props: SeoFormatterProps) {
     {
       height: 630,
       width: 1200,
-      src: `/${slug}twitter-card.jpg`,
+      src: `/static/${slug}twitter-card.jpg`,
     },
     {
       height: 110,
       width: 180,
-      src: `/${slug}linkedin.jpg`,
+      src: `/static/${slug}linkedin.jpg`,
     },
   ];
   // console.log(window.location.href);
