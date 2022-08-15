@@ -41,7 +41,9 @@ export function SeoFormatter(props: SeoFormatterProps) {
   // console.log(window.location.href);
 
   const generateImageLink = (src: string) => {
-    let base = 'https://alex-wine-portfolio.netlify.app';
+    let base =
+      process.env['DEPLOY_PRIME_URL'] ||
+      'https://alex-wine-portfolio.netlify.app';
 
     if (isBrowser) {
       base = window.location.origin;
@@ -53,8 +55,10 @@ export function SeoFormatter(props: SeoFormatterProps) {
     <React.Fragment>
       <GatsbySeo
         title={title}
+        description={getDescription(mdx)}
         openGraph={{
           title: title,
+          description: getDescription(mdx),
           images: og_images.map((og) => {
             const { height, width, src } = og;
 
