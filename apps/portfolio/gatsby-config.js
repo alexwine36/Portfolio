@@ -242,6 +242,7 @@ module.exports = {
                 ORM: 'Object Relational Mapping',
                 AWS: 'Amazon Web Services',
                 MUI: 'Material UI',
+                MDAST: 'Markdown Abstract Syntax Tree',
               },
             },
           },
