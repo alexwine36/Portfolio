@@ -5,6 +5,8 @@ module.exports = {
     },
     collect: {
       staticDistDir: './apps/portfolio/public',
+      maxAutodiscoverUrls: 10,
+      numberOfRuns: 2,
     },
   },
 };
