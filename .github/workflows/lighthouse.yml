@@ -1,8 +1,5 @@
 name: CI
-on:
-  push:
-    branches:
-      - ignore
+on: [push]
 jobs:
   prepare:
     name: Prepare
