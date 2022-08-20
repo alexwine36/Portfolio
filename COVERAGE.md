@@ -12,7 +12,7 @@ apps.portfolio.src.components.pages.tags | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.parallax-section-display | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.project-card | 100% | 50% | 0 | ✔
 apps.portfolio.src.components.remark-link | 70% | 56% | 0 | ➖
-apps.portfolio.src.components.seo-formatter | 100% | 50% | 0 | ✔
+apps.portfolio.src.components.seo-formatter | 100% | 67% | 0 | ✔
 apps.portfolio.src.hooks.use-pages | 67% | 0% | 0 | ➖
 apps.portfolio.src.pages.projects | 75% | 100% | 0 | ✔
 apps.portfolio.src.pages.skills | 100% | 100% | 0 | ✔
@@ -61,4 +61,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **83%** (463 / 557) | **68%** (138 / 203) | **0** | ✔
+**Summary** | **83%** (463 / 557) | **68%** (140 / 205) | **0** | ✔

@@ -1,3 +1,35 @@
+## [3.7.0](https://github.com/alexwine36/Portfolio/compare/v3.6.1...v3.7.0) (2022-08-20)
+
+
+### Features
+
+* **gatsby:** added a method to generate OG images ([7fe0508](https://github.com/alexwine36/Portfolio/commit/7fe0508b02ad510a7991c311a6853ec4b7f90e16))
+* **lighthouse:** added lighthouse report config ([51042cb](https://github.com/alexwine36/Portfolio/commit/51042cbd66c9574bb8bd4bf48a7d67e12fad93e3))
+* **lighthouse:** added lighthouse to github actions ([5484fd4](https://github.com/alexwine36/Portfolio/commit/5484fd4e812d9922724a2f058f7a48dd5785f404))
+
+
+### Bug Fixes
+
+* **gatsby:** potential seo og link fix ([4e0006d](https://github.com/alexwine36/Portfolio/commit/4e0006d4a8c229afbae1cdb493738d06ac73137d))
+* **gatsby:** sEO updates ([e1dbf00](https://github.com/alexwine36/Portfolio/commit/e1dbf00fc5660e7573fd6fde22f8a02c08a5755e))
+* **lighthouse:** added needed prepare step ([c8e2ed7](https://github.com/alexwine36/Portfolio/commit/c8e2ed71d04b7bdcbf4f9553be545094f5aacd73))
+* **lighthouse:** updated config with token and updated lighthouse ([d31b422](https://github.com/alexwine36/Portfolio/commit/d31b4229988fde44ffbb9275ebefe6cdcf19b634))
+* **lighthouse:** updated lighthouse install method ([554689d](https://github.com/alexwine36/Portfolio/commit/554689d4b630b8350ecb5985ebe500f023ed5587))
+* **lighthouse:** updated lighthouse node setup ([4de1692](https://github.com/alexwine36/Portfolio/commit/4de1692bcea19f56945f5d31052d9b05263cae72))
+* **netlify:** moved location of netlify config ([c5f431d](https://github.com/alexwine36/Portfolio/commit/c5f431de9d117140db1f647ec7b6aa7b41527028))
+* **seo:** updated opengraph details ([67ef88b](https://github.com/alexwine36/Portfolio/commit/67ef88b68457fb040fa64fc0d013f49d3a6d401e))
+
+
+### Docs
+
+* **portfolio:** updated portfolio project content ([d5a2dc8](https://github.com/alexwine36/Portfolio/commit/d5a2dc82bcc2476d1f4fb3ab6ba62d2bc1adc704))
+
+
+### CI
+
+* **lighthouse:** changed lighthouse location ([3e91bb4](https://github.com/alexwine36/Portfolio/commit/3e91bb44669359f1120f185dbe61ab221b4fd2a6))
+* **lighthouse:** moved lighthouse to build-deploy pipeline ([248c7e0](https://github.com/alexwine36/Portfolio/commit/248c7e0d76db7b47db9faa4b348d1b34c1684245))
+
 ### [3.6.1](https://github.com/alexwine36/Portfolio/compare/v3.6.0...v3.6.1) (2022-08-12)
 
 
