@@ -242,6 +242,7 @@ module.exports = {
                 ORM: 'Object Relational Mapping',
                 AWS: 'Amazon Web Services',
                 MUI: 'Material UI',
+                MDAST: 'Markdown Abstract Syntax Tree',
               },
             },
           },
@@ -268,5 +269,6 @@ module.exports = {
     'gatsby-plugin-netlify',
     'gatsby-plugin-transition-link',
     'gatsby-plugin-pdf-gen',
+    'gatsby-generate-og',
   ],
 };

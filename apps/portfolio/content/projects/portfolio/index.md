@@ -20,11 +20,67 @@ It was time to write a résumé and I wanted to have fun making it. Since I do e
 
 ## Structure
 
-I chose to use [NX](https://nx.dev/) for the project. The ease of generating components, apps, and libraries fast while having them linked quickly allowed fast iterations.
+I chose to use [NX](https://nx.dev/) for the project. The ease of generating components, apps, and libraries fast while having them automatically linked allowed fast iterations.
 
 ## Design
 
-I really liked the look of Glassmorphism and I wanted to try and implement some of that style into the design. For the frontend library I choose MUI because I have used it in the past and the ability to customize quickly would help during the design process.
+I really liked the look of Glassmorphism and I wanted to try and implement some of that style into the design. For the frontend library I choose MUI because I have used it in the past and the ability to customize would help during the design process.
+
+
+
+## Gatsby Source Nodes
+
+Thanks to Gatsby sourcing content is a breeze. Content is sourced from Markdown and YAML files. Markdown is parsed using MDX so that I can augment markdown with React components for projects such as [360 Panos](/projects/360-panos). This also allowed adding images and graphs with text content. For skills a basic YAML file added allowed reading in skills with categories, ratings, and estimated start date. The general content setup is as follows.
+
+
+```mermaid
+erDiagram
+  CONTENT ||--|{ WORK : MDX
+  CONTENT ||--|{ EDUCATION : MDX
+  CONTENT ||--|{ PROJECTS : MDX
+  CONTENT ||--|{ SKILLS : YAML
+
+  PROJECTS }|--|{ SKILLS : TAGS
+
+  WORK {
+    string company
+    string position
+    date startDate
+    date endDate
+    markdown content
+  }
+  EDUCATION {
+    string school
+    string study
+    date startDate
+    date endDate
+    markdown content
+  }  
+  PROJECTS {
+    string title
+    date date
+    string-array tags
+    image hero
+    bool published
+    markdown content
+  }
+  SKILLS {
+    string skill
+    string-array categories
+    date date
+    int rating
+  }
+
+```
+
+
+## Automatic Resume Generation
+
+I created a library for parsing MDAST data and adding the information to the PDF generation function.
+This allows 
+<!-- Using Markdown data resume content is automatically parsed and saved for display. -->
+
+<PDFDisplay />
 
 
 ## CI Process
@@ -83,62 +139,3 @@ stateDiagram-v2
 
 By laying out the deployment process this way I could achieve quick build times and address errors sooner. If a test failed, the path was immediately displayed and could be navigated to quickly. If a build failed Netlify's build log would share detailed logs with where the error arose. 
 
-
-
-
-# Features
-
-
-## Gatsby Source Nodes
-
-Thanks to Gatsby sourcing content is a breeze. I chose to use MDX so that I can augment markdown with React components for projects such as [360 Panos](/projects/360-panos). This also allowed me to add images and graphs alongside text content.
-
-For skills a basic YAML file added allowed reading in skills with categories, ratings, and estimated start date.
-
-
-```mermaid
-erDiagram
-  CONTENT ||--|{ WORK : MDX
-  CONTENT ||--|{ EDUCATION : MDX
-  CONTENT ||--|{ PROJECTS : MDX
-  CONTENT ||--|{ SKILLS : YAML
-
-  PROJECTS }|--|{ SKILLS : TAGS
-
-  WORK {
-    string company
-    string position
-    date startDate
-    date endDate
-    markdown content
-  }
-  EDUCATION {
-    string school
-    string study
-    date startDate
-    date endDate
-    markdown content
-  }  
-  PROJECTS {
-    string title
-    date date
-    string-array tags
-    image hero
-    bool published
-    markdown content
-  }
-  SKILLS {
-    string skill
-    string-array categories
-    date date
-    int rating
-  }
-
-```
-
-
-## Automatic Resume Generation
-
-Using Markdown data resume content is automatically parsed and saved for display.
-
-<PDFDisplay />
