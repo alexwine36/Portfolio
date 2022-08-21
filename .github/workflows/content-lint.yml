@@ -18,7 +18,7 @@ jobs:
         with:
           reporter: github-pr-check
           files: apps/portfolio/content
-          filter_mode: nofilter
+          filter_mode: added
         env:
           # Required, set by GitHub actions automatically:
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
@@ -28,7 +28,7 @@ jobs:
         with:
           reporter: github-check
           files: apps/portfolio/content
-          filter_mode: nofilter
+          filter_mode: added
         env:
           # Required, set by GitHub actions automatically:
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
