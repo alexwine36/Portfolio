@@ -1,3 +1,4 @@
+/* eslint-disable */
 // const esModules = ["@types/react__router", "ngx-bootstrap"].join("|")
 /* eslint-disable */
 
