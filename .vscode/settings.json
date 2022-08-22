@@ -1,3 +1,4 @@
 {
-  "vale.core.useCLI": true
+  "ltex.completionEnabled": true,
+  "ltex.additionalRules.enablePickyRules": true
 }

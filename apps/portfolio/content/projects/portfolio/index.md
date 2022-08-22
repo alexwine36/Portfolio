@@ -1,7 +1,7 @@
 ---
 title: Portfolio
 date: 2022-06-09
-published: false
+published: true
 hero: diego-ph-fIq0tET6llw-unsplash.jpg
 tags:
   - React
@@ -24,13 +24,13 @@ I chose to use [NX](https://nx.dev/) for the project. The ease of generating com
 
 ## Design
 
-I really liked the look of Glassmorphism and I wanted to try and implement some of that style into the design. For the frontend library I choose MUI because I have used it in the past and the ability to customize proved helpful during the design process.
+I really liked the look of Glassmorphism and I wanted to try to implement some of that style into the design. For the frontend library I choose MUI because I have used it in the past and the ability to customize proved helpful during the design process.
 
 
 
 ## Site
 
-I chose to use Gatsby for the development of the site. Thanks to Gatsby sourcing content is a breeze. Content is sourced from Markdown and YAML files. Markdown is parsed using MDX so that I can augment markdown with React components for projects such as [360 Panos](/projects/360-panos). This also allowed adding images and graphs with text content. For skills, a basic YAML file added allowed reading in skills with categories, ratings, and estimated start date. The general content setup is as follows.
+I chose to use Gatsby for the development of the site. Thanks to Gatsby sourcing content is a breeze. Content comes from Markdown and YAML files. Markdown then is parsed using MDX then it can be augmented with React components for projects such as [360 Panos](/projects/360-panos). This also allowed adding images and graphs within text content. For skills, a basic YAML file added allowed reading in skills with categories, ratings, and estimated start date. The general content setup is as follows.
 
 
 ```mermaid
@@ -73,11 +73,15 @@ erDiagram
 
 ```
 
+Gatsby also has the ability to add plugins for adding features to the build of your site. You can also locally host your own. I created a plugin to generate Open Graph Images based off the hero image and title of the project. This step utilized Jimp and a small WASM library to crop modify and combine the hero image and text needed. 
+
+![Twitter Card](twitter-card.jpg)
 
 ## Automatic Resume Generation
 
-I created a library for parsing MDAST data and adding the information to the PDF generation function.
-This allows 
+Though it would be nice if everyone wanted to just view the portfolio for the most up-to-date information, it is not very likely. So, I created a library for parsing MDAST data and adding the information to a PDF.
+
+This function is run at build time from the source files and saved to the public folder for serving. This means that all resume content is generated automatically and no more double data entry! That means the PDF below always has the most accurate data available.
 <!-- Using Markdown data resume content is automatically parsed and saved for display. -->
 
 <PDFDisplay />
@@ -85,7 +89,7 @@ This allows
 
 ## CI Process
 
-As this was my first time using GitHub Actions there was a bit of a learning curve. However, after multiple iterations I found a flow I liked.
+This was my first time using GitHub Actions and there was a bit of a learning curve before there were results. However, after multiple iterations I found a flow I liked.
 
 ```mermaid
 stateDiagram-v2
@@ -96,10 +100,11 @@ stateDiagram-v2
   state "GitHub Actions" as GitHub
   state GitHub {
     [*] --> Test
+    [*] --> Vale
     state "Generate Coverage" as cov
 
     Test --> cov
-    
+    Vale --> cov
     state "Build Docs" as docs
     [*] --> docs
     state "Compile Docs" as docDeploy
@@ -138,4 +143,13 @@ stateDiagram-v2
 ```
 
 By laying out the deployment process this way I could achieve quick build times and address errors sooner. If a test failed, the path was immediately displayed and could be navigated to quickly. If a build failed Netlify's build log would share detailed logs with where the error arose. 
+
+One of the best additions to this workflow was Vale. Vale is an open source program that will check the content of your code and provide suggestions and point out errors. You can even provide different style guides for what you are writing. I highly recommend checking it out.
+
+
+# The Conclusion
+
+This project was absolutely a labor of love. I hope you enjoyed it and if you would like to learn more about it here is the link to the [repository](https://github.com/alexwine36/Portfolio).
+
+Feel free to reach out with comments, questions, or concerns, and thank you for checking it out.
 
