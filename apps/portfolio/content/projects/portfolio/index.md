@@ -79,7 +79,7 @@ Gatsby also has the ability to add plugins for adding features to the build of y
 
 ## Automatic Resume Generation
 
-Though it would be nice if everyone wanted to just view the portfolio for the most up-to-date information, it is not very likely. So, I created a library for parsing MDAST data and adding the information to a PDF.
+Though it would be nice if everyone wanted to just view the portfolio for the most up-to-date information, it is not likely. This led me to create a library for parsing MDAST data and adding the information to a PDF.
 
 This function is run at build time from the source files and saved to the public folder for serving. This means that all resume content is generated automatically and no more double data entry! That means the PDF below always has the most accurate data available.
 <!-- Using Markdown data resume content is automatically parsed and saved for display. -->
@@ -149,7 +149,7 @@ One of the best additions to this workflow was Vale. Vale is an open source prog
 
 # The Conclusion
 
-This project was absolutely a labor of love. I hope you enjoyed it and if you would like to learn more about it here is the link to the [repository](https://github.com/alexwine36/Portfolio).
+This project was a joy to complete. I hope you enjoyed it and if you would like to learn more about it here is the link to the [repository](https://github.com/alexwine36/Portfolio).
 
 Feel free to reach out with comments, questions, or concerns, and thank you for checking it out.
 

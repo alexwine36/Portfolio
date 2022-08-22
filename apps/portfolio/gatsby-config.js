@@ -243,6 +243,7 @@ module.exports = {
                 AWS: 'Amazon Web Services',
                 MUI: 'Material UI',
                 MDAST: 'Markdown Abstract Syntax Tree',
+                WASM: 'WebAssembly',
               },
             },
           },

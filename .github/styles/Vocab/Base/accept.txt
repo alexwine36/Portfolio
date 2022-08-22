@@ -34,3 +34,4 @@ infographics
 Docusaurus
 TypeDoc
 Glassmorphism
+Jimp
