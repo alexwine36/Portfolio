@@ -1,3 +1,25 @@
+## [3.8.0](https://github.com/alexwine36/Portfolio/compare/v3.7.0...v3.8.0) (2022-08-22)
+
+
+### Features
+
+* **portfolio:** portfolio project published and updated ([f28ac21](https://github.com/alexwine36/Portfolio/commit/f28ac21dc0296a4ec49f4df5dc02054de5642859))
+
+
+### Bug Fixes
+
+* **vale:** fixed vale errors in portfolio ([299d7c6](https://github.com/alexwine36/Portfolio/commit/299d7c6b84bb4fd86db790fa563f0a636f148a9b))
+
+
+### CI
+
+* **vale:** changed filter mode to added ([31e4e33](https://github.com/alexwine36/Portfolio/commit/31e4e33bd0eb40ee97164fe5f45ebc21bf51dc29))
+
+
+### Docs
+
+* **portfolio:** updated portfolio content ([02d1994](https://github.com/alexwine36/Portfolio/commit/02d1994349ab8adb33dcea342e0a50f68059d42d))
+
 ## [3.7.0](https://github.com/alexwine36/Portfolio/compare/v3.6.1...v3.7.0) (2022-08-20)
 
 
