@@ -7,6 +7,7 @@ tags:
   - Python
   - Jupyter
   - Kubernetes
+  - GraphQL
 ---
 # The Problem
 The ERP system used at Abrazo Homes is called MarkSystems. This system effectively supports scheduling, accounting and, sales. However, the relational database used by MarkSystems, Basis, was not well supported. Due to this, writing a GraphQL endpoint was unnecessarily difficult. With experience using [Prisma](https://www.prisma.io/) there was hope to develop something similar. 
