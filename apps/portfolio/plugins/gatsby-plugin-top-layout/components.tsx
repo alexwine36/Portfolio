@@ -180,7 +180,6 @@ const components = {
     // console.log('Object', obj);
 
     const Image = (props) => {
-      console.log(props);
       const theme = useTheme();
       if (props.className === 'gatsby-resp-image-wrapper') {
         return (

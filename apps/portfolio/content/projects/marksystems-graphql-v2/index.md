@@ -6,6 +6,7 @@ hero: sunder-muthukumaran-n7eJHQwefeI-unsplash.jpg
 tags:
   - MySQL
   - Prisma
+  - GraphQL
 ---
 import {NextPostComponent} from '../../../src/components/next-post-component/next-post-component.tsx'
 
