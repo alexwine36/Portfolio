@@ -11,7 +11,7 @@ tags:
 ---
 # The Problem
 
-During COVID, a school local to the area needed a quick way to check-in students every morning. The previous process involved using a spreadsheet to record student's information based on the block day and grade. This process had a lot of redundant steps and was inefficient for staff, students, and, teachers. 
+During COVID, a school local to the area needed a quick way to check in students every morning. The previous process involved using a spreadsheet to record student's information based on the block day and grade. This process had a lot of redundant steps and was inefficient for staff, students, and, teachers. 
 
 # The Solution
 
@@ -36,7 +36,7 @@ autonumber
     end
 ```
 
-Using this flow complicated the backend design but, would make checking in faster for families of all sizes. Instead of searching for students individually, a grouped record would help get parents moving quicker through the drop off line. 
+Using this flow complicated the backend design but, would make checking in faster for families of all sizes. Instead of searching for students individually, a grouped record would help get parents moving quicker through the drop-off line. 
 
 
 The data that the school sent contained students grouped by the family members that could pick them up. This appeared to be a straight-forward mapping, however, not all children under those family groups had the same family members dropping off.
@@ -60,7 +60,7 @@ erDiagram
 
 For the framework I chose NextJS since I needed a stable backend, and with the database schema decided, I used Prisma to generate the ORM and Apollo GraphQL to serve it to the frontend. By using families as groups on their own table, searching was incredibly efficient. 
 
-Over the course of nine months the project recorded 7,880 check-ins from 153 families using 37 different staff members. Cutting down the time to check-in students and adding the ability to have multiple staff to check-in students simultaneously. 
+Over the course of nine months the project recorded 7,880 check-ins from 153 families using 37 different staff members. Cutting down the time to check in students and adding the ability to have multiple staff to check in students simultaneously. 
 
 
 
