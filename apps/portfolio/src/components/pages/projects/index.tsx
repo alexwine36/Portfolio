@@ -15,7 +15,6 @@ import { ChipListDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import pluralize from 'pluralize';
 import Sticky from 'react-stickynode';
 import { usePage } from '../../../hooks/use-pages/use-pages';
 import { generateTagLink } from '../../../utilities/generate-tag-link';
@@ -57,18 +56,10 @@ export function ProjectPage(props: ProjectPageProps) {
   const page = usePage('projects');
   const { mdx, related } = props.data;
   const { frontmatter, body, timeToRead, tableOfContents } = mdx;
-  const { title, tags, hero } = frontmatter;
+  const { title, tags, hero, fromNow } = frontmatter;
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
   const shadowColor = '255';
-
-  const init = () => {
-    (window as any).mermaid.initialize({
-      // startOnLoad: true,
-      theme: 'dark',
-    });
-    (window as any).mermaid.init('.mermaid');
-  };
 
   return (
     <StyledProjectPage>
@@ -98,7 +89,8 @@ export function ProjectPage(props: ProjectPageProps) {
             }}
             variant="overline"
           >
-            {pluralize('minute', timeToRead, true)}
+            {/* {pluralize('minute', timeToRead, true)} */}
+            {fromNow}
           </Typography>
         </Box>
       </HeroImage>
@@ -203,6 +195,7 @@ export const pageQuery = graphql`
         title
         date
         description
+        fromNow: date(fromNow: true)
         hero {
           childImageSharp {
             gatsbyImageData(

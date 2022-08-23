@@ -71,10 +71,14 @@ export const pageQuery = graphql`
   fragment ProjectExcerptFragment on MdxConnection {
     totalCount
     nodes {
+      fields {
+        year
+      }
       frontmatter {
         tags
         title
         description
+        fromNow: date(fromNow: true)
         hero {
           childImageSharp {
             gatsbyImageData(

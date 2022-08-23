@@ -11,7 +11,6 @@ import {
 import { ChipListDisplay } from '@portfolio/ui';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import pluralize from 'pluralize';
 import { getDescription } from '../../utilities/get-description';
 
 type ProjectPreview = Queries.ProjectsPageQuery['allMdx']['nodes'][0];
@@ -28,8 +27,9 @@ export interface ProjectCardProps {
 
 export function ProjectCard(props: ProjectCardProps) {
   const { node, small } = props;
-  const { slug, timeToRead, frontmatter } = node;
-  const { title, tags, hero } = frontmatter;
+  const { slug, timeToRead, frontmatter, fields } = node;
+  const { title, tags, hero, fromNow } = frontmatter;
+  const { year } = fields;
 
   // console.log(excerpt);
   const excerpt = getDescription(node);
@@ -51,7 +51,8 @@ export function ProjectCard(props: ProjectCardProps) {
             variant: 'overline',
           }}
           title={title}
-          subheader={`${pluralize('minute', timeToRead, true)}`}
+          // subheader={`${pluralize('minute', timeToRead, true)}`}
+          subheader={fromNow}
         />
         <GatsbyImage
           {...(small && {
