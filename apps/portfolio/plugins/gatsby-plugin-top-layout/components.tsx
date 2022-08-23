@@ -27,6 +27,11 @@ const components = {
       // console.log(props);
       const theme = useTheme();
       const { children, ...rest } = props;
+
+      if ('aria-hidden' in props) {
+        return <svg {...rest}>{children}</svg>;
+      }
+
       return (
         <Zoom
           overlayBgColorEnd={theme.palette.background.default}
@@ -35,7 +40,7 @@ const components = {
           // component="h2"
           // variant="h3"
         >
-          <svg {...rest}>{props.children}</svg>
+          <svg {...rest}>{children}</svg>
         </Zoom>
       );
     };
