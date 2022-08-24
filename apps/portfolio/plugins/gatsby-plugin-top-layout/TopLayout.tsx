@@ -93,7 +93,7 @@ export default function TopLayout(props) {
 
             '.markdown-body': {
               '>': {
-                'h1, h2, h3, h4, h5, h6, hr, p': {
+                'h1, h2, h3, h4, h5, h6, hr, p, div': {
                   margin: theme.spacing(3),
 
                   // '.gatsby-resp-image-wrapper': {

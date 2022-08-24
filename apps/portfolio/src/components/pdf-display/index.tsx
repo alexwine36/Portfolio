@@ -24,7 +24,9 @@ const StyledPDF = styled('object')`
 
 const PdfLink = () => (
   <Typography>
-    <Link href="/static/resume.pdf">View PDF</Link>
+    <Link href="/static/resume.pdf" rel="noopener" target="_blank">
+      View PDF
+    </Link>
   </Typography>
 );
 
