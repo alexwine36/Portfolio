@@ -270,14 +270,14 @@ module.exports = {
     'gatsby-plugin-netlify',
     'gatsby-plugin-pdf-gen',
     'gatsby-generate-og',
-    {
-      resolve: `gatsby-plugin-loadable-components-ssr`,
-      options: {
-        // Whether replaceHydrateFunction should call ReactDOM.hydrate or ReactDOM.render
-        // Defaults to ReactDOM.render on develop and ReactDOM.hydrate on build
-        useHydrate: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-loadable-components-ssr`,
+    //   options: {
+    //     // Whether replaceHydrateFunction should call ReactDOM.hydrate or ReactDOM.render
+    //     // Defaults to ReactDOM.render on develop and ReactDOM.hydrate on build
+    //     useHydrate: true,
+    //   },
+    // },
     `gatsby-plugin-perf-budgets`,
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',

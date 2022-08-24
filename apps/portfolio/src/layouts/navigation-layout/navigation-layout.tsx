@@ -33,7 +33,9 @@ const StyledNavigationLayout = styled(Box)(
       /rgba\(0,0,0/gm,
       `rgba(${shadowColor},${shadowColor},${shadowColor}`
     )};
-    border: 1px solid ${theme.palette.divider};
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: ${theme.palette.divider};
     .Mui-selected {
       // background: yellow;
       color: ${theme.palette.primary.light} !important;
