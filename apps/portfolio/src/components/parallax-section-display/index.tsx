@@ -26,6 +26,7 @@ const ParallaxFallback = styled.div({
 
 export function ParallaxSectionDisplay(props: ParallaxSectionDisplayProps) {
   const { page, children, hideHeader } = props;
+
   return (
     <StyledParallaxSectionDisplay>
       {!hideHeader && (
