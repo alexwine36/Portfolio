@@ -5,9 +5,7 @@ import { SizeMe } from 'react-sizeme';
 
 import GradientText from '../gradient-text/gradient-text';
 
-const StyledPolygonBackground = React.lazy(
-  () => import('../../assets/polygon-background/polygon-background-styled')
-);
+const StyledPolygonBackground = React.lazy(() => import('../pg-background'));
 
 /* eslint-disable-next-line */
 export interface HeroDisplayProps {
