@@ -3,7 +3,7 @@
   category:
     - 'Web Development'
   rating: 5
-  date: 2013-01-01
+  date: 2016-01-01
 - skill: 'Javascript'
   category:
     - 'Web Development'
@@ -14,7 +14,7 @@
     - 'Web Development'
     - 'Backend Development'
   rating: 5
-  date: 2015-01-01
+  date: 2016-01-01
 - skill: Frontend Design
   category:
     - 'Web Development'
@@ -23,6 +23,7 @@
 - skill: Rust
   category:
     - 'Web Development'
+    - 'Backend Development'
   rating: 3
   date: 2021-01-01
 
@@ -53,6 +54,11 @@
     - 'Backend Development'
   rating: 5
   date: 2014-01-01
+- skill: 'Express'
+  category:
+    - 'Backend Development'
+  rating: 5
+  date: 2016-01-01
 - skill: Pulumi
   category:
     - 'Backend Development'
@@ -95,7 +101,7 @@
   category:
     - 'Database'
   rating: 3
-  date: 2012-01-01
+  date: 2016-01-01
 - skill: Redis
   category:
     - 'Database'
@@ -123,7 +129,7 @@
 - skill: Docker
   category:
     - 'CI/CD'
-  date: 2014-01-01
+  date: 2016-01-01
   rating: 4
 - skill: Jest
   category:

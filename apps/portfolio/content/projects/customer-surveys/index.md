@@ -36,20 +36,25 @@ Developed an algorithm and dashboard to monitor the progression and customer sat
 
 # The Process
 
-Beginning in June 2019, this has been the longest running project for Abrazo Homes. Originally developed with Serverless, using Razzle and React for the backend. 
-<!-- TODO: Alex look at this -->
-Once the pandemic began, higher priority issues came to light pausing the project until January 2022. 
+<!-- Beginning in June 2019, this has been the longest running development process. Originally developed with Serverless, using Razzle and React for the backend. 
+
+Once the pandemic began, higher priority issues came to light pausing the project until January 2022.  -->
+
+<!-- The project was initially designed to be a standalone application. However, after  -->
+
+<!-- ## Initial -->
 
 
-## Restart
 
-Having taken a step back, opportunities for improvement were realized.
+<!-- ## Restart -->
+
+<!-- Having taken a step back, opportunities for improvement were realized. -->
 
 <!-- First - the survey was included with the application which wasn't a necessary feature.
  -->
 Initially the project had built-in surveys to provide custom functionality. Later discovering that Typeform contains methods for embedding data into forms that would manage the use case and ease the programming load.
 
-The rewrite of this project required data access between both the dashboard [GitLab Pages](/tags/git-lab-ci) package and *Pulumi*
+The rewrite of this project required data access between both the dashboard [GitLab Pages](/tags/git-lab-ci) package and [Pulumi](/tags/pulumi)
 
 Basic app structure:
 
@@ -71,7 +76,6 @@ Using a Monorepo for this project efficiently allowed type sharing between proje
 The state machine links the steps necessary for generating and sending surveys. After many iterations a design was created that allowed the greatest flexibility and speed to the process. 
 
 ```mermaid
-%%{init: {'theme': 'dark'} }%%
 stateDiagram-v2
 [*] --> SurveyBase
 SurveyBase --> QueryBase
@@ -80,8 +84,10 @@ QueryBase --> Base
 state QueryBase {
 [*] --> Base
 Base --> HouseSchedule: $.table schedhousedetail
+Base --> ProspectOptnSchedule: $.table prospectoptnhdr
 Base --> HousemasterSchedule: $.table housemaster
 HousemasterSchedule --> ValidateAll
+ProspectOptnSchedule --> ValidateAll
 HouseSchedule --> ValidateAll
 ValidateAll --> [*]
 ValidateAll --> Contacts
