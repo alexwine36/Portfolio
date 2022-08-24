@@ -3,10 +3,6 @@ import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { ProjectsPage } from '.';
 
-jest.mock('gatsby-plugin-transition-link/AniLink', () => {
-  console.log('Yello');
-});
-
 describe('Projects Page', () => {
   test('should render successfully', () => {
     const { baseElement } = render(

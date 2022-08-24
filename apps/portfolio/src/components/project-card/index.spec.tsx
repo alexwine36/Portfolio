@@ -2,9 +2,6 @@ import { render, within } from '@testing-library/react';
 import React from 'react';
 import { ProjectCard } from '.';
 import { projectCardData } from '../../utilities/test/constants/project-card';
-jest.mock('gatsby-plugin-transition-link/AniLink', () => {
-  console.log('Yello');
-});
 
 const data = projectCardData;
 
