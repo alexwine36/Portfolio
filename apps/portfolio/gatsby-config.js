@@ -268,7 +268,6 @@ module.exports = {
     `gatsby-transformer-yaml`,
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-netlify',
-    'gatsby-plugin-transition-link',
     'gatsby-plugin-pdf-gen',
     'gatsby-generate-og',
   ],

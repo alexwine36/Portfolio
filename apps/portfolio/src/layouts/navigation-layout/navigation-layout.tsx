@@ -7,7 +7,8 @@ import {
   useTheme,
 } from '@mui/material';
 import { hexRgb } from '@portfolio/hex-rgb';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
+
 import React from 'react';
 // import { hexToRgba } from '../../../../../libs/ui/src/lib/utilities/hex-to-rgba';
 import { usePages } from '../../hooks/use-pages/use-pages';
@@ -75,10 +76,10 @@ export function NavigationLayout(props: NavigationLayoutProps) {
         {pageArray.map((action, idx) => {
           return (
             <BottomNavigationAction
-              component={AniLink}
-              cover
-              direction={idx < value ? 'right' : 'left'}
-              bg={theme.palette.background.default}
+              component={Link}
+              // cover
+              // direction={idx < value ? 'right' : 'left'}
+              // bg={theme.palette.background.default}
               to={action.href}
               activeClassName={'Mui-selected'}
               key={action.href}

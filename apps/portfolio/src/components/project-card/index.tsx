@@ -9,8 +9,8 @@ import {
   useTheme,
 } from '@mui/material';
 import { ChipListDisplay } from '@portfolio/ui';
+import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { getDescription } from '../../utilities/get-description';
 
 type ProjectPreview = Queries.ProjectsPageQuery['allMdx']['nodes'][0];
@@ -38,10 +38,10 @@ export function ProjectCard(props: ProjectCardProps) {
   const link = `/projects/${slug}`;
   return (
     <CardActionArea
-      component={AniLink}
-      cover
-      direction="up"
-      bg={theme.palette.background.default}
+      component={Link}
+      // cover
+      // direction="up"
+      // bg={theme.palette.background.default}
       to={link}
     >
       <Card>
@@ -75,10 +75,10 @@ export function ProjectCard(props: ProjectCardProps) {
         </CardContent>
         <CardActions>
           <Button
-            component={AniLink}
-            cover
-            direction="up"
-            bg={theme.palette.background.default}
+            component={Link}
+            // cover
+            // direction="up"
+            // bg={theme.palette.background.default}
             to={link}
           >
             Keep Reading
