@@ -1,12 +1,20 @@
 import { styled } from '@mui/material';
+import React, { Suspense } from 'react';
 import { Background, Parallax } from 'react-parallax';
 import { SizeMe } from 'react-sizeme';
-import GenerateCircuitBoardBackground from '../../assets/generate-circuit-board-background/generate-circuit-board-background';
+
 import GenerateLowPolyBackground from '../../assets/generate-low-poly-background/generate-low-poly-background';
 import GenerateMeteorBackground from '../../assets/generate-meteor-background/generate-meteor-background';
 import GeneratePlanetBackground from '../../assets/generate-planet-background/generate-planet-background';
 import GenerateSoundwaveBackground from '../../assets/generate-soundwave-background/generate-soundwave-background';
 import GenerateWavesBackground from '../../assets/generate-waves-background/generate-waves-background';
+
+const GenerateCircuitBoardBackground = React.lazy(
+  () =>
+    import(
+      '../../assets/generate-circuit-board-background/generate-circuit-board-background'
+    )
+);
 
 export type PredefinedBackgrounds =
   | 'planet'
@@ -115,11 +123,13 @@ export function ParallaxBackground(props: ParallaxBackgroundProps) {
               >
                 <StyledBackground height={size.height}>
                   {predefined && (
-                    <GeneratePredefined
-                      predefined={predefined}
-                      width={size.width || undefined}
-                      height={size.height || undefined}
-                    />
+                    <Suspense fallback={<div></div>}>
+                      <GeneratePredefined
+                        predefined={predefined}
+                        width={size.width || undefined}
+                        height={size.height || undefined}
+                      />
+                    </Suspense>
                   )}
 
                   {image && image}
