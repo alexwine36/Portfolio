@@ -6,7 +6,7 @@
     "commit": "run-s commit:*",
     "commit:cz": "git cz -a",
     "start": "nx serve",
-    "build": "PREFIX_PATHS=true nx build portfolio",
+    "build": "nx build portfolio",
     "build:netlify": "nx build-net portfolio",
     "test": "nx run-many --target=test --all",
     "test:ci": "nx run-many --target=test --all --parallel=3 --ci --code-coverage --coverageReporters=cobertura --coverageReporters=html --coverageReporters=text",
@@ -21,7 +21,8 @@
     "doc:version": "docusaurus --config apps/docs/docusaurus.config.js docs:version 1.0",
     "generate:badge": "ts-node ./libs/generate-badges/src",
     "clean": "yarn gatsby clean && rimraf apps/portfolio/.cache apps/portfolio/public",
-    "release": "nx affected --verbose=true --target=semantic-release --all --maxParallel=1"
+    "release": "nx affected --verbose=true --target=semantic-release --all --maxParallel=1",
+    "serve": "npx serve apps/portfolio/public"
   },
   "private": true,
   "dependencies": {
@@ -100,7 +101,6 @@
     "@emotion/jest": "^11.9.4",
     "@graphql-eslint/eslint-plugin": "^3.10.6",
     "@jscutlery/semver": "^2.25.2",
-    "@loadable/component": "^5.15.2",
     "@nrwl/cli": "14.4.3",
     "@nrwl/cypress": "14.4.3",
     "@nrwl/eslint-plugin-nx": "14.4.3",
@@ -148,7 +148,6 @@
     "eslint-plugin-unicorn": "^43.0.2",
     "fs-extra": "^10.1.0",
     "gatsby-plugin-emotion": "7.18.0",
-    "gatsby-plugin-loadable-components-ssr": "^4.2.1",
     "gatsby-plugin-lodash": "^5.21.0",
     "gatsby-plugin-material-ui": "^4.0.2",
     "gatsby-plugin-netlify": "^5.0.0",
