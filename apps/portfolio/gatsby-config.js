@@ -291,5 +291,6 @@ module.exports = {
         // pathToEmotionCacheProps: `src/emotion-cache-props`,
       },
     },
+    'gatsby-plugin-lodash',
   ],
 };
