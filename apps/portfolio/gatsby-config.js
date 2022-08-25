@@ -83,7 +83,7 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-mui-emotion',
+    // 'gatsby-plugin-mui-emotion',
     // `gatsby-transformer-remark`,
     'gatsby-plugin-mdx-source-name',
 
@@ -268,8 +268,29 @@ module.exports = {
     `gatsby-transformer-yaml`,
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-netlify',
-    'gatsby-plugin-transition-link',
     'gatsby-plugin-pdf-gen',
     'gatsby-generate-og',
+    // {
+    //   resolve: `gatsby-plugin-loadable-components-ssr`,
+    //   options: {
+    //     // Whether replaceHydrateFunction should call ReactDOM.hydrate or ReactDOM.render
+    //     // Defaults to ReactDOM.render on develop and ReactDOM.hydrate on build
+    //     useHydrate: true,
+    //   },
+    // },
+    `gatsby-plugin-perf-budgets`,
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        // devMode: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // pathToEmotionCacheProps: `src/emotion-cache-props`,
+      },
+    },
+    'gatsby-plugin-lodash',
   ],
 };

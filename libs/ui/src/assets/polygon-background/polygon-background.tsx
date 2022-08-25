@@ -1,8 +1,7 @@
-import { styled, useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 import { SVGProps } from 'react';
-import { cssImageSettings } from '../../lib/utilities/css-image-settings';
+
 import { hexToRgba } from '../../lib/utilities/hex-to-rgba';
-import React from 'react';
 // CREDIT TO https://bgjar.com
 
 /* eslint-disable-next-line */
@@ -142,9 +141,5 @@ export function PolygonBackground(props: PolygonBackgroundProps) {
     </svg>
   );
 }
-
-export const StyledPolygonBackground = styled(PolygonBackground)`
-  ${cssImageSettings}
-`;
 
 export default PolygonBackground;

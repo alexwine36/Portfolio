@@ -7,7 +7,8 @@ import {
   useTheme,
 } from '@mui/material';
 import { hexRgb } from '@portfolio/hex-rgb';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
+
 import React from 'react';
 // import { hexToRgba } from '../../../../../libs/ui/src/lib/utilities/hex-to-rgba';
 import { usePages } from '../../hooks/use-pages/use-pages';
@@ -32,7 +33,9 @@ const StyledNavigationLayout = styled(Box)(
       /rgba\(0,0,0/gm,
       `rgba(${shadowColor},${shadowColor},${shadowColor}`
     )};
-    border: 1px solid ${theme.palette.divider};
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: ${theme.palette.divider};
     .Mui-selected {
       // background: yellow;
       color: ${theme.palette.primary.light} !important;
@@ -75,10 +78,10 @@ export function NavigationLayout(props: NavigationLayoutProps) {
         {pageArray.map((action, idx) => {
           return (
             <BottomNavigationAction
-              component={AniLink}
-              cover
-              direction={idx < value ? 'right' : 'left'}
-              bg={theme.palette.background.default}
+              component={Link}
+              // cover
+              // direction={idx < value ? 'right' : 'left'}
+              // bg={theme.palette.background.default}
               to={action.href}
               activeClassName={'Mui-selected'}
               key={action.href}

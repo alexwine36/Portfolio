@@ -1,7 +1,8 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { IconButton, Link, styled } from '@mui/material';
-import { RiGitlabFill, RiStackOverflowFill } from 'react-icons/ri';
+import { RiGitlabFill } from '@react-icons/all-files/ri/RiGitlabFill';
+import { RiStackOverflowFill } from '@react-icons/all-files/ri/RiStackOverflowFill';
 export type SocialProviders =
   | 'linkedin'
   | 'github'

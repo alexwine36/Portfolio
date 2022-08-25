@@ -1,10 +1,11 @@
 /* eslint-disable-next-line */
-import React from 'react';
 import { Container, Grid, styled, Typography } from '@mui/material';
+import React, { Suspense } from 'react';
 import { SizeMe } from 'react-sizeme';
-// import hexRgb from 'hex-rgb';
-import { StyledPolygonBackground } from '../../assets/polygon-background/polygon-background';
+
 import GradientText from '../gradient-text/gradient-text';
+
+const StyledPolygonBackground = React.lazy(() => import('../pg-background'));
 
 /* eslint-disable-next-line */
 export interface HeroDisplayProps {
@@ -68,12 +69,14 @@ export function HeroDisplay(props: HeroDisplayProps) {
         return (
           <StyledHeroDisplay>
             {!hideSvg && (
-              <StyledPolygonBackground
-                sx={{
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover',
-                }}
-              />
+              <Suspense fallback={<div></div>}>
+                <StyledPolygonBackground
+                  sx={{
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                  }}
+                />
+              </Suspense>
             )}
             {/* <StyledGenerateGalaxyBackground /> */}
             <Container

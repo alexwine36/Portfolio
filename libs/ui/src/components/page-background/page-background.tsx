@@ -1,6 +1,9 @@
 import { styled } from '@mui/material';
-import React from 'react';
-import StarBackground from '../../assets/star-background/star-background';
+import React, { Suspense } from 'react';
+
+const StarBackground = React.lazy(
+  () => import('../../assets/star-background/star-background')
+);
 // import { generateBase64 } from '../../lib/utilities/functions/generateBase64';
 
 /* eslint-disable-next-line */
@@ -50,9 +53,12 @@ const StyledPageBackground = styled('div')(({ theme }) => {
  */
 export const PageBackground = (props: PageBackgroundProps) => {
   const { children, ...rest } = props;
+
   return (
     <StyledPageBackground {...rest}>
-      <StarBackground>{props.children}</StarBackground>
+      <Suspense fallback={<div></div>}>
+        <StarBackground>{props.children}</StarBackground>
+      </Suspense>
     </StyledPageBackground>
   );
 };

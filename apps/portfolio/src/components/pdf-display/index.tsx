@@ -5,10 +5,6 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { renderPDF } from '@portfolio/markdown-to-pdf';
-import { graphql, useStaticQuery } from 'gatsby';
-import React, { useEffect } from 'react';
-import { parseResumeData } from '../../utilities/pdf-constants';
 
 /* eslint-disable-next-line */
 export interface PDFDisplayProps {}
@@ -28,69 +24,26 @@ const StyledPDF = styled('object')`
 
 const PdfLink = () => (
   <Typography>
-    <Link href="/static/resume.pdf">View PDF</Link>
+    <Link href="/static/resume.pdf" rel="noopener" target="_blank">
+      View PDF
+    </Link>
   </Typography>
 );
 
 export function PDFDisplay(props: PDFDisplayProps) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('md'));
-  const data = useStaticQuery<Queries.ResumeDataQuery>(graphql`
-    query ResumeData {
-      work: allMdx(
-        filter: { fields: { source: { eq: "work" } } }
-        sort: { order: DESC, fields: frontmatter___endDate }
-      ) {
-        nodes {
-          frontmatter {
-            startDate(formatString: "MMM YYYY")
-            company
-            position
-            endDate(formatString: "MMM YYYY")
-          }
-          mdxAST
-        }
-      }
-      education: allMdx(
-        filter: { fields: { source: { eq: "education" } } }
-        sort: { order: DESC, fields: frontmatter___endDate }
-      ) {
-        nodes {
-          frontmatter {
-            startDate(formatString: "YYYY")
-            school
-            study
-            endDate(formatString: "YYYY")
-          }
-          mdxAST
-        }
-      }
-      skills: allSkillsYaml(sort: { fields: rating, order: DESC }) {
-        group(field: category) {
-          edges {
-            node {
-              skill
-              rating
-            }
-          }
-          fieldValue
-        }
-      }
-    }
-  `);
-
-  const { doc } = parseResumeData(data);
   // const previewEl = document.getElementById('preview');
-  const preview = React.createRef<HTMLObjectElement>();
-  useEffect(() => {
-    if (doc && preview) {
-      renderPDF(doc).then((url) => {
-        if (preview && preview.current) {
-          preview.current.data = url;
-        }
-      });
-    }
-  }, [preview, doc]);
+  // const preview = React.createRef<HTMLObjectElement>();
+  // useEffect(() => {
+  //   if (doc && preview) {
+  //     renderPDF(doc).then((url) => {
+  //       if (preview && preview.current) {
+  //         preview.current.data = url;
+  //       }
+  //     });
+  //   }
+  // }, [preview]);
   if (matches) {
     return <PdfLink />;
   } else {
@@ -100,7 +53,12 @@ export function PDFDisplay(props: PDFDisplayProps) {
       //   visibility: matches ? 'hidden' : 'visible',
       // }}
       >
-        <StyledPDF ref={preview} id="preview" type="application/pdf">
+        <StyledPDF
+          // ref={preview}
+          data="/static/resume.pdf"
+          id="preview"
+          type="application/pdf"
+        >
           <PdfLink />
         </StyledPDF>
       </StyledPDFDisplay>

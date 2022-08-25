@@ -22,10 +22,15 @@ interface Data
 }
 
 export const projectCardData: Data = {
+  fields: {
+    year: 2012,
+  },
   frontmatter: {
     tags: ['React', 'Typescript'],
     title: 'Porfolio',
     description: null,
+    fromNow: '5 years ago',
+
     hero: {
       childImageSharp: {
         gatsbyImageData: {

@@ -5,7 +5,11 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { HeroBannerImplementation } from './hero-banner-implementation';
 
 const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
-useStaticQuery.mockImplementation(() => ({
+
+export const ImageTestData: {
+  mtns: Queries.HomePageQuery['mtns'];
+  bkg: Queries.HomePageQuery['bkg'];
+} = {
   mtns: {
     childImageSharp: {
       gatsbyImageData: {
@@ -64,7 +68,9 @@ useStaticQuery.mockImplementation(() => ({
       },
     },
   },
-}));
+};
+
+// useStaticQuery.mockImplementation(() => (ImageTestData));
 
 beforeEach(() => {
   jest.clearAllMocks();
@@ -74,7 +80,10 @@ describe('HeroBannerImplementation', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
       <ParallaxProvider>
-        <HeroBannerImplementation />
+        <HeroBannerImplementation
+          mtns={ImageTestData.mtns}
+          bkg={ImageTestData.bkg}
+        />
       </ParallaxProvider>
     );
     expect(baseElement).toBeTruthy();

@@ -4,10 +4,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { TagPage } from '.';
 import { projectCardData } from '../../../utilities/test/constants/project-card';
 
-jest.mock('gatsby-plugin-transition-link/AniLink', () => {
-  console.log('Yello');
-});
-
 describe('Skill/Tag Page', () => {
   test('should render correctly', () => {
     const { baseElement } = render(
