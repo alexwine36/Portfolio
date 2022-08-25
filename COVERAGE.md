@@ -1,4 +1,4 @@
-![Code Coverage](https://img.shields.io/badge/Code%20Coverage-83%25-success?style=flat)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-84%25-success?style=flat)
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
@@ -14,6 +14,8 @@ apps.portfolio.src.components.project-card | 100% | 50% | 0 | ✔
 apps.portfolio.src.components.remark-link | 70% | 56% | 0 | ➖
 apps.portfolio.src.components.seo-formatter | 100% | 67% | 0 | ✔
 apps.portfolio.src.hooks.use-pages | 67% | 0% | 0 | ➖
+apps.portfolio.src.loadable.hero-banner-fallback | 100% | 100% | 0 | ✔
+apps.portfolio.src.loadable.loadable-parallax-component | 100% | 100% | 0 | ✔
 apps.portfolio.src.pages.projects | 75% | 100% | 0 | ✔
 apps.portfolio.src.pages.skills | 100% | 100% | 0 | ✔
 apps.portfolio.src.pages.work | 70% | 0% | 0 | ➖
@@ -46,11 +48,12 @@ libs.ui.src.components.detail-list-display | 100% | 100% | 0 | ✔
 libs.ui.src.components.footer-display | 71% | 100% | 0 | ➖
 libs.ui.src.components.gradient-text | 83% | 90% | 0 | ✔
 libs.ui.src.components.hero-banner | 100% | 100% | 0 | ✔
-libs.ui.src.components.hero-display | 71% | 100% | 0 | ➖
+libs.ui.src.components.hero-display | 75% | 100% | 0 | ✔
 libs.ui.src.components.info-text-display | 100% | 100% | 0 | ✔
-libs.ui.src.components.masonry-grid-component | 69% | 58% | 0 | ➖
+libs.ui.src.components.masonry-grid-component | 88% | 83% | 0 | ✔
 libs.ui.src.components.page-background | 100% | 100% | 0 | ✔
-libs.ui.src.components.parallax-background | 44% | 42% | 0 | ❌
+libs.ui.src.components.parallax-background | 45% | 42% | 0 | ❌
+libs.ui.src.components.pg-background | 100% | 100% | 0 | ✔
 libs.ui.src.components.section-container | 100% | 100% | 0 | ✔
 libs.ui.src.components.section-display | 100% | 100% | 0 | ✔
 libs.ui.src.components.social-icon-button | 58% | 43% | 0 | ➖
@@ -61,4 +64,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **83%** (463 / 557) | **68%** (140 / 205) | **0** | ✔
+**Summary** | **84%** (486 / 578) | **70%** (143 / 205) | **0** | ✔

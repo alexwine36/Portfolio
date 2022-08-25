@@ -1,3 +1,32 @@
+## [3.9.0](https://github.com/alexwine36/Portfolio/compare/v3.8.0...v3.9.0) (2022-08-25)
+
+
+### Features
+
+* **gatsby:** removed page transition ([042bff2](https://github.com/alexwine36/Portfolio/commit/042bff2de5f66d001efa6c368e3daa792db36ddc))
+* **gatsby:** updated Mui configuration ([79ac260](https://github.com/alexwine36/Portfolio/commit/79ac260a87e5c201c1025cfc0276495c943ee3be))
+* **gatsby:** updated removed libraries and added url blocklist to lighthouse ([feff59a](https://github.com/alexwine36/Portfolio/commit/feff59a8934e7433c0bd1939219c56b394dddf1d))
+
+
+### Bug Fixes
+
+* **config:** removed ssg and added updated nav border ([d09c694](https://github.com/alexwine36/Portfolio/commit/d09c6942a63853aee47af8e166d5fc54f0b97c64))
+* **content:** updated GraphQL tag ([836a266](https://github.com/alexwine36/Portfolio/commit/836a2662e4091b7895ba7b1cb64f4a8ce08e8180))
+* **gatsby:** added react lazy ([b8b70af](https://github.com/alexwine36/Portfolio/commit/b8b70af7c92bc7927cef2b35853d5e7748bced65))
+* **gatsby:** changed project card display to time from now ([8dfeac4](https://github.com/alexwine36/Portfolio/commit/8dfeac4bcda152c9168acda862d2e7f2205ba856))
+* **gatsby:** fixed header link display ([22e3b41](https://github.com/alexwine36/Portfolio/commit/22e3b4138f3435d6c680e235dfa3e7cdd6debac3))
+* **gatsby:** pdf object display fix ([0e97814](https://github.com/alexwine36/Portfolio/commit/0e97814697298258dc1f41b57838f881d8267b00))
+* **gatsby:** removed transition link from node modules ([af2383a](https://github.com/alexwine36/Portfolio/commit/af2383a16317c4389df756a5bae42faa82a89815))
+* **gatsby:** updated hero banner to use react lazy ([0f2948a](https://github.com/alexwine36/Portfolio/commit/0f2948a3d894aa17caa3d18d25c864664c3cb4d3))
+* **gatsby:** updated lazy components ([aaff621](https://github.com/alexwine36/Portfolio/commit/aaff621651ed302d09262a814c1439afe4114cc3))
+* **gatsby:** updated missing gatsby component ([e24ac2b](https://github.com/alexwine36/Portfolio/commit/e24ac2b743a80f199c07101ab2b0bf6a367db7cb))
+* **skills:** updated skill dates ([21b4a34](https://github.com/alexwine36/Portfolio/commit/21b4a3486b71a13e66dc0becebf7b83aeb12667d))
+
+
+### CI
+
+* **lighthouse:** updated lighthouse config ([52f33cb](https://github.com/alexwine36/Portfolio/commit/52f33cb801cd5097837db62a31bf1d31a1131713))
+
 ## [3.8.0](https://github.com/alexwine36/Portfolio/compare/v3.7.0...v3.8.0) (2022-08-22)
 
 
