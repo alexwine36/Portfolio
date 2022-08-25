@@ -111,7 +111,7 @@
     "@nrwl/react": "14.4.3",
     "@nrwl/web": "14.4.3",
     "@nrwl/workspace": "14.4.3",
-    "@nx-plus/docusaurus": "^14.0.0",
+    "@nx-plus/docusaurus": "^14.1.0",
     "@react-icons/all-files": "^4.1.0",
     "@swc/cli": "~0.1.55",
     "@swc/core": "^1.2.173",
