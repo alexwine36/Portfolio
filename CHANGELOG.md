@@ -1,3 +1,10 @@
+### [3.9.1](https://github.com/alexwine36/Portfolio/compare/v3.9.0...v3.9.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* **content:** updated resume content ([b96e2df](https://github.com/alexwine36/Portfolio/commit/b96e2df971ae0998a53921cf346997fe6907b8b4))
+
 ## [3.9.0](https://github.com/alexwine36/Portfolio/compare/v3.8.0...v3.9.0) (2022-08-25)
 
 
