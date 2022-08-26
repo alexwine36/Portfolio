@@ -11,7 +11,7 @@ endDate: 2012-01-01
 
 - Portrayed Charley in stage production of Charley's Aunt (2011) 
 - Ran live sound for SIC (2012), managing sound levels while queueing created sound effects.
-- Participated in an improv club 
+- Performed as part of an improv club 
 <!-- - Researched reasoning behind stalking behavior in an effort to keep college students safe -->
 <!-- - Envisioned, created and built an Audio Recording Program for the use of the students at the college. 
   - Got the program up and running within six months 

@@ -24,13 +24,13 @@ I chose to use [NX](https://nx.dev/) for the project. The ease of generating com
 
 ## Design
 
-I really liked the look of Glassmorphism and I wanted to try to implement some of that style into the design. For the frontend library I choose MUI because I have used it in the past and the ability to customize proved helpful during the design process.
+I really liked the look of Glassmorphism and I wanted to try to implement some of that style into the design. For the frontend library I chose MUI because I have used it in the past and the ability to customize proved helpful during the design process.
 
 
 
 ## Site
 
-I chose to use Gatsby for the development of the site. Thanks to Gatsby sourcing content is a breeze. Content comes from Markdown and YAML files. Markdown then is parsed using MDX then it can be augmented with React components for projects such as [360 Panos](/projects/360-panos). This also allowed adding images and graphs within text content. For skills, a basic YAML file added allowed reading in skills with categories, ratings, and estimated start date. The general content setup is as follows.
+I chose to use Gatsby for the development of the site. Thanks to Gatsby sourcing content is a breeze. Content comes from Markdown and YAML files. Markdown then is parsed using MDX and then it can be augmented with React components for projects such as [360 Panos](/projects/360-panos). This also allowed adding images and graphs within text content. For skills, a basic YAML file added allowed reading in skills with categories, ratings, and estimated start date. The general content setup is as follows.
 
 
 ```mermaid

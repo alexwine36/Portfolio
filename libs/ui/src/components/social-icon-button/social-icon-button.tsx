@@ -1,13 +1,16 @@
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { IconButton, Link, styled } from '@mui/material';
 import { RiGitlabFill } from '@react-icons/all-files/ri/RiGitlabFill';
 import { RiStackOverflowFill } from '@react-icons/all-files/ri/RiStackOverflowFill';
+
 export type SocialProviders =
   | 'linkedin'
   | 'github'
   | 'gitlab'
-  | 'stackoverflow';
+  | 'stackoverflow'
+  | 'admin';
 
 /* eslint-disable-next-line */
 export interface SocialIconButtonProps {
@@ -31,6 +34,8 @@ const SelectIcon = (provider: SocialProviders) => {
       return RiGitlabFill;
     case 'stackoverflow':
       return RiStackOverflowFill;
+    case 'admin':
+      return AdminPanelSettingsIcon;
     default:
       return LinkedInIcon;
   }

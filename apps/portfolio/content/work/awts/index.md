@@ -7,7 +7,7 @@ endDate: 2019-03-01
 
 - Developed mobile and web applications for local businesses to facilitate ecommerce, data analysis and data management.
 
-- Repaired and troubleshot numerous electrical and electronic systems i.e. LED installations, electronic locks and computers.
+- Repaired and troubleshot numerous electrical and electronic systems i.e. LED installations, electronic locks, and computers.
 
 - Provided computer, electrical, and mechanical services for a variety of customers including The Sandia Crest House and Convention Services of the Southwest.
 

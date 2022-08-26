@@ -23,14 +23,14 @@ export function PageLayout(props: PageLayoutProps) {
             display: 'Resume',
             link: '/static/resume.pdf',
           },
-          {
-            display: 'Admin',
-            link: '/admin',
-          },
-          {
-            display: 'Documentation',
-            link: 'https://alexwine36.github.io/Portfolio/',
-          },
+          // {
+          //   display: 'Admin',
+          //   link: '/admin',
+          // },
+          // {
+          //   display: 'Documentation',
+          //   link: 'https://alexwine36.github.io/Portfolio/',
+          // },
         ]}
         social={[
           {
@@ -48,6 +48,10 @@ export function PageLayout(props: PageLayoutProps) {
           {
             link: 'https://stackoverflow.com/users/5237963/alex-wine',
             provider: 'stackoverflow',
+          },
+          {
+            link: '/admin',
+            provider: 'admin',
           },
         ]}
       ></FooterDisplay>

@@ -21,7 +21,7 @@ The application was initially written using beta version of Prisma. I had finall
 The trouble now was that prisma2 was not terribly reliable yet. Nexus, the plugin to generate a GraphQL schema from a Prisma model, was also not too reliable. The solution I found was to write several scripts to bridge the gaps between the two and, find a new method of hosting. 
 
 
-I love Kubernetes but, I had read about Serverless which seemed like a better choice for this particular program using Next.js. The ability to have automated review environments through Vercel, at the time ZEIT, was also appealing.
+I love Kubernetes, but I had read about Serverless which seemed like a better choice for this particular program using Next.js. The ability to have automated review environments through Vercel, at the time ZEIT, was also appealing.
 The speed boost this gave previous applications was incredible and continued to get better through development iterations. However this was only one of the Prisma endpoints we had and needed a better method to connect.
 
 [^jk]: They were actually incredibly helpful and polite.
