@@ -1,0 +1,43 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pdf-generator/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/pdf-generator",
+        "tsConfig": "libs/pdf-generator/tsconfig.lib.json",
+        "project": "libs/pdf-generator/package.json",
+        "entryFile": "libs/pdf-generator/src/index.ts",
+        "external": ["@emotion/react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/pdf-generator/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/pdf-generator/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/pdf-generator"],
+      "options": {
+        "jestConfig": "libs/pdf-generator/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

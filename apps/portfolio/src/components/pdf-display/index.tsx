@@ -5,7 +5,10 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-
+import { Resume } from '@portfolio/pdf-generator';
+import { PDFViewer } from '@react-pdf/renderer';
+import { graphql, useStaticQuery } from 'gatsby';
+import { parseResumeData } from '../../utilities/pdf-constants';
 /* eslint-disable-next-line */
 export interface PDFDisplayProps {}
 
@@ -15,7 +18,7 @@ const StyledPDFDisplay = styled('div')`
   // height: 100vh;
 `;
 
-const StyledPDF = styled('object')`
+const StyledPDF = styled(PDFViewer)`
   // color: pink;
   width: 60vw;
   max-width: 100%;
@@ -33,6 +36,52 @@ const PdfLink = () => (
 export function PDFDisplay(props: PDFDisplayProps) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('md'));
+
+  const data = useStaticQuery<Queries.ResumeDataQuery>(graphql`
+    query ResumeData {
+      work: allMdx(
+        filter: { fields: { source: { eq: "work" } } }
+        sort: { order: DESC, fields: frontmatter___endDate }
+      ) {
+        nodes {
+          frontmatter {
+            startDate(formatString: "MMM YYYY")
+            company
+            position
+            endDate(formatString: "MMM YYYY")
+          }
+          mdxAST
+        }
+      }
+      education: allMdx(
+        filter: { fields: { source: { eq: "education" } } }
+        sort: { order: DESC, fields: frontmatter___endDate }
+      ) {
+        nodes {
+          frontmatter {
+            startDate(formatString: "YYYY")
+            school
+            study
+            endDate(formatString: "YYYY")
+          }
+          mdxAST
+        }
+      }
+      skills: allSkillsYaml(sort: { fields: rating, order: DESC }) {
+        group(field: category) {
+          edges {
+            node {
+              skill
+              rating
+            }
+          }
+          fieldValue
+        }
+      }
+    }
+  `);
+
+  const { parsedData } = parseResumeData(data);
   // const previewEl = document.getElementById('preview');
   // const preview = React.createRef<HTMLObjectElement>();
   // useEffect(() => {
@@ -44,6 +93,8 @@ export function PDFDisplay(props: PDFDisplayProps) {
   //     });
   //   }
   // }, [preview]);
+  console.log(parsedData);
+
   if (matches) {
     return <PdfLink />;
   } else {
@@ -53,14 +104,17 @@ export function PDFDisplay(props: PDFDisplayProps) {
       //   visibility: matches ? 'hidden' : 'visible',
       // }}
       >
-        <StyledPDF
+        <StyledPDF>
+          <Resume data={parsedData} />
+        </StyledPDF>
+        {/* <StyledPDF
           // ref={preview}
           data="/static/resume.pdf"
           id="preview"
           type="application/pdf"
         >
           <PdfLink />
-        </StyledPDF>
+        </StyledPDF> */}
       </StyledPDFDisplay>
     );
   }

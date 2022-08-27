@@ -103,10 +103,19 @@ exports.onCreateWebpackConfig = ({
   actions,
 }) => {
   actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        util: require.resolve('util/'),
+        zlib: require.resolve('browserify-zlib'),
+        stream: require.resolve('stream-browserify'),
+        assert: require.resolve('assert/'),
+      },
+    },
     plugins: [
       new webpack.ProvidePlugin({
         process: 'process/browser',
       }),
+
       new webpack.ProvidePlugin({
         Buffer: ['buffer', 'Buffer'],
       }),

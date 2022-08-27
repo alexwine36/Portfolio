@@ -3,6 +3,7 @@ import { PageBackground } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { Suspense } from 'react';
+import PDFDisplay from '../components/pdf-display';
 import HeroBannerFallback from '../loadable/hero-banner-fallback';
 const HeroBannerImplementation = React.lazy(
   () =>
@@ -42,7 +43,7 @@ export function Index(props: HomePageProps) {
       <Suspense fallback={<HeroBannerFallback mtns={mtns} bkg={bkg} />}>
         <HeroBannerImplementation mtns={mtns} bkg={bkg} />
       </Suspense>
-
+      <PDFDisplay />
       <StyledApp>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </StyledApp>
