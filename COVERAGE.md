@@ -56,7 +56,7 @@ libs.ui.src.components.parallax-background | 45% | 42% | 0 | ❌
 libs.ui.src.components.pg-background | 100% | 100% | 0 | ✔
 libs.ui.src.components.section-container | 100% | 100% | 0 | ✔
 libs.ui.src.components.section-display | 100% | 100% | 0 | ✔
-libs.ui.src.components.social-icon-button | 58% | 43% | 0 | ➖
+libs.ui.src.components.social-icon-button | 54% | 38% | 0 | ➖
 libs.ui.src.components.speed-dial-navigation | 88% | 50% | 0 | ✔
 libs.ui.src.components.text-header-display | 67% | 54% | 0 | ➖
 libs.ui.src.lib | 100% | 100% | 0 | ✔
@@ -64,4 +64,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **84%** (486 / 578) | **70%** (143 / 205) | **0** | ✔
+**Summary** | **84%** (486 / 579) | **69%** (143 / 206) | **0** | ✔
