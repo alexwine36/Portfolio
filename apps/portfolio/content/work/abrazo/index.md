@@ -2,7 +2,7 @@
 company: Abrazo Homes
 position: Business Intelligence Analyst
 startDate: 2018-08-01
-endDate: 2022-07-14
+
 ---
 
 <!-- - Developed an end-to-end analytics solution using Python and business intelligence tools, quantifiably improving the efficiency and productivity of the team. -->
