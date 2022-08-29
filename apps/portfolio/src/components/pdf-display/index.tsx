@@ -29,7 +29,9 @@ const PdfLink = () => {
   const { instance } = useGenerateResume();
   return (
     <Typography>
-      <Link href={instance.url}>View PDF</Link>
+      <Link target="_blank" rel="noopener" href={instance.url}>
+        View PDF
+      </Link>
     </Typography>
   );
 };
