@@ -1,9 +1,7 @@
 import { GatsbyNode } from 'gatsby';
 import path from 'path';
-import { RenderPDF } from '../../../../libs/pdf-generator/src';
+// import { RenderPDF } from '../../../../libs/pdf-generator/src';
 import { parseResumeData } from '../../src/utilities/pdf-constants';
-import React from 'react'
-
 
 export const createPages: GatsbyNode['createPages'] = async ({
   // actions,
@@ -65,10 +63,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
   reporter.info(outputPath);
   const { parsedData } = parseResumeData(result.data);
   // reporter.info(JSON.stringify(parsedData, null, 2));
-  RenderPDF({
-    data: parsedData,
-    output: outputPath,
-  });
+  // RenderPDF({
+  //   data: parsedData,
+  //   output: outputPath,
+  // });
   // doc.pipe(fs.createWriteStream(outputPath));
   // await doc.end();
 
