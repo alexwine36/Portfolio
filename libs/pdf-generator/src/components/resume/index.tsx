@@ -1,8 +1,6 @@
 import { Document, Font, Page, StyleSheet } from '@react-pdf/renderer';
 import Header from '../header';
 import SectionDisplay from '../section/section-display';
-import React from 'react'
-
 
 const styles = StyleSheet.create({
   page: {
@@ -66,18 +64,17 @@ Font.register({
   src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`,
 });
 
-export type SectionInfoType = {
+export interface SectionInfoType {
   title: string;
   pretitle?: string;
   subtitle?: string;
-};
+}
 
 export type SectionData = SectionInfoType & {
   content: string[] | string;
   // rawContent: Root;
 };
 
-/* eslint-disable-next-line */
 export interface ResumeProps {
   data: {
     work: SectionData[];

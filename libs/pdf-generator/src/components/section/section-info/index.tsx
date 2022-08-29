@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from '@react-pdf/renderer';
 import { baseFontSize, GlobalStyles } from '../../../constants/styles';
 import { SectionInfoType } from '../../resume';
+
 /* eslint-disable-next-line */
 export interface SectionInfoProps extends SectionInfoType {
   // title: string;
@@ -40,4 +41,4 @@ export function SectionInfo(props: SectionInfoProps) {
   );
 }
 
-export default SectionInfoType;
+export default SectionInfo;

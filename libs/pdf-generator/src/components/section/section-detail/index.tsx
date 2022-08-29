@@ -21,7 +21,7 @@ export function SectionDetail(props: SectionDetailProps) {
     <View style={styles.container}>
       <List>
         {Array.isArray(items) ? (
-          items.map((item) => <ListItem>{item}</ListItem>)
+          items.map((item, idx) => <ListItem key={idx}>{item}</ListItem>)
         ) : (
           <ListItemContent simple>{items}</ListItemContent>
         )}

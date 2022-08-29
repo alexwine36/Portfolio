@@ -29,11 +29,11 @@ export function SectionDisplay(props: SectionDisplayProps) {
   return (
     <View style={styles.mainSection} break={pageBreak}>
       <SectionHeader title={name} />
-      {data.map((d) => {
+      {data.map((d, idx) => {
         const { title, pretitle, subtitle, content } = d;
 
         return (
-          <View style={styles.section}>
+          <View key={idx} style={styles.section}>
             <SectionInfo
               title={title}
               pretitle={pretitle}
