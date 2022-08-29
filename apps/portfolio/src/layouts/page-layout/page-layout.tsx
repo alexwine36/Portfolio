@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { FooterDisplay } from '@portfolio/ui';
+import useGenerateResume from '../../hooks/use-generate-resume/use-generate-resume';
 import NavigationLayout from '../navigation-layout/navigation-layout';
 
 /* eslint-disable-next-line */
@@ -13,6 +14,7 @@ const StyledPageLayout = styled.div`
 
 export function PageLayout(props: PageLayoutProps) {
   const { children } = props;
+  const { instance } = useGenerateResume();
   return (
     <StyledPageLayout>
       <NavigationLayout />
@@ -21,7 +23,7 @@ export function PageLayout(props: PageLayoutProps) {
         links={[
           {
             display: 'Resume',
-            link: '/static/resume.pdf',
+            link: instance.url,
           },
           // {
           //   display: 'Admin',
@@ -49,10 +51,10 @@ export function PageLayout(props: PageLayoutProps) {
             link: 'https://stackoverflow.com/users/5237963/alex-wine',
             provider: 'stackoverflow',
           },
-          {
-            link: '/admin',
-            provider: 'admin',
-          },
+          // {
+          //   link: '/admin',
+          //   provider: 'admin',
+          // },
         ]}
       ></FooterDisplay>
     </StyledPageLayout>

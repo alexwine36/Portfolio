@@ -1,7 +1,10 @@
-import fs from 'fs';
 import { GatsbyNode } from 'gatsby';
 import path from 'path';
+import { RenderPDF } from '../../../../libs/pdf-generator/src';
 import { parseResumeData } from '../../src/utilities/pdf-constants';
+import React from 'react'
+
+
 export const createPages: GatsbyNode['createPages'] = async ({
   // actions,
   graphql,
@@ -58,8 +61,16 @@ export const createPages: GatsbyNode['createPages'] = async ({
   `);
   // reporter.info(JSON.stringify(result, undefined, 2));
   reporter.info('Retrieved Data');
-  const { doc } = parseResumeData(result.data);
   const outputPath = path.join(process.cwd(), `public`, `static`, 'resume.pdf');
-  doc.pipe(fs.createWriteStream(outputPath));
-  await doc.end();
+  reporter.info(outputPath);
+  const { parsedData } = parseResumeData(result.data);
+  // reporter.info(JSON.stringify(parsedData, null, 2));
+  RenderPDF({
+    data: parsedData,
+    output: outputPath,
+  });
+  // doc.pipe(fs.createWriteStream(outputPath));
+  // await doc.end();
+
+  // ReactPDF.render(Resume, outputPath);
 };

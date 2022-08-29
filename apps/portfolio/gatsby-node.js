@@ -105,10 +105,20 @@ exports.onCreateWebpackConfig = ({
   actions.setWebpackConfig({
     resolve: {
       fallback: {
-        util: require.resolve('util/'),
+        module: 'empty',
+        dgram: 'empty',
+        dns: 'mock',
+        fs: 'empty',
+        http2: 'empty',
+        net: 'empty',
+        tls: 'empty',
+        child_process: 'empty',
+        process: require.resolve('process/browser'),
         zlib: require.resolve('browserify-zlib'),
         stream: require.resolve('stream-browserify'),
-        assert: require.resolve('assert/'),
+        util: require.resolve('util'),
+        buffer: require.resolve('buffer'),
+        asset: require.resolve('assert'),
       },
     },
     plugins: [

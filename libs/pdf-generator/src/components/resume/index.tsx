@@ -1,6 +1,8 @@
 import { Document, Font, Page, StyleSheet } from '@react-pdf/renderer';
 import Header from '../header';
 import SectionDisplay from '../section/section-display';
+import React from 'react'
+
 
 const styles = StyleSheet.create({
   page: {

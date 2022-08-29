@@ -6,11 +6,13 @@ import {
   useTheme,
 } from '@mui/material';
 import { Resume } from '@portfolio/pdf-generator';
-import { PDFViewer } from '@react-pdf/renderer';
+import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import { graphql, useStaticQuery } from 'gatsby';
 import { parseResumeData } from '../../utilities/pdf-constants';
 /* eslint-disable-next-line */
-export interface PDFDisplayProps {}
+export interface PDFDisplayProps {
+  link?: boolean;
+}
 
 const StyledPDFDisplay = styled('div')`
   // color: pink;
@@ -25,13 +27,23 @@ const StyledPDF = styled(PDFViewer)`
   height: 100vh;
 `;
 
-const PdfLink = () => (
-  <Typography>
-    <Link href="/static/resume.pdf" rel="noopener" target="_blank">
+const PdfLink = (props: { document: React.ReactElement }) => {
+  const { document } = props;
+  return (
+    <Typography>
+      <PDFDownloadLink document={document} fileName="resume.pdf">
+        {({ blob, url, loading, error }) => {
+          // Do whatever you need with blob here
+          return <Link href={url}>View PDF</Link>;
+        }}
+      </PDFDownloadLink>
+
+      {/* <Link component={PDFDownloadLink} document={document} fileName="resume.pdf" >
       View PDF
-    </Link>
-  </Typography>
-);
+    </Link> */}
+    </Typography>
+  );
+};
 
 export function PDFDisplay(props: PDFDisplayProps) {
   const theme = useTheme();
@@ -94,9 +106,9 @@ export function PDFDisplay(props: PDFDisplayProps) {
   //   }
   // }, [preview]);
   console.log(parsedData);
-
+  const ResumeInstance = <Resume data={parsedData} />;
   if (matches) {
-    return <PdfLink />;
+    return <PdfLink document={ResumeInstance} />;
   } else {
     return (
       <StyledPDFDisplay
@@ -104,9 +116,7 @@ export function PDFDisplay(props: PDFDisplayProps) {
       //   visibility: matches ? 'hidden' : 'visible',
       // }}
       >
-        <StyledPDF>
-          <Resume data={parsedData} />
-        </StyledPDF>
+        <StyledPDF>{ResumeInstance}</StyledPDF>
         {/* <StyledPDF
           // ref={preview}
           data="/static/resume.pdf"

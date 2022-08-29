@@ -268,7 +268,7 @@ module.exports = {
     `gatsby-transformer-yaml`,
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-netlify',
-    'gatsby-plugin-pdf-gen',
+    // 'gatsby-plugin-pdf-gen',
     'gatsby-generate-og',
     // {
     //   resolve: `gatsby-plugin-loadable-components-ssr`,
