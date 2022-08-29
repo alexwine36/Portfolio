@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from '@react-pdf/renderer';
+import { baseFontSize } from '../../../constants/styles';
 
 /* eslint-disable-next-line */
 export interface SectionHeaderProps {
@@ -8,8 +9,8 @@ export interface SectionHeaderProps {
 const styles = StyleSheet.create({
   title: {
     fontFamily: 'Lato Bold',
-    fontSize: 14,
-    margin: 5,
+    fontSize: baseFontSize + 2,
+    margin: baseFontSize / 2,
     textTransform: 'uppercase',
   },
   container: {
@@ -21,6 +22,8 @@ const styles = StyleSheet.create({
     borderTopColor: '#112131',
     borderTopStyle: 'solid',
     alignItems: 'stretch',
+
+    // marginBottom: baseFontSize / 2,
     // paddingBottom: 12,
   },
 });

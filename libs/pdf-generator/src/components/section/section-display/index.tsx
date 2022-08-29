@@ -1,27 +1,33 @@
 import { StyleSheet, View } from '@react-pdf/renderer';
-import { GlobalStyles } from '../../../constants/styles';
+import { baseFontSize, GlobalStyles } from '../../../constants/styles';
 import { SectionData } from '../../resume';
 import SectionDetail from '../section-detail';
 import SectionHeader from '../section-header';
-import SectionInfo from '../section-info';
+import { SectionInfo } from '../section-info';
 
 /* eslint-disable-next-line */
 export interface SectionDisplayProps {
   name: string;
   data: SectionData[];
+  wrap?: boolean;
+  pageBreak?: boolean;
 }
 
 const styles = StyleSheet.create({
   section: {
     flexDirection: 'row',
     ...GlobalStyles['borderBottom'],
+    marginTop: baseFontSize / 2,
+  },
+  mainSection: {
+    // marginBottom: baseFontSize / 2,
   },
 });
 
 export function SectionDisplay(props: SectionDisplayProps) {
-  const { name, data } = props;
+  const { name, data, pageBreak } = props;
   return (
-    <View>
+    <View style={styles.mainSection} break={pageBreak}>
       <SectionHeader title={name} />
       {data.map((d) => {
         const { title, pretitle, subtitle, content } = d;

@@ -1,10 +1,10 @@
 import { StyleSheet, View } from '@react-pdf/renderer';
 import { baseFontSize } from '../../../constants/styles';
-import { List, ListItem } from '../../list';
+import { List, ListItem, ListItemContent } from '../../list';
 
 /* eslint-disable-next-line */
 export interface SectionDetailProps {
-  items: string[];
+  items: string[] | string;
 }
 
 const styles = StyleSheet.create({
@@ -20,9 +20,11 @@ export function SectionDetail(props: SectionDetailProps) {
   return (
     <View style={styles.container}>
       <List>
-        {items.map((item) => (
-          <ListItem>{item}</ListItem>
-        ))}
+        {Array.isArray(items) ? (
+          items.map((item) => <ListItem>{item}</ListItem>)
+        ) : (
+          <ListItemContent simple>{items}</ListItemContent>
+        )}
       </List>
     </View>
   );

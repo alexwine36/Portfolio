@@ -1,4 +1,5 @@
 import { Link, StyleSheet, Text, View } from '@react-pdf/renderer';
+import { baseFontSize, boldFont, normalFont } from '../../constants/styles';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
@@ -10,7 +11,7 @@ const styles = StyleSheet.create({
     // borderBottomColor: '#112131',
     // borderBottomStyle: 'solid',
     alignItems: 'stretch',
-    paddingBottom: 12,
+    paddingBottom: baseFontSize,
   },
   detailColumn: {
     flexDirection: 'column',
@@ -29,19 +30,19 @@ const styles = StyleSheet.create({
     justifySelf: 'flex-end',
   },
   name: {
-    fontSize: 24,
-    fontFamily: 'Lato Bold',
+    fontSize: baseFontSize * 2,
+    fontFamily: boldFont,
   },
   subtitle: {
-    fontSize: 12,
+    fontSize: baseFontSize + 2,
     justifySelf: 'flex-end',
-    fontFamily: 'Lato',
+    fontFamily: boldFont,
     textDecoration: 'none',
     marginVertical: 2,
   },
   linkheader: {
-    fontFamily: 'Lato Bold',
-    fontSize: 12,
+    fontFamily: boldFont,
+    fontSize: baseFontSize,
     color: 'black',
     textDecoration: 'none',
     alignSelf: 'flex-end',
@@ -50,8 +51,8 @@ const styles = StyleSheet.create({
     marginVertical: 2,
   },
   link: {
-    fontFamily: 'Lato',
-    fontSize: 12,
+    fontFamily: normalFont,
+    fontSize: baseFontSize,
     color: 'black',
     textDecoration: 'none',
     alignSelf: 'flex-end',
@@ -68,14 +69,22 @@ export function Header(props: HeaderProps) {
         <Text style={styles.subtitle}>Developer</Text>
         <View style={styles.linkContainer}>
           <Link
-            style={styles.subtitle}
+            style={{ ...styles.subtitle, fontFamily: normalFont }}
             src={'https://alex-wine-portfolio.netlify.app/'}
           >
             Portfolio
           </Link>
-          <Text style={{ ...styles.subtitle, paddingHorizontal: 4 }}>|</Text>
+          <Text
+            style={{
+              ...styles.subtitle,
+              paddingHorizontal: 4,
+              fontFamily: normalFont,
+            }}
+          >
+            |
+          </Text>
           <Link
-            style={styles.subtitle}
+            style={{ ...styles.subtitle, fontFamily: normalFont }}
             src={'https://www.linkedin.com/in/alexwine/'}
           >
             LinkedIn
@@ -89,16 +98,17 @@ export function Header(props: HeaderProps) {
       >
         <Text style={styles.linkheader}>phone</Text>
         <Text style={styles.linkheader}>email</Text>
-        <Text style={styles.linkheader}>location</Text>
+        {/* <Text style={styles.linkheader}>location</Text> */}
       </View>
       <View style={styles.linkColumn}>
-        <Link src="mailto:alexwine36@gmail.com" style={styles.link}>
-          alexwine36@gmail.com
-        </Link>
         <Link src="tel:5056297298" style={styles.link}>
           505.629.7298
         </Link>
-        <Text style={styles.link}>Albuquerque, NM</Text>
+        <Link src="mailto:alexwine36@gmail.com" style={styles.link}>
+          alexwine36@gmail.com
+        </Link>
+
+        {/* <Text style={styles.link}>Albuquerque, NM</Text> */}
       </View>
     </View>
   );

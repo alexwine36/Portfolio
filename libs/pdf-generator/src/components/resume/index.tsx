@@ -64,11 +64,14 @@ Font.register({
   src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`,
 });
 
-export type SectionData = {
+export type SectionInfoType = {
   title: string;
-  pretitle: string;
-  subtitle: string;
-  content: string[];
+  pretitle?: string;
+  subtitle?: string;
+};
+
+export type SectionData = SectionInfoType & {
+  content: string[] | string;
   // rawContent: Root;
 };
 
@@ -89,6 +92,18 @@ export function Resume(props: ResumeProps) {
       <Page size="LETTER" style={styles.page}>
         <Header></Header>
         <SectionDisplay name={'Experience'} data={work}></SectionDisplay>
+        <SectionDisplay
+          name={'Education'}
+          data={education}
+          pageBreak
+        ></SectionDisplay>
+        <SectionDisplay
+          name="Skills"
+          data={skills.map((d) => ({
+            title: d.category,
+            content: d.skills.join(', '),
+          }))}
+        ></SectionDisplay>
       </Page>
     </Document>
   );

@@ -5,13 +5,16 @@ type StylesType = {
 };
 
 export const borderColor = '#112131';
-export const baseFontSize = 12;
+export const baseFontSize = 10;
+export const boldFont = 'Lato Bold';
+export const normalFont = 'Lato';
+
 export const BaseStyles: StylesType = {
   bold: {
-    fontFamily: 'Lato Bold',
+    fontFamily: boldFont,
   },
   normal: {
-    fontFamily: 'Lato',
+    fontFamily: normalFont,
   },
 };
 

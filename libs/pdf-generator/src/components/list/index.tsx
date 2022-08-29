@@ -12,10 +12,10 @@ export interface ListProps {
 const styles = StyleSheet.create({
   item: {
     flexDirection: 'row',
-    marginBottom: 5,
+    marginBottom: baseFontSize / 4,
   },
   bulletPoint: {
-    width: 10,
+    width: baseFontSize - 2,
     fontSize: baseFontSize,
   },
   itemContent: {
@@ -27,10 +27,27 @@ const styles = StyleSheet.create({
 
 export const List = ({ children }: ListProps) => children;
 
+export const ListItemContent = ({
+  children,
+  simple,
+}: ListItemProps & { simple?: boolean }) => {
+  if (simple) {
+    return (
+      <View style={{ ...styles.item }}>
+        <Text style={{ ...styles.itemContent, lineHeight: 1.5 }}>
+          {children}
+        </Text>
+      </View>
+    );
+  }
+  return <Text style={styles.itemContent}>{children}</Text>;
+};
+
 export const ListItem = ({ children }: ListItemProps) => (
-  <View style={styles.item}>
-    <Text style={styles.bulletPoint}>•</Text>
-    <Text style={styles.itemContent}>{children}</Text>
+  <View style={styles.item} wrap={false}>
+    {/* <Text style={styles.bulletPoint}>•</Text> */}
+    <Text style={styles.bulletPoint}>-</Text>
+    <ListItemContent>{children}</ListItemContent>
   </View>
 );
 
