@@ -1,4 +1,4 @@
-![Code Coverage](https://img.shields.io/badge/Code%20Coverage-84%25-success?style=flat)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-79%25-success?style=flat)
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
@@ -16,6 +16,7 @@ apps.portfolio.src.components.seo-formatter | 100% | 67% | 0 | ✔
 apps.portfolio.src.hooks.use-pages | 67% | 0% | 0 | ➖
 apps.portfolio.src.loadable.hero-banner-fallback | 100% | 100% | 0 | ✔
 apps.portfolio.src.loadable.loadable-parallax-component | 100% | 100% | 0 | ✔
+apps.portfolio.src.loadable.pdf-loadable | 100% | 100% | 0 | ✔
 apps.portfolio.src.pages.projects | 75% | 100% | 0 | ✔
 apps.portfolio.src.pages.skills | 100% | 100% | 0 | ✔
 apps.portfolio.src.pages.work | 70% | 0% | 0 | ➖
@@ -26,6 +27,17 @@ apps.portfolio.src.utilities.test.constants.project-card | 100% | 100% | 0 | ✔
 libs.generate-badges.src.lib | 18% | 0% | 0 | ❌
 libs.hex-rgb.src | 100% | 100% | 0 | ✔
 libs.hex-rgb.src.lib | 74% | 64% | 0 | ➖
+libs.markdown-to-pdf.src.utilities.parse-mdast | 10% | 0% | 0 | ❌
+libs.pdf-generator.src | 100% | 100% | 0 | ✔
+libs.pdf-generator.src.components.header | 100% | 100% | 0 | ✔
+libs.pdf-generator.src.components.list | 100% | 100% | 0 | ✔
+libs.pdf-generator.src.components.resume | 89% | 100% | 0 | ✔
+libs.pdf-generator.src.components.section.section-detail | 75% | 50% | 0 | ✔
+libs.pdf-generator.src.components.section.section-display | 60% | 100% | 0 | ➖
+libs.pdf-generator.src.components.section.section-header | 100% | 100% | 0 | ✔
+libs.pdf-generator.src.components.section.section-info | 100% | 100% | 0 | ✔
+libs.pdf-generator.src.constants.styles | 100% | 100% | 0 | ✔
+libs.pdf-generator.src.lib | 100% | 100% | 0 | ✔
 libs.resume-hooks.src.lib | 100% | 100% | 0 | ✔
 libs.resume-hooks.src.lib.data | 100% | 100% | 0 | ✔
 libs.resume-hooks.src.lib.use-rhubarb-resume | 100% | 100% | 0 | ✔
@@ -45,7 +57,7 @@ libs.ui.src.assets.star-background | 100% | 100% | 0 | ✔
 libs.ui.src.components.chip-list-display | 100% | 50% | 0 | ✔
 libs.ui.src.components.detail-card-display | 100% | 100% | 0 | ✔
 libs.ui.src.components.detail-list-display | 100% | 100% | 0 | ✔
-libs.ui.src.components.footer-display | 71% | 100% | 0 | ➖
+libs.ui.src.components.footer-display | 56% | 0% | 0 | ➖
 libs.ui.src.components.gradient-text | 83% | 90% | 0 | ✔
 libs.ui.src.components.hero-banner | 100% | 100% | 0 | ✔
 libs.ui.src.components.hero-display | 75% | 100% | 0 | ✔
@@ -64,4 +76,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **84%** (486 / 579) | **69%** (143 / 206) | **0** | ✔
+**Summary** | **79%** (531 / 674) | **60%** (148 / 247) | **0** | ✔

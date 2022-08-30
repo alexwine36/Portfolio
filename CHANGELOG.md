@@ -1,3 +1,40 @@
+## [3.10.0](https://github.com/alexwine36/Portfolio/compare/v3.9.1...v3.10.0) (2022-08-30)
+
+
+### Features
+
+* **pdf:** new PDF Generator method ([1124171](https://github.com/alexwine36/Portfolio/commit/1124171231b39a2f6ee24831a09307c7e19971c9))
+
+
+### Bug Fixes
+
+* **gatsby:** added resume generate hook ([f619876](https://github.com/alexwine36/Portfolio/commit/f619876b5184f84a2df255783bcbcaf1416b7a01))
+* **gatsby:** added tarif suggestions to site ([dd5909e](https://github.com/alexwine36/Portfolio/commit/dd5909e9c6b4fff2415cd8b1b4ddfd6e41655378))
+* **gatsby:** updated gnerate resume hook ([66b81db](https://github.com/alexwine36/Portfolio/commit/66b81db8e4f8b782f3de9a7ee6239d01d8aed497))
+* **gatsby:** updated resume link props ([f6a67d5](https://github.com/alexwine36/Portfolio/commit/f6a67d5655618ff79fd87650d236fee5e57c4a91))
+* **pdf generator:** updated section info export to fix errors ([591b675](https://github.com/alexwine36/Portfolio/commit/591b675d7364e9de13280275c3969f882ffd6c3e))
+* **pdf gen:** updated pdf generator library ([fd61c19](https://github.com/alexwine36/Portfolio/commit/fd61c1993bd01c589c076a84e950406064e292e0))
+* **pdf:** changed to react lazy for pdf gen ([91a9cae](https://github.com/alexwine36/Portfolio/commit/91a9cae0b8818833dc7b89b1db3a55bd3d2f99ce))
+* **resume generation:** updated display of sections ([05fa402](https://github.com/alexwine36/Portfolio/commit/05fa402680d21e221a126f5814d675d5c88fabc2))
+* **tests:** fixed failing tests ([ac84a1a](https://github.com/alexwine36/Portfolio/commit/ac84a1a7e35bd7a4c6bc9410e59d380803644ada))
+* **test:** updated failing tests ([fc45d97](https://github.com/alexwine36/Portfolio/commit/fc45d97d9ed02130d2044e416a706618dee45b9a))
+* **work experience:** fixed abrazo work experience ([077fb35](https://github.com/alexwine36/Portfolio/commit/077fb3526913ec0689d0d2df6d7eb1aa9c15f4b5))
+
+
+### Performance Improvements
+
+* **cache:** updated cache provider for mui ([2b72155](https://github.com/alexwine36/Portfolio/commit/2b72155780d100ae701ce4ff482b01abe8d1ba3b))
+
+
+### Docs
+
+* **vale:** updated vale config to ignore semicolon warning ([f743c9e](https://github.com/alexwine36/Portfolio/commit/f743c9e440265ddf35e2e44300b2e6d7fbb6b19d))
+
+
+### Tests
+
+* **gatsby:** updated test snapshots ([c200ca9](https://github.com/alexwine36/Portfolio/commit/c200ca9129db2c1908ac4fce0d0b2e10f8eff159))
+
 ### [3.9.1](https://github.com/alexwine36/Portfolio/compare/v3.9.0...v3.9.1) (2022-08-26)
 
 
