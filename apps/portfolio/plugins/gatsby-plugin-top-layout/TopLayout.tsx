@@ -1,3 +1,4 @@
+import { CacheProvider } from '@emotion/react';
 import { MDXProvider } from '@mdx-js/react';
 import { GlobalStyles } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -5,19 +6,22 @@ import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '@portfolio/theme';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import PropTypes from 'prop-types';
-import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import PageLayout from '../../src/layouts/page-layout/page-layout';
+import getEmotionCache from '../gatsby-plugin-mui-emotion/getEmotionCache';
 import components from './components';
+
+const cache = getEmotionCache();
 
 export default function TopLayout(props) {
   return (
-    <React.Fragment>
+    <CacheProvider value={cache}>
       <Helmet>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Helmet>
       <GatsbySeo titleTemplate="Alex Wine | %s" title="Portfolio" />
+
       <ThemeProvider theme={theme}>
         <GlobalStyles
           styles={{
@@ -150,7 +154,7 @@ export default function TopLayout(props) {
           </ParallaxProvider>
         </MDXProvider>
       </ThemeProvider>
-    </React.Fragment>
+    </CacheProvider>
   );
 }
 

@@ -35,6 +35,7 @@
     "@mdx-js/react": "^1.6.22",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.0",
+    "@react-pdf/renderer": "^2.3.0",
     "@swc/helpers": "~0.3.3",
     "clsx": "^1.1.1",
     "core-js": "^3.6.5",
@@ -129,10 +130,12 @@
     "@types/seedrandom": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "5.30.6",
     "@typescript-eslint/parser": "5.30.6",
+    "assert": "^2.0.0",
     "babel-jest": "28.1.2",
     "babel-plugin-module-resolver": "4.1.0",
     "babel-preset-gatsby": "2.19.0",
     "badge-maker": "^3.3.1",
+    "browserify-zlib": "^0.2.0",
     "commander": "^9.3.0",
     "commitizen": "^4.2.4",
     "cypress": "^9.1.0",
@@ -167,12 +170,15 @@
     "nx": "14.4.3",
     "prettier": "^2.6.2",
     "puppeteer": "^15.5.0",
+    "react-test-renderer": "18.2.0",
     "rimraf": "^3.0.2",
+    "stream-browserify": "^3.0.0",
     "ts-jest": "^28.0.5",
     "ts-node": "~10.8.0",
     "typedoc": "^0.22.17",
     "typedoc-plugin-markdown": "^3.12.1",
-    "typescript": "~4.7.2"
+    "typescript": "~4.7.2",
+    "util": "^0.12.4"
   },
   "config": {
     "commitizen": {

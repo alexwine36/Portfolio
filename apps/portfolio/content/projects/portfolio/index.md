@@ -9,7 +9,7 @@ tags:
   - GitHub Actions
 ---
 
-import {PDFDisplay} from '../../../src/components/pdf-display';
+import {PDFLoadable} from '../../../src/loadable/pdf-loadable';
 
 # The Problem
 
@@ -84,7 +84,7 @@ Though it would be nice if everyone wanted to just view the portfolio for the mo
 This function is run at build time from the source files and saved to the public folder for serving. This means that all resume content is generated automatically and no more double data entry! That means the PDF below always has the most accurate data available.
 <!-- Using Markdown data resume content is automatically parsed and saved for display. -->
 
-<PDFDisplay />
+<PDFLoadable />
 
 
 ## CI Process

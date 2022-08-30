@@ -1,4 +1,4 @@
-import { Box, Rating, styled, Typography } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 
 /* eslint-disable-next-line */
 export interface SkillHeaderDisplayProps {
@@ -33,7 +33,7 @@ export function SkillHeaderDisplay(props: SkillHeaderDisplayProps) {
         }}
         data-testid="container"
       >
-        <Rating data-testid="rating" readOnly value={skill?.rating}></Rating>
+        {/* <Rating data-testid="rating" readOnly value={skill?.rating}></Rating> */}
         <Typography data-testid="skill">{skill?.skill}</Typography>
       </Box>
 

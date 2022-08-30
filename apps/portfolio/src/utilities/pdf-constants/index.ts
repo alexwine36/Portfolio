@@ -1,7 +1,4 @@
-import {
-  generatePdfResume,
-  parseResume,
-} from '../../../../../libs/markdown-to-pdf/src';
+import { parseResume } from '../../../../../libs/markdown-to-pdf/src';
 
 export const parseResumeData = (data: Queries.ResumeGenerateQuery) => {
   const { work, education, skills } = data;
@@ -41,5 +38,5 @@ export const parseResumeData = (data: Queries.ResumeGenerateQuery) => {
       skills: category.edges.map((sk) => sk.node.skill),
     })),
   };
-  return { parsedData, doc: generatePdfResume(parsedData as any) };
+  return { parsedData };
 };

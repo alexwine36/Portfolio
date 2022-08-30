@@ -42,7 +42,6 @@ export function Index(props: HomePageProps) {
       <Suspense fallback={<HeroBannerFallback mtns={mtns} bkg={bkg} />}>
         <HeroBannerImplementation mtns={mtns} bkg={bkg} />
       </Suspense>
-
       <StyledApp>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </StyledApp>

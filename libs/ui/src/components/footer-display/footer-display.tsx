@@ -5,11 +5,16 @@ import SocialIconButton, {
 } from '../social-icon-button/social-icon-button';
 
 /* eslint-disable-next-line */
+
+type LinkType =
+  | {
+      display: string;
+      link: string;
+    }
+  | React.ReactElement;
+
 export interface FooterDisplayProps {
-  links?: {
-    display: string;
-    link: string;
-  }[];
+  links?: LinkType[];
   social?: {
     provider: SocialProviders;
     link: string;
@@ -68,19 +73,25 @@ export function FooterDisplay(props: FooterDisplayProps) {
             },
           }}
         >
-          {links?.map((item, idx) => (
-            <Link
-              key={idx}
-              variant="body2"
-              target="_blank"
-              rel="noopener"
-              color="inherit"
-              href={item.link}
-              underline="hover"
-            >
-              {item.display}
-            </Link>
-          ))}
+          {links?.map((item, idx) => {
+            if ('display' in item) {
+              return (
+                <Link
+                  key={idx}
+                  variant="body2"
+                  target="_blank"
+                  rel="noopener"
+                  color="inherit"
+                  href={item.link}
+                  underline="hover"
+                >
+                  {item.display}
+                </Link>
+              );
+            }
+
+            return item;
+          })}
         </StyledBox>
         <StyledBox>
           {social?.map((item, idx) => (
