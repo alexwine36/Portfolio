@@ -1,7 +1,6 @@
-import { styled } from '@mui/material';
+import { styled, Typography } from '@mui/material';
 import { PageBackground } from '@portfolio/ui';
 import { graphql, PageProps } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React, { Suspense } from 'react';
 import HeroBannerFallback from '../loadable/hero-banner-fallback';
 const HeroBannerImplementation = React.lazy(
@@ -36,6 +35,8 @@ const StyledApp = styled('div')`
 
 export function Index(props: HomePageProps) {
   const { data } = props;
+  // const {}
+  const { header, content } = data.pagesYaml;
   const { mtns, bkg } = data;
   return (
     <PageBackground>
@@ -43,7 +44,14 @@ export function Index(props: HomePageProps) {
         <HeroBannerImplementation mtns={mtns} bkg={bkg} />
       </Suspense>
       <StyledApp>
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <div className="markdown-body">
+          <Typography variant="h4" component="h2">
+            {header}
+          </Typography>
+          <Typography>{content}</Typography>
+        </div>
+
+        {/* <MDXRenderer>{data.mdx.body}</MDXRenderer> */}
       </StyledApp>
     </PageBackground>
   );
@@ -51,8 +59,9 @@ export function Index(props: HomePageProps) {
 
 export const pageQuery = graphql`
   query HomePage {
-    mdx(slug: { eq: "about/" }) {
-      body
+    pagesYaml(page: { eq: "about" }) {
+      content
+      header
     }
     mtns: file(name: { eq: "mountains" }) {
       childImageSharp {
