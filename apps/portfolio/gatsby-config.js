@@ -8,6 +8,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-top-layout',
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // pathToEmotionCacheProps: `src/emotion-cache-props`,
+      },
+    },
 
     {
       resolve: 'gatsby-plugin-svgr',
@@ -285,12 +291,7 @@ module.exports = {
         // devMode: true,
       },
     },
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        // pathToEmotionCacheProps: `src/emotion-cache-props`,
-      },
-    },
+
     'gatsby-plugin-lodash',
   ],
 };

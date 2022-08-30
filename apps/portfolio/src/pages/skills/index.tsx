@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Box, Rating, Typography, useTheme } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 import { DetailCardDisplay, MasonryGridComponent } from '@portfolio/ui';
 import { graphql, Link, PageProps } from 'gatsby';
 import ParallaxSectionDisplay from '../../components/parallax-section-display';
@@ -68,13 +68,14 @@ export function Skills(props: SkillsProps) {
                       <Box
                         key={skill.skill}
                         sx={{
+                          paddingLeft: 3,
                           display: 'flex',
                           // alignItems: "center",
                           flexDirection: 'row',
                           // width: "100%",
                         }}
                       >
-                        <Rating readOnly value={skill.rating}></Rating>
+                        {/* <Rating readOnly value={skill.rating}></Rating> */}
                         <Typography
                           sx={{
                             paddingX: 2,
