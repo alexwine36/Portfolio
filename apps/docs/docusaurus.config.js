@@ -24,6 +24,20 @@ const config = {
     [
       'docusaurus-plugin-typedoc',
       {
+        entryPoints: ['libs/pdf-generator/src/index.ts'],
+        tsconfig: 'libs/pdf-generator/tsconfig.json',
+        out: 'pdf-generator',
+        id: 'pdf-generator',
+        sidebar: {
+          categoryLabel: '@portfolio/pdf-generator',
+          position: 0,
+          fullNames: true,
+        },
+      },
+    ],
+    [
+      'docusaurus-plugin-typedoc',
+      {
         entryPoints: ['libs/hex-rgb/src/index.ts'],
         tsconfig: 'libs/hex-rgb/tsconfig.json',
         out: 'hex-rgb',
