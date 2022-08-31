@@ -1,5 +1,11 @@
 import fs from 'fs';
 import { parseResumeData } from '.';
+
+/**
+ * @deprecated
+ * @param graphql
+ */
+
 export const generateResume = async (graphql: any) => {
   console.log('GENERATE RESUME');
 

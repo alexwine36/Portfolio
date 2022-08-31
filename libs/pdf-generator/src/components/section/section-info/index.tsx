@@ -41,7 +41,7 @@ export function SectionInfo(props: SectionInfoProps) {
       })} */}
       <View style={{ ...styles.subContainer, flexDirection: 'row' }}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.base}>{subtitle}</Text>
+        {subtitle && <Text style={styles.base}>{`| ${subtitle}`}</Text>}
       </View>
       <View style={{ ...styles.subContainer, flexGrow: 1 }}>
         <Text style={{ ...styles.base, textAlign: 'right' }}>{pretitle}</Text>
