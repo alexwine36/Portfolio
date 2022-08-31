@@ -5,6 +5,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import { PDFViewer } from '@react-pdf/renderer';
 import useGenerateResume from '../../hooks/use-generate-resume/use-generate-resume';
 /* eslint-disable-next-line */
 export interface PDFDisplayProps {
@@ -19,6 +20,12 @@ const StyledPDFDisplay = styled('div')`
 
 const StyledPDF = styled('object')`
   // color: pink;
+  width: 60vw;
+  max-width: 100%;
+  height: 100vh;
+`;
+
+const StyledPDFView = styled(PDFViewer)`
   width: 60vw;
   max-width: 100%;
   height: 100vh;
@@ -40,7 +47,7 @@ export function PDFDisplay(props: PDFDisplayProps) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('md'));
 
-  const { instance } = useGenerateResume();
+  const { instance, document } = useGenerateResume();
   // const previewEl = document.getElementById('preview');
   // const preview = React.createRef<HTMLObjectElement>();
   // useEffect(() => {
@@ -62,9 +69,10 @@ export function PDFDisplay(props: PDFDisplayProps) {
       //   visibility: matches ? 'hidden' : 'visible',
       // }}
       >
-        <StyledPDF data={instance.url}>
+        <StyledPDFView>{document}</StyledPDFView>
+        {/* <StyledPDF data={instance.url}>
           <PdfLink />
-        </StyledPDF>
+        </StyledPDF> */}
         {/* <StyledPDF
           // ref={preview}
           data="/static/resume.pdf"

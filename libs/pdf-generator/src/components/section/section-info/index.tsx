@@ -15,12 +15,17 @@ const styles = StyleSheet.create({
   },
   base: {
     ...GlobalStyles['baseText'],
+    marginLeft: baseFontSize / 4,
   },
   container: {
-    flexDirection: 'column',
-    // flexGrow: 1,
-    width: '25%',
+    flexDirection: 'row',
+    flexGrow: 1,
+    // width: '25%',
     marginLeft: baseFontSize / 4,
+    marginBottom: baseFontSize / 4,
+  },
+  subContainer: {
+    flexDirection: 'column',
   },
 });
 
@@ -34,9 +39,13 @@ export function SectionInfo(props: SectionInfoProps) {
       {_.chunk(subtitle.split(' '), 2).map((v) => {
         return <Text style={styles.base}>{v.join(' ')}</Text>;
       })} */}
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.base}>{subtitle}</Text>
-      <Text style={styles.base}>{pretitle}</Text>
+      <View style={{ ...styles.subContainer, flexDirection: 'row' }}>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.base}>{subtitle}</Text>
+      </View>
+      <View style={{ ...styles.subContainer, flexGrow: 1 }}>
+        <Text style={{ ...styles.base, textAlign: 'right' }}>{pretitle}</Text>
+      </View>
     </View>
   );
 }

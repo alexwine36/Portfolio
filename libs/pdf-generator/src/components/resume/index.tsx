@@ -1,10 +1,10 @@
-import { Document, Font, Page, StyleSheet } from '@react-pdf/renderer';
+import { Document, Font, Page, StyleSheet, View } from '@react-pdf/renderer';
 import Header from '../header';
 import SectionDisplay from '../section/section-display';
 
 const styles = StyleSheet.create({
   page: {
-    padding: 30,
+    padding: 20,
   },
   container: {
     flex: 1,
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
   },
   leftColumn: {
     flexDirection: 'column',
-    width: 170,
-    paddingTop: 30,
+    width: 180,
+    // paddingTop: 30,
     paddingRight: 15,
     '@media max-width: 400': {
       width: '100%',
@@ -64,6 +64,11 @@ Font.register({
   src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`,
 });
 
+Font.registerHyphenationCallback((words) => {
+  // console.log(words);
+  return [words];
+});
+
 export interface SectionInfoType {
   title: string;
   pretitle?: string;
@@ -89,20 +94,31 @@ export function Resume(props: ResumeProps) {
   return (
     <Document author="Alex Wine" title="Resume">
       <Page size="LETTER" style={styles.page}>
-        <Header></Header>
-        <SectionDisplay name={'Experience'} data={work}></SectionDisplay>
-        <SectionDisplay
-          name={'Education'}
-          data={education}
-          pageBreak
-        ></SectionDisplay>
-        <SectionDisplay
-          name="Skills"
-          data={skills.map((d) => ({
-            title: d.category,
-            content: d.skills.join(', '),
-          }))}
-        ></SectionDisplay>
+        <View style={styles.container}>
+          <View style={styles.leftColumn}>
+            <Header></Header>
+            <SectionDisplay
+              name="Skills"
+              data={skills.map((d) => ({
+                title: d.category,
+                content: d.skills.join(', '),
+              }))}
+            ></SectionDisplay>
+            <SectionDisplay
+              name={'Education'}
+              data={education}
+              truncate
+              // pageBreak
+            ></SectionDisplay>
+          </View>
+          <View
+            style={{
+              flex: 1,
+            }}
+          >
+            <SectionDisplay name={'Experience'} data={work}></SectionDisplay>
+          </View>
+        </View>
       </Page>
     </Document>
   );
