@@ -35,6 +35,7 @@ I chose to use Gatsby for the development of the site. Thanks to Gatsby sourcing
 
 ```mermaid
 erDiagram
+  accTitle: Content setup
   CONTENT ||--|{ WORK : MDX
   CONTENT ||--|{ EDUCATION : MDX
   CONTENT ||--|{ PROJECTS : MDX
@@ -93,6 +94,7 @@ This was my first time using GitHub Actions and there was a bit of a learning cu
 
 ```mermaid
 stateDiagram-v2
+  accTitle: Build process
   [*] --> Push
   state "Commit" as Push
   Push --> GitHub

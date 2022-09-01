@@ -120,7 +120,9 @@ export function ProjectPage(props: ProjectPageProps) {
                     justifyContent: 'center',
                   }}
                 >
-                  <MDXRenderer>{body}</MDXRenderer>
+                  <MDXRenderer>
+                    {body.replaceAll('aria-labelled-by', 'aria-labelledby')}
+                  </MDXRenderer>
                 </CardContent>
               </Card>
             </Grid>
