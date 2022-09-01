@@ -1,4 +1,4 @@
-![Code Coverage](https://img.shields.io/badge/Code%20Coverage-79%25-success?style=flat)
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-77%25-success?style=flat)
 
 Package | Line Rate | Branch Rate | Complexity | Health
 -------- | --------- | ----------- | ---------- | ------
@@ -10,7 +10,7 @@ apps.portfolio.src.components.mdx.vr-viewer | 58% | 50% | 0 | ➖
 apps.portfolio.src.components.next-post-component | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.pages.tags | 100% | 100% | 0 | ✔
 apps.portfolio.src.components.parallax-section-display | 100% | 100% | 0 | ✔
-apps.portfolio.src.components.project-card | 100% | 50% | 0 | ✔
+apps.portfolio.src.components.project-card | 90% | 50% | 0 | ✔
 apps.portfolio.src.components.remark-link | 70% | 56% | 0 | ➖
 apps.portfolio.src.components.seo-formatter | 100% | 67% | 0 | ✔
 apps.portfolio.src.hooks.use-pages | 67% | 0% | 0 | ➖
@@ -27,15 +27,15 @@ apps.portfolio.src.utilities.test.constants.project-card | 100% | 100% | 0 | ✔
 libs.generate-badges.src.lib | 18% | 0% | 0 | ❌
 libs.hex-rgb.src | 100% | 100% | 0 | ✔
 libs.hex-rgb.src.lib | 74% | 64% | 0 | ➖
-libs.markdown-to-pdf.src.utilities.parse-mdast | 10% | 0% | 0 | ❌
+libs.markdown-to-pdf.src.utilities.parse-mdast | 9% | 0% | 0 | ❌
 libs.pdf-generator.src | 100% | 100% | 0 | ✔
 libs.pdf-generator.src.components.header | 100% | 100% | 0 | ✔
 libs.pdf-generator.src.components.list | 100% | 100% | 0 | ✔
-libs.pdf-generator.src.components.resume | 89% | 100% | 0 | ✔
+libs.pdf-generator.src.components.resume | 82% | 100% | 0 | ✔
 libs.pdf-generator.src.components.section.section-detail | 75% | 50% | 0 | ✔
-libs.pdf-generator.src.components.section.section-display | 60% | 100% | 0 | ➖
+libs.pdf-generator.src.components.section.section-display | 38% | 0% | 0 | ❌
 libs.pdf-generator.src.components.section.section-header | 100% | 100% | 0 | ✔
-libs.pdf-generator.src.components.section.section-info | 100% | 100% | 0 | ✔
+libs.pdf-generator.src.components.section.section-info | 100% | 75% | 0 | ✔
 libs.pdf-generator.src.constants.styles | 100% | 100% | 0 | ✔
 libs.pdf-generator.src.lib | 100% | 100% | 0 | ✔
 libs.resume-hooks.src.lib | 100% | 100% | 0 | ✔
@@ -76,4 +76,4 @@ libs.ui.src.lib.utilities.css-image-settings | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generate-gradient | 100% | 100% | 0 | ✔
 libs.ui.src.lib.utilities.functions.generateBase64 | 71% | 100% | 0 | ➖
 libs.ui.src.lib.utilities.hex-to-rgba | 100% | 100% | 0 | ✔
-**Summary** | **79%** (531 / 674) | **60%** (148 / 247) | **0** | ✔
+**Summary** | **77%** (532 / 689) | **56%** (149 / 265) | **0** | ✔
