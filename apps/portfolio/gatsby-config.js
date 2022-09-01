@@ -6,8 +6,10 @@ module.exports = {
     description: `Portfolio for developer and nerd, Alex Wine. `,
   },
   plugins: [
-    'gatsby-plugin-emotion',
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-top-layout',
+    'gatsby-plugin-emotion',
+
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {
@@ -22,7 +24,7 @@ module.exports = {
         ref: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
