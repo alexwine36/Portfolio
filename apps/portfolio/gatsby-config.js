@@ -76,6 +76,11 @@ module.exports = {
         theme_color: `#000F08`,
         display: `minimal-ui`,
         icon: `src/images/AW-Portfolio.svg`,
+        icon_options: {
+          // For all the options available,
+          // please see the section "Additional Resources" below.
+          purpose: `any maskable`,
+        },
       },
     },
     {
