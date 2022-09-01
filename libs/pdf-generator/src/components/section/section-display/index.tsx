@@ -11,12 +11,18 @@ export interface SectionDisplayProps {
   data: SectionData[];
   wrap?: boolean;
   pageBreak?: boolean;
+  truncate?: boolean;
 }
 
 const styles = StyleSheet.create({
   section: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     ...GlobalStyles['borderBottom'],
+    marginTop: baseFontSize / 2,
+  },
+  lastSection: {
+    flexDirection: 'column',
+    // ...GlobalStyles['borderBottom'],
     marginTop: baseFontSize / 2,
   },
   mainSection: {
@@ -25,21 +31,35 @@ const styles = StyleSheet.create({
 });
 
 export function SectionDisplay(props: SectionDisplayProps) {
-  const { name, data, pageBreak } = props;
+  const { name, data, pageBreak, truncate } = props;
   return (
     <View style={styles.mainSection} break={pageBreak}>
       <SectionHeader title={name} />
       {data.map((d, idx) => {
         const { title, pretitle, subtitle, content } = d;
+        const last = idx === data.length - 1;
+
+        if (truncate) {
+          return (
+            <View key={idx} style={last ? styles.lastSection : styles.section}>
+              <SectionInfo
+                title={title}
+                pretitle={pretitle}
+                // subtitle={subtitle}
+              />
+              <SectionDetail items={`${subtitle}`}></SectionDetail>
+            </View>
+          );
+        }
 
         return (
-          <View key={idx} style={styles.section}>
+          <View key={idx} style={last ? styles.lastSection : styles.section}>
             <SectionInfo
               title={title}
               pretitle={pretitle}
               subtitle={subtitle}
             />
-            <SectionDetail items={content}></SectionDetail>
+            {!truncate && <SectionDetail items={content}></SectionDetail>}
           </View>
         );
       })}

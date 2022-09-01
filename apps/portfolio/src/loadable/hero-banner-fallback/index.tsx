@@ -27,10 +27,10 @@ const StyledContainer = styled.div`
     position: relative;
     scale: (1);
     transform: translateY(0%);
-    &:nth-child(2) {
+    &:nth-of-type(2) {
       transform: translateY(-100%);
     }
-    &:nth-child(3) {
+    &:nth-of-type(3) {
       height: 100%;
       transform: translateY(-200%);
     }

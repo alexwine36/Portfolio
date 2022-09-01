@@ -22,6 +22,7 @@ export function useGenerateResume() {
           frontmatter {
             startDate(formatString: "MMM YYYY")
             company
+            shortName
             position
             endDate(formatString: "MMM YYYY")
           }
@@ -36,6 +37,7 @@ export function useGenerateResume() {
           frontmatter {
             startDate(formatString: "YYYY")
             school
+            shortName
             study
             endDate(formatString: "YYYY")
           }
@@ -55,13 +57,15 @@ export function useGenerateResume() {
       }
     }
   `);
+
   const { parsedData } = parseResumeData(data);
-  const [instance, update] = usePDF({ document: <Resume data={parsedData} /> });
+  const document = <Resume data={parsedData} />;
+  const [instance, update] = usePDF({ document });
 
   // const increment = useCallback(() => setCount((x) => x + 1), []);
   // return { count, increment };
 
-  return { parsedData, instance };
+  return { parsedData, instance, document };
 }
 
 export default useGenerateResume;

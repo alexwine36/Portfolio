@@ -32,21 +32,41 @@ const parseChildren = (data: Root['children']): (string | undefined)[] => {
       if (d.type === 'text') {
         return d.value;
       }
+
+      if (d.type === 'link') {
+        console.log(d);
+      }
+
       if ('children' in d) {
         // if (d.type === 'link') {
         //   return undefined;
         // }
 
         if (d.type === 'paragraph' && d.children.length > 1) {
-          return d.children
+          const line = d.children
             .map((c: ChildType[0]) => {
+              if (c.type === 'link') {
+                const res = parseChildren(c.children);
+
+                if (res.length > 0) {
+                  return res[0];
+                }
+              }
+
               if ('value' in c) {
                 return c.value;
               }
               return '';
             })
             .filter((c) => !!c)
+
             .join(' ');
+
+          if (line.includes('  ')) {
+            // console.info(line);
+            return line.replace('  ', ' ');
+          }
+          return line;
         }
         return parseChildren(d.children);
       }

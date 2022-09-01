@@ -6,12 +6,12 @@ export interface HeaderProps {}
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     // borderBottomWidth: 2,
     // borderBottomColor: '#112131',
     // borderBottomStyle: 'solid',
     alignItems: 'stretch',
-    paddingBottom: baseFontSize,
+    // paddingBottom: baseFontSize,
   },
   detailColumn: {
     flexDirection: 'column',
@@ -91,24 +91,22 @@ export function Header(props: HeaderProps) {
           </Link>
         </View>
       </View>
-      <View
+      {/* <View
         style={{
           ...styles.linkColumn,
         }}
       >
         <Text style={styles.linkheader}>phone</Text>
         <Text style={styles.linkheader}>email</Text>
-        {/* <Text style={styles.linkheader}>location</Text> */}
-      </View>
+
+      </View> */}
       <View style={styles.linkColumn}>
         <Link src="tel:5056297298" style={styles.link}>
-          505.629.7298
+          phone: 505.629.7298
         </Link>
         <Link src="mailto:alexwine36@gmail.com" style={styles.link}>
-          alexwine36@gmail.com
+          email: alexwine36@gmail.com
         </Link>
-
-        {/* <Text style={styles.link}>Albuquerque, NM</Text> */}
       </View>
     </View>
   );

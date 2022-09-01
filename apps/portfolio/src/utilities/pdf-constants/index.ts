@@ -1,6 +1,6 @@
 import { parseResume } from '../../../../../libs/markdown-to-pdf/src';
 
-export const parseResumeData = (data: Queries.ResumeGenerateQuery) => {
+export const parseResumeData = (data: Queries.ResumeHookDataQuery) => {
   const { work, education, skills } = data;
   const parsedData = {
     work: work.nodes.map((d) => {
@@ -10,7 +10,7 @@ export const parseResumeData = (data: Queries.ResumeGenerateQuery) => {
         frontmatter.endDate || 'Present'
       }`;
       return {
-        subtitle: frontmatter.company,
+        subtitle: frontmatter.shortName || frontmatter.company,
         title: frontmatter.position,
         pretitle: displayDate,
         content: parseResume(mdxAST as any),
@@ -25,7 +25,7 @@ export const parseResumeData = (data: Queries.ResumeGenerateQuery) => {
         frontmatter.endDate || 'Present'
       }`;
       return {
-        title: frontmatter.school,
+        title: frontmatter.shortName || frontmatter.school,
         subtitle: frontmatter.study,
         pretitle: displayDate,
         content: parseResume(mdxAST as any),

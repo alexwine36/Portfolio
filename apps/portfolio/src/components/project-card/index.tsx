@@ -9,7 +9,7 @@ import {
   useTheme,
 } from '@mui/material';
 import { ChipListDisplay } from '@portfolio/ui';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { getDescription } from '../../utilities/get-description';
 
@@ -75,11 +75,9 @@ export function ProjectCard(props: ProjectCardProps) {
         </CardContent>
         <CardActions>
           <Button
-            component={Link}
-            // cover
-            // direction="up"
-            // bg={theme.palette.background.default}
-            to={link}
+            onClick={() => {
+              navigate(link);
+            }}
           >
             Keep Reading
           </Button>

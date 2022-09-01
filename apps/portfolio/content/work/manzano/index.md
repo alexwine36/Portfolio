@@ -1,5 +1,6 @@
 ---
 company: Manzano Mesa Multigenerational Center
+shortName: Manzano Mesa
 position: Student Seasonal Supervisor
 startDate: 2012-08-01
 endDate: 2018-02-01
