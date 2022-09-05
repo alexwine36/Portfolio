@@ -7,17 +7,17 @@ startDate: 2018-08-01
 
 <!-- - Developed an end-to-end analytics solution using Python and business intelligence tools, quantifiably improving the efficiency and productivity of the team. -->
 
-- Developed an end-to-end analytics solution using Python and business intelligence tools, improving the efficiency and productivity of the team.
+- Developed an end-to-end analytics solution using Python and Tableau, improving the efficiency and productivity of the team.
 
-- Developed pipelines for merging data from data resources i.e. sales tools CRM, spreadsheets, and ERP software, resulting in increased business insights and better-informed decisions.
+- Developed pipelines for merging data from data resources e.g. sales tools CRM, spreadsheets, and ERP software. This led to refined business insights and better-informed decisions.
 
 <!-- - Developed applications to automate repetitive tasks and streamline processes to reduce errors. -->
 
-- Developed applications to automate repetitive tasks such as report generation, processing utility bills and alerts for issues, streamlining processes and reducing errors.
+- Developed applications to automate repetitive tasks such as report generation, processing utility bills and alerts for issues. This streamlined processes and reducing errors.
 
 <!-- and streamline processes to reduce errors. -->
 
-- Automated the process of delivering new services to users using CI/CD tools.
+- Automated the process of delivering new services to users using GitLab CI/CD.
 
 - Developed automated service for sending [customer surveys](/projects/customer-surveys/) using Pulumi and Node under a Yarn Monorepo.
 
