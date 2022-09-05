@@ -13,7 +13,7 @@ startDate: 2018-08-01
 
 <!-- - Developed applications to automate repetitive tasks and streamline processes to reduce errors. -->
 
-- Developed applications to automate repetitive tasks such as report generation, processing utility bills and alerts for issues. This streamlined processes and reducing errors.
+- Developed applications to automate repetitive tasks such as report generation, processing utility bills, and alerts for issues. This streamlined processes and reduced errors.
 
 <!-- and streamline processes to reduce errors. -->
 
