@@ -1,3 +1,15 @@
+### [3.11.1](https://github.com/alexwine36/Portfolio/compare/v3.11.0...v3.11.1) (2022-09-05)
+
+
+### Bug Fixes
+
+* **update work:** updated grammar issues in Abrazo work experience ([9f84041](https://github.com/alexwine36/Portfolio/commit/9f84041e487521e55de8c6d110c58e8790f9a11a))
+
+
+### Docs
+
+* **update abrazo:** updated Abrazo work experience ([3f32d65](https://github.com/alexwine36/Portfolio/commit/3f32d653ef9ee681f8c5c085bac51f5a2a1cdf0b))
+
 ## [3.11.0](https://github.com/alexwine36/Portfolio/compare/v3.10.0...v3.11.0) (2022-09-01)
 
 
