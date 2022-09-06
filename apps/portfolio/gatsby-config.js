@@ -4,6 +4,10 @@ module.exports = {
   siteMetadata: {
     title: `Portfolio`,
     description: `Portfolio for developer and nerd, Alex Wine. `,
+    firstName: 'Alex',
+    lastName: 'Wine',
+    phone: '5056297298',
+    email: 'alexwine36@gmail.com',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
