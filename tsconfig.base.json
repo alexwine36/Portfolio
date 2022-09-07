@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "resolveJsonModule": true,
     "paths": {
+      "@portfolio/cover-letter-generator": [
+        "libs/cover-letter-generator/src/index.ts"
+      ],
       "@portfolio/generate-badges": ["libs/generate-badges/src/index.ts"],
       "@portfolio/hex-rgb": ["libs/hex-rgb/src/index.ts"],
       "@portfolio/markdown-to-pdf": ["libs/markdown-to-pdf/src/index.ts"],

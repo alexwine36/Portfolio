@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "cover-letter-generator": "libs/cover-letter-generator",
     "docs": "apps/docs",
     "generate-badges": "libs/generate-badges",
     "hex-rgb": "libs/hex-rgb",
