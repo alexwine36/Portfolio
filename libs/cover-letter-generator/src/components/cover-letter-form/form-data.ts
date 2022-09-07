@@ -24,9 +24,9 @@ export type Strengths =
   | "communicative"
   | "enthusiastic"
   | "innovative"
-  | "interpersonal"
   | "leading"
-  | "self-motivated"
+  | "motivated"
+  | "self-modivated"
   | "observant"
   | "teamwide";
 /**
@@ -36,6 +36,7 @@ export type SoftSkillNouns = [Strengths1, ...Strengths1[]];
 export type Strengths1 =
   | "collaboration"
   | "communication"
+  | "critical thinker"
   | "critical thinking"
   | "customer service"
   | "decision-making"
@@ -43,7 +44,7 @@ export type Strengths1 =
   | "enthusiasm"
   | "innovation"
   | "interpersonal relationships"
-  | "leader"
+  | "leadership"
   | "management"
   | "motivation"
   | "observation"
@@ -52,21 +53,6 @@ export type Strengths1 =
   | "team-building"
   | "teamwork"
   | "time-management";
-/**
- * @minItems 1
- */
-export type SoftSkillVerbs = [Strengths2, ...Strengths2[]];
-export type Strengths2 =
-  | "collaborate"
-  | "communicate"
-  | "delegate"
-  | "enthuse"
-  | "innovate"
-  | "lead"
-  | "manage"
-  | "motivate"
-  | "observe"
-  | "plan";
 export type Skills =
   | "React"
   | "Javascript"
@@ -104,13 +90,6 @@ export type Skills =
 export type HardSkills = Skills[];
 export type Skills1 = string;
 export type OtherSkills = Skills1[];
-export type WorkingStyle =
-  | "Artistic"
-  | "Enterprising"
-  | "Investigative"
-  | "Organized"
-  | "Practical"
-  | "Service-Oriented";
 
 /**
  * A simple generator for cover letters.
@@ -134,7 +113,6 @@ export interface CoverLetterForm {
     softSkills?: SoftSkills;
     hardSkills?: HardSkills;
     otherHardSkills?: OtherSkills;
-    style?: WorkingStyle;
     [k: string]: unknown;
   };
   [k: string]: unknown;
@@ -148,6 +126,5 @@ export interface CompanyAddress {
 export interface SoftSkills {
   adjectives?: SoftSkillAdjectives;
   nouns?: SoftSkillNouns;
-  verbs?: SoftSkillVerbs;
   [k: string]: unknown;
 }

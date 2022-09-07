@@ -79,7 +79,8 @@ export const schema: FormProps['schema'] = {
           properties: {
             adjectives: {
               default: [],
-              minItems: 1,
+              minItems: 3,
+              maxItems: 3,
               type: 'array',
               title: 'Soft Skill Adjectives',
               items: {

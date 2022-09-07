@@ -10,6 +10,7 @@ import { schema } from './schema';
 /* eslint-disable-next-line */
 export interface EditFormProps {
   formData: CoverLetterData;
+  onSubmit: (data: CoverLetterEdit) => void;
 }
 
 const Form = withTheme(Theme);
@@ -19,7 +20,7 @@ const StyledEditForm = styled(Form)`
 `;
 
 export function EditForm(props: EditFormProps) {
-  const { formData } = props;
+  const { formData, onSubmit } = props;
   const [baseData, setBaseData] = useState<CoverLetterEdit>();
 
   useEffect(() => {
@@ -37,6 +38,9 @@ export function EditForm(props: EditFormProps) {
       validator={validator}
       formData={baseData}
       schema={schema}
+      onSubmit={(data) => {
+        onSubmit(data.formData);
+      }}
       uiSchema={{
         Body: {
           items: {

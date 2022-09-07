@@ -82,6 +82,12 @@ export const softSkillArray = [
   {
     noun: 'time-management',
   },
+  {
+    noun: 'team player',
+  },
+  {
+    adj: 'curious',
+  },
 ];
 
 // export const softSkillArray: {

@@ -4,6 +4,8 @@ import { useState } from 'react';
 import CoverLetterForm from '../components/cover-letter-form';
 import { CoverLetterForm as CoverLetterFormData } from '../components/cover-letter-form/form-data';
 import EditForm from '../components/edit-form';
+import { CoverLetterEdit } from '../components/edit-form/form-data';
+import CoverLetterDisplay from './cover-letter-display';
 
 // export interface BaseData {
 //   firstName?: string;
@@ -24,6 +26,7 @@ const StyledCoverLetterGenerator = styled.div`
 export function CoverLetterGenerator(props: CoverLetterGeneratorProps) {
   const { formData } = props;
   const [baseForm, setBaseForm] = useState<CoverLetterFormData>(formData);
+  const [editForm, setEditForm] = useState<CoverLetterEdit>();
   const [expanded, setExpanded] = useState<string | false>('panel1');
 
   const handleInitialSubmit = (data: CoverLetterFormData) => {
@@ -32,6 +35,11 @@ export function CoverLetterGenerator(props: CoverLetterGeneratorProps) {
       ...data,
     }));
     setExpanded('panel2');
+  };
+
+  const handleEditSubmit = (data: CoverLetterEdit) => {
+    setEditForm(data);
+    setExpanded('panel3');
   };
 
   const handleChange =
@@ -61,7 +69,21 @@ export function CoverLetterGenerator(props: CoverLetterGeneratorProps) {
         </AccordionSummary>
         <AccordionDetails>
           {/* <CoverLetterForm formData={baseForm} onSubmit={handleInitialSubmit} /> */}
-          <EditForm formData={baseForm} />
+          <EditForm onSubmit={handleEditSubmit} formData={baseForm} />
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === 'panel3'}
+        onChange={handleChange('panel3')}
+      >
+        <AccordionSummary aria-controls="panel3bh-content" id="panel3bh-header">
+          Resume Display
+        </AccordionSummary>
+        <AccordionDetails>
+          {/* <CoverLetterForm formData={baseForm} onSubmit={handleInitialSubmit} /> */}
+          {/* <EditForm formData={baseForm} /> */}
+          {JSON.stringify(editForm)}
+          {editForm && <CoverLetterDisplay editForm={editForm} />}
         </AccordionDetails>
       </Accordion>
       {/* <h1>Welcome to CoverLetterGenerator!</h1> */}
