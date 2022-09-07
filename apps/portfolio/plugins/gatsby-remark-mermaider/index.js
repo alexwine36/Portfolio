@@ -46,7 +46,6 @@ async function render(browser, definition, theme, viewport, mermaidOptions) {
   return res;
 }
 
-
 function mermaidNodes(markdownAST, language) {
   const result = [];
   visit(markdownAST, 'code', (node) => {
@@ -89,6 +88,8 @@ module.exports = async (
         });
       })
     );
+  } catch (err) {
+    console.error(err);
   } finally {
     if (browser) {
       await browser.close();
